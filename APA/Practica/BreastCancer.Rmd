@@ -1,0 +1,755 @@
+####################################################################
+APA Project (FIB - UPC)
+Josep de Cid & Gonzalo Recio
+
+Breast Cancer Diagnostic
+Q1 2017-2018
+####################################################################
+
+First install necessary packages, skip  this step or some installations
+if some are already installed.
+
+```{R Setup}
+# install.packages('corrplot')
+# install.packages('caTools')
+# install.packages('ggplot2')
+# install.packages('rpart')
+# install.packages('randomForest')
+# install.packages('caret')
+# install.packages('e1071')
+# install.packages('lfda')
+# install.packages('xgboost')
+# install.packages('pROC')
+# install.packages('tree')
+
+library(corrplot)
+library(caret)
+library(caTools)
+library(ggplot2)
+library(MASS)
+library(e1071)
+library(class)
+library(pROC)
+library(nnet)
+library(tree)
+library(randomForest)
+```
+
+```{R Utils}
+harmMean <- function(elements) {
+  return(length(elements) / sum(1 / elements))
+}
+
+factorOrdered <- function(categories) {
+  return(factor(categories, levels = c('M', 'B')))
+}
+
+getAccuracyReport <- function(Truth, Pred) {
+  conf <- table(Truth = Truth,
+                Pred = factorOrdered(Pred))
+  
+  # Percent of each class and accuracy
+  props <- prop.table(conf, 1)
+  accuracy <- sum(diag(conf)) / sum(conf)
+
+  # Results
+  print(conf)
+  print(paste0('Accuracy: ', round(100 * accuracy, 4), '%'))
+  print(paste0('Error: ', round(100 * (1 - accuracy), 4), '%'))
+  print(paste0('F1: ', round(100 * harmMean(diag(props)), 4), '%'))
+}
+```
+
+####################################################################
+SECTION 1: Data Preprocessing
+####################################################################
+
+Let's start reading the dataset and removing unnecessary columns.
+- id is a useless column for classification
+- X is a NaN column
+
+```{R Dataset}
+dataset <- read.csv('data.csv')
+dataset <- subset(x = dataset,
+                  select = -c(X, id))
+
+summary(dataset)
+```
+
+Once checked that there are no NA or out of range values, we consider that it's not necessary to deal with missing or invalid data.
+We have to convert the dependant variable 'diagnosis' into factors (2 levels).
+The diagnosis distribution is a bit unbalanced, having 357 Benign and 212 Malign observations.
+As long as we have numeric variables that are shown in different scales, some methods must need to scale or center to work properly, like KNN, NN...
+
+```{R Preprocessing}
+diagnosis <- factorOrdered(dataset$diagnosis)
+dataset$diagnosis <- diagnosis
+
+summary(dataset$diagnosis)
+
+ggplot(dataset, aes(diagnosis)) +
+  geom_bar(aes(fill = diagnosis)) +
+  ggtitle('Diagnosis distribution') +
+  xlab('Diagnosis') + ylab('Count') +
+  guides(fill = guide_legend(title = 'Diagnosis'))
+
+# Feature scaling
+dataset[, -1] <- scale(dataset[, -1],
+                       scale = TRUE,
+                       center = TRUE)
+```
+
+Let's look at the variables to check some correlation, and try to remove unnecessary predictors with high correlation among them.
+
+```{R Correlation}
+correlation <- cor(dataset[, -1])
+corrplot(corr = correlation,
+         order = 'hclust',
+         tl.col = 'black',
+         tl.cex = 0.8)
+```
+
+There are some variables with almost a correlation of 1. Let's apply a feature selection removing very correlated variables.
+
+```{R Feature selection}
+# area_se, radius_se, perimeter_se -> area_se
+dataset$radius_se <- NULL
+dataset$perimeter_se <- NULL
+# area_mean, radius_mean, perimeter_mean -> area_mean
+dataset$radius_mean <- NULL
+dataset$perimeter_mean <- NULL
+# area_worst, radius_worst, perimeter_worst -> area_worst
+dataset$radius_worst <- NULL
+dataset$area_worst <- NULL
+```
+
+We can explore how each features helps us to classify the data. 
+
+```{R Separability of each variable}
+scales <- list(x = list(relation = 'free'),
+               y = list(relation = 'free'),
+               cex = 0.6)
+
+featurePlot(x = dataset[, -1],
+            y = dataset$diagnosis,
+            plot = 'density',
+            scales = scales,
+            layout = c(3, 8),
+            auto.key = list(columns = 2),
+            pch = '|')
+```
+
+Once the dataset basic preprocessing is ready we proceed to split it into Training and Test set.
+
+```{R Split dataset}
+set.seed(10)
+split = sample.split(Y = dataset$diagnosis, SplitRatio = 0.8)
+
+training.set = subset(dataset, split == TRUE)
+test.set = subset(dataset, split == FALSE)
+```
+
+Now let's apply feature extraction (PCA) because we can easily reduce dimensionality without losing so much information. With 10 components we get over 0.95 of variance explained (16 for 0.99). We would need all the others only to explain an extra 1%, so those would be discarded.
+
+```{R PCA}
+pca <- prcomp(dataset[, -1])
+vars = apply(pca$x, 2, var)
+props <- vars / sum(vars)
+
+ggplot(mapping = aes(x = seq(1, length(props)), y = cumsum(props))) +
+  geom_bar(stat = "identity", fill = '#00BA38') +
+  geom_line(aes(x = seq(1, length(props)), y = 0.95), linetype = 'dotted') +
+  geom_line(aes(x = seq(1, length(props)), y = 0.99), linetype = 'dotted') +
+  xlab('Component') + ylab('Cummulate variance') +
+  ggtitle('Cummulate variance for PCA')
+
+summary(pca)
+
+pca.df <- as.data.frame(pca$x)
+
+# Create PCA for training set.
+training.set.pca <- subset(pca.df[, 1:16], split == TRUE)
+training.set.pca$diagnosis <- training.set$diagnosis
+# Create PCA for test set.
+test.set.pca <- subset(pca.df[, 1:16], split == FALSE)
+test.set.pca$diagnosis <- test.set$diagnosis
+
+ggplot(pca.df, mapping = aes(x = PC1, y = PC2, col = diagnosis)) +
+  ggtitle('Diagnosis distribution over first two Principal Components') +
+  geom_point()
+```
+
+####################################################################
+# SECTION 2: Model Building - Linear Methods
+####################################################################
+
+Let's start looking for a logistic regression model for classification into binomial data. We start setting an arbitrary centered threshold at 0.5.
+
+```{R - Logistic}
+model.log <- glm(formula = diagnosis ~ .,
+                 family = binomial,
+                 data = training.set,
+                 trace = FALSE)
+
+# Simplify it using the AIC
+model.log.aic <- step(model.log)
+
+prob.log <- predict(model.log.aic,
+                    type = 'response',
+                    newdata = test.set[-1])
+
+pred.log <- ifelse(prob.log > 0.5, 'B', 'M')
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.log)
+
+ggplot(test.set) +
+  xlab('Observation') + ylab('Probability') +
+  ggtitle('Class probability for each observation') +
+  geom_line(aes(x = seq(nrow(test.set)), y = 0.5), col = 'purple') +
+  geom_point(aes(x = seq(nrow(test.set)), y = prob.log, col = diagnosis))
+```
+
+As probabilities of M and B are almost 1 or 0 there is no way to improve the P selection, so we choose the middle separator (0.5).
+
+Let's check data separability with LDA:
+
+```{R LDA model}
+lda <- lda(formula = diagnosis ~ .,
+           data = training.set)
+
+# Create LDA for training set.
+training.set.lda <- as.data.frame(predict(lda, training.set))
+training.set.lda <- training.set.lda[c(1, 4)]
+colnames(training.set.lda) <- c('diagnosis', 'LD1')
+# Create LDA for test set.
+test.set.lda <- as.data.frame(predict(lda, test.set))
+test.set.lda <- test.set.lda[c(1, 4)]
+colnames(test.set.lda) <- c('diagnosis', 'LD1')
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = test.set.lda$diagnosis)
+
+pred.lda <- predict(lda, test.set, type = 'prob')
+```
+
+```{R LDA plots}
+# Display diagnosis over 1D.
+ggplot(training.set.lda, aes(x = LD1, y = 0, col = diagnosis)) +
+  ggtitle('Diagnosis distribution over LD1') +
+  geom_point(alpha = 0.8)
+
+# Display diagnosis over 2D (Density).
+ggplot(training.set.lda, aes(x = LD1, fill = diagnosis)) +
+  ggtitle('Diagnosis density over LD1') +
+  geom_density(alpha = 0.8)
+```
+
+Let's apply a basic Naive Bayes: 
+
+```{R Naive Bayes}
+model.nb <- naiveBayes(formula = diagnosis ~ .,
+                       data = training.set)
+model.nb
+
+# predict(model.nb, newdata = test.set[-1], type = 'raw')
+pred.nb <- predict(model.nb,
+                   newdata = test.set[-1])
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.nb)
+```
+
+Given the non-linearity independence among features, the classifier does not work as good as it could do, with only a 95'57% of accuracy. Let's apply it over a LDA reduced training set:
+
+```{R Naive Bayes: LDA}
+model.nb.lda <- naiveBayes(formula = diagnosis ~ .,
+                           data = training.set.lda)
+model.nb.lda
+
+# predict(model.nb, newdata = test.set[-1], type = 'raw')
+pred.nb.lda <- predict(model.nb.lda,
+                       newdata = test.set.lda[-1])
+
+getAccuracyReport(Truth = test.set.lda$diagnosis,
+                  Pred = pred.nb.lda)
+```
+
+It is quite perfect! And we also got no false negative errors.
+
+Fit a K-NN model with an arbitrary K.
+
+```{R - KNN}
+pred.knn <- knn(train = training.set[-1],
+                test = test.set[-1],
+                cl = training.set$diagnosis,
+                prob = TRUE,
+                k = 5)
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.knn)
+```
+
+Validate with Cross-Validation.
+
+```{R KNN-CV}
+pred.knn.cv <- knn.cv(train = training.set[-1],
+                      cl = training.set$diagnosis,
+                      k = 5)
+
+getAccuracyReport(Truth = training.set$diagnosis,
+                  Pred = pred.knn.cv)
+```
+
+As long as we have 456 observations in our training set, we might try odd k, roughly equal to the square root of 456. With two-category outcome, use an odd number eliminates tie vote chances.
+
+```{R - KNN: Find optimal k}
+neighbours <- seq(1, sqrt(nrow(training.set)), 2)
+errors <- matrix(c(neighbours, rep(0, length(neighbours))),
+                 nrow = length(neighbours))
+colnames(errors) <- c('k', 'LOOCV error')
+
+errors.k <- sapply(X = neighbours, FUN = function(k) {
+  pred.knn.cv <- knn.cv(train = training.set[-1],
+                        cl = training.set$diagnosis,
+                        k = k)
+  
+  conf.knn <- table(training.set$diagnosis, pred.knn.cv)
+  return(1 - sum(diag(conf.knn)) / sum(conf.knn))
+})
+
+errors[, 'LOOCV error'] <- errors.k
+errors
+
+lowest.error<- as.integer(which.min(errors[, 'LOOCV error']))
+(k.best <- errors[lowest.error, 'k'])
+
+ggplot(mapping = aes(x = neighbours, y = errors[, 2])) +
+  geom_point(col = '#00BFC4') + geom_line(col = '#00BFC4') +
+  ggtitle('Optimization of K for K-NN') +
+  xlab('K') + ylab('LOOCV error')
+```
+
+```{R - KNN: Optimal k}
+pred.knn <- knn(train = training.set[-1],
+                test = test.set[-1],
+                cl = training.set$diagnosis,
+                prob = TRUE,
+                k = k.best)
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.knn)
+```
+
+```{R - SVM}
+model.svm.linear <- svm(formula = diagnosis ~ .,
+                        data = training.set,
+                        type = 'C-classification',
+                        kernel = 'linear')
+model.svm.linear
+
+pred.svm.linear <- predict(model.svm.linear,
+                           newdata = test.set)
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.svm.linear)
+```
+
+Cross-Validation to optimize C parameter:
+
+```{R - SVM: C optimization}
+model.svm.linear.cv = tune.svm(x = diagnosis ~ .,
+                               data = training.set,
+                               cost = 10^seq(-8, 3),
+                               type = 'C-classification',
+                               kernel = 'linear',
+                               tunecontrol = tune.control(cross = 12))
+
+model.svm.linear.cv
+
+pred.svm.linear.cv <- predict(model.svm.linear.cv$best.model,
+                              newdata = test.set)
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.svm.linear.cv)
+```
+
+We obtain a higher accuracy, but all errors are false negatives. Let's try to modify each class error weight:
+
+```{R - SVM: Class weights}
+model.svm.linear <- svm(formula = diagnosis ~ .,
+                        data = training.set,
+                        cost = model.svm.linear.cv$best.parameters$cost,
+                        class.weights = c(M = 5, B = 1),
+                        type = 'C-classification',
+                        kernel = 'linear')
+model.svm.linear
+
+pred.svm.linear <- predict(model.svm.linear,
+                           newdata = test.set)
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.svm.linear)
+```
+
+####################################################################
+# SECTION 3: Model Building - Non-Linear Methods
+####################################################################
+
+Let's try with a single decision tree and check the training error rate and the test results report.
+
+```{R - Random Forest: Single decision tree}
+model.dt <- tree(formula = diagnosis ~ .,
+                 data = training.set)
+
+summary(model.dt)
+
+plot(model.dt)
+text(model.dt)
+
+pred.dt <- predict(model.dt,
+                   newdata = test.set,
+                   type="class")
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.dt)
+```
+
+We get a high-performance for being just a unique tree, but let's create an aggregation of them and see what happens.
+
+```{R - Random Forest}
+set.seed(10)
+model.rf <- randomForest(formula = diagnosis ~ .,
+                         data = training.set,
+                         ntree = 25,
+                         proximity = FALSE)
+model.rf
+```
+
+We get an estimated test error (OOB) of 4.61%. Let's compute the real test error:
+
+```{R - Random Forest: test accuracy}
+pred.rf <- predict(model.rf,
+                   newdata = test.set,
+                   type = 'class')
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.rf)
+```
+
+So OOB really works in estimating prediction error and the RF is better than a single tree. However, there still is a big issue with unbalanced classes one way to deal with this is to include class weights which can help a little bit:
+
+```{R - Random Forest: weight assign}
+set.seed(10)
+model.rf <- randomForest(formula = diagnosis ~ .,
+                         data = training.set,
+                         ntree = 25,
+                         proximity = FALSE,
+                         classwt = c(5, 1))
+model.rf
+
+pred.rf <- predict(model.rf,
+                   newdata = test.set,
+                   type = 'class')
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.rf)
+```
+
+This fix doesn't even improve the accuracy or reduction of OOB error. Another way is to arrange the sampling in the boostrap and let's compute the real test error:
+
+```{R}
+numB <- summary(training.set$diagnosis)[['B']]
+numM <- summary(training.set$diagnosis)[['M']]
+
+set.seed(10)
+model.rf <- randomForest(formula = diagnosis ~ .,
+                         data = training.set,
+                         ntree = 25,
+                         proximity = FALSE,
+                         strata = training.set$diagnosis,
+                         sampsize = c(B = min(numB, numM),
+                                      M = min(numB, numM)))
+model.rf
+
+pred.rf <- predict(model.rf,
+                   newdata = test.set,
+                   type = 'class')
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.rf)
+```
+
+Resamples which seems to help much more: we get an estimated test error (OOB) of 4.39%, but with a better balance. Let's optimize the number of trees based on OOB error:
+
+```{R - Random Forest: nTree optimization}
+(ntrees <- round(10^seq(1, 3, by = 0.05)))
+
+rf.results <- matrix(c(ntrees, rep(0, length(ntrees))),
+                     nrow = length(ntrees))
+colnames(rf.results) <- c('nTrees', 'OOB')
+
+OOBs <- sapply(X = ntrees, FUN = function(nt) {
+  set.seed(10)
+  model.rf <- randomForest(formula = diagnosis ~ .,
+                           data = training.set,
+                           ntree = nt,
+                           proximity = FALSE,
+                           strata = training.set$diagnosis,
+                           sampsize = c(B = min(numB, numM),
+                                        M = min(numB, numM)))
+  return(model.rf$err.rate[[nt, 1]])
+})
+
+rf.results[, 'OOB'] <- OOBs
+rf.results
+
+# Choose best value of 'nTrees'
+lowest.OOB.error<- as.integer(which.min(rf.results[, 'OOB']))
+(nt.best <- rf.results[lowest.OOB.error, 'nTrees'])
+```
+
+We could also try to optimize the number of variables in the same way but, as it was said in the lectures, the default value (square root) works fine in general. Now let's refit the RF with the best value of 'ntrees', check the statistics and the importance of the variables:
+
+```{R - Random Forest: Best model}
+set.seed(10)
+model.rf <- randomForest(formula = diagnosis ~ .,
+                         data = training.set,
+                         ntree = nt.best,
+                         proximity = FALSE,
+                         importance = TRUE,
+                         strata = training.set$diagnosis,
+                         sampsize = c(B = min(numB, numM),
+                                      M = min(numB, numM)))
+model.rf
+
+pred.rf <- predict(model.rf,
+                   newdata = test.set,
+                   type = 'class')
+
+plot(model.rf)
+varImpPlot(model.rf, type = 1)
+vars <- importance(model.rf, type = 1)
+
+plot(model.rf, main = 'Error')
+
+legend('topright',
+       legend = c('OOB', 'B', 'M'),
+       pch = c(1, 1),
+       col = c('black', 'red', 'green'))
+
+# What variables are being used in the forest (their counts)
+vars <- cbind(vars, varUsed(model.rf, by.tree=FALSE,count = TRUE))
+colnames(vars) = c('Importance', 'Count')
+vars
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.rf)
+```
+
+
+Let's try a neural net with 10 neurons inside the hidden layer.
+
+```{R Neural Networks}
+set.seed(10)
+model.nn <- nnet(formula = diagnosis ~ .,
+                 data = training.set,
+                 size = 10,
+                 maxit = 2000,
+                 decay = 0)
+
+pred.nn <- as.factor(predict(model.nn,
+                             type = 'class'))
+
+getAccuracyReport(Truth = training.set$diagnosis,
+                  Pred = pred.nn)
+```
+
+Predicted error from training is 0% in our case so let's try to get test error directly in order to make improvements on our neural net.
+
+```{R}
+pred.nn <- as.factor(predict(model.nn, newdata = test.set, type = 'class'))
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.nn)
+```
+
+Now let's train for different size and decay values to find the best nnet, using cross-validation. This method finds that best number of hidden units is 6 and decay weight value 0.03162278.
+This takes some minutes to compute!
+
+```{R}
+train_control <- trainControl(method = 'cv', number = 12)
+grid <- expand.grid(decay = 10^seq(-3, 0, 0.1),
+                    size = seq(1, 10))
+
+set.seed(10)
+nnet <- train(form = diagnosis ~.,
+              data = training.set,
+              method = 'nnet', 
+              tuneGrid = grid, 
+              trControl = train_control,
+              trace = FALSE)
+
+nnet
+
+pred.nn <- as.factor(predict(nnet, type = 'raw'))
+getAccuracyReport(Truth = training.set$diagnosis,
+                  Pred = pred.nn)
+```
+
+Now we test the optimal neural net with test set
+
+```{R}
+pred.nn <- as.factor(predict(nnet,
+                             newdata = test.set,
+                             type = 'raw'))
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.nn)
+
+```
+
+How about if we try to use LDA data into a NN?
+
+```{R - Neural Network: LDA}
+train.control <- trainControl(method = 'cv', number = 12)
+grid <- expand.grid(decay = 10^seq(-3, 0, 0.1),
+                    size = seq(1, 10))
+
+set.seed(10)
+nnet <- train(form = diagnosis ~.,
+              data = training.set.lda,
+              method = 'nnet', 
+              tuneGrid = grid, 
+              trControl = train.control,
+              trace = FALSE)
+nnet
+
+pred.nn.lda <- as.factor(predict(nnet, type = 'raw'))
+getAccuracyReport(Truth = training.set.lda$diagnosis,
+                  Pred = pred.nn.lda)
+```
+
+```{R - Neural Network: Best model over LDA?}
+pred.nn.lda <- as.factor(predict(nnet,
+                                 newdata = test.set.lda,
+                                 type = 'raw'))
+
+getAccuracyReport(Truth = test.set.lda$diagnosis,
+                  Pred = pred.nn.lda)
+```
+
+Wow, 100%!
+
+```{R - SVM: Gaussian Kernel}
+model.svm.gaussian <- svm(formula = diagnosis ~ .,
+                          data = training.set,
+                          type = 'C-classification',
+                          kernel = 'radial')
+model.svm.gaussian
+
+pred.svm.gaussian <- predict(model.svm.gaussian,
+                             newdata = test.set)
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.svm.gaussian)
+```
+
+```{R - SVM: C & Gamma optimization}
+model.svm.gaussian.cv = tune.svm(x = diagnosis ~ .,
+                                 data = training.set,
+                                 cost = 10^seq(-8, 3),
+                                 gamma = 2^seq(-3, 4),
+                                 type = 'C-classification',
+                                 kernel = 'radial',
+                                 tunecontrol = tune.control(cross = 12))
+
+model.svm.gaussian.cv
+
+pred.svm.gaussian.cv <- predict(model.svm.gaussian.cv$best.model,
+                                newdata = test.set)
+
+getAccuracyReport(Truth = test.set$diagnosis,
+                  Pred = pred.svm.gaussian.cv)
+```
+
+Testing Gradient Boosting (discarded)
+tune.xgb <- expand.grid(
+  eta = c(0.01, 0.001, 0.0001),
+  nrounds = 500,
+  lambda = 1,
+  alpha = 0
+)
+
+classifier.xgb <- train(x = as.matrix(training.set[-1]),
+                        y = training.set$diagnosis,
+                        method = 'xgbLinear',
+                        trControl = trc,
+                        tuneGrid = tune.xgb)
+
+pred.xgb <- predict(classifier.xgb,
+                    newdata = test.set)
+
+# Cost plots, Confusion matrix and accuracy.
+(conf.xgb <- confusionMatrix(data = classifier.xgb,
+                             reference = test.set$diagnosis,
+                             positive = 'M'))
+(acc.xgb <- mean(pred.xgb == test.set$diagnosis))
+
+####################################################################
+# SECTION 4: Model Comparaison
+####################################################################
+
+We plot ROC curves which represent False Positive rate against True Positives rate. This gives us an accuracy estimation of out model.
+
+```{R}
+par(mfrow = c(4, 2))
+
+# Logistic ROC
+plot(roc(response = test.set$diagnosis,  
+         predictor = as.numeric(as.factor(pred.log))),
+     col = '#9C27B0', main = 'Logistic Regression')
+abline(v = 1, lty = 'dotted')
+
+# LDA ROC
+plot(roc(response = test.set$diagnosis,  
+         predictor = as.numeric(test.set.lda$diagnosis)),
+     col = '#009688', main = 'LDA')
+abline(v = 1, lty = 'dotted')
+
+# Naive Bayes ROC
+plot(roc(response = test.set.lda$diagnosis,  
+         predictor = as.numeric(pred.nb.lda)),
+     col = '#FF9800', main = 'Naive Bayes (over LDA)')
+abline(v = 1, lty = 'dotted')
+
+# K-NN ROC
+plot(roc(response = test.set$diagnosis,  
+         predictor = as.numeric(pred.knn)),
+     col = '#795548', main = 'K-NN')
+abline(v = 1, lty = 'dotted')
+
+# SVM linear ROC
+plot(roc(response = test.set$diagnosis,  
+          predictor = as.numeric(pred.svm.linear.cv)),
+     col = '#8BC34A', main = 'Linear SVM')
+abline(v = 1, lty = 'dotted')
+
+# Random Forest ROC
+plot(roc(response = test.set$diagnosis,  
+         predictor = as.numeric(pred.rf)),
+     col = '#03A9F4', main = 'Random Forest')
+abline(v = 1, lty = 'dotted')
+
+# Neural Network ROC
+plot(roc(response = test.set.lda$diagnosis,  
+         predictor = as.numeric(pred.nn.lda)),
+     col = '#F44336', main = 'MLP (over LDA)')
+abline(v = 1, lty = 'dotted')
+
+# SVM Gaussian ROC
+plot(roc(response = test.set$diagnosis,  
+         predictor = as.numeric(pred.svm.gaussian.cv)),
+     col = '#3F51B5', main = 'Radial SVM')
+abline(v = 1, lty = 'dotted')
+```
