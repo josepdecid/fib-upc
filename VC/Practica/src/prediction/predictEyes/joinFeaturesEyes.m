@@ -1,0 +1,6 @@
+function [features] = joinFeaturesEyes(eyes, noEyes)
+    features = horzcat(                ...
+        buildHOGFeature(eyes, noEyes), ...
+        buildLBPFeature(eyes, noEyes));
+end
+
