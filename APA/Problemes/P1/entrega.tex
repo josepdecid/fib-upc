@@ -1,0 +1,99 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{APA - Problema 3}
+\author{Josep de Cid}
+\date{September 2017}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{minted}
+\newcommand{\R}{\mathbb{R}}
+
+\begin{document}
+
+\maketitle
+
+Considerem un experiment aleatori en què mesurem una determinada variable aleatòria X, que segueix una distribució gaussiana univariada, cosa que escrivim $X ~ N(\mu; \sigma^2)$. Prenem N mesures independents de X i obtenim una mostra aleatòria simple ${x_1, ...,x_N}$, on cada $x_n$ és una realització de X, per n = 1,...,N. Es demana:
+
+\begin{enumerate}
+    \item Escriviu la funció de densitat de probabilitat per un $x_n$ qualsevol i construïu la funció log-versemblança (negativa) de la mostra.\newline
+    
+    La funció de densitat de probabilitat per a $x_n$ en la distribució Normal és:
+    \[\mathcal{N}(x_n, \mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi}}exp(-\frac{x_n - \mu}{2\sigma})^2\]
+    
+    Per construïr la funció log-versemblaça (negativa) necessitem operar amb la probabilitat d'obenir $D = {x_1...x_n}$, a partir dels paràmetres $\theta$, en el nostre cas, $\theta = \binom{\mu}{\sigma^2}$. El nostre objectiu és obtenir una estimació $\hat{\sigma}$ de $\sigma$, donat D, amb la funció de versemblança (\textit{likelihood}), que va en funció dels paràmetres, intentant màximitzar $\mathcal{L}(\theta)$ respecte a $\theta$:
+    \[\mathcal{L}(\theta) = \prod_{i=1}^{N} p(x_i;\sigma) = \prod_{i=1}^{N} (\frac{1}{\sigma\sqrt{2\pi}}exp(-\frac{x_n - \mu}{2\sigma})^2)\]
+    
+    Per simplificar el problema, operarem amb el $\ln$ de $\mathcal{L}$ negatiu, que no canviarà qualitativament el resultat del problema, però haurem de minimitzar $\mathcal{L}$ enlloc de maximitzar. Aplicant propietats dels logaritmes podem simplificar l'expressió resultant fins a obtenir la funció log-versemblança negativa de la mostra.
+    \[\mathcal{L}(\theta)\xrightarrow[]{\text{log-likelihood}}l(\theta) = \ln\prod_{i=1}^{N} \mathcal{N}(x_i, \theta) = \sum_{i=1}^{N} \ln\mathcal{N}(x_i, \theta) =\]
+    \[= \sum_{i=1}^{N} \ln(\frac{1}{\sigma\sqrt{2\pi}}exp(-\frac{x_n - \mu}{2\sigma})^2) \xrightarrow[]{\text{negatiu}} -\sum_{i=1}^{N} \ln(\frac{1}{\sigma\sqrt{2\pi}}exp(-\frac{x_n - \mu}{2\sigma})^2) =\]
+    \[= \sum_{i=1}^{N} (\ln(\sigma\sqrt{2\pi}) + \frac{(x_n - \mu)^2}{(2\sigma)^2})\]
+        
+    \item Trobeu els estimadors de màxima versemblança $\hat{\mu}$ i $\hat{\sigma}^2$ per $\mu$ i per $\sigma^2$, a partir de la mostra.\newline
+    
+    Per obtenir els EMV $\hat{\mu}$ i $\hat{\sigma^2}$, hem de calcular la derivada parcial en $\mu$ i $\sigma^2$ respectivament.
+    
+    \[\frac{\partial{l}}{\partial{\mu}} = \sum_{n=1}^{N} (0 + \frac{2\sigma^2*2(x_n-\mu)*(-1) - (x_n-\mu)^2*0}{(2\sigma^2)^2}) =\]
+    \[= \sum_{n=1}^{N} (\frac{2(x_n-\mu)*(-1)}{2\sigma^2}) = \sum_{n=1}^{N} (\frac{-x_n + \mu}{\sigma^2}) = \frac{1}{\sigma^2}\sum_{n=1}^{N}(-x_n + \mu)\]
+    Un cop derivat respecte a $\mu$ necessitem aïllar-la per obtenir el valor de l'estimador:
+    \[\sum_{n=1}^{N}(-x_n + \mu) = \sigma^2 * 0 \Rightarrow \sum_{n=1}^{N}(-x_n + \mu) = 0 \Rightarrow\]
+    \[\Rightarrow \sum_{n=1}^{N}(\mu) = \sum_{n=1}^{N}(x_n) \Rightarrow N\mu = \sum_{n=1}^{N}(x_n) \Rightarrow \hat{\mu} = \frac{1}{N}\sum_{n=1}^{N} x_n\]
+    Repetim el procés derivant respecte a $\sigma^2$:
+    \[\frac{\partial{l}}{\partial{\sigma^2}} = \frac{N}{2\sigma^2} - \frac{1}{2\sigma^4}\sum_{n=1}^{N}(x_n-\mu)^2\]
+        
+    \item Demostreu que realment són mínims (i no extrems qualsevol).
+    
+    Per demostrar que són mínims, necessitem veure que la segona derivada és positiva: $\frac{\partial^2{l}}{\partial^2{\mu}}(\hat{\mu}) > 0$ i $\frac{\partial^2{l}}{\partial^2{\sigma^2}}(\hat{\sigma}^2) > 0$ respectivament:
+    \[\frac{\partial^2{l}}{\partial{\mu}}(\hat{\mu}) = \frac\]
+    \[\frac{\partial^2{l}}{\partial{\sigma}}(\hat{\sigma}^2) = \]
+    
+    \item Calculeu els biaixos dels dos estimadors. Determineu si l'estimador per $\mu$ és consistent.
+    
+    \item Calculeu la variança de l'estimador per $\mu$, de 2 maneres (que han de coincidir),  a triar de les 3 següents. Pista: useu que si $X_n, X_m ~ N(\mu, \sigma^2)$, llavors:
+    \begin{enumerate}
+        \item Insertant directament el valor de l'estimador i utilitzant les propietats de la variança;
+        \item Usant la coneguda fòrmula $Var[\hat{\theta}] = 0$;
+        \item Utilizant la definició directa de la variança $Var[\hat{\theta}] = 0$;
+    \end{enumerate}
+    
+    \item Per determinar la velocitat màxima d'un prototip d'avió es van fer 15 proves independents (i caríssimes!) amb els resultats\newline
+    422.2, 418.7, 425.6, 420.3, 425.8, 423.1, 431.5, 428.2, 438.3, 434.0, 411.3, 417.2, 413.5, 441.3, 423.0\newline
+    on els valors venen expresats en m/s. Suposant que aquesta velocitat màxima és gaussiana, quins valors estimaríeu per a $\mu$ i per $\sigma$?
+    
+    Per estimar els valors de $\mu$ i $\sigma$ només necessitem aplicar les dades que ens dona l'enunciat a les fòrmules dels estimadors que hem obtingut a l'apartat \textbf{b}. Per simplificar els càlculs i el posterior anàlisis, hem introduït les dades a un script R:
+    \begin{minted}
+X <- c(422.2, 418.7, 425.6, 420.3, 425.8, 423.1, 431.5, 428.2, 438.3, 434.0, 411.3, 417.2, 413.5, 441.3, 423.0)
+mu <- sum(X) / length(X)
+sigma.square <- sum((X - mu)^2) / length(X)
+sigma <- sqrt(sigma.square)
+    \end{minted}
+ Un cop realitzats els càlculs obtenim que $\mu = 424.9333$ i $\sigma = 	8.306677$.
+ 
+    \item \textbf{[R]} Fixeu unes $\mu$ i $\sigma^2$ al vostre gust i genereu 1000 mostres aleatòries simples Gaussianes de mida N = 50 (noteu que no cal emmagatzemar-les); utilitzeu les mostres (que han de ser i.i.d i independents entre si) per estimar els biaixos i variances dels valors teòrics de $\mu$ i $\sigma^2$. Compareu els resultats respecte els valors teòrics dels estimadors.
+    
+    \begin{minted}{R}
+M <- 1000
+N <- 50
+mu <- 42
+sigma <- 0.42
+sigma.square <- sigma ^ 2
+
+gaussian.generator <- function() {
+  return(rnorm(n = N, mean = mu, sd = sigma))
+}
+l <- replicate(n = M, expr = gaussian.generator(), simplify = F)
+
+l.mu <- sapply(X = l, FUN = "mean")
+l.sigma.square <- sapply(X = l, FUN = "var")
+
+mu.bias <- mean(l.mu) - mu
+mu.var <- var(l.mu)
+
+sigma.square.bias <- mean(l.sigma.square) - sigma.square
+sigma.square.var <- var(l.sigma.square)
+    \end{minted}
+        
+\end{enumerate}
+
+\end{document}

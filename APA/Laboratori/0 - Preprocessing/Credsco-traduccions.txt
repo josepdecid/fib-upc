@@ -1,0 +1,14 @@
+Ingressos - Income
+AntiguitatFeina - YearsInJob
+Dictamen - Assessment
+Habitatge - Housing
+Termini - Deadline
+Edat - Age
+EstatCivil - MaritalStatus
+Registres - Records
+TipusFeina - TypeOfJob
+Despeses - Expenses
+Patrimoni - Capital
+CarreguesPatrimonials - ChargesOnCapital
+ImportSol·licitat - AmountRequested
+PreudelBeFinançat - MarketPrice
