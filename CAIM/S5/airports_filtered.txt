@@ -1,0 +1,5629 @@
+Goroka,Papua New Guinea,GKA
+Madang,Papua New Guinea,MAG
+Mount Hagen,Papua New Guinea,HGU
+Nadzab,Papua New Guinea,LAE
+Port Moresby Jacksons Intl,Papua New Guinea,POM
+Wewak Intl,Papua New Guinea,WWK
+Narsarsuaq,Greenland,UAK
+Nuuk,Greenland,GOH
+Sondre Stromfjord,Greenland,SFJ
+Thule Air Base,Greenland,THU
+Akureyri,Iceland,AEY
+Egilsstadir,Iceland,EGS
+Hornafjordur,Iceland,HFN
+Husavik,Iceland,HZK
+Isafjordur,Iceland,IFJ
+Keflavik International Airport,Iceland,KEF
+Patreksfjordur,Iceland,PFJ
+Reykjavik,Iceland,RKV
+Siglufjordur,Iceland,SIJ
+Vestmannaeyjar,Iceland,VEY
+Sault Ste Marie,Canada,YAM
+Winnipeg St Andrews,Canada,YAV
+Shearwater,Canada,YAW
+St Anthony,Canada,YAY
+Tofino,Canada,YAZ
+Kugaaruk,Canada,YBB
+Baie Comeau,Canada,YBC
+Bagotville,Canada,YBG
+Baker Lake,Canada,YBK
+Campbell River,Canada,YBL
+Brandon Muni,Canada,YBR
+Cambridge Bay,Canada,YCB
+Nanaimo,Canada,YCD
+Castlegar,Canada,YCG
+Miramichi,Canada,YCH
+Charlo,Canada,YCL
+Kugluktuk,Canada,YCO
+Coronation,Canada,YCT
+Chilliwack,Canada,YCW
+Clyde River,Canada,YCY
+Fairmont Hot Springs,Canada,YZS
+Dawson City,Canada,YDA
+Burwash,Canada,YDB
+Princeton,Canada,YDC
+Deer Lake,Canada,YDF
+Dease Lake,Canada,YDL
+Dauphin Barker,Canada,YDN
+Dawson Creek,Canada,YDQ
+Edmonton Intl,Canada,YEG
+Arviat,Canada,YEK
+Estevan,Canada,YEN
+Edson,Canada,YET
+Eureka,Canada,YEU
+Inuvik Mike Zubko,Canada,YEV
+Iqaluit,Canada,YFB
+Fredericton,Canada,YFC
+Flin Flon,Canada,YFO
+Fort Resolution,Canada,YFR
+Fort Simpson,Canada,YFS
+Kingston,Canada,YGK
+La Grande Riviere,Canada,YGL
+Gaspe,Canada,YGP
+Geraldton Greenstone Regional,Canada,YGQ
+Iles De La Madeleine,Canada,YGR
+Hudson Bay,Canada,YHB
+Dryden Rgnl,Canada,YHD
+Ulukhaktok Holman,Canada,YHI
+Gjoa Haven,Canada,YHK
+Hamilton,Canada,YHM
+St Hubert,Canada,YHU
+Hay River,Canada,YHY
+Halifax Intl,Canada,YHZ
+Atikokan Muni,Canada,YIB
+Pond Inlet,Canada,YIO
+St Jean,Canada,YJN
+Stephenville,Canada,YJT
+Kamloops,Canada,YKA
+Waterloo,Canada,YKF
+Schefferville,Canada,YKL
+Kindersley,Canada,YKY
+Buttonville Muni,Canada,YKZ
+Chapleau,Canada,YLD
+Meadow Lake,Canada,YLJ
+Lloydminster,Canada,YLL
+Alert,Canada,YLT
+Kelowna,Canada,YLW
+Mayo,Canada,YMA
+Moose Jaw Air Vice Marshal C M Mcewen,Canada,YMJ
+Fort Mcmurray,Canada,YMM
+Moosonee,Canada,YMO
+Maniwaki,Canada,YMW
+Montreal Intl Mirabel,Canada,YMX
+Natashquan,Canada,YNA
+Gatineau,Canada,YND
+Matagami,Canada,YNM
+Old Crow,Canada,YOC
+Cold Lake,Canada,YOD
+High Level,Canada,YOJ
+Ottawa Macdonald Cartier Intl,Canada,YOW
+Prince Albert Glass Field,Canada,YPA
+Peace River,Canada,YPE
+Southport,Canada,YPG
+Pickle Lake,Canada,YPL
+Port Menier,Canada,YPN
+Peterborough,Canada,YPQ
+Prince Rupert,Canada,YPR
+Fort Chipewyan,Canada,YPY
+Muskoka,Canada,YQA
+Quebec Jean Lesage Intl,Canada,YQB
+Red Deer Regional,Canada,YQF
+Windsor,Canada,YQG
+Watson Lake,Canada,YQH
+Kenora,Canada,YQK
+Lethbridge,Canada,YQL
+Greater Moncton Intl,Canada,YQM
+Comox,Canada,YQQ
+Regina Intl,Canada,YQR
+Thunder Bay,Canada,YQT
+Grande Prairie,Canada,YQU
+Yorkton Muni,Canada,YQV
+North Battleford,Canada,YQW
+Gander Intl,Canada,YQX
+Sydney,Canada,YQY
+Quesnel,Canada,YQZ
+Resolute Bay,Canada,YRB
+Riviere Du Loup,Canada,YRI
+Roberval,Canada,YRJ
+Rocky Mountain House,Canada,YRM
+Rankin Inlet,Canada,YRT
+Sudbury,Canada,YSB
+Sherbrooke,Canada,YSC
+Saint John,Canada,YSJ
+Fort Smith,Canada,YSM
+Nanisivik,Canada,YSR
+Summerside,Canada,YSU
+Sachs Harbour,Canada,YSY
+Cape Dorset,Canada,YTE
+Thompson,Canada,YTH
+Trenton,Canada,YTR
+Timmins,Canada,YTS
+City Centre,Canada,YTZ
+Tuktoyaktuk,Canada,YUB
+Pierre Elliott Trudeau Intl,Canada,YUL
+Repulse Bay,Canada,YUT
+Hall Beach,Canada,YUX
+Rouyn Noranda,Canada,YUY
+La Ronge,Canada,YVC
+Vermilion,Canada,YVG
+Qikiqtarjuaq,Canada,YVM
+Val D Or,Canada,YVO
+Kuujjuaq,Canada,YVP
+Norman Wells,Canada,YVQ
+Vancouver Intl,Canada,YVR
+Buffalo Narrows,Canada,YVT
+Wiarton,Canada,YVV
+Petawawa,Canada,YWA
+Winnipeg Intl,Canada,YWG
+Wabush,Canada,YWK
+Williams Lake,Canada,YWL
+Wrigley,Canada,YWY
+Canadian Rockies Intl,Canada,YXC
+Edmonton City Centre,Canada,YXD
+Saskatoon J G Diefenbaker Intl,Canada,YXE
+Medicine Hat,Canada,YXH
+Fort St John,Canada,YXJ
+Sioux Lookout,Canada,YXL
+Pangnirtung,Canada,YXP
+Timiskaming Rgnl,Canada,YXR
+Prince George,Canada,YXS
+Terrace,Canada,YXT
+London,Canada,YXU
+Abbotsford,Canada,YXX
+Whitehorse Intl,Canada,YXY
+North Bay,Canada,YYB
+Calgary Intl,Canada,YYC
+Smithers,Canada,YYD
+Fort Nelson,Canada,YYE
+Penticton,Canada,YYF
+Charlottetown,Canada,YYG
+Taloyoak,Canada,YYH
+Victoria Intl,Canada,YYJ
+Lynn Lake,Canada,YYL
+Swift Current,Canada,YYN
+Churchill,Canada,YYQ
+Goose Bay,Canada,YYR
+St Johns Intl,Canada,YYT
+Kapuskasing,Canada,YYU
+Armstrong,Canada,YYW
+Mont Joli,Canada,YYY
+Lester B Pearson Intl,Canada,YYZ
+Downsview,Canada,YZD
+Gore Bay Manitoulin,Canada,YZE
+Yellowknife,Canada,YZF
+Slave Lake,Canada,YZH
+Sandspit,Canada,YZP
+Chris Hadfield,Canada,YZR
+Port Hardy,Canada,YZT
+Whitecourt,Canada,YZU
+Sept Iles,Canada,YZV
+Teslin,Canada,YZW
+Greenwood,Canada,YZX
+Faro,Canada,ZFA
+Fort Mcpherson,Canada,ZFM
+Soummam,Algeria,BJA
+Houari Boumediene,Algeria,ALG
+Tiska,Algeria,DJG
+Boufarik,Algeria,QFD
+Illizi Takhamalt,Algeria,VVZ
+Tamanrasset,Algeria,TMR
+Jijel,Algeria,GJL
+Annaba,Algeria,AAE
+Mohamed Boudiaf Intl,Algeria,CZL
+Cheikh Larbi Tebessi,Algeria,TEE
+Hassi R Mel,Algeria,HRM
+Bou Chekif,Algeria,TID
+Tindouf,Algeria,TIN
+Ech Cheliff,Algeria,QAS
+Tafaraoui,Algeria,TAF
+Zenata,Algeria,TLM
+Es Senia,Algeria,ORN
+Ghriss,Algeria,MUW
+Touat Cheikh Sidi Mohamed Belkebir,Algeria,AZR
+Biskra,Algeria,BSK
+El Golea,Algeria,ELG
+Noumerat,Algeria,GHA
+Oued Irara,Algeria,HME
+In Salah,Algeria,INZ
+Sidi Mahdi,Algeria,TGR
+Laghouat,Algeria,LOO
+Timimoun,Algeria,TMX
+Ouargla,Algeria,OGX
+In Amenas,Algeria,IAM
+Cadjehoun,Benin,COO
+Ouagadougou,Burkina Faso,OUA
+Bobo Dioulasso,Burkina Faso,BOY
+Kotoka Intl,Ghana,ACC
+Tamale,Ghana,TML
+Sunyani,Ghana,NYI
+Takoradi,Ghana,TKD
+Abidjan Felix Houphouet Boigny Intl,Cote d'Ivoire,ABJ
+Bouake,Cote d'Ivoire,BYK
+Daloa,Cote d'Ivoire,DJO
+Korhogo,Cote d'Ivoire,HGO
+Man,Cote d'Ivoire,MJC
+San Pedro,Cote d'Ivoire,SPY
+Yamoussoukro,Cote d'Ivoire,ASK
+Nnamdi Azikiwe Intl,Nigeria,ABV
+Akure,Nigeria,AKR
+Benin,Nigeria,BNI
+Calabar,Nigeria,CBQ
+Enugu,Nigeria,ENU
+Gusau,Nigeria,QUS
+Ibadan,Nigeria,IBA
+Ilorin,Nigeria,ILR
+Yakubu Gowon,Nigeria,JOS
+Kaduna,Nigeria,KAD
+Mallam Aminu Intl,Nigeria,KAN
+Maiduguri,Nigeria,MIU
+Makurdi,Nigeria,MDI
+Murtala Muhammed,Nigeria,LOS
+Minna New,Nigeria,MXJ
+Port Harcourt Intl,Nigeria,PHC
+Sadiq Abubakar Iii Intl,Nigeria,SKO
+Yola,Nigeria,YOL
+Zaria,Nigeria,ZAR
+Maradi,Niger,MFQ
+Diori Hamani,Niger,NIM
+Tahoua,Niger,THZ
+Manu Dayak,Niger,AJY
+Zinder,Niger,ZND
+Habib Bourguiba Intl,Tunisia,MIR
+Carthage,Tunisia,TUN
+Gafsa,Tunisia,GAF
+Gabes,Tunisia,GAE
+Zarzis,Tunisia,DJE
+El Borma,Tunisia,EBM
+Thyna,Tunisia,SFA
+Nefta,Tunisia,TOE
+Niamtougou International,Togo,LRL
+Gnassingbe Eyadema Intl,Togo,LFW
+Deurne,Belgium,ANR
+Brussels Natl,Belgium,BRU
+Brussels South,Belgium,CRL
+Wevelgem,Belgium,QKT
+Liege,Belgium,LGG
+Oostende,Belgium,OST
+Bautzen,Germany,BBJ
+Altenburg Nobitz,Germany,AOC
+Barth,Germany,BBH
+Schonefeld,Germany,SXF
+Dresden,Germany,DRS
+Erfurt,Germany,ERF
+Frankfurt Main,Germany,FRA
+Munster Osnabruck,Germany,FMO
+Hamburg,Germany,HAM
+Tempelhof,Germany,THF
+Koln Bonn,Germany,CGN
+Dusseldorf,Germany,DUS
+Franz Josef Strauss,Germany,MUC
+Nurnberg,Germany,NUE
+Leipzig Halle,Germany,LEJ
+Saarbrucken,Germany,SCN
+Stuttgart,Germany,STR
+Tegel,Germany,TXL
+Hannover,Germany,HAJ
+Neuenland,Germany,BRE
+Frankfurt Hahn,Germany,HHN
+Mannheim City,Germany,MHG
+Hamburg Finkenwerder,Germany,XFW
+Kiel Holtenau,Germany,KEL
+Lubeck Blankensee,Germany,LBC
+Arnsberg Menden,Germany,ZCA
+Essen Mulheim,Germany,ESS
+Monchengladbach,Germany,MGL
+Paderborn Lippstadt,Germany,PAD
+Dortmund,Germany,DTM
+Augsburg,Germany,AGB
+Oberpfaffenhofen,Germany,OBF
+Friedrichshafen,Germany,FDH
+Schwerin Parchim,Germany,SZW
+Stendal Borstel,Germany,ZSN
+Bayreuth,Germany,BYU
+Hof Plauen,Germany,HOQ
+Koblenz Winningen,Germany,ZNV
+Trier Fohren,Germany,ZQF
+Speyer,Germany,ZQC
+Donaueschingen Villingen,Germany,ZQL
+Braunschweig Wolfsburg,Germany,BWE
+Kassel Calden,Germany,KSF
+Bremerhaven,Germany,BRV
+Emden,Germany,EME
+Wilhelmshaven Mariensiel,Germany,WVN
+Borkum,Germany,BMK
+Norderney,Germany,NRD
+Flensburg Schaferhaus,Germany,FLF
+Westerland Sylt,Germany,GWT
+Kardla,Estonia,KDL
+Kuressaare,Estonia,URE
+Parnu,Estonia,EPU
+Tallinn,Estonia,TLL
+Tartu,Estonia,TAY
+Enontekio,Finland,ENF
+Halli,Finland,KEV
+Helsinki Malmi,Finland,HEM
+Helsinki Vantaa,Finland,HEL
+Hyvinkaa,Finland,HYV
+Ivalo,Finland,IVL
+Joensuu,Finland,JOE
+Jyvaskyla,Finland,JYV
+Kauhava,Finland,KAU
+Kemi Tornio,Finland,KEM
+Kajaani,Finland,KAJ
+Kruunupyy,Finland,KOK
+Kuusamo,Finland,KAO
+Kittila,Finland,KTT
+Kuopio,Finland,KUO
+Lappeenranta,Finland,LPP
+Mariehamn,Finland,MHQ
+Mikkeli,Finland,MIK
+Oulu,Finland,OUL
+Pori,Finland,POR
+Rovaniemi,Finland,RVN
+Savonlinna,Finland,SVL
+Sodankyla,Finland,SOT
+Tampere Pirkkala,Finland,TMP
+Turku,Finland,TKU
+Utti,Finland,QVY
+Vaasa,Finland,VAA
+Varkaus,Finland,VRK
+Belfast Intl,United Kingdom,BFS
+St Angelo,United Kingdom,ENK
+Belfast City,United Kingdom,BHD
+City of Derry,United Kingdom,LDY
+Birmingham,United Kingdom,BHX
+Coventry,United Kingdom,CVT
+Gloucestershire,United Kingdom,GLO
+Manchester,United Kingdom,MAN
+St Mawgan,United Kingdom,NQY
+Lyneham,United Kingdom,LYE
+Yeovilton,United Kingdom,YEO
+Cardiff,United Kingdom,CWL
+Swansea,United Kingdom,SWS
+Bristol,United Kingdom,BRS
+Liverpool,United Kingdom,LPL
+Luton,United Kingdom,LTN
+Plymouth,United Kingdom,PLH
+Bournemouth,United Kingdom,BOH
+Southampton,United Kingdom,SOU
+Lasham,United Kingdom,QLA
+Alderney,Guernsey,ACI
+Guernsey,Guernsey,GCI
+Jersey,Jersey,JER
+Shoreham,United Kingdom,ESH
+Biggin Hill,United Kingdom,BQH
+Gatwick,United Kingdom,LGW
+City,United Kingdom,LCY
+Farnborough,United Kingdom,FAB
+Blackbushe,United Kingdom,BBS
+Heathrow,United Kingdom,LHR
+Southend,United Kingdom,SEN
+Lydd,United Kingdom,LYX
+Manston,United Kingdom,MSE
+Carlisle,United Kingdom,CAX
+Blackpool,United Kingdom,BLK
+Humberside,United Kingdom,HUY
+Walney Island,United Kingdom,BWF
+Leeds Bradford,United Kingdom,LBA
+Hawarden,United Kingdom,CEG
+Isle Of Man,Isle of Man,IOM
+Newcastle,United Kingdom,NCL
+Durham Tees Valley Airport,United Kingdom,MME
+Nottingham East Midlands,United Kingdom,EMA
+Kirkwall,United Kingdom,KOI
+Sumburgh,United Kingdom,LSI
+Wick,United Kingdom,WIC
+Dyce,United Kingdom,ABZ
+Inverness,United Kingdom,INV
+Glasgow,United Kingdom,GLA
+Edinburgh,United Kingdom,EDI
+Islay,United Kingdom,ILY
+Prestwick,United Kingdom,PIK
+Benbecula,United Kingdom,BEB
+Scatsta,United Kingdom,SDZ
+Dundee,United Kingdom,DND
+Stornoway,United Kingdom,SYY
+Tiree,United Kingdom,TRE
+Leuchars,United Kingdom,ADX
+Lossiemouth,United Kingdom,LMO
+Cambridge,United Kingdom,CBG
+Norwich,United Kingdom,NWI
+Stansted,United Kingdom,STN
+Exeter,United Kingdom,EXT
+Bristol Filton,United Kingdom,FZO
+Kidlington,United Kingdom,OXF
+Mildenhall,United Kingdom,MHZ
+Fairford,United Kingdom,FFD
+Brize Norton,United Kingdom,BZZ
+Odiham,United Kingdom,ODH
+Northolt,United Kingdom,NHT
+Coningsby,United Kingdom,QCY
+Honington,United Kingdom,BEQ
+Waddington,United Kingdom,WTN
+Marham,United Kingdom,KNF
+Mount Pleasant,Falkland Islands,MPN
+Schiphol,Netherlands,AMS
+Maastricht,Netherlands,MST
+Eindhoven,Netherlands,EIN
+Eelde,Netherlands,GRQ
+De Kooy,Netherlands,DHR
+Leeuwarden,Netherlands,LWR
+Rotterdam,Netherlands,RTM
+Soesterberg,Netherlands,UTC
+Twenthe,Netherlands,ENS
+Valkenburg,Netherlands,LID
+Woensdrecht,Netherlands,WOE
+Cork,Ireland,ORK
+Galway,Ireland,GWY
+Dublin,Ireland,DUB
+Ireland West Knock,Ireland,NOC
+Kerry,Ireland,KIR
+Shannon,Ireland,SNN
+Sligo,Ireland,SXL
+Waterford,Ireland,WAT
+Aarhus,Denmark,AAR
+Billund,Denmark,BLL
+Kastrup,Denmark,CPH
+Esbjerg,Denmark,EBJ
+Karup,Denmark,KRP
+Odense,Denmark,ODE
+Roskilde,Denmark,RKE
+Bornholm Ronne,Denmark,RNN
+Sonderborg,Denmark,SGD
+Skrydstrup,Denmark,SKS
+Thisted,Denmark,TED
+Vagar,Faroe Islands,FAE
+Stauning,Denmark,STA
+Aalborg,Denmark,AAL
+Luxembourg,Luxembourg,LUX
+Vigra,Norway,AES
+Andenes,Norway,ANX
+Alta,Norway,ALF
+Bronnoy,Norway,BNN
+Bodo,Norway,BOO
+Flesland,Norway,BGO
+Batsfjord,Norway,BJF
+Kjevik,Norway,KRS
+Bardufoss,Norway,BDU
+Evenes,Norway,EVE
+Leirin,Norway,VDB
+Floro,Norway,FRO
+Gardermoen,Norway,OSL
+Karmoy,Norway,HAU
+Hasvik,Norway,HAA
+Kvernberget,Norway,KSU
+Hoybuktmoen,Norway,KKN
+Lista,Norway,FAN
+Aro,Norway,MOL
+Kjaerstad,Norway,MJF
+Banak,Norway,LKL
+Notodden,Norway,NTB
+Orland,Norway,OLA
+Roros,Norway,RRS
+Moss,Norway,RYG
+Longyear,Norway,LYR
+Geiteryggen,Norway,SKE
+Sorstokken,Norway,SRP
+Stokka,Norway,SSJ
+Langnes,Norway,TOS
+Torp,Norway,TRF
+Vaernes,Norway,TRD
+Sola,Norway,SVG
+Lech Walesa,Poland,GDN
+Balice,Poland,KRK
+Pyrzowice,Poland,KTW
+Lawica,Poland,POZ
+Jasionka,Poland,RZE
+Goleniow,Poland,SZZ
+Redzikowo,Poland,OSP
+Okecie,Poland,WAW
+Strachowice,Poland,WRO
+Babimost,Poland,IEG
+Ronneby,Sweden,RNB
+Landvetter,Sweden,GOT
+Jonkoping,Sweden,JKG
+Lidkoping,Sweden,LDK
+Save,Sweden,GSE
+Skovde,Sweden,KVB
+Trollhattan Vanersborg,Sweden,THN
+Karlskoga,Sweden,KSK
+Mora,Sweden,MXX
+Skavsta,Sweden,NYO
+Kristianstad,Sweden,KID
+Landskrona,Sweden,JLD
+Oskarshamn,Sweden,OSK
+Kalmar,Sweden,KLR
+Sturup,Sweden,MMX
+Halmstad,Sweden,HAD
+Kronoberg,Sweden,VXO
+Sveg,Sweden,EVG
+Gallivare,Sweden,GEV
+Hudiksvall,Sweden,HUV
+Kramfors Solleftea,Sweden,KRF
+Lycksele,Sweden,LYC
+Sundsvall Harnosand,Sweden,SDL
+Ornskoldsvik,Sweden,OER
+Kiruna,Sweden,KRN
+Skelleftea,Sweden,SFT
+Umea,Sweden,UME
+Vilhelmina,Sweden,VHM
+Arvidsjaur,Sweden,AJR
+Orebro,Sweden,ORB
+Vasteras,Sweden,VST
+Kallax,Sweden,LLA
+Arlanda,Sweden,ARN
+Bromma,Sweden,BMA
+Borlange,Sweden,BLE
+Hultsfred,Sweden,HLF
+Gavle,Sweden,GVX
+Saab,Sweden,LPI
+Kungsangen,Sweden,NRK
+Visby,Sweden,VBY
+Spangdahlem Ab,Germany,SPM
+Ramstein Ab,Germany,RMS
+Giebelstadt Aaf,Germany,GHF
+Celle,Germany,ZCN
+Hanau Aaf,Germany,ZNF
+Geilenkirchen,Germany,GKE
+Laage,Germany,RLG
+Furstenfeldbruck,Germany,FEL
+Gutersloh,Germany,GUT
+Alexander Bay,South Africa,ALJ
+Aggeneys,South Africa,AGZ
+Bhisho,South Africa,BIY
+Bloemfontein Intl,South Africa,BFN
+Cape Town Intl,South Africa,CPT
+Durban Intl,South Africa,DUR
+East London,South Africa,ELS
+Grand Central,South Africa,GCJ
+George,South Africa,GRJ
+Hoedspruit Afb,South Africa,HDS
+Johannesburg Intl,South Africa,JNB
+Kimberley,South Africa,KIM
+Kleinsee,South Africa,KLZ
+Lanseria,South Africa,HLA
+Ladysmith,South Africa,LAY
+Margate,South Africa,MGH
+Messina,South Africa,MEZ
+Newcastle,South Africa,NCS
+Oudtshoorn,South Africa,DUH
+Port Elizabeth Intl,South Africa,PLZ
+Phalaborwa,South Africa,PHW
+Polokwane International,South Africa,PTG
+Pietermaritzburg,South Africa,PZB
+Pilanesberg Intl,South Africa,NTY
+Queenstown,South Africa,UTW
+Richards Bay,South Africa,RCB
+Springbok,South Africa,SBU
+Sishen,South Africa,SIS
+Skukuza,South Africa,SZK
+Tzaneen,South Africa,LTA
+Prince Mangosuthu Buthelezi,South Africa,ULD
+Upington,South Africa,UTN
+Mthatha,South Africa,UTT
+Vryburg,South Africa,VRU
+Virginia,South Africa,VIR
+Wonderboom,South Africa,PRY
+Welkom,South Africa,WEL
+Francistown,Botswana,FRW
+Jwaneng,Botswana,JWA
+Kasane,Botswana,BBK
+Maun,Botswana,MUB
+Sir Seretse Khama Intl,Botswana,GBE
+Selebi Phikwe,Botswana,PKW
+Maya Maya,Congo (Brazzaville),BZV
+Owando,Congo (Kinshasa),FTX
+Ouesso,Congo (Kinshasa),OUE
+Pointe Noire,Congo (Brazzaville),PNR
+Matsapha,Swaziland,MTS
+Bangui M Poko,Central African Republic,BGF
+Berberati,Central African Republic,BBT
+Bata,Equatorial Guinea,BSG
+Malabo,Equatorial Guinea,SSG
+Sir Seewoosagur Ramgoolam Intl,Mauritius,MRU
+Plaine Corail,Mauritius,RRG
+Tiko,Cameroon,TKC
+Douala,Cameroon,DLA
+Salak,Cameroon,MVR
+Foumban Nkounja,Cameroon,FOM
+Ngaoundere,Cameroon,NGE
+Garoua,Cameroon,GOU
+Bafoussam,Cameroon,BFX
+Bamenda,Cameroon,BPC
+Yaounde Ville,Cameroon,YAO
+Livingstone,Zambia,LVI
+Lusaka Intl,Zambia,LUN
+Mfuwe,Zambia,MFU
+Ndola,Zambia,NLA
+Southdowns,Zambia,KIW
+Prince Said Ibrahim,Comoros,HAH
+Bandaressalam,Comoros,NWA
+Ouani,Comoros,AJN
+Dzaoudzi Pamandzi,Mayotte,DZA
+St Denis Gillot,Reunion,RUN
+St Pierre Pierrefonds,Reunion,ZSE
+Ivato,Madagascar,TNR
+Miandrivazo,Madagascar,ZVA
+Sainte Marie,Madagascar,SMS
+Toamasina,Madagascar,TMM
+Morondava,Madagascar,MOQ
+Arrachart,Madagascar,DIE
+Avaratra,Madagascar,WMR
+Andapa,Madagascar,ZWA
+Ambilobe,Madagascar,AMB
+Antsirabato,Madagascar,ANM
+Analalava,Madagascar,HVA
+Philibert Tsiranana,Madagascar,MJN
+Fascene,Madagascar,NOS
+Besalampy,Madagascar,BPY
+Maroantsetra,Madagascar,WMN
+Sambava,Madagascar,SVB
+Vohimarina,Madagascar,VOH
+Ambalabe,Madagascar,WAI
+Tolagnaro,Madagascar,FTU
+Fianarantsoa,Madagascar,WFI
+Farafangana,Madagascar,RVA
+Manakara,Madagascar,WVK
+Mananjary,Madagascar,MNJ
+Morombe,Madagascar,MXM
+Toliara,Madagascar,TLE
+Mbanza Congo,Angola,SSY
+Benguela,Angola,BUG
+Cabinda,Angola,CAB
+Culebra Airport,Puerto Rico,CPX
+Huambo,Angola,NOV
+Kuito,Angola,SVP
+Luanda 4 De Fevereiro,Angola,LAD
+Malanje,Angola,MEG
+Menongue,Angola,SPP
+Negage,Angola,GXG
+Porto Amboim,Angola,PBN
+Saurimo,Angola,VHC
+Soyo,Angola,SZA
+Lubango,Angola,SDD
+Luena,Angola,LUO
+Uige,Angola,UGO
+Xangongo,Angola,XGN
+Oyem,Gabon,OYE
+Okondja,Gabon,OKN
+Lambarene,Gabon,LBQ
+Bitam,Gabon,BMM
+Port Gentil,Gabon,POG
+Omboue Hopital,Gabon,OMB
+Makokou,Gabon,MKU
+Leon M Ba,Gabon,LBV
+Mvengue,Gabon,MVB
+Principe,Sao Tome and Principe,PCP
+Sao Tome Intl,Sao Tome and Principe,TMS
+Beira,Mozambique,BEW
+Inhambane,Mozambique,INH
+Lichinga,Mozambique,VXC
+Maputo,Mozambique,MPM
+Mocimboa Da Praia,Mozambique,MZB
+Nacala,Mozambique,MNC
+Nampula,Mozambique,APL
+Pemba,Mozambique,POL
+Quelimane,Mozambique,UEL
+Tete Chingodzi,Mozambique,TET
+Vilankulo,Mozambique,VNX
+Desroches,Seychelles,DES
+Seychelles Intl,Seychelles,SEZ
+Praslin,Seychelles,PRI
+Abeche,Chad,AEH
+Moundou,Chad,MQQ
+Ndjamena Hassan Djamous,Chad,NDJ
+Faya Largeau,Chad,FYT
+J M Nkomo Intl,Zimbabwe,BUQ
+Buffalo Range,Zimbabwe,BFO
+Victoria Falls Intl,Zimbabwe,VFA
+Harare Intl,Zimbabwe,HRE
+Kariba Intl,Zimbabwe,KAB
+Masvingo Intl,Zimbabwe,MVZ
+Gweru Thornhill,Zimbabwe,GWE
+Hwange National Park,Zimbabwe,WKM
+Chileka Intl,Malawi,BLZ
+Karonga,Malawi,KGJ
+Kamuzu Intl,Malawi,LLW
+Mzuzu,Malawi,ZZU
+Moshoeshoe I Intl,Lesotho,MSU
+Ndjili Intl,Congo (Kinshasa),FIH
+Ndolo,Congo (Kinshasa),NLO
+Muanda,Congo (Kinshasa),MNB
+Bandundu,Congo (Kinshasa),FDU
+Kikwit,Congo (Kinshasa),KKW
+Mbandaka,Congo (Kinshasa),MDK
+Gbadolite,Congo (Kinshasa),BDT
+Gemena,Congo (Kinshasa),GMA
+Lisala,Congo (Kinshasa),LIQ
+Kisangani Simisini,Congo (Kinshasa),FKI
+Matari,Congo (Kinshasa),IRP
+Bunia,Congo (Kinshasa),BUX
+Bukavu Kavumu,Congo (Kinshasa),BKY
+Goma,Congo (Kinshasa),GOM
+Kindu,Congo (Kinshasa),KND
+Lubumbashi Intl,Congo (Kinshasa),FBM
+Kolwezi,Congo (Kinshasa),KWZ
+Kalemie,Congo (Kinshasa),FMI
+Kamina Base,Congo (Kinshasa),KMN
+Kananga,Congo (Kinshasa),KGA
+Mbuji Mayi,Congo (Kinshasa),MJM
+Senou,Mali,BKO
+Gao,Mali,GAQ
+Kayes Dag Dag,Mali,KYS
+Ambodedjo,Mali,MZI
+Tombouctou,Mali,TOM
+Banjul Intl,Gambia,BJL
+Fuerteventura,Spain,FUE
+Hierro,Spain,VDE
+La Palma,Spain,SPC
+Gran Canaria,Spain,LPA
+Lanzarote,Spain,ACE
+Tenerife Sur,Spain,TFS
+Tenerife Norte,Spain,TFN
+Melilla,Spain,MLN
+Freetown Lungi,Sierra Leone,FNA
+Monrovia Spriggs Payne,Liberia,MLW
+Monrovia Roberts Intl,Liberia,ROB
+Inezgane,Morocco,AGA
+Plage Blanche,Morocco,TTA
+Saiss,Morocco,FEZ
+Moulay Ali Cherif,Morocco,ERH
+Bassatine,Morocco,MEK
+Angads,Morocco,OUD
+Sale,Morocco,RBA
+Mohammed V Intl,Morocco,CMN
+Menara,Morocco,RAK
+Kenitra,Morocco,NNA
+Ouarzazate,Morocco,OZZ
+Cherif El Idrissi,Morocco,AHU
+Saniat Rmel,Morocco,TTU
+Ibn Batouta,Morocco,TNG
+Ziguinchor,Senegal,ZIG
+Cap Skiring,Senegal,CSK
+Kaolack,Senegal,KLC
+Leopold Sedar Senghor Intl,Senegal,DKR
+Saint Louis,Senegal,XLS
+Bakel,Senegal,BXE
+Kedougou,Senegal,KGG
+Tambacounda,Senegal,TUD
+Aioun El Atrouss,Mauritania,IEO
+Tidjikja,Mauritania,TIY
+Kiffa,Mauritania,KFA
+Nema,Mauritania,EMN
+Kaedi,Mauritania,KED
+Nouakchott,Mauritania,NKC
+Selibady,Mauritania,SEY
+Atar,Mauritania,ATR
+Nouadhibou,Mauritania,NDB
+Fria,Guinea,FIG
+Faranah,Guinea,FAA
+Labe,Guinea,LEK
+Amilcar Cabral Intl,Cape Verde,SID
+Rabil,Cape Verde,BVC
+Maio,Cape Verde,MMO
+Preguica,Cape Verde,SNE
+Sao Pedro,Cape Verde,VXE
+Bole Intl,Ethiopia,ADD
+Arba Minch,Ethiopia,AMH
+Axum,Ethiopia,AXU
+Bahir Dar,Ethiopia,BJR
+Dire Dawa Intl,Ethiopia,DIR
+Gambella,Ethiopia,GMB
+Gondar,Ethiopia,GDQ
+Jimma,Ethiopia,JIM
+Lalibella,Ethiopia,LLI
+Makale,Ethiopia,MQX
+Asosa,Ethiopia,ASO
+Bujumbura Intl,Burundi,BJM
+Egal Intl,Somalia,HGA
+Berbera,Somalia,BBO
+Kisimayu,Somalia,KMU
+Alexandria Intl,Egypt,ALY
+Abu Simbel,Egypt,ABS
+Cairo Intl,Egypt,CAI
+Hurghada Intl,Egypt,HRG
+El Gora,Egypt,EGR
+Luxor Intl,Egypt,LXR
+Mersa Matruh,Egypt,MUH
+Port Said,Egypt,PSD
+St Catherine Intl,Egypt,SKV
+Aswan Intl,Egypt,ASW
+El Tor,Egypt,ELT
+Eldoret Intl,Kenya,EDL
+Kisumu,Kenya,KIS
+Kitale,Kenya,KTL
+Cambridge Municipal Airport,United States,CDI
+Lodwar,Kenya,LOK
+Lamu Manda,Kenya,LAU
+Mombasa Moi Intl,Kenya,MBA
+Nairobi Wilson,Kenya,WIL
+Wajir,Kenya,WJR
+Ghat,Libya,GHT
+Kufra,Libya,AKF
+Benina,Libya,BEN
+Sebha,Libya,SEB
+Tripoli Intl,Libya,TIP
+Ghadames East,Libya,LTD
+Gisenyi,Rwanda,GYI
+Kigali Intl,Rwanda,KGL
+Kamembe,Rwanda,KME
+Dongola,Sudan,DOG
+El Fashir,Sudan,ELF
+Kassala,Sudan,KSL
+El Obeid,Sudan,EBD
+Juba,South Sudan,JUB
+Malakal,Sudan,MAK
+Khartoum,Sudan,KRT
+Arusha,Tanzania,ARK
+Mwalimu Julius K Nyerere Intl,Tanzania,DAR
+Dodoma,Tanzania,DOD
+Iringa,Tanzania,IRI
+Kilimanjaro Intl,Tanzania,JRO
+Lake Manyara,Tanzania,LKY
+Mtwara,Tanzania,MYW
+Mwanza,Tanzania,MWZ
+Pemba,Tanzania,PMA
+Tanga,Tanzania,TGT
+Zanzibar,Tanzania,ZNZ
+Entebbe Intl,Uganda,EBB
+Dusseldorf Hauptbahnhof,Germany,QDU
+Soroti,Uganda,SRT
+Tirana Rinas,Albania,TIA
+Burgas,Bulgaria,BOJ
+Gorna Oryahovitsa,Bulgaria,GOZ
+Plovdiv,Bulgaria,PDV
+Sofia,Bulgaria,SOF
+Varna,Bulgaria,VAR
+Larnaca,Cyprus,LCA
+Pafos Intl,Cyprus,PFO
+Akrotiri,Cyprus,AKT
+Dubrovnik,Croatia,DBV
+Osijek,Croatia,OSI
+Pula,Croatia,PUY
+Rijeka,Croatia,RJK
+Split,Croatia,SPU
+Zagreb,Croatia,ZAG
+Zadar,Croatia,ZAD
+Alicante,Spain,ALC
+Almeria,Spain,LEI
+Asturias,Spain,OVD
+Cordoba,Spain,ODB
+Bilbao,Spain,BIO
+Barcelona,Spain,BCN
+Talavera La Real,Spain,BJZ
+A Coruna,Spain,LCG
+Girona,Spain,GRO
+Granada,Spain,GRX
+Ibiza,Spain,IBZ
+Jerez,Spain,XRY
+Murcia San Javier,Spain,MJV
+Alexion,Greece,PKH
+Barajas,Spain,MAD
+Malaga,Spain,AGP
+Menorca,Spain,MAH
+Moron Ab,Spain,OZP
+Pamplona,Spain,PNA
+Reus,Spain,REU
+Salamanca,Spain,SLM
+San Sebastian,Spain,EAS
+Santiago,Spain,SCQ
+Seo De Urgel,Spain,LEU
+Torrejon,Spain,TOJ
+Valencia,Spain,VLC
+Valladolid,Spain,VLL
+Vitoria,Spain,VIT
+Vigo,Spain,VGO
+Santander,Spain,SDR
+Zaragoza Ab,Spain,ZAZ
+Sevilla,Spain,SVQ
+Calais Dunkerque,France,CQF
+Le Touquet Paris Plage,France,LTQ
+La Garenne,France,AGF
+Merignac,France,BOD
+Roumaniere,France,EGC
+Chateaubernard,France,CNG
+Biard,France,PIS
+Bellegarde,France,LIG
+Souche,France,NIT
+Blagnac,France,TLS
+Pau Pyrenees,France,PUF
+Lourdes,France,LDE
+Brie Champniers,France,ANG
+La Roche,France,BVE
+Bassillac,France,PGX
+Anglet,France,BIQ
+La Teste De Buch,France,XAC
+Le Sequestre,France,LBI
+Mazamet,France,DCM
+Marcillac,France,RDZ
+Medis,France,RYN
+St Agnant,France,RCO
+Houssen,France,CMR
+Tavaux,France,DLE
+Ardeche Meridionale,France,OBS
+Loudes,France,LPY
+Ceyzeriat,France,XBK
+Tarare,France,XVF
+Montbeugny,France,XMU
+Metz Nancy Lorraine,France,ETZ
+Poretta,France,BIA
+Saint Catherine,France,CLY
+Sud Corse,France,FSC
+Campo Dell Oro,France,AJA
+Solenzara,France,SOZ
+Branches,France,AUF
+Aix Les Bains,France,CMF
+Auvergne,France,CFE
+Bourges,France,BOU
+Champforgeuil,France,XCD
+Annemasse,France,QNJ
+Saint Exupery,France,LYS
+Charnay,France,QNX
+Renaison,France,RNE
+Meythet,France,NCY
+Saint Geoirs,France,GNB
+Domerat,France,MCU
+Chabeuil,France,VAF
+Charmeil,France,VHY
+Aurillac,France,AUR
+Deols,France,CHR
+Bron,France,LYN
+Aix Les Milles,France,QXB
+Mandelieu,France,CEQ
+Boutheon,France,EBU
+Salvaza,France,CCF
+Provence,France,MRS
+Cote D\\'Azur,France,NCE
+Rivesaltes,France,PGF
+Le Castellet,France,CTT
+Mediterranee,France,MPL
+Vias,France,BZR
+Caumont,France,AVN
+Brenoux,France,MEN
+Tille,France,BVA
+Octeville,France,LEH
+Bricy,France,ORE
+Vatry,France,XCR
+Vallee De Seine,France,URO
+Val De Loire,France,TUF
+Le Pontreau,France,CET
+Entrammes,France,LVA
+Le Bourget,France,LBG
+Creil,France,CSF
+Charles De Gaulle,France,CDG
+Toussus Le Noble,France,TNF
+Orly,France,ORY
+Cormeilles En Vexin,France,POX
+Barberey,France,QYR
+Fourchambault,France,NVS
+Lesquin,France,LIL
+Guipavas,France,BES
+Maupertus,France,CER
+Pleurtuit,France,DNR
+Granville,France,GFR
+St Gatien,France,DOL
+Lann Bihoue,France,LRT
+Les Ajoncs,France,EDM
+Carpiquet,France,CFR
+Arnage,France,LME
+St Jacques,France,RNS
+Lannion,France,LAI
+Pluguffan,France,UIP
+Nantes Atlantique,France,NTE
+Armor,France,SBK
+Ploujean,France,MXN
+Meucon,France,VNE
+Montoir,France,SNR
+Bale Mulhouse,France,MLH
+Longvic,France,DIJ
+Frescaty,France,MZM
+Mirecourt,France,EPL
+Essey,France,ENC
+Champagne,France,RHE
+Entzheim,France,SXB
+Le Palyvestre,France,TLN
+Garons,France,FNI
+Miquelon,Saint Pierre and Miquelon,MQC
+St Pierre,Saint Pierre and Miquelon,FSP
+Andravida,Greece,PYR
+Agrinion,Greece,AGQ
+Dimokritos,Greece,AXD
+Nea Anchialos,Greece,VOL
+Chios,Greece,JKH
+Ioannina,Greece,IOA
+Nikos Kazantzakis,Greece,HER
+Aristotelis,Greece,KSO
+Kithira,Greece,KIT
+Kefallinia,Greece,EFL
+Kalamata,Greece,KLX
+Kos,Greece,KGS
+Karpathos,Greece,AOK
+Ioannis Kapodistrias Intl,Greece,CFU
+Kasos,Greece,KSJ
+Megas Alexandros Intl,Greece,KVA
+Filippos,Greece,KZI
+Leros,Greece,LRS
+Limnos,Greece,LXS
+Larisa,Greece,LRA
+Mikonos,Greece,JMK
+Mitilini,Greece,MJT
+Aktio,Greece,PVK
+Rhodes Diagoras,Greece,RHO
+Araxos,Greece,GPA
+Souda,Greece,CHQ
+Alexandros Papadiamantis,Greece,JSI
+Samos,Greece,SMI
+Ashford,United Kingdom,LYM
+Santorini,Greece,JTR
+Sitia,Greece,JSH
+Skiros,Greece,SKU
+Makedonia,Greece,SKG
+Dionysios Solomos,Greece,ZTH
+Ferihegy,Hungary,BUD
+Debrecen,Hungary,DEB
+Door County Cherryland Airport,United States,SUE
+Crotone,Italy,CRV
+Bari,Italy,BRI
+Gino Lisa,Italy,FOG
+Grottaglie,Italy,TAR
+Lecce,Italy,LCC
+Pescara,Italy,PSR
+Casale,Italy,BDS
+Lamezia Terme,Italy,SUF
+Catania Fontanarossa,Italy,CTA
+Lampedusa,Italy,LMP
+Pantelleria,Italy,PNL
+Palermo,Italy,PMO
+Reggio Calabria,Italy,REG
+Trapani Birgi,Italy,TPS
+Sigonella,Italy,NSY
+Alghero,Italy,AHO
+Decimomannu,Italy,DCI
+Elmas,Italy,CAG
+Olbia Costa Smeralda,Italy,OLB
+Tortoli,Italy,TTB
+Malpensa,Italy,MXP
+Bergamo Orio Al Serio,Italy,BGY
+Torino,Italy,TRN
+Albenga,Italy,ALL
+Genova Sestri,Italy,GOA
+Linate,Italy,LIN
+Parma,Italy,PMF
+Piacenza,Italy,QPZ
+Levaldigi,Italy,CUF
+Aviano Ab,Italy,AVB
+Bolzano,Italy,BZO
+Bologna,Italy,BLQ
+Treviso,Italy,TSF
+Forli,Italy,FRL
+Montichiari,Italy,VBS
+Ronchi Dei Legionari,Italy,TRS
+Rimini,Italy,RMI
+Vicenza,Italy,VIC
+Padova,Italy,QPA
+Villafranca,Italy,VRN
+Venezia Tessera,Italy,VCE
+Ampugnano,Italy,SAY
+Ciampino,Italy,CIA
+Fiumicino,Italy,FCO
+Marina Di Campo,Italy,EBA
+Latina,Italy,QLT
+Capodichino,Italy,NAP
+Pisa,Italy,PSA
+Firenze,Italy,FLR
+Grosseto,Italy,GRS
+Perugia,Italy,PEG
+Ljubljana,Slovenia,LJU
+Maribor,Slovenia,MBX
+Portoroz,Slovenia,POW
+Karlovy Vary,Czech Republic,KLV
+Mosnov,Czech Republic,OSR
+Pardubice,Czech Republic,PED
+Prerov,Czech Republic,PRV
+Ruzyne,Czech Republic,PRG
+Turany,Czech Republic,BRQ
+Ben Gurion,Israel,TLV
+Teyman,Israel,BEV
+Eilat,Israel,ETH
+Haifa,Israel,HFA
+Mahanaim I Ben Yaakov,Israel,RPN
+Ovda,Israel,VDA
+Sde Dov,Israel,SDV
+Luqa,Malta,MLA
+Graz,Austria,GRZ
+Innsbruck,Austria,INN
+Linz,Austria,LNZ
+Salzburg,Austria,SZG
+Schwechat,Austria,VIE
+Santa Maria,Portugal,SMA
+Braganca,Portugal,BGC
+Flores,Portugal,FLW
+Faro,Portugal,FAO
+Graciosa,Portugal,GRW
+Horta,Portugal,HOR
+Lajes,Portugal,TER
+Ponta Delgada,Portugal,PDL
+Pico,Portugal,PIX
+Porto,Portugal,OPO
+Porto Santo,Portugal,PXO
+Lisboa,Portugal,LIS
+Sao Jorge,Portugal,SJZ
+Vila Real,Portugal,VRL
+Eastern Oregon Regional Airport,United States,PDT
+Mostar,Bosnia and Herzegovina,OMO
+Sarajevo,Bosnia and Herzegovina,SJJ
+Arad,Romania,ARW
+Bacau,Romania,BCM
+Tautii Magheraus,Romania,BAY
+Aurel Vlaicu,Romania,BBU
+Mihail Kogalniceanu,Romania,CND
+Cluj Napoca,Romania,CLJ
+Caransebes,Romania,CSB
+Craiova,Romania,CRA
+Iasi,Romania,IAS
+Oradea,Romania,OMR
+Henri Coanda,Romania,OTP
+Sibiu,Romania,SBZ
+Satu Mare,Romania,SUJ
+Stefan Cel Mare,Romania,SCV
+Cataloi,Romania,TCE
+Transilvania Targu Mures,Romania,TGM
+Traian Vuia,Romania,TSR
+Geneve Cointrin,Switzerland,GVA
+Sion,Switzerland,SIR
+Lugano,Switzerland,LUG
+Bern Belp,Switzerland,BRN
+Zurich,Switzerland,ZRH
+St Gallen Altenrhein,Switzerland,ACH
+Samedan,Switzerland,SMV
+Esenboga,Turkey,ESB
+Etimesgut,Turkey,ANK
+Adana,Turkey,ADA
+Afyon,Turkey,AFY
+Antalya,Turkey,AYT
+Oguzeli,Turkey,GZT
+Konya,Turkey,KYA
+Merzifon,Turkey,MZH
+Sivas,Turkey,VAS
+Erhac,Turkey,MLX
+Erkilet,Turkey,ASR
+Cardak,Turkey,DNZ
+Ataturk,Turkey,IST
+Balikesir,Turkey,BZI
+Bandirma,Turkey,BDM
+Tyonek Airport,United States,TYE
+Eskisehir,Turkey,ESK
+Adnan Menderes,Turkey,ADB
+Cigli,Turkey,IGL
+Dalaman,Turkey,DLM
+Riverton Regional,United States,RIW
+Imsik,Turkey,BXN
+Elazig,Turkey,EZS
+Diyarbakir,Turkey,DIY
+Erzincan,Turkey,ERC
+Erzurum,Turkey,ERZ
+Trabzon,Turkey,TZX
+Montrose Regional Airport,United States,MTJ
+Van,Turkey,VAN
+Batman,Turkey,BAL
+Chisinau Intl,Moldova,KIV
+Ohrid,Macedonia,OHD
+Skopje,Macedonia,SKP
+Gibraltar,Gibraltar,GIB
+Beograd,Serbia,BEG
+Nis,Serbia,INI
+Podgorica,Montenegro,TGD
+Pristina,Serbia,PRN
+Tivat,Montenegro,TIV
+M R Stefanik,Slovakia,BTS
+Kosice,Slovakia,KSC
+Piestany,Slovakia,PZY
+Sliac,Slovakia,SLD
+Tatry,Slovakia,TAT
+North Caicos,Turks and Caicos Islands,NCA
+Providenciales,Turks and Caicos Islands,PLS
+South Caicos,Turks and Caicos Islands,XSC
+Arroyo Barril Intl,Dominican Republic,EPS
+Maria Montez Intl,Dominican Republic,BRX
+Casa De Campo Intl,Dominican Republic,LRM
+Punta Cana Intl,Dominican Republic,PUJ
+Gregorio Luperon Intl,Dominican Republic,POP
+Las Americas Intl,Dominican Republic,SDQ
+Cibao Intl,Dominican Republic,STI
+Coban,Guatemala,CBV
+La Aurora,Guatemala,GUA
+Goloson Intl,Honduras,LCE
+La Mesa Intl,Honduras,SAP
+Guanaja,Honduras,GJA
+Juan Manuel Galvez Intl,Honduras,RTB
+Tela,Honduras,TEA
+Toncontin Intl,Honduras,TGU
+Boscobel,Jamaica,OCJ
+Norman Manley Intl,Jamaica,KIN
+Sangster Intl,Jamaica,MBJ
+Ken Jones,Jamaica,POT
+Tinson Pen,Jamaica,KTP
+General Juan N Alvarez Intl,Mexico,ACA
+Del Norte Intl,Mexico,NTR
+Jesus Teran Intl,Mexico,AGU
+Bahias De Huatulco Intl,Mexico,HUX
+General Mariano Matamoros,Mexico,CVJ
+Ciudad Del Carmen Intl,Mexico,CME
+Culiacan Intl,Mexico,CUL
+Chetumal Intl,Mexico,CTM
+Ciudad Obregon Intl,Mexico,CEN
+Ingeniero Alberto Acuna Ongay Intl,Mexico,CPE
+Abraham Gonzalez Intl,Mexico,CJS
+General R Fierro Villalobos Intl,Mexico,CUU
+General Pedro Jose Mendez Intl,Mexico,CVM
+Kenosha Regional Airport,United States,ENW
+Cozumel Intl,Mexico,CZM
+Durango Intl,Mexico,DGO
+Tepic,Mexico,TPQ
+Ensenada,Mexico,ESE
+Don Miguel Hidalgo Y Costilla Intl,Mexico,GDL
+General Jose Maria Yanez Intl,Mexico,GYM
+Tehuacan,Mexico,TCN
+General Ignacio P Garcia Intl,Mexico,HMO
+Colima,Mexico,CLQ
+Isla Mujeres,Mexico,ISJ
+Plan De Guadalupe Intl,Mexico,SLW
+Lazaro Cardenas,Mexico,LZC
+Valle Del Fuerte Intl,Mexico,LMM
+Guanajuato Intl,Mexico,BJX
+General Manuel Marquez De Leon Intl,Mexico,LAP
+Loreto Intl,Mexico,LTO
+General Servando Canales Intl,Mexico,MAM
+Licenciado Manuel Crescencio Rejon Int,Mexico,MID
+General Rodolfo Sanchez Taboada Intl,Mexico,MXL
+General Francisco J Mujica Intl,Mexico,MLM
+Minatitlan,Mexico,MTT
+Monclova Intl,Mexico,LOV
+Licenciado Benito Juarez Intl,Mexico,MEX
+General Mariano Escobedo Intl,Mexico,MTY
+General Rafael Buelna Intl,Mexico,MZT
+Nogales Intl,Mexico,NOG
+Quetzalcoatl Intl,Mexico,NLD
+Xoxocotlan Intl,Mexico,OAX
+Tajin,Mexico,PAZ
+Hermanos Serdan Intl,Mexico,PBC
+Ingeniero Juan Guillermo Villasana,Mexico,PCA
+Puerto Penasco,Mexico,PPE
+Piedras Negras Intl,Mexico,PDS
+Licenciado Y Gen Ignacio Lopez Rayon,Mexico,UPN
+Licenciado Gustavo Diaz Ordaz Intl,Mexico,PVR
+Puerto Escondido Intl,Mexico,PXM
+Queretaro Intercontinental,Mexico,QRO
+General Lucio Blanco Intl,Mexico,REX
+Los Cabos Intl,Mexico,SJD
+Ponciano Arriaga Intl,Mexico,SLP
+Tlaxcala,Mexico,TXA
+Torreon Intl,Mexico,TRC
+Angel Albino Corzo,Mexico,TGZ
+General Abelardo L Rodriguez Intl,Mexico,TIJ
+General Francisco Javier Mina Intl,Mexico,TAM
+Tamuin,Mexico,TSL
+Licenciado Adolfo Lopez Mateos Intl,Mexico,TLC
+Tapachula Intl,Mexico,TAP
+Cancun Intl,Mexico,CUN
+C P A Carlos Rovirosa Intl,Mexico,VSA
+General Heriberto Jara Intl,Mexico,VER
+General Leobardo C Ruiz Intl,Mexico,ZCL
+Ixtapa Zihuatanejo Intl,Mexico,ZIH
+Zamora,Mexico,ZMM
+Playa De Oro Intl,Mexico,ZLO
+Bluefields,Nicaragua,BEF
+Managua Intl,Nicaragua,MGA
+Puerto Cabezas,Nicaragua,PUZ
+Bocas Del Toro Intl,Panama,BOC
+Cap Manuel Nino Intl,Panama,CHX
+Enrique Malek Intl,Panama,DAV
+Howard,Panama,HOW
+Marcos A Gelabert Intl,Panama,PAC
+Tocumen Intl,Panama,PTY
+North Las Vegas Airport,United States,VGT
+Coto 47,Costa Rica,OTR
+Golfito,Costa Rica,GLF
+Daniel Oduber Quiros Intl,Costa Rica,LIR
+Limon Intl,Costa Rica,LIO
+Nosara,Costa Rica,NOB
+Juan Santamaria Intl,Costa Rica,SJO
+Palmar Sur,Costa Rica,PMZ
+La Managua,Costa Rica,XQP
+El Salvador Intl,El Salvador,SAL
+Cap Haitien Intl,Haiti,CAP
+Toussaint Louverture Intl,Haiti,PAP
+Gustavo Rizo,Cuba,BCA
+Carlos Manuel De Cespedes,Cuba,BYM
+Maximo Gomez,Cuba,AVI
+Jaime Gonzalez,Cuba,CFG
+Vilo Acuna Intl,Cuba,CYO
+Ignacio Agramonte Intl,Cuba,CMW
+Antonio Maceo Intl,Cuba,SCU
+Mariana Grajales,Cuba,GAO
+Jose Marti Intl,Cuba,HAV
+Frank Pais Intl,Cuba,HOG
+La Coloma,Cuba,LCL
+Orestes Acosta,Cuba,MOA
+Sierra Maestra,Cuba,MZO
+Rafael Cabrera,Cuba,GER
+Abel Santamaria,Cuba,SNU
+Juan Gualberto Gomez Intl,Cuba,VRA
+Hermanos Ameijeiras,Cuba,VTU
+Gerrard Smith Intl,Cayman Islands,CYB
+Owen Roberts Intl,Cayman Islands,GCM
+Fresh Creek,Bahamas,ASD
+Marsh Harbour,Bahamas,MHH
+San Andros,Bahamas,SAQ
+Spring Point,Bahamas,AXP
+Treasure Cay,Bahamas,TCB
+Chub Cay,Bahamas,CCZ
+South Bimini,Bahamas,BIM
+De Kalb Taylor Municipal Airport,United States,DKB
+Exuma Intl,Bahamas,GGT
+North Eleuthera,Bahamas,ELH
+Governors Harbour,Bahamas,GHB
+Rock Sound,Bahamas,RSD
+Grand Bahama Intl,Bahamas,FPO
+Matthew Town,Bahamas,IGA
+Deadmans Cay,Bahamas,LGI
+Stella Maris,Bahamas,SML
+Mayaguana,Bahamas,MYG
+Lynden Pindling Intl,Bahamas,NAS
+San Salvador,Bahamas,ZSA
+Philip S W Goldson Intl,Belize,BZE
+Aitutaki,Cook Islands,AIT
+Rarotonga Intl,Cook Islands,RAR
+Nadi Intl,Fiji,NAN
+Nausori Intl,Fiji,SUV
+Fua Amotu Intl,Tonga,TBU
+Vavau Intl,Tonga,VAV
+Bonriki Intl,Kiribati,TRW
+Tabiteuea North,Kiribati,TBF
+Maitland Airport,Australia,MTL
+Wallis,Wallis and Futuna,WLS
+Faleolo Intl,Samoa,APW
+Pago Pago Intl,American Samoa,PPG
+Rurutu,French Polynesia,RUR
+Tubuai,French Polynesia,TUB
+Anaa,French Polynesia,AAA
+Tikehau,French Polynesia,TIH
+Reao,French Polynesia,REA
+Fakarava,French Polynesia,FAV
+Manihi,French Polynesia,XMH
+Totegegie,French Polynesia,GMR
+Kaukura,French Polynesia,KKR
+Makemo,French Polynesia,MKP
+Puka Puka,French Polynesia,PKP
+Takapoto,French Polynesia,TKP
+Arutua,French Polynesia,AXR
+Mataiva,French Polynesia,MVT
+Takaroa,French Polynesia,TKX
+Nuku Hiva,French Polynesia,NHV
+Purude University Airport,United States,LAF
+Bora Bora,French Polynesia,BOB
+Rangiroa,French Polynesia,RGI
+Huahine,French Polynesia,HUH
+Moorea,French Polynesia,MOZ
+Hao,French Polynesia,HOI
+Maupiti,French Polynesia,MAU
+Raiatea,French Polynesia,RFP
+Port Vila Bauerfield,Vanuatu,VLI
+Kone,New Caledonia,KNQ
+Koumac,New Caledonia,KOC
+Lifou,New Caledonia,LIF
+Magenta,New Caledonia,GEA
+Mare,New Caledonia,MEE
+Touho,New Caledonia,TOU
+Ouvea,New Caledonia,UVE
+La Tontouta,New Caledonia,NOU
+Auckland Intl,New Zealand,AKL
+Taupo,New Zealand,TUO
+Ardmore,New Zealand,AMZ
+Christchurch Intl,New Zealand,CHC
+Chatham Islands,New Zealand,CHT
+Dunedin,New Zealand,DUD
+Gisborne,New Zealand,GIS
+Glentanner,New Zealand,MON
+Hokitika,New Zealand,HKK
+Hamilton,New Zealand,HLZ
+Kerikeri,New Zealand,KKE
+Kaitaia,New Zealand,KAT
+Alexandra,New Zealand,ALR
+Mount Cook,New Zealand,GTN
+Manapouri,New Zealand,TEU
+Masterton,New Zealand,MRO
+New Plymouth,New Zealand,NPL
+Nelson,New Zealand,NSN
+Invercargill,New Zealand,IVC
+Oamaru,New Zealand,OAM
+Palmerston North,New Zealand,PMR
+Paraparaumu,New Zealand,PPQ
+Queenstown,New Zealand,ZQN
+Rotorua,New Zealand,ROT
+Tauranga,New Zealand,TRG
+Timaru,New Zealand,TIU
+Woodbourne,New Zealand,BHE
+Wanaka,New Zealand,WKA
+Whakatane,New Zealand,WHK
+Wellington Intl,New Zealand,WLG
+Whangarei,New Zealand,WRE
+Westport,New Zealand,WSZ
+Wanganui,New Zealand,WAG
+Herat,Afghanistan,HEA
+Jalalabad,Afghanistan,JAA
+Kabul Intl,Afghanistan,KBL
+Kandahar,Afghanistan,KDH
+Maimana,Afghanistan,MMZ
+Mazar I Sharif,Afghanistan,MZR
+Konduz,Afghanistan,UND
+Bahrain Intl,Bahrain,BAH
+Abha,Saudi Arabia,AHB
+Al Ahsa,Saudi Arabia,HOF
+Al Baha,Saudi Arabia,ABT
+Bisha,Saudi Arabia,BHH
+King Fahd Intl,Saudi Arabia,DMM
+King Abdulaziz Ab,Saudi Arabia,DHA
+King Abdullah Bin Abdulaziz,Saudi Arabia,GIZ
+Gassim,Saudi Arabia,ELQ
+Guriat,Saudi Arabia,URY
+Hail,Saudi Arabia,HAS
+King Abdulaziz Intl,Saudi Arabia,JED
+King Khaled Military City,Saudi Arabia,HBT
+Prince Mohammad Bin Abdulaziz,Saudi Arabia,MED
+Nejran,Saudi Arabia,EAM
+Qaisumah,Saudi Arabia,AQI
+Rafha,Saudi Arabia,RAH
+King Khaled Intl,Saudi Arabia,RUH
+Arar,Saudi Arabia,RAE
+Sharurah,Saudi Arabia,SHW
+Mudgee Airport,Australia,DGE
+Sulayel,Saudi Arabia,SLF
+Tabuk,Saudi Arabia,TUU
+Taif,Saudi Arabia,TIF
+Turaif,Saudi Arabia,TUI
+Miami University Airport,United States,OXD
+Wejh,Saudi Arabia,EJH
+Yenbo,Saudi Arabia,YNB
+Abadan,Iran,ABD
+Shahid Asyaee,Iran,QMJ
+Mahshahr,Iran,MRX
+Ahwaz,Iran,AWZ
+Bushehr,Iran,BUZ
+Kish Island,Iran,KIH
+Bandar Lengeh,Iran,BDH
+Shahid Ashrafi Esfahani,Iran,KSH
+Sanandaj,Iran,SDG
+Rasht,Iran,RAS
+Delaware County Airport,United States,MIE
+Mehrabad Intl,Iran,THR
+Bandar Abbass Intl,Iran,BND
+Kerman,Iran,KER
+Birjand,Iran,XBJ
+Whitsunday Airstrip,Australia,WSY
+Ramsar,Iran,RZR
+Aeropuerto de Rafaela,Argentina,RAF
+Shiraz Shahid Dastghaib Intl,Iran,SYZ
+Sabadell Airport,Spain,QSA
+Tabriz Intl,Iran,TBZ
+Yazd Shahid Sadooghi,Iran,AZD
+Chah Bahar,Iran,ZBR
+Zahedan Intl,Iran,ZAH
+Queen Alia Intl,Jordan,AMM
+Marka Intl,Jordan,ADJ
+Aqaba King Hussein Intl,Jordan,AQJ
+King Hussein,Jordan,OMF
+Kuwait Intl,Kuwait,KWI
+Rafic Hariri Intl,Lebanon,BEY
+Abu Dhabi Intl,United Arab Emirates,AUH
+Bateen,United Arab Emirates,AZI
+Reykjahlid Airport,Iceland,MVA
+Dubai Intl,United Arab Emirates,DXB
+Fujairah Intl,United Arab Emirates,FJR
+Ras Al Khaimah Intl,United Arab Emirates,RKT
+Sharjah Intl,United Arab Emirates,SHJ
+Khasab,Oman,KHS
+Masirah,Oman,MSH
+Seeb Intl,Oman,MCT
+Salalah,Oman,SLL
+Thumrait,Oman,TTH
+Lyon Part-Dieu Railway,France,XYD
+Faisalabad Intl,Pakistan,LYP
+Gwadar,Pakistan,GWD
+Gilgit,Pakistan,GIL
+Jinnah Intl,Pakistan,KHI
+Allama Iqbal Intl,Pakistan,LHE
+Muzaffarabad,Pakistan,MFG
+Moenjodaro,Pakistan,MJD
+Multan Intl,Pakistan,MUX
+Nawabshah,Pakistan,WNS
+Panjgur,Pakistan,PJG
+Pasni,Pakistan,PSI
+Peshawar Intl,Pakistan,PEW
+Quetta,Pakistan,UET
+Sheikh Zayed,Pakistan,RYK
+Chaklala,Pakistan,ISB
+Rawalakot,Pakistan,RAZ
+Sukkur,Pakistan,SKZ
+Saidu Sharif,Pakistan,SDT
+Sui,Pakistan,SUL
+Talhar,Pakistan,BDN
+Zhob,Pakistan,PZH
+Basrah Intl,Iraq,BSR
+Aleppo Intl,Syria,ALP
+Damascus Intl,Syria,DAM
+Deir Zzor,Syria,DEZ
+Bassel Al Assad Intl,Syria,LTK
+Palmyra,Syria,PMS
+Doha Intl,Qatar,DOH
+Canton,Kiribati,CIS
+Rota Intl,Northern Mariana Islands,ROP
+Francisco C Ada Saipan Intl,Northern Mariana Islands,SPN
+Andersen Afb,Guam,UAM
+Guam Intl,Guam,GUM
+Tinian Intl,Northern Mariana Islands,TIQ
+Scone Airport,Australia,NSO
+Marshall Islands Intl,Marshall Islands,MAJ
+Bucholz Aaf,Marshall Islands,KWA
+Cassidy Intl,Kiribati,CXI
+Midway Atoll,Midway Islands,MDY
+Chuuk Intl,Micronesia,TKK
+Pohnpei Intl,Micronesia,PNI
+Babelthuap,Palau,ROR
+Kosrae,Micronesia,KSA
+Yap Intl,Micronesia,YAP
+Shang Yi,Taiwan,KNH
+Pingtung South,Taiwan,PIF
+Fengnin,Taiwan,TTT
+Lyudao,Taiwan,GNI
+Kaohsiung Intl,Taiwan,KHH
+Chiayi,Taiwan,CYI
+Lanyu,Taiwan,KYD
+Ching Chuang Kang,Taiwan,RMQ
+Cessnock Airport,Australia,CES
+Tainan,Taiwan,TNN
+Magong,Taiwan,MZG
+Sungshan,Taiwan,TSA
+Taoyuan Intl,Taiwan,TPE
+Wang An,Taiwan,WOT
+Hualien,Taiwan,HUN
+Narita Intl,Japan,NRT
+Matsumoto,Japan,MMJ
+Hyakuri,Japan,IBR
+Iwo Jima,Japan,IWO
+Nanki Shirahama,Japan,SHM
+Obihiro,Japan,OBO
+New Chitose,Japan,CTS
+Hakodate,Japan,HKD
+Chitose,Japan,SPK
+Memanbetsu,Japan,MMB
+Nakashibetsu,Japan,SHB
+Wakkanai,Japan,WKJ
+Iki,Japan,IKI
+Yamaguchi Ube,Japan,UBJ
+Tsushima,Japan,TSJ
+Monbetsu,Japan,MBE
+Asahikawa,Japan,AKJ
+Okushiri,Japan,OIR
+Rishiri,Japan,RIS
+Yakushima,Japan,KUM
+Fukue,Japan,FUJ
+Fukuoka,Japan,FUK
+New Tanegashima,Japan,TNE
+Kagoshima,Japan,KOJ
+Miyazaki,Japan,KMI
+Oita,Japan,OIT
+New Kitakyushu,Japan,KKJ
+Kumamoto,Japan,KMJ
+Nagasaki,Japan,NGS
+Amami,Japan,ASJ
+Tokunoshima,Japan,TKN
+Komatsu,Japan,KMQ
+Oki,Japan,OKI
+Toyama,Japan,TOY
+Hiroshima,Japan,HIJ
+Okayama,Japan,OKJ
+Izumo,Japan,IZO
+Yonago Kitaro,Japan,YGJ
+Kochi,Japan,KCZ
+Matsuyama,Japan,MYJ
+Osaka Intl,Japan,ITM
+Tottori,Japan,TTJ
+Tokushima,Japan,TKS
+Takamatsu,Japan,TAK
+Aomori,Japan,AOJ
+Yamagata,Japan,GAJ
+Hanamaki,Japan,HNA
+Akita,Japan,AXT
+Misawa Ab,Japan,MSJ
+Sendai,Japan,SDJ
+Sazena,Czech Republic,LKS
+Hachijojima,Japan,HAC
+Oshima,Japan,OIM
+Tokyo Intl,Japan,HND
+Yokota Ab,Japan,OKO
+Gwangju,South Korea,KWJ
+Yeosu,South Korea,RSU
+Sokcho,South Korea,SHO
+Gangneung,South Korea,KAG
+Macomb Municipal Airport,United States,MQB
+Jeju Intl,South Korea,CJU
+Gimhae Intl,South Korea,PUS
+Ulsan,South Korea,USN
+Seoul Ab,South Korea,SSN
+Osan Ab,South Korea,OSN
+Gimpo,South Korea,GMP
+Pohang,South Korea,KPO
+Daegu Ab,South Korea,TAE
+Yecheon,South Korea,YEC
+Naha,Japan,OKA
+Kadena Ab,Japan,DNA
+Ishigaki,Japan,ISG
+Kumejima,Japan,UEO
+Minami Daito,Japan,MMD
+Miyako,Japan,MMY
+Kitadaito,Japan,KTD
+Shimojishima,Japan,SHI
+Yoron,Japan,RNJ
+Yonaguni,Japan,OGN
+Ninoy Aquino Intl,Philippines,MNL
+Mary Airport,Turkmenistan,MYP
+Cotabato,Philippines,CBO
+Cagayan De Oro,Philippines,CGY
+Pagadian,Philippines,PAG
+Zamboanga Intl,Philippines,ZAM
+Baguio,Philippines,BAG
+Daniel Z Romualdez,Philippines,TAC
+Bacolod,Philippines,BCD
+Gardermoen Airport,Norway,GEN
+Dumaguete,Philippines,DGT
+Iloilo,Philippines,ILO
+Kalibo,Philippines,KLO
+Wausau Downtown Airport,United States,AUW
+Puerto Princesa,Philippines,PPS
+Antique,Philippines,SJI
+Comodoro Pierrestegui,Argentina,COC
+Gualeguaychu,Argentina,GHU
+General Urquiza,Argentina,PRA
+Rosario,Argentina,ROS
+Sauce Viejo,Argentina,SFN
+Aeroparque Jorge Newbery,Argentina,AEP
+Ambrosio L V Taravella,Argentina,COR
+La Plata,Argentina,LPG
+El Plumerillo,Argentina,MDZ
+Malargue,Argentina,LGS
+San Rafael,Argentina,AFA
+Catamarca,Argentina,CTC
+Santiago Del Estero,Argentina,SDE
+La Rioja,Argentina,IRJ
+Teniente Benjamin Matienzo,Argentina,TUC
+San Juan,Argentina,UAQ
+Rio Cuarto Area De Material,Argentina,RCU
+Villa Dolores,Argentina,VDR
+San Luis,Argentina,LUQ
+Corrientes,Argentina,CNQ
+Resistencia,Argentina,RES
+Formosa,Argentina,FMA
+Cataratas Del Iguazu,Argentina,IGR
+Paso De Los Libres,Argentina,AOL
+Posadas,Argentina,PSS
+Salta,Argentina,SLA
+Jujuy,Argentina,JUJ
+Oran,Argentina,ORA
+El Bolson,Argentina,EHL
+Comodoro Rivadavia,Argentina,CRD
+Esquel,Argentina,EQS
+Almirante Zar,Argentina,REL
+Gobernador Castello,Argentina,VDM
+El Tehuelche,Argentina,PMY
+Puerto Deseado,Argentina,PUD
+Rio Grande,Argentina,RGA
+Rio Gallegos,Argentina,RGL
+Ushuaia Malvinas Argentinas,Argentina,USH
+San Julian,Argentina,ULA
+Perito Moreno,Argentina,PMQ
+Santa Cruz,Argentina,RZA
+Comandante Espora,Argentina,BHI
+Gogebic Iron County Airport,United States,IWD
+Mar Del Plata,Argentina,MDQ
+Presidente Peron,Argentina,NQN
+Mackinac Island Airport,United States,MCD
+Santa Rosa,Argentina,RSA
+San Carlos De Bariloche,Argentina,BRC
+Tandil,Argentina,TDL
+Villa Gesell,Argentina,VLG
+Aviador C Campos,Argentina,CPC
+Conceicao Do Araguaia,Brazil,CDJ
+Araraquara,Brazil,AQA
+Santa Maria,Brazil,AJU
+Alta Floresta,Brazil,AFL
+Aracatuba,Brazil,ARU
+Val De Cans Intl,Brazil,BEL
+Comandante Gustavo Kraemer,Brazil,BGX
+Pampulha Carlos Drummond De Andrade,Brazil,PLU
+Bacacheri,Brazil,BFH
+Presidente Juscelino Kubitschek,Brazil,BSB
+Bauru,Brazil,BAU
+Boa Vista,Brazil,BVB
+Cascavel,Brazil,CAC
+Tancredo Neves Intl,Brazil,CNF
+Campo Grande,Brazil,CGR
+Chapeco,Brazil,XAP
+Carolina,Brazil,CLN
+Forquilhinha,Brazil,CCM
+Bartolomeu Lisandro,Brazil,CAW
+Corumba Intl,Brazil,CMG
+Afonso Pena,Brazil,CWB
+Caravelas,Brazil,CRQ
+Campo Dos Bugres,Brazil,CXJ
+Marechal Rondon,Brazil,CGB
+Cruzeiro do Sul,Brazil,CZS
+Presidente Prudente,Brazil,PPB
+Eduardo Gomes Intl,Brazil,MAO
+Cataratas Intl,Brazil,IGU
+Hercilio Luz,Brazil,FLN
+Fernando De Noronha,Brazil,FEN
+Pinto Martins Intl,Brazil,FOR
+Galeao Antonio Carlos Jobim,Brazil,GIG
+Santa Genoveva,Brazil,GYN
+Guarulhos Gov Andre Franco Montouro,Brazil,GRU
+Altamira,Brazil,ATM
+Ilheus,Brazil,IOS
+Usiminas,Brazil,IPN
+Prefeito Renato Moreira,Brazil,IMP
+Francisco De Assis,Brazil,JDF
+Presidente Castro Pinto,Brazil,JPA
+Lauro Carneiro De Loyola,Brazil,JOI
+Presidente Joao Suassuna,Brazil,CPV
+Viracopos,Brazil,VCP
+Lins,Brazil,LIP
+Londrina,Brazil,LDB
+Bom Jesus Da Lapa,Brazil,LAZ
+Maraba,Brazil,MAB
+Regional De Maringa Silvio Name Junior,Brazil,MGF
+Mario Ribeiro,Brazil,MOC
+Grand Marais Cook County Airport,United States,GRM
+Zumbi Dos Palmares,Brazil,MCZ
+Macapa,Brazil,MCP
+Manicore,Brazil,MNX
+Ministro Victor Konder Intl,Brazil,NVT
+Santo Angelo,Brazil,GEL
+Augusto Severo,Brazil,NAT
+Salgado Filho,Brazil,POA
+Pocos De Caldas,Brazil,POO
+Lauro Kurtz,Brazil,PFB
+Pelotas,Brazil,PET
+Senador Nilo Coelho,Brazil,PNZ
+Porto Nacional,Brazil,PNB
+Ponta Pora,Brazil,PMG
+Governador Jorge Teixeira De Oliveira,Brazil,PVH
+Porter County Municipal Airport,United States,NPZ
+PlÃ¡cido de Castro,Brazil,RBR
+Guararapes Gilberto Freyre Intl,Brazil,REC
+Rio Grande,Brazil,RIG
+Santos Dumont,Brazil,SDU
+Leite Lopes,Brazil,RAO
+Santa Cruz,Brazil,STU
+Professor Urbano Ernesto Stumpf,Brazil,SJK
+Marechal Cunha Machado Intl,Brazil,SLZ
+Congonhas,Brazil,CGH
+Sao Jose Do Rio Preto,Brazil,SJP
+Base Aerea De Santos,Brazil,SSZ
+Deputado Luis Eduardo Magalhaes,Brazil,SSA
+Trombetas,Brazil,TMT
+Senador Petronio Portella,Brazil,THE
+Tefe,Brazil,TFF
+Tabatinga,Brazil,TBT
+Tucurui,Brazil,TUR
+Paulo Afonso,Brazil,PAV
+Rubem Berta,Brazil,URG
+Ten Cel Av Cesar Bombonato,Brazil,UDI
+Uberaba,Brazil,UBA
+Major Brigadeiro Trompowsky,Brazil,VAG
+Vilhena,Brazil,BVH
+Goiabeiras,Brazil,VIX
+Campo Fontenelle,Brazil,QPS
+Chacalluta,Chile,ARI
+Balmaceda,Chile,BBA
+Chile Chico,Chile,CCH
+El Loa,Chile,CJC
+Carlos Ibanez Del Campo Intl,Chile,PUQ
+Teniente Vidal,Chile,GXQ
+Diego Aracena Intl,Chile,IQQ
+Arturo Merino Benitez Intl,Chile,SCL
+Cerro Moreno Intl,Chile,ANF
+Maria Dolores,Chile,LSQ
+Carriel Sur Intl,Chile,CCP
+Mataveri Intl,Chile,IPC
+Canal Bajo Carlos Hott Siebert,Chile,ZOS
+La Florida,Chile,LSC
+Maquehue,Chile,ZCO
+El Tepual Intl,Chile,PMC
+Chaiten,Chile,WCH
+Pichoy,Chile,ZAL
+Chachoan,Ecuador,ATF
+Francisco De Orellana,Ecuador,OCC
+Mariscal Lamar,Ecuador,CUE
+Seymour,Ecuador,GPS
+Jose Joaquin De Olmedo Intl,Ecuador,GYE
+Coronel E Carvajal,Ecuador,XMS
+General Manuel Serrano,Ecuador,MCH
+Eloy Alfaro Intl,Ecuador,MEC
+Reales Tamarindos,Ecuador,PVO
+Mariscal Sucre Intl,Ecuador,UIO
+General Ulpiano Paez,Ecuador,SNC
+Tarapoa,Ecuador,TPC
+Teniente Coronel Luis A Mantilla,Ecuador,TUA
+Silvio Pettirossi Intl,Paraguay,ASU
+El Eden,Colombia,AXM
+Tres De Mayo,Colombia,PUU
+Palonegro,Colombia,BGA
+Eldorado Intl,Colombia,BOG
+Ernesto Cortissoz,Colombia,BAQ
+Jose Celestino Mutis,Colombia,BSC
+Gerardo Tobar Lopez,Colombia,BUN
+Camilo Daza,Colombia,CUC
+Rafael Nunez,Colombia,CTG
+Alfonso Bonilla Aragon Intl,Colombia,CLO
+La Florida,Colombia,TCO
+Las Brujas,Colombia,CZU
+Yariguies,Colombia,EJA
+Gustavo Artunduaga Paredes,Colombia,FLA
+McCarthy Airport,United States,MXY
+Juan Casiano,Colombia,GPI
+Perales,Colombia,IBE
+San Luis,Colombia,IPI
+Alfredo Vasquez Cobo,Colombia,LET
+Olaya Herrera,Colombia,EOH
+Baracoa,Colombia,MGN
+Los Garzones,Colombia,MTR
+Fabio Alberto Leon Bentley,Colombia,MVP
+La Nubia,Colombia,MZL
+Benito Salas,Colombia,NVA
+Aguas Claras,Colombia,OCV
+Otu,Colombia,OTU
+Puerto Carreno,Colombia,PCR
+Matecana,Colombia,PEI
+Guillermo Leon Valencia,Colombia,PPN
+Antonio Narino,Colombia,PSO
+El Embrujo,Colombia,PVA
+Jose Maria Cordova,Colombia,MDE
+Almirante Padilla,Colombia,RCH
+Jorge E Gonzalez Torres,Colombia,SJE
+Simon Bolivar,Colombia,SMR
+Gustavo Rojas Pinilla,Colombia,ADZ
+Eduardo Falla Solano,Colombia,SVI
+Tame,Colombia,TME
+Santiago Perez,Colombia,AUC
+El Carano,Colombia,UIB
+Farfan,Colombia,ULQ
+Alfonso Lopez Pumarejo,Colombia,VUP
+Vanguardia,Colombia,VVC
+Bermejo,Bolivia,BJO
+Jorge Wilsterman,Bolivia,CBB
+Heroes Del Acre,Bolivia,CIJ
+El Alto Intl,Bolivia,LPB
+Capitan Nicolas Rojas,Bolivia,POI
+Tte De Av Salvador Ogaya G,Bolivia,PSZ
+Juana Azurduy De Padilla,Bolivia,SRE
+Capitan Oriel Lea Plaza,Bolivia,TJA
+Tte Av Jorge Henrich Arauz,Bolivia,TDD
+Viru Viru Intl,Bolivia,VVI
+Yacuiba,Bolivia,BYC
+Johan A Pengel Intl,Suriname,PBM
+Rochambeau,French Guiana,CAY
+Seward Airport,United States,SWD
+Cap Fap David Abenzur Rengifo Intl,Peru,PCL
+Teniente Jaime A De Montreuil Morales,Peru,CHM
+Capt Jose A Quinones Gonzales Intl,Peru,CIX
+Coronel Fap Alfredo Mendivil Duarte,Peru,AYP
+Andahuaylas,Peru,ANS
+Comandante Fap German Arias Graziani,Peru,ATA
+Jorge Chavez Intl,Peru,LIM
+Juanjui,Peru,JJI
+Juliaca,Peru,JUL
+Michigan City Municipal Airport,United States,MGC
+Pedro Canga,Peru,TBP
+Moises Benzaquen Rengifo,Peru,YMS
+Chachapoyas,Peru,CHH
+Coronel Francisco Secada Vignetta Intl,Peru,IQT
+Rodriguez Ballon,Peru,AQP
+Capitan Carlos Martinez De Pinillos,Peru,TRU
+Pisco Intl,Peru,PIO
+Cadete Guillermo Del Castillo Paredes,Peru,TPP
+Coronel Carlos Ciriani Santa Rosa Intl,Peru,TCQ
+Padre Aldamiz,Peru,PEM
+Capitan Fap Guillermo Concha Iberico,Peru,PIU
+Capitan Montes,Peru,TYL
+Teniente Alejandro Velasco Astete Intl,Peru,CUZ
+Carrasco Intl,Uruguay,MVD
+Nueva Hesperides Intl,Uruguay,STY
+Oswaldo Guevara Mujica,Venezuela,AGV
+Anaco,Venezuela,AAO
+General Jose Antonio Anzoategui Intl,Venezuela,BLA
+Barinas,Venezuela,BNS
+Barquisimeto Intl,Venezuela,BRM
+Ciudad Bolivar,Venezuela,CBL
+Canaima,Venezuela,CAJ
+General Jose Francisco Bermudez,Venezuela,CUP
+Jose Leonardo Chirinos,Venezuela,CZE
+Antonio Jose De Sucre,Venezuela,CUM
+Guiria,Venezuela,GUI
+Guanare,Venezuela,GUQ
+Josefa Camejo,Venezuela,LSP
+La Fria,Venezuela,LFR
+La Chinita Intl,Venezuela,MAR
+Alberto Carnevalli,Venezuela,MRD
+Del Caribe Intl Gen Santiago Marino,Venezuela,PMV
+Simon Bolivar Intl,Venezuela,CCS
+Maturin,Venezuela,MUN
+Casique Aramare,Venezuela,PYH
+General Bartolome Salom Intl,Venezuela,PBL
+General Manuel Carlos Piar,Venezuela,PZO
+San Antonio Del Tachira,Venezuela,SVZ
+Mayor Buenaventura Vivas,Venezuela,STD
+Sub Teniente Nestor Arias,Venezuela,SFH
+San Fernando De Apure,Venezuela,SFD
+San Tome,Venezuela,SOM
+Santa Barbara Del Zulia,Venezuela,STB
+Tucupita,Venezuela,TUV
+Arturo Michelena Intl,Venezuela,VLN
+Dr Antonio Nicolas Briceno,Venezuela,VLV
+Valle De La Pascua,Venezuela,VDP
+Lethem,Guyana,LTM
+V C Bird Intl,Antigua and Barbuda,ANU
+Grantley Adams Intl,Barbados,BGI
+Canefield,Dominica,DCF
+Melville Hall,Dominica,DOM
+Le Lamentin,Martinique,FDF
+Grand Case,Guadeloupe,SFG
+Le Raizet,Guadeloupe,PTP
+Point Salines Intl,Grenada,GND
+Cyril E King,Virgin Islands,STT
+Henry E Rohlsen,Virgin Islands,STX
+Rafael Hernandez,Puerto Rico,BQN
+Diego Jimenez Torres,Puerto Rico,FAJ
+Fernando Luis Ribas Dominicci,Puerto Rico,SIG
+Eugenio Maria De Hostos,Puerto Rico,MAZ
+Mercedita,Puerto Rico,PSE
+Luis Munoz Marin Intl,Puerto Rico,SJU
+Robert L Bradshaw,Saint Kitts and Nevis,SKB
+George F L Charles,Saint Lucia,SLU
+Hewanorra Intl,Saint Lucia,UVF
+Reina Beatrix Intl,Aruba,AUA
+Flamingo,Netherlands Antilles,BON
+Hato,Netherlands Antilles,CUR
+F D Roosevelt,Netherlands Antilles,EUX
+Princess Juliana Intl,Netherlands Antilles,SXM
+Wallblake,Anguilla,AXA
+Crown Point,Trinidad and Tobago,TAB
+Piarco,Trinidad and Tobago,POS
+Terrance B Lettsome Intl,British Virgin Islands,EIS
+Allakaket Airport,United States,AET
+Canouan,Saint Vincent and the Grenadines,CIW
+Mustique,Saint Vincent and the Grenadines,MQS
+E T Joshua,Saint Vincent and the Grenadines,SVD
+Almaty,Kazakhstan,ALA
+Astana Intl,Kazakhstan,TSE
+Taraz,Kazakhstan,DMB
+Manas,Kyrgyzstan,FRU
+Osh,Kyrgyzstan,OSS
+Shymkent,Kazakhstan,CIT
+Yakutat,United States,YAK
+Uralsk,Kazakhstan,URA
+Pavlodar,Kazakhstan,PWQ
+Semipalatinsk,Kazakhstan,PLX
+Aktyubinsk,Kazakhstan,AKX
+Heydar Aliyev,Azerbaijan,GYD
+Yakutsk,Russia,YKS
+Mirny,Russia,MJZ
+Ignatyevo,Russia,BQS
+Novy,Russia,KHV
+Sawyer International Airport,United States,MQT
+Provideniya Bay,Russia,PVS
+Sokol,Russia,GDX
+Pevek,Russia,PWE
+Yelizovo,Russia,PKC
+Khomutovo,Russia,UUS
+Knevichi,Russia,VVO
+Kadala,Russia,HTA
+Bratsk,Russia,BTK
+Irkutsk,Russia,IKT
+Mukhino,Russia,UUD
+Boryspil Intl,Ukraine,KBP
+Donetsk Intl,Ukraine,DOK
+Dnipropetrovsk Intl,Ukraine,DNK
+Simferopol Intl,Ukraine,SIP
+Zhuliany Intl,Ukraine,IEV
+Lviv Intl,Ukraine,LWO
+Ford Airport,United States,IMT
+Odesa Intl,Ukraine,ODS
+Pulkovo,Russia,LED
+Murmansk,Russia,MMK
+Gomel,Belarus,GME
+Vitebsk,Belarus,VTB
+Khrabrovo,Russia,KGD
+Minsk 1,Belarus,MHP
+Minsk 2,Belarus,MSQ
+Abakan,Russia,ABA
+Barnaul,Russia,BAX
+Kemerovo,Russia,KEJ
+Omsk,Russia,OMS
+Pashkovskiy,Russia,KRR
+Uytash,Russia,MCX
+Mineralnyye Vody,Russia,MRV
+Shpakovskoye,Russia,STW
+Rostov Na Donu,Russia,ROV
+Sochi,Russia,AER
+Astrakhan,Russia,ASF
+Gumrak,Russia,VOG
+Balandino,Russia,CEK
+Magnitogorsk,Russia,MQF
+Great Barrier Island,New Zealand,GBZ
+Nizhnevartovsk,Russia,NJC
+Bolshoye Savino,Russia,PEE
+Surgut,Russia,SGC
+Koltsovo,Russia,SVX
+Ashgabat,Turkmenistan,ASB
+Turkmenbashi,Turkmenistan,KRW
+Dushanbe,Tajikistan,DYU
+Bukhara,Uzbekistan,BHK
+Samarkand,Uzbekistan,SKD
+Al Udeid AB,Qatar,IUD
+Yuzhny,Uzbekistan,TAS
+Bryansk,Russia,BZK
+Sheremetyevo,Russia,SVO
+Migalovo,Russia,KLD
+Chertovitskoye,Russia,VOZ
+Vnukovo,Russia,VKO
+Syktyvkar,Russia,SCW
+Kazan,Russia,KZN
+Orenburg,Russia,REN
+Ufa,Russia,UFA
+Kurumoch,Russia,KBY
+Ahmedabad,India,AMD
+Akola,India,AKD
+Aurangabad,India,IXU
+Chhatrapati Shivaji Intl,India,BOM
+Bilaspur,India,PAB
+Bhuj,India,BHJ
+Belgaum,India,IXG
+Vadodara,India,BDQ
+Bhopal,India,BHO
+Bhavnagar,India,BHU
+Daman,India,NMB
+Goa,India,GOI
+Devi Ahilyabai Holkar,India,IDR
+Jabalpur,India,JLR
+Jamnagar,India,JGA
+Kandla,India,IXY
+Khajuraho,India,HJR
+Kolhapur,India,KLH
+Keshod,India,IXK
+Dr Ambedkar Intl,India,NAG
+Nasik Road,India,ISK
+Pune,India,PNQ
+Porbandar,India,PBD
+Rajkot,India,RAJ
+Raipur,India,RPR
+Sholapur,India,SSE
+Surat,India,STV
+Udaipur,India,UDR
+Bandaranaike Intl Colombo,Sri Lanka,CMB
+Colombo Ratmalana,Sri Lanka,RML
+Amparai,Sri Lanka,GOY
+Kankesanturai,Sri Lanka,JAF
+China Bay,Sri Lanka,TRR
+Kirkuk AB,Iraq,KIK
+Phnom Penh Intl,Cambodia,PNH
+Siem Reap,Cambodia,REP
+Agartala,India,IXA
+Aizawl,India,AJL
+Bagdogra,India,IXB
+Bhubaneshwar,India,BBI
+Netaji Subhash Chandra Bose Intl,India,CCU
+Cooch Behar,India,COH
+Dhanbad,India,DBD
+Delta County Airport,United States,ESC
+Gaya,India,GAY
+Imphal,India,IMF
+Jamshedpur,India,IXW
+Jorhat,India,JRH
+Kailashahar,India,IXH
+Silchar,India,IXS
+Lilabari,India,IXI
+Dibrugarh,India,MOH
+Patna,India,PAT
+Birsa Munda,India,IXR
+Rourkela,India,RRK
+Vishakhapatnam,India,VTZ
+Coxs Bazar,Bangladesh,CXB
+Shah Amanat Intl,Bangladesh,CGP
+Ishurdi,Bangladesh,IRD
+Jessore,Bangladesh,JSR
+Shah Mokhdum,Bangladesh,RJH
+Saidpur,Bangladesh,SPD
+Osmany Intl,Bangladesh,ZYL
+Zia Intl,Bangladesh,DAC
+Hong Kong Intl,Hong Kong,HKG
+Agra,India,AGR
+Allahabad,India,IXD
+Amritsar,India,ATQ
+Varanasi,India,VNS
+Kullu Manali,India,KUU
+Chandigarh,India,IXC
+Dehradun,India,DED
+Indira Gandhi Intl,India,DEL
+Gwalior,India,GWL
+Jodhpur,India,JDH
+Jaipur,India,JAI
+Jaisalmer,India,JSA
+Jammu,India,IXJ
+Kanpur,India,KNU
+Kota,India,KTU
+Ludhiana,India,LUH
+Leh,India,IXL
+Lucknow,India,LKO
+Pathankot,India,IXP
+Pantnagar,India,PGH
+Srinagar,India,SXR
+Satna,India,TNI
+Balkhash Airport,Kazakhstan,BXH
+Luang Phabang Intl,Laos,LPQ
+Pakse,Laos,PKZ
+Savannakhet,Laos,ZVK
+Wattay Intl,Laos,VTE
+Macau Intl,Macau,MFM
+Bhairahawa,Nepal,BWA
+Tribhuvan Intl,Nepal,KTM
+Pokhara,Nepal,PKR
+Simara,Nepal,SIF
+Biratnagar,Nepal,BIR
+Agatti,India,AGX
+Bangalore,India,BLR
+Bellary,India,BEP
+Vijayawada,India,VGA
+Coimbatore,India,CJB
+Cochin,India,COK
+Calicut,India,CCJ
+Cuddapah,India,CDP
+Hyderabad,India,HYD
+Madurai,India,IXM
+Mangalore,India,IXE
+Chennai Intl,India,MAA
+Port Blair,India,IXZ
+Pondicherry,India,PNY
+Rajahmundry,India,RJA
+Tirupati,India,TIR
+Trichy,India,TRZ
+Thiruvananthapuram Intl,India,TRV
+Paro,Bhutan,PBH
+Male Intl,Maldives,MLE
+Don Muang Intl,Thailand,DMK
+Naha,Indonesia,NAH
+U Taphao Intl,Thailand,UTP
+Lampang,Thailand,LPT
+Phrae,Thailand,PRH
+Hua Hin,Thailand,HHQ
+Phitsanulok,Thailand,PHS
+Narathiwat,Thailand,NAW
+Krabi,Thailand,KBV
+Pattani,Thailand,PAN
+Samui,Thailand,USM
+Phuket Intl,Thailand,HKT
+Hat Yai Intl,Thailand,HDY
+Trang,Thailand,TST
+Udon Thani,Thailand,UTH
+Sakon Nakhon,Thailand,SNO
+Loei,Thailand,LOE
+Orchid Beach,Australia,OKB
+Danang Intl,Vietnam,DAD
+Noibai Intl,Vietnam,HAN
+Nhatrang,Vietnam,NHA
+Tansonnhat Intl,Vietnam,SGN
+Bamburi,Kenya,BMQ
+Heho,Burma,HEH
+Kengtung,Burma,KET
+Williamson Country Regional Airport,United States,MWA
+Kyaukpyu,Burma,KYP
+Lashio,Burma,LSH
+Mandalay Intl,Burma,MDL
+Myeik,Burma,MGZ
+Myitkyina,Burma,MYT
+Mong Hsat,Burma,MOG
+Putao,Burma,PBU
+Sittwe,Burma,AKY
+Thandwe,Burma,SNW
+Tachileik,Burma,THL
+Yangon Intl,Burma,RGN
+Hasanuddin,Indonesia,UPG
+Frans Kaisiepo,Indonesia,BIK
+Nabire,Indonesia,NBX
+Moses Kilangin,Indonesia,TIM
+Sentani,Indonesia,DJJ
+Wamena,Indonesia,WMX
+Mopah,Indonesia,MKQ
+Jalaluddin,Indonesia,GTO
+Incheon Intl,South Korea,ICN
+Mutiara,Indonesia,PLW
+Sam Ratulangi,Indonesia,MDC
+Kasiguncu,Indonesia,PSJ
+Pitu,Indonesia,OTI
+Sultan Babullah,Indonesia,TTE
+Bubung,Indonesia,LUW
+Pattimura,Indonesia,AMQ
+Fak Fak,Indonesia,FKQ
+Kaimana,Indonesia,KNG
+Babo,Indonesia,BXB
+Rendani,Indonesia,MKW
+Jefman,Indonesia,SOQ
+Bintulu,Malaysia,BTU
+Kuching Intl,Malaysia,KCH
+Limbang,Malaysia,LMN
+Marudi,Malaysia,MUR
+Miri,Malaysia,MYY
+Sibu,Malaysia,SBW
+Lahad Datu,Malaysia,LDU
+Kota Kinabalu Intl,Malaysia,BKI
+Labuan,Malaysia,LBU
+Tawau,Malaysia,TWU
+Brunei Intl,Brunei,BWN
+Sultan Syarif Kasim Ii,Indonesia,PKU
+Pinang Kampai,Indonesia,DUM
+Soekarno Hatta Intl,Indonesia,CGK
+Binaka,Indonesia,GNS
+Minangkabau,Indonesia,PDG
+Polonia,Indonesia,MES
+Rahadi Usman,Indonesia,KTG
+Supadio,Indonesia,PNK
+Sultan Thaha,Indonesia,DJB
+Fatmawati Soekarno,Indonesia,BKS
+Sultan Mahmud Badaruddin Ii,Indonesia,PLM
+Japura,Indonesia,RGT
+Balti International Airport,Moldova,BZY
+Sultan Iskandarmuda,Indonesia,BTJ
+Sultan Abdul Halim,Malaysia,AOR
+Sultan Ismail Petra,Malaysia,KBR
+Kuantan,Malaysia,KUA
+Kerteh,Malaysia,KTE
+Sultan Azlan Shah,Malaysia,IPH
+Sultan Ismail,Malaysia,JHB
+Kuala Lumpur Intl,Malaysia,KUL
+Langkawi Intl,Malaysia,LGK
+Malacca,Malaysia,MKZ
+Sultan Mahmud,Malaysia,TGG
+Penang Intl,Malaysia,PEN
+Presidente Nicolau Lobato Intl,East Timor,DIL
+Paya Lebar,Singapore,QPG
+Seletar,Singapore,XSP
+Changi Intl,Singapore,SIN
+Bamaga Injinoo,Australia,ABM
+Alice Springs,Australia,ASP
+Brisbane Intl,Australia,BNE
+Gold Coast,Australia,OOL
+Cairns Intl,Australia,CNS
+Charleville,Australia,CTL
+Mount Isa,Australia,ISA
+Sunshine Coast,Australia,MCY
+Mackay,Australia,MKY
+Proserpine Whitsunday Coast,Australia,PPP
+Rockhampton,Australia,ROK
+Townsville,Australia,TSV
+Weipa,Australia,WEI
+Avalon,Australia,AVV
+Albury,Australia,ABX
+Melbourne Essendon,Australia,MEB
+Hobart,Australia,HBA
+Launceston,Australia,LST
+Melbourne Moorabbin,Australia,MBW
+Melbourne Intl,Australia,MEL
+Adelaide Intl,Australia,ADL
+Perth Jandakot,Australia,JAD
+Karratha,Australia,KTA
+Kalgoorlie Boulder,Australia,KGI
+Kununurra,Australia,KNX
+Learmonth,Australia,LEA
+Port Hedland Intl,Australia,PHE
+Perth Intl,Australia,PER
+Woomera,Australia,UMR
+Christmas Island,Christmas Island,XCH
+Sydney Bankstown,Australia,BWU
+Canberra,Australia,CBR
+Coffs Harbour,Australia,CFS
+Camden,Australia,CDU
+Dubbo,Australia,DBO
+Norfolk Island Intl,Norfolk Island,NLK
+Richmond,Australia,RCM
+Sydney Intl,Australia,SYD
+Tamworth,Australia,TMW
+Wagga Wagga,Australia,WGA
+Capital Intl,China,PEK
+Dongshan,China,HLD
+Binhai,China,TSN
+Wusu,China,TYN
+Baiyun Intl,China,CAN
+Huanghua,China,CSX
+Liangjiang,China,KWL
+Wuxu,China,NNG
+Baoan Intl,China,SZX
+Xinzheng,China,CGO
+Tianhe,China,WUH
+Pyongyang Intl,Korea,FNJ
+Zhongchuan,China,ZGC
+Xianyang,China,XIY
+Chinggis Khaan Intl,Mongolia,ULN
+Wujiaba,China,KMG
+Gaoqi,China,XMN
+Changbei Intl,China,KHN
+Changle,China,FOC
+Xiaoshan,China,HGH
+Lishe,China,NGB
+Lukou,China,NKG
+Luogang,China,HFE
+Liuting,China,TAO
+Hongqiao Intl,China,SHA
+Laishan,China,YNT
+Jiangbei,China,CKG
+Longdongbao,China,KWE
+Shuangliu,China,CTU
+Qingshan,China,XIC
+Kashi,China,KHG
+Hotan,China,HTN
+Diwopu,China,URC
+Taiping,China,HRB
+Hohenems,Austria,HOJ
+Zhoushuizi,China,DLC
+Pudong,China,PVG
+Pulau Tioman,Malaysia,TOD
+Subang-Sultan Abdul Aziz Shah Intl,Malaysia,SZB
+Noto,Japan,NTQ
+Borg El Arab Intl,Egypt,HBE
+Barter Island Lrrs,United States,BTI
+Cape Lisburne Lrrs,United States,LUR
+Point Lay Lrrs,United States,PIZ
+Hilo Intl,United States,ITO
+Executive,United States,ORL
+Bettles,United States,BTT
+Indian Mountain Lrrs,United States,UTO
+Fort Yukon,United States,FYU
+Sparrevohn Lrrs,United States,SVW
+Bryant Ahp,United States,FRN
+Tatalina Lrrs,United States,TLJ
+Cape Romanzof Lrrs,United States,CZF
+Laurence G Hanscom Fld,United States,BED
+St Paul Island,United States,SNP
+Cape Newenham Lrrs,United States,EHM
+St George,United States,PBV
+Iliamna,United States,ILI
+Platinum,United States,PTU
+Big Mountain Afs,United States,BMX
+Oscoda Wurtsmith,United States,OSC
+Marina Muni,United States,OAR
+Sacramento Mather,United States,MHR
+Bicycle Lake Aaf,United States,BYS
+Twentynine Palms Eaf,United States,NXP
+Fort Smith Rgnl,United States,FSM
+Merrill Fld,United States,MRI
+Grants Milan Muni,United States,GNT
+Ponca City Rgnl,United States,PNC
+Hunter Aaf,United States,SVN
+Grand Forks Intl,United States,GFK
+Grider Fld,United States,PBF
+Whiting Fld Nas North,United States,NSE
+Hana,United States,HNM
+Ernest A Love Fld,United States,PRC
+Trenton Mercer,United States,TTN
+General Edward Lawrence Logan Intl,United States,BOS
+Travis Afb,United States,SUU
+Griffiss Afld,United States,RME
+Wendover,United States,ENV
+Mobile Downtown,United States,BFM
+Metropolitan Oakland Intl,United States,OAK
+Eppley Afld,United States,OMA
+Port Angeles Cgas,United States,NOW
+Kahului,United States,OGG
+Wichita Mid Continent,United States,ICT
+Kansas City Intl,United States,MCI
+Dane Co Rgnl Truax Fld,United States,MSN
+Dillingham,United States,DLG
+Boone Co,United States,HRO
+Phoenix Sky Harbor Intl,United States,PHX
+Bangor Intl,United States,BGR
+Fort Lauderdale Executive,United States,FXE
+East Texas Rgnl,United States,GGG
+Anderson Rgnl,United States,AND
+Spokane Intl,United States,GEG
+North Perry,United States,HWO
+San Francisco Intl,United States,SFO
+Cut Bank Muni,United States,CTB
+Acadiana Rgnl,United States,ARA
+Gainesville Rgnl,United States,GNV
+Memphis Intl,United States,MEM
+Bisbee Douglas Intl,United States,DUG
+Allen Aaf,United States,BIG
+Tstc Waco,United States,CNW
+Annette Island,United States,ANN
+Caribou Muni,United States,CAR
+Little Rock Afb,United States,LRF
+Redstone Aaf,United States,HUA
+Pope Field,United States,POB
+Dalhart Muni,United States,DHT
+Laughlin Afb,United States,DLF
+Los Angeles Intl,United States,LAX
+Anniston Metro,United States,ANB
+Cleveland Hopkins Intl,United States,CLE
+Dover Afb,United States,DOV
+Cincinnati Northern Kentucky Intl,United States,CVG
+Tipton,United States,FME
+China Lake Naws,United States,NID
+Huron Rgnl,United States,HON
+Juneau Intl,United States,JNU
+Lafayette Rgnl,United States,LFT
+Newark Liberty Intl,United States,EWR
+Boise Air Terminal,United States,BOI
+Creech Afb,United States,INS
+Garden City Rgnl,United States,GCK
+Minot Intl,United States,MOT
+Wheeler Aaf,United States,HHI
+Maxwell Afb,United States,MXF
+Robinson Aaf,United States,RBM
+Dallas Love Fld,United States,DAL
+Butts Aaf,United States,FCS
+Helena Rgnl,United States,HLN
+Miramar Mcas,United States,NKX
+Luke Afb,United States,LUF
+Hurlburt Fld,United States,HRT
+Jack Northrop Fld Hawthorne Muni,United States,HHR
+Houlton Intl,United States,HUL
+Vance Afb,United States,END
+Point Mugu Nas,United States,NTD
+Edwards Afb,United States,EDW
+Lake Charles Rgnl,United States,LCH
+Kona Intl At Keahole,United States,KOA
+Myrtle Beach Intl,United States,MYR
+Lemoore Nas,United States,NLC
+Nantucket Mem,United States,ACK
+Felker Aaf,United States,FAF
+Campbell Aaf,United States,HOP
+Ronald Reagan Washington Natl,United States,DCA
+Patuxent River Nas,United States,NHK
+Palacios Muni,United States,PSX
+Arkansas Intl,United States,BYH
+Atlantic City Intl,United States,ACY
+Tinker Afb,United States,TIK
+Elizabeth City Cgas Rgnl,United States,ECG
+Pueblo Memorial,United States,PUB
+Northern Maine Rgnl At Presque Isle,United States,PQI
+Kirtland Air Force Base,United States,IKR
+Gray Aaf,United States,GRF
+Kodiak,United States,ADQ
+Upolu,United States,UPP
+Fort Lauderdale Hollywood Intl,United States,FLL
+Davis Fld,United States,MKO
+Falls Intl,United States,INL
+Salt Lake City Intl,United States,SLC
+Childress Muni,United States,CDS
+Keesler Afb,United States,BIX
+Lawson Aaf,United States,LSF
+Kingsville Nas,United States,NQI
+Marshall Aaf,United States,FRI
+Harrisburg Intl,United States,MDT
+Lincoln,United States,LNK
+Capital City,United States,LAN
+Waimea Kohala,United States,MUE
+Massena Intl Richards Fld,United States,MSS
+Hickory Rgnl,United States,HKY
+Albert Whitted,United States,SPG
+Page Fld,United States,FMY
+George Bush Intercontinental,United States,IAH
+Millinocket Muni,United States,MLT
+Andrews Afb,United States,ADW
+Smith Reynolds,United States,INT
+Southern California Logistics,United States,VCV
+Bob Sikes,United States,CEW
+Wheeler Sack Aaf,United States,GTB
+St Clair Co Intl,United States,PHN
+Meadows Fld,United States,BFL
+El Paso Intl,United States,ELP
+Valley Intl,United States,HRL
+Columbia Metropolitan,United States,CAE
+Davis Monthan Afb,United States,DMA
+Pensacola Nas,United States,NPA
+Pensacola Rgnl,United States,PNS
+Grand Forks Afb,United States,RDR
+William P Hobby,United States,HOU
+Buckley Afb,United States,BKF
+Northway,United States,ORT
+Palmer Muni,United States,PAQ
+Pittsburgh Intl,United States,PIT
+Wiley Post Will Rogers Mem,United States,BRW
+Ellington Fld,United States,EFD
+Whidbey Island Nas,United States,NUW
+Alice Intl,United States,ALI
+Moody Afb,United States,VAD
+Miami Intl,United States,MIA
+Seattle Tacoma Intl,United States,SEA
+Lovell Fld,United States,CHA
+Igor I Sikorsky Mem,United States,BDR
+Jackson Evers Intl,United States,JAN
+Scholes Intl At Galveston,United States,GLS
+Long Beach,United States,LGB
+Dillingham,United States,HDH
+Williamsport Rgnl,United States,IPT
+Indianapolis Intl,United States,IND
+Whiteman Afb,United States,SZL
+Akron Fulton Intl,United States,AKC
+Greenwood Leflore,United States,GWO
+Westchester Co,United States,HPN
+Francis S Gabreski,United States,FOK
+Jonesboro Muni,United States,JBR
+Tonopah Test Range,United States,TNX
+Palm Beach Co Park,United States,LNA
+North Island Nas,United States,NZY
+Biggs Aaf,United States,BIF
+Yuma Mcas Yuma Intl,United States,YUM
+Cavern City Air Terminal,United States,CNM
+Duluth Intl,United States,DLH
+Bethel,United States,BET
+Bowman Fld,United States,LOU
+Sierra Vista Muni Libby Aaf,United States,FHU
+Lihue,United States,LIH
+Terre Haute Intl Hulman Fld,United States,HUF
+Havre City Co,United States,HVR
+Grant Co Intl,United States,MWH
+Edward F Knapp State,United States,MPV
+Richmond Intl,United States,RIC
+Shreveport Rgnl,United States,SHV
+Merle K Mudhole Smith,United States,CDV
+Norfolk Intl,United States,ORF
+Southeast Texas Rgnl,United States,BPT
+Savannah Hilton Head Intl,United States,SAV
+Hill Afb,United States,HIF
+Nome,United States,OME
+Scappoose Industrial Airpark,United States,SPB
+St Petersburg Clearwater Intl,United States,PIE
+Menominee Marinette Twin Co,United States,MNM
+Lone Star Executive,United States,CXO
+Deadhorse,United States,SCC
+San Antonio Intl,United States,SAT
+Greater Rochester Intl,United States,ROC
+Patrick Afb,United States,COF
+Teterboro,United States,TEB
+Ellsworth Afb,United States,RCA
+Raleigh Durham Intl,United States,RDU
+James M Cox Dayton Intl,United States,DAY
+Kenai Muni,United States,ENA
+Mc Alester Rgnl,United States,MLC
+Niagara Falls Intl,United States,IAG
+Coulter Fld,United States,CFD
+Newport News Williamsburg Intl,United States,PHF
+Esler Rgnl,United States,ESF
+Altus Afb,United States,LTS
+Tucson Intl,United States,TUS
+Minot Afb,United States,MIB
+Beale Afb,United States,BAB
+Greater Kankakee,United States,IKK
+Seymour Johnson Afb,United States,GSB
+Theodore Francis Green State,United States,PVD
+Salisbury Ocean City Wicomico Rgnl,United States,SBY
+Rancho Murieta,United States,RIU
+Bob Hope,United States,BUR
+Detroit Metro Wayne Co,United States,DTW
+Tampa Intl,United States,TPA
+Pembina Muni,United States,PMB
+Polk Aaf,United States,POE
+Eielson Afb,United States,EIL
+Chisholm Hibbing,United States,HIB
+Angelina Co,United States,LFK
+Midland Intl,United States,MAF
+Austin Straubel Intl,United States,GRB
+Ardmore Muni,United States,ADM
+Mc Guire Afb,United States,WRI
+Cherry Point Mcas,United States,NKT
+Emanuel Co,United States,SBO
+Augusta Rgnl At Bush Fld,United States,AGS
+Sloulin Fld Intl,United States,ISN
+Adams Fld,United States,LIT
+Stewart Intl,United States,SWF
+Baudette Intl,United States,BDE
+Sacramento Executive,United States,SAC
+Homer,United States,HOM
+Waynesville Rgnl Arpt At Forney Fld,United States,TBN
+Dobbins Arb,United States,MGE
+Fairchild Afb,United States,SKA
+Roscommon Co,United States,HTL
+Tyndall Afb,United States,PAM
+Dallas Fort Worth Intl,United States,DFW
+Melbourne Intl,United States,MLB
+Mc Chord Afb,United States,TCM
+Austin Bergstrom Intl,United States,AUS
+Rickenbacker Intl,United States,LCK
+Mc Ghee Tyson,United States,TYS
+Hood Aaf,United States,HLR
+Lambert St Louis Intl,United States,STL
+Millville Muni,United States,MIV
+Sheppard Afb Wichita Falls Muni,United States,SPS
+Cincinnati Muni Lunken Fld,United States,LUK
+Hartsfield Jackson Atlanta Intl,United States,ATL
+Castle,United States,MER
+Mc Clellan Afld,United States,MCC
+Gerald R Ford Intl,United States,GRR
+Winkler Co,United States,INK
+Fresno Yosemite Intl,United States,FAT
+Vero Beach Muni,United States,VRB
+Imperial Co,United States,IPL
+Nashville Intl,United States,BNA
+Laredo Intl,United States,LRD
+Elmendorf Afb,United States,EDF
+Ralph Wien Mem,United States,OTZ
+Altoona Blair Co,United States,AOO
+Dyess Afb,United States,DYS
+South Arkansas Rgnl At Goodwin Fld,United States,ELD
+La Guardia,United States,LGA
+Tallahassee Rgnl,United States,TLH
+Dupage,United States,DPA
+Waco Rgnl,United States,ACT
+Augusta State,United States,AUG
+Hillsboro Muni,United States,INJ
+Jacksonville Nas,United States,NIP
+Mc Kellar Sipes Rgnl,United States,MKL
+Molokai,United States,MKK
+Godman Aaf,United States,FTK
+San Angelo Rgnl Mathis Fld,United States,SJT
+Calexico Intl,United States,CXL
+Chico Muni,United States,CIC
+Burlington Intl,United States,BTV
+Jacksonville Intl,United States,JAX
+Durango La Plata Co,United States,DRO
+Washington Dulles Intl,United States,IAD
+Easterwood Fld,United States,CLL
+Felts Fld,United States,SFF
+General Mitchell Intl,United States,MKE
+Abilene Rgnl,United States,ABI
+Columbia Rgnl,United States,COU
+Portland Intl,United States,PDX
+Dade Collier Training And Transition,United States,TNT
+Palm Beach Intl,United States,PBI
+Fort Worth Meacham Intl,United States,FTW
+Ogdensburg Intl,United States,OGS
+Otis Angb,United States,FMH
+Boeing Fld King Co Intl,United States,BFI
+Lackland Afb Kelly Fld Annex,United States,SKF
+Honolulu Intl,United States,HNL
+Des Moines Intl,United States,DSM
+Craven Co Rgnl,United States,EWN
+San Diego Intl,United States,SAN
+Monroe Rgnl,United States,MLU
+Shaw Afb,United States,SSC
+Ontario Intl,United States,ONT
+Majors,United States,GVT
+Roswell Intl Air Center,United States,ROW
+Coleman A Young Muni,United States,DET
+Brownsville South Padre Island Intl,United States,BRO
+Dothan Rgnl,United States,DHN
+Cape May Co,United States,WWD
+Fallon Nas,United States,NFL
+Selfridge Angb,United States,MTC
+Four Corners Rgnl,United States,FMN
+Corpus Christi Intl,United States,CRP
+Syracuse Hancock Intl,United States,SYR
+Key West Nas,United States,NQX
+Chicago Midway Intl,United States,MDW
+Norman Y Mineta San Jose Intl,United States,SJC
+Lea Co Rgnl,United States,HOB
+Northeast Philadelphia,United States,PNE
+Denver Intl,United States,DEN
+Philadelphia Intl,United States,PHL
+Sioux Gateway Col Bud Day Fld,United States,SUX
+Middle Georgia Rgnl,United States,MCN
+Truth Or Consequences Muni,United States,TCS
+Palmdale Rgnl Usaf Plt 42,United States,PMD
+Randolph Afb,United States,RND
+El Centro Naf,United States,NJK
+Port Columbus Intl,United States,CMH
+Drake Fld,United States,FYV
+Henry Post Aaf,United States,FSI
+Princeton Muni,United States,PNM
+Wright Patterson Afb,United States,FFO
+Edward G Pitka Sr,United States,GAL
+Mineral Wells,United States,MWL
+Mc Connell Afb,United States,IAB
+New Orleans Nas Jrb,United States,NBG
+Beaufort,United States,BFT
+Texarkana Rgnl Webb Fld,United States,TXK
+Plattsburgh Intl,United States,PBG
+Phillips Aaf,United States,APG
+Tucumcari Muni,United States,TCC
+Ted Stevens Anchorage Intl,United States,ANC
+Robert Gray Aaf,United States,GRK
+Black Rock,United States,ZUN
+Bellingham Intl,United States,BLI
+Millington Rgnl Jetport,United States,NQA
+Elkins Randolph Co Jennings Randolph,United States,EKN
+Hartford Brainard,United States,HFD
+North Central State,United States,SFZ
+Mobile Rgnl,United States,MOB
+Moffett Federal Afld,United States,NUQ
+Santa Fe Muni,United States,SAF
+Barking Sands Pmrf,United States,BKH
+Beauregard Rgnl,United States,DRI
+Bradshaw Aaf,United States,BSF
+Nogales Intl,United States,OLS
+Macdill Afb,United States,MCF
+Scott Afb Midamerica,United States,BLV
+Opa Locka,United States,OPF
+Del Rio Intl,United States,DRT
+Southwest Florida Intl,United States,RSW
+King Salmon,United States,AKN
+Muir Aaf,United States,MUI
+Kapalua,United States,JHM
+John F Kennedy Intl,United States,JFK
+Homestead Arb,United States,HST
+Riverside Muni,United States,RAL
+Sherman Aaf,United States,FLV
+Wallops Flight Facility,United States,WAL
+Holloman Afb,United States,HMN
+Willow Grove Nas Jrb,United States,NXX
+Cheyenne Rgnl Jerry Olson Fld,United States,CYS
+Stockton Metropolitan,United States,SCK
+Charleston Afb Intl,United States,CHS
+Reno Tahoe Intl,United States,RNO
+Ketchikan Intl,United States,KTN
+Willow Run,United States,YIP
+Vandenberg Afb,United States,VBG
+Birmingham Intl,United States,BHM
+Lakehurst Naes,United States,NEL
+Eareckson As,United States,SYA
+Nellis Afb,United States,LSV
+March Arb,United States,RIV
+Modesto City Co Harry Sham,United States,MOD
+Sacramento Intl,United States,SMF
+Waukegan Rgnl,United States,UGN
+City Of Colorado Springs Muni,United States,COS
+Buffalo Niagara Intl,United States,BUF
+Griffing Sandusky,United States,SKY
+Snohomish Co,United States,PAE
+Mountain Home Afb,United States,MUO
+Cedar City Rgnl,United States,CDC
+Bradley Intl,United States,BDL
+Mc Allen Miller Intl,United States,MFE
+Norfolk Ns,United States,NGU
+Westover Arb Metropolitan,United States,CEF
+Lubbock Preston Smith Intl,United States,LBB
+Chicago Ohare Intl,United States,ORD
+Boca Raton,United States,BCT
+Fairbanks Intl,United States,FAI
+Quantico Mcaf,United States,NYG
+Cannon Afb,United States,CVS
+Kaneohe Bay Mcaf,United States,NGF
+Offutt Afb,United States,OFF
+Gulkana,United States,GKN
+Watertown Intl,United States,ART
+Palm Springs Intl,United States,PSP
+Rick Husband Amarillo Intl,United States,AMA
+Fort Dodge Rgnl,United States,FOD
+Barksdale Afb,United States,BAD
+Forbes Fld,United States,FOE
+Cotulla Lasalle Co,United States,COT
+Wilmington Intl,United States,ILM
+Baton Rouge Metro Ryan Fld,United States,BTR
+Meridian Nas,United States,NMM
+Tyler Pounds Rgnl,United States,TYR
+Baltimore Washington Intl,United States,BWI
+Hobart Muni,United States,HBR
+Lanai,United States,LNY
+Alexandria Intl,United States,AEX
+Condron Aaf,United States,WSD
+Cold Bay,United States,CDB
+Tulsa Intl,United States,TUL
+Sitka Rocky Gutierrez,United States,SIT
+Long Island Mac Arthur,United States,ISP
+Minneapolis St Paul Intl,United States,MSP
+New Castle,United States,ILG
+Unalaska,United States,DUT
+Louis Armstrong New Orleans Intl,United States,MSY
+Portland Intl Jetport,United States,PWM
+Will Rogers World,United States,OKC
+Albany Intl,United States,ALB
+Valdez Pioneer Fld,United States,VDZ
+Langley Afb,United States,LFI
+John Wayne Arpt Orange Co,United States,SNA
+Columbus Afb,United States,CBM
+Kendall Tamiami Executive,United States,TMB
+Oceana Nas,United States,NTU
+Grissom Arb,United States,GUS
+Natrona Co Intl,United States,CPR
+Eglin Afb,United States,VPS
+Craig Fld,United States,SEM
+Key West Intl,United States,EYW
+Charlotte Douglas Intl,United States,CLT
+Mc Carran Intl,United States,LAS
+Orlando Intl,United States,MCO
+Florence Rgnl,United States,FLO
+Great Falls Intl,United States,GTF
+Youngstown Warren Rgnl,United States,YNG
+Ladd Aaf,United States,FBK
+Mc Minnville Muni,United States,MMV
+Robins Afb,United States,WRB
+Suvarnabhumi Intl,Thailand,BKK
+Wolter Monginsidi,Indonesia,KDI
+Maimun Saleh,Indonesia,SBG
+Abdul Rachman Saleh,Indonesia,MLG
+Husein Sastranegara,Indonesia,BDO
+Penggung,Indonesia,CBN
+Adi Sutjipto,Indonesia,JOG
+Tunggul Wulung,Indonesia,CXP
+Pondok Cabe,Indonesia,PCB
+Achmad Yani,Indonesia,SRG
+Hang Nadim,Indonesia,BTH
+H As Hanandjoeddin,Indonesia,TJQ
+Depati Amir,Indonesia,PGK
+Kijang,Indonesia,TNJ
+Dabo,Indonesia,SIQ
+Syamsudin Noor,Indonesia,BDJ
+Iskandar,Indonesia,PKN
+Tjilik Riwut,Indonesia,PKY
+Wai Oti,Indonesia,MOF
+H Hasan Aroeboesman,Indonesia,ENE
+Satar Tacik,Indonesia,RTG
+El Tari,Indonesia,KOE
+Mutiara Ii,Indonesia,LBJ
+Sepinggan,Indonesia,BPN
+Juwata,Indonesia,TRK
+Temindung,Indonesia,SRI
+Selaparang,Indonesia,AMI
+Muhammad Salahuddin,Indonesia,BMU
+Mau Hau,Indonesia,WGP
+Juanda,Indonesia,SUB
+Adi Sumarmo Wiryokusumo,Indonesia,SOC
+Chiang Mai Intl,Thailand,CNX
+Chiang Rai Intl,Thailand,CEI
+Nakhon Si Thammarat,Thailand,NST
+Bali Ngurah Rai,Indonesia,DPS
+Nakhon Ratchasima,Thailand,NAK
+Nakhon Phanom,Thailand,KOP
+Ubon Ratchathani,Thailand,UBP
+Khon Kaen,Thailand,KKC
+Sukhothai,Thailand,THS
+Eleftherios Venizelos Intl,Greece,ATH
+Chubu Centrair Intl,Japan,NGO
+Kobe,Japan,UKB
+Pullman-Moscow Rgnl,United States,PUW
+Lewiston Nez Perce Co,United States,LWS
+Elmira Corning Rgnl,United States,ELM
+Ithaca Tompkins Rgnl,United States,ITH
+Monterey Peninsula,United States,MRY
+Santa Barbara Muni,United States,SBA
+Daytona Beach Intl,United States,DAB
+Liepaja Intl,Latvia,LPX
+Riga Intl,Latvia,RIX
+Siauliai Intl,Lithuania,SQQ
+Barysiai,Lithuania,HLJ
+Kaunas Intl,Lithuania,KUN
+Palanga Intl,Lithuania,PLQ
+Vilnius Intl,Lithuania,VNO
+Pajuostis,Lithuania,PNV
+Zvartnots,Armenia,EVN
+Gyumri,Armenia,LWN
+Assab Intl,Eritrea,ASA
+Asmara Intl,Eritrea,ASM
+Massawa Intl,Eritrea,MSW
+Yasser Arafat Intl,Palestine,GZA
+Riyan,Yemen,RIY
+Batumi,Georgia,BUS
+Kopitnari,Georgia,KUT
+Tbilisi,Georgia,TBS
+Taiz Intl,Yemen,TAI
+Hodeidah Intl,Yemen,HOD
+Aden Intl,Yemen,ADE
+Ataq,Yemen,AXK
+Al Ghaidah Intl,Yemen,AAY
+Sanaa Intl,Yemen,SAH
+Allgau,Germany,FMM
+Beihan,Yemen,BHN
+Socotra Intl,Yemen,SCT
+Kapadokya,Turkey,NAV
+Ministro Pistarini,Argentina,EZE
+Erbil Intl,Iraq,EBL
+Emerald,Australia,EMD
+Kansai,Japan,KIX
+Wall Street Heliport,United States,JRB
+Tagbilaran,Philippines,TAG
+Ilulissat,Greenland,JAV
+Qasigiannguit,Greenland,JCH
+Aasiaat,Greenland,JEG
+Son Sant Joan,Spain,PMI
+Darwin Intl,Australia,DRW
+Surat Thani,Thailand,URT
+Bagan Intl,Burma,NYU
+Godofredo P,Philippines,MPH
+Bimini North Seaplane Base,Bahamas,NSB
+Talkeetna,United States,TKA
+Xewkija Heliport,Malta,GZM
+Tweed-New Haven Airport,United States,HVN
+Asheville Regional Airport,United States,AVL
+Piedmont Triad,United States,GSO
+Sioux Falls,United States,FSD
+Ayers Rock,Australia,AYQ
+Manchester Regional Airport,United States,MHT
+Naples Muni,United States,APF
+Redang,Malaysia,RDN
+Louisville International Airport,United States,SDF
+Charlottesville-Albemarle,United States,CHO
+Roanoke Regional,United States,ROA
+Blue Grass,United States,LEX
+Evansville Regional,United States,EVV
+Albuquerque International Sunport,United States,ABQ
+Gallatin Field,United States,BZN
+Billings Logan International Airport,United States,BIL
+Bert Mooney Airport,United States,BTM
+Cherry Capital Airport,United States,TVC
+Mundo Maya International,Guatemala,FRS
+Hancock County - Bar Harbor,United States,BHB
+Knox County Regional Airport,United States,RKD
+Jackson Hole Airport,United States,JAC
+Chicago Rockford International Airport ,United States,RFD
+Domododevo,Russia,DME
+Phoenix International,China,SYX
+Milford Sound Airport,New Zealand,MFN
+East 34th Street Heliport,United States,TSS
+Lijiang Airport,China,LJG
+Greenville-Spartanburg International,United States,GSP
+Cologne Railway,Germany,QKL
+Stuttgart Railway Station,Germany,ZWS
+Central Illinois Rgnl,United States,BMI
+Gulfport-Biloxi,United States,GPT
+Kalamazoo,United States,AZO
+Toledo,United States,TOL
+Fort Wayne,United States,FWA
+Decatur,United States,DEC
+Cedar Rapids,United States,CID
+La Crosse Municipal,United States,LSE
+Central Wisconsin,United States,CWA
+Peoria Regional,United States,PIA
+Appleton,United States,ATW
+Rochester,United States,RST
+Champaign,United States,CMI
+Manhattan Reigonal,United States,MHK
+Kingscote Airport,Australia,KGC
+Hervey Bay Airport,Australia,HVB
+EuroAirport Basel-Mulhouse-Freiburg,Switzerland,BSL
+Dali,China,DLU
+Jinghong,China,JHG
+Mulu,Malaysia,MZV
+Sharm El Sheikh Intl,Egypt,SSH
+Franklin,United States,FKL
+Jomo Kenyatta International,Kenya,NBO
+Seronera,Tanzania,SEU
+El Calafate,Argentina,FTE
+Armidale,Australia,ARM
+Grand Junction Regional,United States,GJT
+St George Muni,United States,SGU
+David Wayne Hooks Field,United States,DWH
+Sarasota Bradenton Intl,United States,SRQ
+Van Nuys,United States,VNY
+Bermuda Intl,Bermuda,BDA
+Quad City Intl,United States,MLI
+Panama City Bay Co Intl,United States,PFN
+Honiara International,Solomon Islands,HIR
+Faa\\'a International,French Polynesia,PPT
+Nauru Intl,Nauru,INU
+Funafuti International,Tuvalu,FUN
+Tolmachevo,Russia,OVB
+Orlando,United States,DWS
+Xieng Khouang,Laos,XKH
+Phu Bai,Vietnam,HUI
+Bismarck Municipal Airport,United States,BIS
+Telluride,United States,TEX
+Yinchuan,China,INC
+Mae Hong Son,Thailand,HGN
+Rapid City Regional Airport,United States,RAP
+McClellan-Palomar Airport,United States,CLD
+Bishop International,United States,FNT
+Francisco Bangoy International,Philippines,DVO
+Madeira,Portugal,FNC
+Santarem,Brazil,STM
+Sihanoukville,Cambodia,KOS
+Ekati,Canada,YOA
+Napier,New Zealand,NPE
+Levuka Airfield,Fiji,LEV
+Lhasa-Gonggar,China,LXA
+Redding Muni,United States,RDD
+Mahlon Sweet Fld,United States,EUG
+Idaho Falls Rgnl,United States,IDA
+Rogue Valley Intl Medford,United States,MFR
+Kaikoura,New Zealand,KBZ
+Roberts Fld,United States,RDM
+Koromiko,New Zealand,PCN
+Windhoek Hosea Kutako International Airport ,Namibia,WDH
+Victoria Inner Harbour Airport,Canada,YWH
+Vancouver Coal Harbour,Canada,CXH
+Jinan,China,TNA
+Changzhou,China,CZX
+Yibin,China,YBP
+Roschino,Russia,TJM
+Akron Canton Regional Airport,United States,CAK
+Huntsville International Airport-Carl T Jones Field,United States,HSV
+Mid-Ohio Valley Regional Airport,United States,PKB
+Montgomery Regional Airport ,United States,MGM
+Tri-Cities Regional Airport,United States,TRI
+Barkley Regional Airport,United States,PAH
+Kurumoch,Russia,KUF
+Ambouli International Airport,Djibouti,JIB
+Meilan,China,HAK
+Mafia,Tanzania,MFA
+Glacier Park Intl,United States,FCA
+Page Municipal Airport,United States,PGA
+Utila Airport,Honduras,UII
+Santa Elena Airport,Venezuela,SNV
+Mbs Intl,United States,MBS
+Greater Binghamton Edwin A Link Fld,United States,BGM
+Baghdad International Airport,Iraq,BGW
+Nan,Thailand,NNT
+Roi Et,Thailand,ROI
+Buri Ram,Thailand,BFV
+Ranong,Thailand,UNN
+Trat,Thailand,TDX
+Blythe Airport,United States,BLH
+Diosdado Macapagal International,Philippines,CRK
+Sandakan,Malaysia,SDK
+Luang Namtha,Laos,LXG
+Oudomxay,Laos,ODY
+Shenyang Taoxian International Airport,China,SHE
+Dongying Airport,China,DOY
+John A. Osborne Airport,Montserrat,MNI
+Petersburg James A. Johnson,United States,PSG
+Luoyang Airport,China,LYA
+Xuzhou Guanyin Airport,China,XUZ
+Esfahan Shahid Beheshti Intl,Iran,IFN
+Magwe,Burma,MWQ
+Khamti,Burma,KHM
+Dalat,Vietnam,DLI
+Dong Hoi,Vietnam,VDH
+Rach Gia,Vietnam,VKG
+Ca Mau,Vietnam,CAH
+Chu Lai,Vietnam,VCL
+Dong Tac,Vietnam,TBB
+Pai,Thailand,PYY
+Brac,Croatia,BWK
+Yaounde Nsimalen,Cameroon,NSI
+Conakry,Guinea,CKY
+Flugplatz Merzbrueck,Germany,AAH
+Baden Airpark,Germany,FKB
+Orlando Sanford Intl,United States,SFB
+Duong Dong Airport,Vietnam,PQC
+John Murtha Johnstown-Cambria County Airport,United States,JST
+Lukla,Nepal,LUA
+Bhojpur,Nepal,BHP
+Lamidanda,Nepal,LDN
+Jomsom,Nepal,JMO
+Manang,Nepal,NGX
+Phaplu,Nepal,PPL
+Thamkharka,Nepal,TMK
+Rumjatar,Nepal,RUM
+Tulsipur,Nepal,DNP
+Rukumkot,Nepal,RUK
+Jumla,Nepal,JUM
+Chaurjhari,Nepal,HRJ
+Taplejung,Nepal,TPJ
+Tumling Tar,Nepal,TMI
+Surkhet,Nepal,SKH
+Simikot,Nepal,IMK
+Dolpa,Nepal,DOP
+Bajhang,Nepal,BJH
+Dhangarhi,Nepal,DHI
+Muan,South Korea,MWX
+Astypalaia,Greece,JTY
+Ikaria,Greece,JIK
+Kalymnos Island,Greece,JKL
+Milos,Greece,MLO
+Naxos,Greece,JNX
+Paros,Greece,PAS
+Kastelorizo,Greece,KZS
+Marsa Alam Intl,Egypt,RMF
+Niederrhein,Germany,NRN
+Busuanga,Philippines,USU
+Butuan,Philippines,BXU
+Dipolog,Philippines,DPL
+Laoag Intl,Philippines,LAO
+Legazpi,Philippines,LGP
+Ozamis,Philippines,OZC
+Zweibruecken,Germany,ZQW
+Mactan Cebu Intl,Philippines,CEB
+Sonderlandeplatz Norden-Norddeich,Germany,NOE
+Verkehrslandeplatz Juist,Germany,JUI
+Aeroporto de Porto Seguro,Brazil,BPS
+Gounda Airport,Central African Republic,GDA
+Palmas,Brazil,PMW
+Caldas Novas,Brazil,CLV
+Missoula Intl,United States,MSO
+Blackall,Australia,BKQ
+Bundaberg,Australia,BDB
+Grand Canyon National Park Airport,United States,GCN
+Sugar Land Regional Airport,United States,SGR
+Hayman Island Airport,Australia,HIS
+Centennial,United States,APA
+Clovis Muni,United States,CVN
+Fort Stockton Pecos Co,United States,FST
+Las Vegas Muni,United States,LVS
+West Houston,United States,IWS
+La Junta Muni,United States,LHX
+Las Cruces Intl,United States,LRU
+Stephens Co,United States,BKD
+Draughon Miller Central Texas Rgnl,United States,TPL
+Ozona Muni,United States,OZA
+Athen Helenikon Airport,Greece,HEW
+Waikoloa Heliport,United States,WKL
+Kaadedhdhoo,Maldives,KDM
+Aklavik,Canada,LAK
+Deline,Canada,YWJ
+Tulita,Canada,ZFN
+Fort Good Hope,Canada,YGH
+Tanna island,Vanuatu,TAH
+Paulatuk,Canada,YPC
+Santa Cruz,Bolivia,SRZ
+Kulusuk,Greenland,KUS
+Juancho E. Yrausquin,Netherlands Antilles,SAB
+Eagle Co Rgnl,United States,EGE
+Skagen,Norway,SKN
+Cuyahoga County,United States,CGF
+Mansfield Lahm Regional,United States,MFD
+Columbus Metropolitan Airport,United States,CSG
+Lawton-Fort Sill Regional Airport,United States,LAW
+Fort Collins Loveland Muni,United States,FNL
+Flagstaff Pulliam Airport,United States,FLG
+Lake Tahoe Airport,United States,TVL
+Magic Valley Regional Airport,United States,TWF
+Monaco,Monaco,MCM
+Martha\\'s Vineyard,United States,MVY
+Newport State,United States,UUU
+Hartness State,United States,VSF
+Concord Municipal,United States,CON
+Sanford Regional,United States,SFM
+Groton New London,United States,GON
+Saint Cloud Regional Airport,United States,STC
+Bagan,Burma,BPE
+Golden Triangle Regional Airport,United States,GTR
+Nizhny Novgorod,Russia,GOJ
+Bowerman Field,United States,HQM
+Erie Intl Tom Ridge Fld,United States,ERI
+Barnstable Muni Boardman Polando Fld,United States,HYA
+San Pedro,Belize,SPR
+Sedona,United States,SDX
+Morgantown Muni Walter L Bill Hart Fld,United States,MGW
+Yeager,United States,CRW
+Wilkes Barre Scranton Intl,United States,AVP
+Bemidji Regional Airport,United States,BJI
+Heydar Aliyev,Azerbaijan,BAK
+Thangool,Australia,THG
+Fagali\\'i,Samoa,FGI
+Ballina Byron Gateway,Australia,BNK
+Hector International Airport,United States,FAR
+Downtown,United States,MKC
+Phoenix-Mesa Gateway,United States,AZA
+Ratanakiri,Cambodia,RBE
+Gillette-Campbell County Airport,United States,GCC
+Tomsk Bogashevo Airport,Russia,TOF
+El Toro,United States,NZJ
+Phetchabun,Thailand,PHY
+Chumphon,Thailand,CJM
+Jiuzhaigou Huanglong,China,JZH
+Wai Sha Airport,China,SWA
+Cheddi Jagan Intl,Guyana,GEO
+Ciudad del Este,Paraguay,AGT
+Ogle,Guyana,OGL
+Kaieteur,Guyana,KAI
+Dunhuang Airport,China,DNH
+Falconara,Italy,AOI
+Iosco County,United States,ECA
+Copiapo,Chile,CPO
+Taba Intl,Egypt,TCP
+Edward Bodden Airfield,Cayman Islands,LYB
+Bodrum - Milas,Turkey,BJV
+7 Novembre,Tunisia,TBJ
+Sabiha Gokcen,Turkey,SAW
+University Park Airport,United States,SCE
+Broome,Australia,BME
+Newcastle Airport,Australia,NTL
+Woerthersee International Airport,Austria,KLU
+General Manuel Carlos Piar,Venezuela,CGU
+Hammerfest Airport,Norway,HFT
+Valan,Norway,HVG
+Mehamn,Norway,MEH
+Airport,Norway,VDS
+Imam Khomeini,Iran,IKA
+Mashhad,Iran,MHD
+Egelsbach,Germany,QEF
+Ust-Ilimsk,Russia,UIK
+Mudanjiang,China,MDG
+Key Field,United States,MEI
+Abraham Lincoln Capital,United States,SPI
+Uzundzhovo,Bulgaria,HKV
+Cortez Muni,United States,CEZ
+Yampa Valley,United States,HDN
+Gallup Muni,United States,GUP
+Liberal Muni,United States,LBL
+Lamar Muni,United States,LAA
+Renner Fld,United States,GLD
+Yellowstone Rgnl,United States,COD
+Hovden,Norway,HOV
+ISLES OF SCILLY,United Kingdom,ISC
+Springfield Branson Natl,United States,SGF
+Framnes,Norway,NVK
+Berlevag,Norway,BVG
+Fornebu,Norway,FBU
+Alykel,Russia,NSK
+Vityazevo,Russia,AAQ
+Joplin Rgnl,United States,JLN
+Lehigh Valley Intl,United States,ABE
+NW Arkansas Regional,United States,XNA
+Atyrau,Kazakhstan,GUW
+Kzyl-Orda,Kazakhstan,KZO
+South Bend Rgnl,United States,SBN
+Bykovo,Russia,BKA
+Talagi,Russia,ARH
+Central,Russia,RTW
+Novyi Urengoy,Russia,NUX
+Noyabrsk,Russia,NOJ
+Washington Union Station,United States,ZWU
+Aktau,Kazakhstan,SCO
+Ukhta,Russia,UCT
+Usinsk,Russia,USK
+Pechora,Russia,PEX
+Naryan-Mar,Russia,NNM
+Kresty,Russia,PKV
+Kogalym International,Russia,KGP
+Emelyanovo,Russia,KJA
+Sary-Arka,Kazakhstan,KGF
+Uraj,Russia,URJ
+Turkmenabat,Turkmenistan,CRZ
+Yuzhny,Russia,IWA
+Changchun,China,CGQ
+Niigata,Japan,KIJ
+Johnston Atoll,Johnston Atoll,JON
+Smith Fld,United States,SMD
+Arcata,United States,ACV
+Camp Mabry Austin City,United States,ATT
+Albert J Ellis,United States,OAJ
+Tuscaloosa Rgnl,United States,TCL
+Dubuque Rgnl,United States,DBQ
+Forde Bringeland,Norway,FDE
+Poliarny Airport,Russia,PYJ
+Nakhchivan Airport,Azerbaijan,NAJ
+Ganja Airport,Azerbaijan,KVD
+Ust Kamenogorsk Airport,Kazakhstan,UKK
+Petropavlosk South Airport,Kazakhstan,PPK
+Les Bases Airport,Guadeloupe,GBJ
+St-François Airport,Guadeloupe,SFC
+Codrington Airport,Antigua and Barbuda,BBQ
+Ji-Paraná Airport,Brazil,JPR
+Escuela Mariscal Sucre Airport,Venezuela,MYC
+Maria Reiche Neuman Airport,Peru,NZA
+Mayor General FAP Armando Revoredo Iglesias Airport,Peru,CJA
+Gatokae Airport,Solomon Islands,GTA
+Boorama Airport,Somalia,BXX
+Mucuri Airport,Brazil,MVS
+Zorg en Hoop Airport,Suriname,ORG
+Reyes Airport,Bolivia,REY
+Puerto Rico Airport,Bolivia,PUR
+El Alcaraván Airport,Colombia,EYP
+General Rivadeneira Airport,Ecuador,ESM
+Pucón Airport,Chile,ZPC
+Toledo Airport,Brazil,TOW
+Santa Maria Airport,Brazil,RIA
+Chapada Diamantina Airport,Brazil,LEC
+Goulburn Airport,Australia,GUL
+Orlando Bezerra de Menezes Airport,Brazil,JDO
+Santa Teresita Airport,Argentina,SST
+Gobernador Gregores Airport,Argentina,GGS
+Antoine De St Exupery Airport,Argentina,OES
+Las Heras Airport,Argentina,LHS
+General Enrique Mosconi Airport,Argentina,TTG
+Masbate Airport,Philippines,MBT
+Catarman National Airport,Philippines,CRM
+Jolo Airport,Philippines,JOL
+Camiguin Airport,Philippines,CGM
+Cuyo Airport,Philippines,CYU
+Cheongju International Airport,South Korea,CJJ
+Sacheon Air Base,South Korea,HIN
+Wonju Airport,South Korea,WJU
+Mokpo Airport,South Korea,MPK
+Kunsan Air Base,South Korea,KUV
+Miyakejima Airport,Japan,MYE
+Shonai Airport,Japan,SYO
+Odate Noshiro Airport,Japan,ONJ
+Fukushima Airport,Japan,FKS
+Iwami Airport,Japan,IWJ
+Nagoya Airport,Japan,NKM
+Saga Airport,Japan,HSG
+Okadama Airport,Japan,OKD
+Kushiro Airport,Japan,KUH
+Matsu Beigan Airport,Taiwan,MFK
+Hengchun Airport,Taiwan,HCN
+Matsu Nangan Airport,Taiwan,LZN
+Eniwetok Airport,Marshall Islands,ENT
+Kalaupapa Airport,United States,LUP
+El Nido Airport,Philippines,ENI
+Wipim Airport,Papua New Guinea,WPM
+Baimuru Airport,Papua New Guinea,VMU
+Nuku Airport,Papua New Guinea,UKU
+Tufi Airport,Papua New Guinea,TFI
+Suki Airport,Papua New Guinea,SKC
+Balimo Airport,Papua New Guinea,OPU
+Obo Airport,Papua New Guinea,OBX
+Losuia Airport,Papua New Guinea,LSA
+Londolovit Airport,Papua New Guinea,LNV
+Lake Murray Airport,Papua New Guinea,LMY
+Kamusi Airport,Papua New Guinea,KUY
+Kokoda Airport,Papua New Guinea,KKD
+Kandrian Airport,Papua New Guinea,KDR
+Jacquinot Bay Airport,Papua New Guinea,JAQ
+Nissan Island Airport,Papua New Guinea,IIS
+Ihu Airport,Papua New Guinea,IHU
+Gasmata Island Airport,Papua New Guinea,GMI
+Tadji Airport,Papua New Guinea,ATP
+Wrangell Airport,United States,WRG
+Chevak Airport,United States,VAK
+Aniak Airport,United States,ANI
+Mountain Village Airport,United States,MOU
+McGrath Airport,United States,MCG
+Kalskag Airport,United States,KLG
+Haines Airport,United States,HNS
+Holy Cross Airport,United States,HCR
+Skagway Airport,United States,SGY
+Gustavus Airport,United States,GST
+Adak Airport,United States,ADK
+Sambu Airport,Panama,SAX
+Contadora Airport,Panama,OTD
+EL Real Airport,Panama,ELE
+Bahia Piña Airport,Panama,BFQ
+Sayun International Airport,Yemen,GXF
+Kamishly Airport,Syria,KAC
+Sulaymaniyah International Airport,Iraq,ISU
+Turbat International Airport,Pakistan,TUK
+Sehwan Sharif Airport,Pakistan,SYW
+Skardu Airport,Pakistan,KDU
+Parachinar Airport,Pakistan,PAJ
+Ormara Airport,Pakistan,ORW
+Khuzdar Airport,Pakistan,KDD
+Hyderabad Airport,Pakistan,HDD
+Jiwani Airport,Pakistan,JIW
+Dera Ismael Khan Airport,Pakistan,DSK
+Dera Ghazi Khan Airport,Pakistan,DEA
+Dalbandin Airport,Pakistan,DBA
+Chitral Airport,Pakistan,CJL
+Bahawalpur Airport,Pakistan,BHV
+Bannu Airport,Pakistan,BNP
+Al Ain International Airport,United Arab Emirates,AAN
+Uromiyeh Airport,Iran,OMH
+Ardabil Airport,Iran,ADU
+Lar Airport,Iran,LRR
+Sari Dasht E Naz Airport,Iran,SRY
+Noshahr Airport,Iran,NSH
+Sabzevar National Airport,Iran,AFZ
+Bojnourd Airport,Iran,BJB
+Rafsanjan Airport,Iran,RJN
+Bam Airport,Iran,BXR
+Khoram Abad Airport,Iran,KHD
+Wadi Al Dawasir Airport,Saudi Arabia,EWD
+Al-Jawf Domestic Airport,Saudi Arabia,AJF
+Dawadmi Domestic Airport,Saudi Arabia,DWD
+Saul Airport,French Guiana,XAU
+Faizabad Airport,Afghanistan,FBD
+Île des Pins Airport,New Caledonia,ILP
+Belep Islands Airport,New Caledonia,BMY
+Tiga Airport,New Caledonia,TGJ
+Ipota Airport,Vanuatu,IPA
+Futuna Airport,Vanuatu,FTA
+Dillon's Bay Airport,Vanuatu,DLY
+Aniwa Airport,Vanuatu,AWD
+Anelghowhat Airport,Vanuatu,AUY
+North West Santo Airport,Vanuatu,OLZ
+Southwest Bay Airport,Vanuatu,SWJ
+Valesdir Airport,Vanuatu,VLS
+Uléi Airport,Vanuatu,ULB
+Tongoa Island Airport,Vanuatu,TGH
+Santo Pekoa International Airport,Vanuatu,SON
+Redcliffe Airport,Vanuatu,RCL
+Gaua Island Airport,Vanuatu,ZGU
+Norsup Airport,Vanuatu,NUS
+Lonorore Airport,Vanuatu,LNE
+Naone Airport,Vanuatu,MWF
+Lamen Bay Airport,Vanuatu,LNB
+Lamap Airport,Vanuatu,LPM
+Tavie Airport,Vanuatu,PBJ
+Sara Airport,Vanuatu,SSR
+Longana Airport,Vanuatu,LOD
+Craig Cove Airport,Vanuatu,CCV
+Sangafa Airport,Vanuatu,EAE
+Torres Airstrip,Vanuatu,TOH
+Sola Airport,Vanuatu,SLH
+Mota Lava Airport,Vanuatu,MTV
+Ua Huka Airport,French Polynesia,UAH
+Ua Pou Airport,French Polynesia,UAP
+Hiva Oa-Atuona Airport,French Polynesia,AUQ
+Ahe Airport,French Polynesia,AHE
+Apataki Airport,French Polynesia,APK
+Maota Airport,Samoa,MXS
+Mountain Airport,Nepal,MWP
+Pointe Vele Airport,Wallis and Futuna,FUT
+Niue International Airport,Niue,IUE
+Vanua Balavu Airport,Fiji,VBV
+Kuini Lavenia Airport,Tonga,NTT
+Lifuka Island Airport,Tonga,HPA
+Kaufana Airport,Tonga,EUA
+Savusavu Airport,Fiji,SVU
+Rotuma Airport,Fiji,RTA
+Koro Island Airport,Fiji,KXF
+Matei Airport,Fiji,TVU
+Labasa Airport,Fiji,LBS
+Lakeba Island Airport,Fiji,LKB
+Ngau Airport,Fiji,NGI
+Moala Airport,Fiji,MFJ
+Mana Island Airport,Fiji,MNF
+Vunisea Airport,Fiji,KDV
+Malolo Lailai Island Airport,Fiji,PTF
+Cicia Airport,Fiji,ICI
+Penrhyn Island Airport,Cook Islands,PYE
+Mitiaro Island Airport,Cook Islands,MOI
+Mauke Airport,Cook Islands,MUK
+Manihiki Island Airport,Cook Islands,MHX
+Mangaia Island Airport,Cook Islands,MGS
+Atiu Island Airport,Cook Islands,AIU
+Nassau Paradise Island Airport,Bahamas,PID
+Colonel Hill Airport,Bahamas,CRI
+New Bight Airport,Bahamas,CAT
+Arthurs Town Airport,Bahamas,ATC
+Congo Town Airport,Bahamas,COX
+Long Banga Airport,Malaysia,LBP
+Salina Cruz Naval Air Station,Mexico,SCX
+Alberto Delgado Airport,Cuba,TND
+Cayo Coco Airport,Cuba,CCC
+Port-de-Paix Airport,Haiti,PAX
+Jeremie Airport,Haiti,JEE
+Playa Samara Airport,Costa Rica,PLD
+Tobias Bolanos International Airport,Costa Rica,SYQ
+Puerto Jimenez Airport,Costa Rica,PJM
+Islita Airport,Costa Rica,PBP
+Cabo Velas Airport,Costa Rica,TNO
+Barra del Colorado Airport,Costa Rica,BCL
+Aerotortuguero Airport,Costa Rica,TTQ
+Captain Ramon Xatruch Airport,Panama,PLP
+Jaqué Airport,Panama,JQE
+Enrique Adolfo Jimenez Airport,Panama,ONX
+Alonso Valderrama Airport,Panama,CTD
+Lencero Airport,Mexico,JAL
+Guerrero Negro Airport,Mexico,GUB
+Ciudad Constitución Airport,Mexico,CUA
+Captain Rogelio Castillo National Airport,Mexico,CYW
+Mili Island Airport,Marshall Islands,MIJ
+Puerto Lempira Airport,Honduras,PEU
+Ahuas Airport,Honduras,AHS
+Wotho Island Airport,Marshall Islands,WTO
+Wotje Atoll Airport,Marshall Islands,WTE
+Woja Airport,Marshall Islands,WJA
+Jaluit Airport,Marshall Islands,UIT
+Rongelap Island Airport,Marshall Islands,RNP
+Namorik Atoll Airport,Marshall Islands,NDK
+Majkin Airport,Marshall Islands,MJE
+Mejit Atoll Airport,Marshall Islands,MJB
+Maloelap Island Airport,Marshall Islands,MAV
+Likiep Airport,Marshall Islands,LIK
+Kaben Airport,Marshall Islands,KBT
+Jeh Airport,Marshall Islands,JEJ
+Jabot Airport,Marshall Islands,JAT
+Enyu Airfield,Marshall Islands,BII
+Aur Island Airport,Marshall Islands,AUL
+Ailuk Airport,Marshall Islands,AIM
+Utirik Airport,Marshall Islands,UTK
+Quezaltenango Airport,Guatemala,AAZ
+Puerto Barrios Airport,Guatemala,PBR
+Dr Joaquin Balaguer International Airport,Dominican Republic,JBQ
+Samaná El Catey International Airport,Dominican Republic,AZS
+Salt Cay Airport,Turks and Caicos Islands,SLX
+Middle Caicos Airport,Turks and Caicos Islands,MDS
+JAGS McCartney International Airport,Turks and Caicos Islands,GDT
+Žilina Airport,Slovakia,ILZ
+Ubari Airport,Libya,QUB
+Misratah Airport,Libya,MRA
+Samsun-Çarşamba Airport,Turkey,SZF
+Balikesir Korfez Airport,Turkey,EDO
+Isparta Süleyman Demirel Airport,Turkey,ISE
+Adiyaman Airport,Turkey,ADF
+Agri Airport,Turkey,AJI
+Kahramanmaras Airport,Turkey,KCM
+Sanliurfa Airport,Turkey,SFQ
+Kars Airport,Turkey,KSY
+Usak Airport,Turkey,USQ
+Banja Luka International Airport,Bosnia and Herzegovina,BNX
+Corvo Airport,Portugal,CVU
+Salerno Pontecagnano Airport,Italy,QSR
+Aosta Airport,Italy,AOT
+Sármellék International Airport,Hungary,SOB
+Győr-Pér International Airport,Hungary,QGY
+Pécs-Pogány Airport,Hungary,PEV
+Syros Airport,Greece,JSY
+La Môle Airport,France,LTT
+EuroAirport,France,EAP
+Angers-Loire Airport,France,ANE
+Île d'Yeu Airport,France,IDY
+Logroño-Agoncillo Airport,Spain,RJL
+Ercan International Airport,Cyprus,ECN
+Yakima Air Terminal McAllister Field,United States,YKM
+Kiwayu (Mkononi) Airport,Kenya,KWY
+Worland Municipal Airport,United States,WRL
+Valdosta Regional Airport,United States,VLD
+Victoria Regional Airport,United States,VCT
+Quincy Regional Baldwin Field,United States,UIN
+Tupelo Regional Airport,United States,TUP
+Santa Maria Pub Cpt G Allan Hancock Airport,United States,SMX
+Salina Municipal Airport,United States,SLN
+Adirondack Regional Airport,United States,SLK
+Sheridan County Airport,United States,SHR
+San Luis County Regional Airport,United States,SBP
+Rutland State Airport,United States,RUT
+Rock Springs Sweetwater County Airport,United States,RKS
+Rhinelander Oneida County Airport,United States,RHI
+Reading Regional Carl A Spaatz Field,United States,RDG
+Pease International Tradeport,United States,PSM
+Pellston Regional Airport of Emmet County Airport,United States,PLN
+Pierre Regional Airport,United States,PIR
+Pocatello Regional Airport,United States,PIH
+Hattiesburg Laurel Regional Airport,United States,PIB
+Owensboro Daviess County Airport,United States,OWB
+Southwest Oregon Regional Airport,United States,OTH
+Northwest Alabama Regional Airport,United States,MSL
+Frank Wiley Field,United States,MLS
+Muskegon County Airport,United States,MKG
+Lynchburg Regional Preston Glenn Field,United States,LYH
+Lewistown Municipal Airport,United States,LWT
+Lancaster Airport,United States,LNS
+Klamath Falls Airport,United States,LMT
+Lebanon Municipal Airport,United States,LEB
+North Platte Regional Airport Lee Bird Field,United States,LBF
+Arnold Palmer Regional Airport,United States,LBE
+Laramie Regional Airport,United States,LAR
+Jamestown Regional Airport,United States,JMS
+Kirksville Regional Airport,United States,IRK
+Kili Airport,Marshall Islands,KIO
+Tri State Milton J Ferguson Field,United States,HTS
+Memorial Field,United States,HOT
+Central Nebraska Regional Airport,United States,GRI
+Wokal Field Glasgow International Airport,United States,GGW
+Fayetteville Regional Grannis Field,United States,FAY
+New Bedford Regional Airport,United States,EWB
+Elko Regional Airport,United States,EKO
+Chippewa Valley Regional Airport,United States,EAU
+DuBois Regional Airport,United States,DUJ
+Dodge City Regional Airport,United States,DDC
+Houghton County Memorial Airport,United States,CMX
+William R Fairchild International Airport,United States,CLM
+Harrison Marion Regional Airport,United States,CKB
+Chippewa County International Airport,United States,CIU
+Cape Girardeau Regional Airport,United States,CGI
+Del Norte County Airport,United States,CEC
+Southeast Iowa Regional Airport,United States,BRL
+Brunswick Golden Isles Airport,United States,BQK
+Raleigh County Memorial Airport,United States,BKW
+Western Nebraska Regional Airport,United States,BFF
+Bradford Regional Airport,United States,BFD
+Watertown Regional Airport,United States,ATY
+Alpena County Regional Airport,United States,APN
+Walla Walla Regional Airport,United States,ALW
+Waterloo Regional Airport,United States,ALO
+Alamogordo White Sands Regional Airport,United States,ALM
+Athens Ben Epps Airport,United States,AHN
+Southwest Georgia Regional Airport,United States,ABY
+Aberdeen Regional Airport,United States,ABR
+San Domino Island Heliport,Italy,TQR
+Gheshm Airport,Iran,GSM
+Diu Airport,India,DIU
+Gulu Airport,Uganda,ULU
+Arua Airport,Uganda,RUA
+Tabora Airport,Tanzania,TBO
+Shinyanga Airport,Tanzania,SHY
+Musoma Airport,Tanzania,MUZ
+Kikwetu Airport,Tanzania,LDI
+Kigoma Airport,Tanzania,TKQ
+Bukoba Airport,Tanzania,BKZ
+Port Sudan New International Airport,Sudan,PZU
+Nyala Airport,Sudan,UYL
+Atbara Airport,Sudan,ATB
+La Abraq Airport,Libya,LAQ
+Mitiga Airport,Libya,MJI
+Gamal Abdel Nasser Airport,Libya,TOB
+Gardabya Airport,Libya,SRX
+Nanyuki Civil Airport,Kenya,NYK
+Malindi Airport,Kenya,MYD
+Lokichoggio Airport,Kenya,LKG
+Amboseli Airport,Kenya,ASV
+Asyut International Airport,Egypt,ATZ
+El Arish International Airport,Egypt,AAC
+Burao Airport,Somalia,BUO
+Galcaio Airport,Somalia,GLK
+Aden Adde International Airport,Somalia,MGQ
+Bosaso Airport,Somalia,BSA
+Alula Airport,Somalia,ALU
+Tippi Airport,Ethiopia,TIE
+Mizan Teferi Airport,Ethiopia,MTF
+Kabri Dehar Airport,Ethiopia,ABK
+Gore Airport,Ethiopia,GOR
+Gode Airport,Ethiopia,GDE
+Dembidollo Airport,Ethiopia,DEM
+Combolcha Airport,Ethiopia,DSE
+Beica Airport,Ethiopia,BEI
+Baco Airport,Ethiopia,BCO
+El Aroui Airport,Morocco,NDR
+Hassan I Airport,Western Sahara,EUN
+Mogador Airport,Morocco,ESU
+Dakhla Airport,Western Sahara,VIL
+Smara Airport,Western Sahara,SMW
+Iginniarfik Heliport,Greenland,QFI
+Akunnaaq Heliport,Greenland,QCU
+Groennedal Heliport,Greenland,JGR
+Osvaldo Vieira International Airport,Guinea-Bissau,OXB
+Kenema Airport,Sierra Leone,KEN
+Bo Airport,Sierra Leone,KBS
+Sherbro International Airport,Sierra Leone,BTE
+Ceuta Heliport,Spain,JCU
+Lauriston Airport,Grenada,CRU
+La Gomera Airport,Spain,GMZ
+Papa Stour Airport,United Kingdom,PSV
+Outer Skerries Airport,United Kingdom,OUK
+Foula Airport,United Kingdom,FOA
+Gamba,Gabon,GAX
+Ilebo Airport,Congo (Kinshasa),PFR
+Lodja Airport,Congo (Kinshasa),LJA
+Tshikapa Airport,Congo (Kinshasa),TSH
+Basankusu Airport,Congo (Kinshasa),BSU
+Basango Mboliasa Airport,Congo (Kinshasa),KRZ
+Nioki Airport,Congo (Kinshasa),NIO
+Inongo Airport,Congo (Kinshasa),INO
+Tshimpi Airport,Congo (Kinshasa),MAT
+Boma Airport,Congo (Kinshasa),BOA
+Eros Airport,Namibia,ERS
+Swakopmund Airport,Namibia,SWP
+Oranjemund Airport,Namibia,OMD
+Ondangwa Airport,Namibia,OND
+Luderitz Airport,Namibia,LUD
+Club Makokola Airport,Malawi,CMK
+Sarh Airport,Chad,SRH
+Croisette Heliport,France,JCA
+Chimoio Airport,Mozambique,VPY
+Tchibanga Airport,Gabon,TCH
+Mouilla Ville Airport,Gabon,MJL
+Koulamoutou Airport,Gabon,KOU
+Namibe Airport,Angola,MSZ
+Ondjiva Pereira Airport,Angola,VPE
+Dundo Airport,Angola,DUE
+Catumbela Airport,Angola,CBT
+Manja Airport,Madagascar,MJA
+Mandritsara Airport,Madagascar,WMA
+Tsaratanana Airport,Madagascar,TTS
+Mampikony Airport,Madagascar,WMP
+Soalala Airport,Madagascar,DWB
+Ambanja Airport,Madagascar,IVA
+Port Bergé Airport,Madagascar,WPB
+Ambatondrazaka Airport,Madagascar,WAM
+Tsiroanomandidy Airport,Madagascar,WTS
+Tambohorano Airport,Madagascar,WTA
+Morafenobe Airport,Madagascar,TVA
+Maintirano Airport,Madagascar,MXT
+Belo sur Tsiribihina Airport,Madagascar,BMD
+Ankavandra Airport,Madagascar,JVA
+Antsalova Airport,Madagascar,WAQ
+Iconi Airport,Comoros,YVA
+Solwesi Airport,Zambia,SLI
+Chipata Airport,Zambia,CIP
+Loubomo Airport,Congo (Brazzaville),DIS
+Limpopo Valley Airport,Botswana,TLD
+Shakawe Airport,Botswana,SWX
+Orapa Airport,Botswana,ORP
+Ghanzi Airport,Botswana,GNZ
+Mmabatho International Airport,South Africa,MBD
+Malamala Airport,South Africa,AAM
+Kruger Mpumalanga International Airport,South Africa,MQP
+Rand Airport,South Africa,QRA
+Ventspils International Airport,Latvia,VTS
+Shire Inda Selassie Airport,Ethiopia,SHC
+Shilavo Airport,Ethiopia,HIL
+Hemavan Airport,Sweden,HMV
+Storuman Airport,Sweden,SQO
+Ängelholm-Helsingborg Airport,Sweden,AGH
+Torsby Airport,Sweden,TYF
+Karlstad Airport,Sweden,KSD
+Hagfors Airport,Sweden,HFS
+Östersund Airport,Sweden,OSD
+Łódź Władysław Reymont Airport,Poland,LCJ
+Bydgoszcz Ignacy Jan Paderewski Airport,Poland,BZG
+Værøy Heliport,Norway,VRY
+Svartnes Airport,Norway,VAW
+Sorkjosen Airport,Norway,SOJ
+Svolvær Helle Airport,Norway,SVJ
+Sogndal Airport,Norway,SOG
+Anda Airport,Norway,SDN
+Røst Airport,Norway,RET
+Ryum Airport,Norway,RVK
+Røssvoll Airport,Norway,MQN
+Namsos Høknesøra Airport,Norway,OSY
+Leknes Airport,Norway,LKN
+Sindal Airport,Denmark,CNL
+Donegal Airport,Ireland,CFN
+Barra Airport,United Kingdom,BRR
+Anglesey Airport,United Kingdom,HLY
+Penzance Heliport,United Kingdom,PZE
+Land's End / St. Just Airport,United Kingdom,LEQ
+Westray Airport,United Kingdom,WRY
+Lerwick / Tingwall Airport,United Kingdom,LWK
+Sanday Airport,United Kingdom,NDY
+Stronsay Airport,United Kingdom,SOY
+Papa Westray Airport,United Kingdom,PPW
+North Ronaldsay Airport,United Kingdom,NRL
+Fair Isle Airport,United Kingdom,FIE
+Eday Airport,United Kingdom,EOI
+Campbeltown Airport,United Kingdom,CAL
+Nottingham Airport,United Kingdom,NQT
+Seinäjoki Airport,Finland,SJY
+Helgoland-Düne Airport,Germany,HGL
+Heide-Büsum Airport,Germany,HEI
+Heringsdorf Airport,Germany,HDF
+Kumasi Airport,Ghana,KMS
+Guemar Airport,Algeria,ELU
+Bordj Badji Mokhtar Airport,Algeria,BMW
+Béchar Boudghene Ben Ali Lotfi Airport,Algeria,CBH
+Batna Airport,Algeria,BLJ
+Wollaston Lake Airport,Canada,ZWL
+Churchill Falls Airport,Canada,ZUM
+Shamattawa Airport,Canada,ZTM
+Sandy Lake Airport,Canada,ZSJ
+Round Lake (Weagamow Lake) Airport,Canada,ZRJ
+Sachigo Lake Airport,Canada,ZPB
+Masset Airport,Canada,ZMT
+Muskrat Dam Airport,Canada,MSA
+Kashechewan Airport,Canada,ZKE
+Swan River Airport,Canada,ZJN
+Gods River Airport,Canada,ZGI
+Fond-Du-Lac Airport,Canada,ZFD
+Eastmain River Airport,Canada,ZEM
+Bathurst Airport,Canada,ZBF
+Ilford Airport,Canada,ILF
+York Landing Airport,Canada,ZAC
+Salluit Airport,Canada,YZG
+Whale Cove Airport,Canada,YXN
+Webequie Airport,Canada,YWP
+Deer Lake Airport,Canada,YVZ
+Big Trout Lake Airport,Canada,YTL
+St. Theresa Point Airport,Canada,YST
+Sanikiluaq Airport,Canada,YSK
+Stony Rapids Airport,Canada,YSF
+Red Lake Airport,Canada,YRL
+Rae Lakes Airport,Canada,YRA
+Nakina Airport,Canada,YQN
+The Pas Airport,Canada,YQD
+Powell River Airport,Canada,YPW
+Peawanuck Airport,Canada,YPO
+Pikangikum Airport,Canada,YPM
+Inukjuak Airport,Canada,YPH
+Oxford House Airport,Canada,YOH
+Points North Landing Airport,Canada,YNL
+Norway House Airport,Canada,YNE
+Wemindji Airport,Canada,YNC
+Umiujaq Airport,Canada,YUD
+Chapais Airport,Canada,YMT
+Mary's Harbour Airport,Canada,YMH
+Kangiqsualujjuaq (Georges River) Airport,Canada,XGR
+Lutselk'e Airport,Canada,YSG
+Lansdowne House Airport,Canada,YLH
+Kimmirut Airport,Canada,YLC
+Aupaluk Airport,Canada,YPJ
+Waskaganish Airport,Canada,YKQ
+Akulivik Airport,Canada,AKV
+Island Lake Airport,Canada,YIV
+Ivujivik Airport,Canada,YIK
+Chevery Airport,Canada,YHR
+Hopedale Airport,Canada,YHO
+Nemiscau Airport,Canada,YNS
+Vancouver Harbour Water Airport,Canada,YHC
+Quaqtaq Airport,Canada,YQC
+Grise Fiord Airport,Canada,YGZ
+Gillam Airport,Canada,YGX
+Kuujjuarapik Airport,Canada,YGW
+Igloolik Airport,Canada,YGT
+Gods Lake Narrows Airport,Canada,YGO
+Texada Gillies Bay Airport,Canada,YGB
+Makkovik Airport,Canada,YMN
+Fort Hope Airport,Canada,YFH
+Fort Albany Airport,Canada,YFA
+Fort Severn Airport,Canada,YER
+Nain Airport,Canada,YDP
+Chesterfield Inlet Airport,Canada,YCS
+Cartwright Airport,Canada,YRF
+Lourdes De Blanc Sablon Airport,Canada,YBX
+Uranium City Airport,Canada,YBE
+Attawapiskat Airport,Canada,YAT
+Kangirsuk Airport,Canada,YKG
+Kasabonika Airport,Canada,XKS
+Fort Frances Municipal Airport,Canada,YAG
+Cat Lake Airport,Canada,YAC
+Tarapacá Airport,Colombia,TCD
+Apartadó Airport,Colombia,APO
+Nantong Airport,China,NTG
+La Tabatière Airport,Canada,ZLT
+Tête-à-la-Baleine Airport,Canada,ZTB
+Chisasibi Airport,Canada,YKU
+Poplar Hill Airport,Canada,YHP
+Ogoki Post Airport,Canada,YOG
+Kingfisher Lake Airport,Canada,KIF
+Bearskin Lake Airport,Canada,XBE
+North Spirit Lake Airport,Canada,YNO
+Wunnumin Lake Airport,Canada,WNN
+Wapekeka Airport,Canada,YAX
+Summer Beaver Airport,Canada,SUR
+Whatì Airport,Canada,YLE
+Colville Lake Airport,Canada,YCK
+Rigolet Airport,Canada,YRG
+Port Hope Simpson Airport,Canada,YHA
+St. Lewis (Fox Harbour) Airport,Canada,YFX
+Williams Harbour Airport,Canada,YWM
+Anahim Lake Airport,Canada,YAA
+Whistler/Green Lake Water Aerodrome,Canada,YWS
+Punta Gorda Airport,Belize,PND
+Caye Caulker Airport,Belize,CUK
+Vopnafjörður Airport,Iceland,VPN
+Thorshofn Airport,Iceland,THO
+Drake Bay Airport,Costa Rica,DRK
+Grímsey Airport,Iceland,GRY
+Qaarsut Airport,Greenland,JQA
+Upernavik Airport,Greenland,JUV
+Sisimiut Airport,Greenland,JHS
+Qaanaaq Airport,Greenland,NAQ
+Narsaq Heliport,Greenland,JNS
+Nanortalik Heliport,Greenland,JNN
+Maniitsoq Airport,Greenland,JSU
+Qaqortoq Heliport,Greenland,JJU
+Qeqertarsuaq Heliport,Greenland,JGO
+Paamiut Heliport,Greenland,JFR
+Neerlerit Inaat Airport,Greenland,CNP
+Alluitsup Paa Heliport,Greenland,LLU
+Wapenamanda Airport,Papua New Guinea,WBM
+Vanimo Airport,Papua New Guinea,VAI
+Tokua Airport,Papua New Guinea,RAB
+Tabubil Airport,Papua New Guinea,TBG
+Tari Airport,Papua New Guinea,TIZ
+Misima Island Airport,Papua New Guinea,MIS
+Moro Airport,Papua New Guinea,MXH
+Momote Airport,Papua New Guinea,MAS
+Mendi Airport,Papua New Guinea,MDU
+Kavieng Airport,Papua New Guinea,KVG
+Kerema Airport,Papua New Guinea,KMA
+Kikori Airport,Papua New Guinea,KRI
+Kiunga Airport,Papua New Guinea,UNG
+Kimbe Airport,Papua New Guinea,HKN
+Girua Airport,Papua New Guinea,PNP
+Gurney Airport,Papua New Guinea,GUR
+Daru Airport,Papua New Guinea,DAU
+Chimbu Airport,Papua New Guinea,CMU
+Buka Airport,Papua New Guinea,BUA
+Ramata Airport,Solomon Islands,RBV
+Kagau Island Airport,Solomon Islands,KGE
+Suavanao Airport,Solomon Islands,VAO
+Marau Airport,Solomon Islands,RUS
+Rennell/Tingoa Airport,Solomon Islands,RNL
+Mono Airport,Solomon Islands,MNY
+Nusatupe Airport,Solomon Islands,GZO
+Munda Airport,Solomon Islands,MUA
+Santa Cruz/Graciosa Bay/Luova Airport,Solomon Islands,SCZ
+Ngorangora Airport,Solomon Islands,IRA
+Babanakira Airport,Solomon Islands,MBU
+Fera/Maringe Airport,Solomon Islands,FRE
+Ballalae Airport,Solomon Islands,BAS
+Auki Airport,Solomon Islands,AKS
+Uru Harbour Airport,Solomon Islands,ATD
+Komsomolsk-on-Amur Airport,Russia,KXK
+Moyo Airport,Uganda,OYG
+Tiksi Airport,Russia,IKS
+Cherskiy Airport,Russia,CYX
+Chokurdakh Airport,Russia,CKH
+Chulman,Russia,CNN
+Kostanay West Airport,Kazakhstan,KSN
+Zhezkazgan Airport,Kazakhstan,DZN
+Kokshetau Airport,Kazakhstan,KOV
+Union Island International Airport,Saint Vincent and the Grenadines,UNI
+J F Mitchell Airport,Saint Vincent and the Grenadines,BQU
+Virgin Gorda Airport,British Virgin Islands,VIJ
+Vance Winkworth Amory International Airport,Saint Kitts and Nevis,NEV
+Baillif Airport,Guadeloupe,BBR
+La Désirade Airport,Guadeloupe,DSD
+Juan Pablo Pérez Alfonso Airport,Venezuela,VIG
+El Jaguel / Punta del Este Airport,Uruguay,MDO
+Santa Rosa Airport,Brazil,SRA
+Alferez Fap David Figueroa Fernandini Airport,Peru,HUU
+Caballococha Airport,Peru,LHC
+Capitán Av. German Quiroga G. Airport,Bolivia,SRJ
+Capitán Av. Selin Zeitun Lopez Airport,Bolivia,RIB
+Capitán de Av. Emilio Beltrán Airport,Bolivia,GYA
+Obando Airport,Colombia,PDA
+Reyes Murillo Airport,Colombia,NQU
+La Pedrera Airport,Colombia,LPD
+Caucaya Airport,Colombia,LQM
+La Jagua Airport,Colombia,GLJ
+Santa Ana Airport,Colombia,CRC
+Stanley Airport,Falkland Islands,PSY
+Camilo Ponce Enriquez Airport,Ecuador,LOH
+San Cristóbal Airport,Ecuador,SCY
+Sorocaba Airport,Brazil,SOD
+Ricardo García Posada Airport,Chile,ESR
+Vitória da Conquista Airport,Brazil,VDC
+Marília Airport,Brazil,MII
+Macaé Airport,Brazil,MEA
+Necochea Airport,Argentina,NEC
+Lago Argentino Airport,Argentina,ING
+Roxas Airport,Philippines,RXS
+Calbayog Airport,Philippines,CYP
+Virac Airport,Philippines,VRC
+Tuguegarao Airport,Philippines,TUG
+San Fernando Airport,Philippines,SFE
+Basco Airport,Philippines,BSO
+Naga Airport,Philippines,WNP
+Tandag Airport,Philippines,TDG
+Surigao Airport,Philippines,SUG
+Sanga Sanga Airport,Philippines,SGS
+General Santos International Airport,Philippines,GES
+Subic Bay International Airport,Philippines,SFS
+Yangyang International Airport,South Korea,YNY
+Ugolny Airport,Russia,DYR
+Okhotsk Airport,Russia,OHO
+Ujae Atoll Airport,Marshall Islands,UJE
+Mariupol International Airport,Ukraine,MPW
+Luhansk International Airport,Ukraine,VSG
+Zaporizhzhia International Airport,Ukraine,OZH
+Lozuvatka International Airport,Ukraine,KWG
+Osnova International Airport,Ukraine,HRK
+Ivano Frankivsk International Airport,Ukraine,IFO
+Chernivtsi International Airport,Ukraine,CWC
+Rivne International Airport,Ukraine,RWN
+Uzhhorod International Airport,Ukraine,UDJ
+Solovki Airport,Russia,CSH
+Cherepovets Airport,Russia,CEE
+Amderma Airport,Russia,AMV
+Kotlas Airport,Russia,KSZ
+Petrozavodsk Airport,Russia,PES
+Hrodno Airport,Belarus,GNA
+Mogilev Airport,Belarus,MVQ
+Yeniseysk Airport,Russia,EIE
+Kyzyl Airport,Russia,KYZ
+Spichenkovo Airport,Russia,NOZ
+Khatanga Airport,Russia,HTG
+Igarka Airport,Russia,IAA
+Grozny Airport,Russia,GRV
+Nalchik Airport,Russia,NAL
+Beslan Airport,Russia,OGZ
+Elista Airport,Russia,ESL
+Aleknagik Airport,United States,WKK
+Brookings Regional Airport,United States,BKX
+Mercer County Airport,United States,BLF
+Kearney Municipal Airport,United States,EAR
+Mid Delta Regional Airport,United States,GLH
+Laughlin-Bullhead Intl,United States,IFP
+Kingman Airport,United States,IGM
+Tri Cities Airport,United States,PSC
+Akutan Seaplane Base,United States,KQA
+Grant County Airport,United States,SVC
+Lopez Island Airport,United States,LPS
+Salekhard Airport,Russia,SLY
+Khanty Mansiysk Airport,Russia,HMA
+Nyagan Airport,Russia,NYA
+Sovetsky Tyumenskaya Airport,Russia,OVS
+Izhevsk Airport,Russia,IJK
+Pobedilovo Airport,Russia,KVX
+Nadym Airport,Russia,NYM
+Raduzhny Airport,Russia,RAT
+Nefteyugansk Airport,Russia,NFG
+Kurgan Airport,Russia,KRO
+Khudzhand Airport,Tajikistan,LBD
+Andizhan Airport,Uzbekistan,AZN
+Fergana Airport,Uzbekistan,FEG
+Namangan Airport,Uzbekistan,NMA
+Nukus Airport,Uzbekistan,NCU
+Urgench Airport,Uzbekistan,UGC
+Karshi Khanabad Airport,Uzbekistan,KSQ
+Termez Airport,Uzbekistan,TMJ
+Staroselye Airport,Russia,RYB
+Belgorod International Airport,Russia,EGO
+Kursk East Airport,Russia,URS
+Lipetsk Airport,Russia,LPK
+Vorkuta Airport,Russia,VKT
+Bugulma Airport,Russia,UUA
+Yoshkar-Ola Airport,Russia,JOK
+Cheboksary Airport,Russia,CSY
+Ulyanovsk East Airport,Russia,ULY
+Orsk Airport,Russia,OSW
+Penza Airport,Russia,PEZ
+Saransk Airport,Russia,SKX
+Balakovo Airport,Russia,BWO
+Hubli Airport,India,HBX
+Koggala Airport,Sri Lanka,KCT
+Wirawila Airport,Sri Lanka,WRZ
+Battambang Airport,Cambodia,BBM
+Shillong Airport,India,SHL
+Lokpriya Gopinath Bordoloi International Airport,India,GAU
+Dimapur Airport,India,DMU
+Tezpur Airport,India,TEZ
+Barisal Airport,Bangladesh,BZL
+Ban Huoeisay Airport,Laos,OUI
+Kontum Airport,Vietnam,KON
+Bharatpur Airport,Nepal,BHR
+Chandragadhi Airport,Nepal,BDP
+Meghauli Airport,Nepal,MEY
+Nepalgunj Airport,Nepal,KEP
+Gan Island Airport,Maldives,GAN
+Hanimaadhoo Airport,Maldives,HAQ
+Kadhdhoo Airport,Maldives,KDO
+Mae Sot Airport,Thailand,MAQ
+Buon Ma Thuot Airport,Vietnam,BMV
+Cat Bi International Airport,Vietnam,HPH
+Cam Ranh Airport,Vietnam,CXR
+Co Ong Airport,Vietnam,VCS
+Trà Nóc Airport,Vietnam,VCA
+Dien Bien Phu Airport,Vietnam,DIN
+Phu Cat Airport,Vietnam,UIH
+Pleiku Airport,Vietnam,PXU
+Vinh Airport,Vietnam,VII
+Banmaw Airport,Burma,BMO
+Dawei Airport,Burma,TVY
+Kawthoung Airport,Burma,KAW
+Loikaw Airport,Burma,LIW
+Mawlamyine Airport,Burma,MNU
+Pathein Airport,Burma,BSX
+Pakhokku Airport,Burma,PKK
+Sumbawa Besar Airport,Indonesia,SWQ
+Tambolaka Airport,Indonesia,TMC
+Bokondini Airport,Indonesia,BUI
+Senggeh Airport,Indonesia,SEH
+Tanjung Harapan Airport,Indonesia,TJS
+Datadawai Airport,Indonesia,DTD
+Barau(Kalimaru) Airport,Indonesia,BEJ
+Warukin Airport,Indonesia,TJG
+Sampit(Hasan) Airport,Indonesia,SMQ
+Dumatubun Airport,Indonesia,LUV
+Mali Airport,Indonesia,ARD
+Belaga Airport,Malaysia,BLG
+Long Lellang Airport,Malaysia,LGL
+Long Seridan Airport,Malaysia,ODN
+Mukah Airport,Malaysia,MKM
+Bakalalan Airport,Malaysia,BKM
+Lawas Airport,Malaysia,LWY
+Bario Airport,Malaysia,BBN
+Tomanggong Airport,Malaysia,TMG
+Kudat Airport,Malaysia,KUD
+Radin Inten II (Branti) Airport,Indonesia,TKG
+Halim Perdanakusuma International Airport,Indonesia,HLP
+Ranai Airport,Indonesia,NTX
+Pangsuma Airport,Indonesia,PSU
+Susilo Airport,Indonesia,SQG
+Pendopo Airport,Indonesia,PDO
+Malikus Saleh Airport,Indonesia,LSW
+Pulau Pangkor Airport,Malaysia,PKG
+Stagen Airport,Indonesia,KBU
+Long Bawan Airport,Indonesia,LBW
+Nunukan Airport,Indonesia,NNX
+Long Apung Airport,Indonesia,LPU
+Albany Airport,Australia,ALH
+Argyle Airport,Australia,GYL
+Aurukun Airport,Australia,AUU
+Barcaldine Airport,Australia,BCI
+Badu Island Airport,Australia,BDD
+Birdsville Airport,Australia,BVI
+Broken Hill Airport,Australia,BHQ
+Hamilton Island Airport,Australia,HTI
+Bedourie Airport,Australia,BEU
+Bourke Airport,Australia,BRK
+Burketown Airport,Australia,BUC
+Boigu Airport,Australia,GIC
+Oakey Airport,Australia,OKY
+Boulia Airport,Australia,BQL
+Bathurst Airport,Australia,BHS
+Blackwater Airport,Australia,BLT
+Carnarvon Airport,Australia,CVQ
+Cobar Airport,Australia,CAZ
+Coober Pedy Airport,Australia,CPD
+Coconut Island Airport,Australia,CNC
+Cloncurry Airport,Australia,CNJ
+Ceduna Airport,Australia,CED
+Cooktown Airport,Australia,CTN
+Cunnamulla Airport,Australia,CMA
+Coonamble Airport,Australia,CNB
+Coen Airport,Australia,CUQ
+Cooma Snowy Mountains Airport,Australia,OOM
+Doomadgee Airport,Australia,DMD
+Darnley Island Airport,Australia,NLF
+Devonport Airport,Australia,DPO
+Elcho Island Airport,Australia,ELC
+Esperance Airport,Australia,EPR
+Flinders Island Airport,Australia,FLS
+Geraldton Airport,Australia,GET
+Gladstone Airport,Australia,GLT
+Groote Eylandt Airport,Australia,GTE
+Griffith Airport,Australia,GFF
+Horn Island Airport,Australia,HID
+Hooker Creek Airport,Australia,HOK
+Mount Hotham Airport,Australia,MHU
+Hughenden Airport,Australia,HGD
+Julia Creek Airport,Australia,JCK
+Kalbarri Airport,Australia,KAX
+King Island Airport,Australia,KNS
+Kalkgurung Airport,Australia,KFG
+Karumba Airport,Australia,KRB
+Kowanyama Airport,Australia,KWM
+Kubin Airport,Australia,KUG
+Leonora Airport,Australia,LNO
+Lake Evella Airport,Australia,LEL
+Lord Howe Island Airport,Australia,LDH
+Lockhart River Airport,Australia,IRG
+Lismore Airport,Australia,LSY
+Lightning Ridge Airport,Australia,LHG
+Longreach Airport,Australia,LRE
+Leinster Airport,Australia,LER
+Laverton Airport,Australia,LVO
+Mabuiag Island Airport,Australia,UBB
+Meekatharra Airport,Australia,MKR
+Merimbula Airport,Australia,MIM
+Milingimbi Airport,Australia,MGT
+Maningrida Airport,Australia,MNG
+McArthur River Mine Airport,Australia,MCV
+Mildura Airport,Australia,MQL
+Mount Magnet Airport,Australia,MMG
+Moree Airport,Australia,MRZ
+Moranbah Airport,Australia,MOV
+Moruya Airport,Australia,MYA
+Mount Gambier Airport,Australia,MGB
+Mornington Island Airport,Australia,ONG
+Murray Island Airport,Australia,MYI
+Maryborough Airport,Australia,MBH
+Narrandera Airport,Australia,NRA
+Narrabri Airport,Australia,NAA
+Normanton Airport,Australia,NTN
+Newman Airport,Australia,ZNE
+Olympic Dam Airport,Australia,OLP
+Port Augusta Airport,Australia,PUG
+Palm Island Airport,Australia,PMK
+Paraburdoo Airport,Australia,PBO
+Cocos Keeling Island Airport,Cocos (Keeling) Islands,CCK
+Gove Airport,Australia,GOV
+Parkes Airport,Australia,PKE
+Port Lincoln Airport,Australia,PLO
+Pormpuraaw Airport,Australia,EDR
+Port Macquarie Airport,Australia,PQQ
+Portland Airport,Australia,PTJ
+Quilpie Airport,Australia,ULP
+Ramingining Airport,Australia,RAM
+Roma Airport,Australia,RMA
+St George Airport,Australia,SGO
+Shark Bay Airport,Australia,MJK
+Saibai Island Airport,Australia,SBR
+Strahan Airport,Australia,SRN
+Thargomindah Airport,Australia,XTG
+Tennant Creek Airport,Australia,TCA
+Victoria River Downs Airport,Australia,VCD
+Warraber Island Airport,Australia,SYU
+Windorah Airport,Australia,WNR
+Whyalla Airport,Australia,WYA
+Wiluna Airport,Australia,WUN
+Wollongong Airport,Australia,WOL
+Winton Airport,Australia,WIN
+Wynyard Airport,Australia,BWT
+Yorke Island Airport,Australia,OKR
+Yam Island Airport,Australia,XMY
+Beijing Nanyuan Airport,China,NAY
+Chifeng Airport,China,CIF
+Changzhi Airport,China,CIH
+Datong Airport,China,DAT
+Baita Airport,China,HET
+Baotou Airport,China,BAV
+Shijiazhuang Daguocun International Airport,China,SJW
+Tongliao Airport,China,TGO
+Ulanhot Airport,China,HLH
+Xilinhot Airport,China,XIL
+Beihai Airport,China,BHY
+Changde Airport,China,CGD
+Dayong Airport,China,DYG
+Meixian Airport,China,MXZ
+Zhuhai Airport,China,ZUH
+Bailian Airport,China,LZH
+Zhanjiang Airport,China,ZHA
+Enshi Airport,China,ENH
+Nanyang Airport,China,NNY
+Xiangfan Airport,China,XFN
+Yichang Airport,China,YIH
+Ankang Airport,China,AKA
+Golmud Airport,China,GOQ
+Hanzhong Airport,China,HZG
+Qingyang Airport,China,IQN
+Xining Caojiabu Airport,China,XNN
+Yan'an Airport,China,ENY
+Yulin Airport,China,UYN
+Arvaikheer Airport,Mongolia,AVK
+Altai Airport,Mongolia,LTI
+Bayankhongor Airport,Mongolia,BYN
+Dalanzadgad Airport,Mongolia,DLZ
+Khovd Airport,Mongolia,HVD
+Muren Airport,Mongolia,MXV
+Diqing Airport,China,DIG
+Mangshi Airport,China,LUM
+Simao Airport,China,SYM
+Zhaotong Airport,China,ZAT
+Ganzhou Airport,China,KOW
+Jingdezhen Airport,China,JDZ
+Jiujiang Lushan Airport,China,JIU
+Quzhou Airport,China,JUZ
+Lianyungang Airport,China,LYG
+Huangyan Luqiao Airport,China,HYN
+Shubuling Airport,China,LYI
+Quanzhou Airport,China,JJN
+Tunxi International Airport,China,TXN
+Weifang Airport,China,WEF
+Weihai Airport,China,WEH
+Wuxi Airport,China,WUX
+Nanping Wuyishan Airport,China,WUS
+Wenzhou Yongqiang Airport,China,WNZ
+Yancheng Airport,China,YNZ
+Yiwu Airport,China,YIW
+Zhoushan Airport,China,HSN
+Qamdo Bangda Airport,China,BPX
+Dachuan Airport,China,DAX
+Guangyuan Airport,China,GYS
+Luzhou Airport,China,LZO
+Mianyang Airport,China,MIG
+Nanchong Airport,China,NAO
+Nyingchi Airport,China,LZY
+Wanxian Airport,China,WXN
+Aksu Airport,China,AKU
+Qiemo Airport,China,IQM
+Kuqa Airport,China,KCA
+Korla Airport,China,KRL
+Karamay Airport,China,KRY
+Yining Airport,China,YIN
+Heihe Airport,China,HEK
+Jiamusi Airport,China,JMU
+Jinzhou Airport,China,JNZ
+Qiqihar Sanjiazi Airport,China,NDG
+Yanji Airport,China,YNJ
+Mount Keith,Australia,WME
+Gran Roque Airport,Venezuela,LRV
+Inishmore Airport,Ireland,IOR
+Connemara Regional Airport,Ireland,NNR
+Guettin MecklenburgVorpommern Germany,Germany,GTI
+Berezovo,Russia,NBB
+Worcester Regional Airport,United States,ORH
+Anqing Airport,China,AQG
+Jing Gang Shan Airport,China,JGS
+Shanhaiguan Airport,China,SHP
+Zhangxiao,China,YCU
+Lanzhou Airport,China,LHW
+Jiayuguan Airport,China,JGN
+Dandong,China,DDG
+Ordos Ejin Horo,China,DSN
+Panzhihua,China,PZI
+New Haven Rail Station,United States,ZVE
+Dibrugarh Airport,India,DIB
+Doha Free Zone Airport,Qatar,XOZ
+Bremerton National,United States,PWT
+Spencer Muni,United States,SPW
+Jefferson City Memorial Airport,United States,JEF
+Grand Canyon West Airport,United States,GCW
+Boulder City Municipal Airport,United States,BLD
+Unst Airport,United Kingdom,UNT
+Provincetown Muni,United States,PVC
+Kenmore Air Harbor Seaplane Base,United States,LKE
+Saint Barthelemy,France,SBH
+Belize City Municipal Airport,Belize,TZA
+Sukhumi Dranda,Georgia,SUI
+Tambow,Russia,TBW
+Oban Airport,United Kingdom,OBN
+Mt. Fuji Shizuoka Airport,Japan,FSZ
+Erechim Airport,Brazil,ERM
+Courchevel Airport,France,CVF
+Fullerton Municipal Airport,United States,FUL
+Fort William Heliport,United Kingdom,FWM
+Navoi Airport,Uzbekistan,NVI
+La Defense Heliport,France,JPU
+Ronda Airport,Spain,RRA
+Ain Arnat Airport,Algeria,QSF
+La Rochelle-Ile de Re,France,LRH
+Friedman Mem,United States,SUN
+Portsmouth Airport,United Kingdom,PME
+Mason City Municipal,United States,MCW
+Jining Airport ,China,JNG
+Heilongjiang Mohe Airport,China,OHE
+Daqing Saertu Airport,China,DAQ
+Tunoshna,Russia,IAR
+Neuchatel Airport,Switzerland,QNC
+Locarno Airport,Switzerland,ZJI
+Rimatara,French Polynesia,RMT
+Ust-Kut,Russia,UKX
+Bellona,Solomon Islands,BNY
+Ringi Cove Airport,Solomon Islands,RIN
+Antonio Juarbe Pol Airport,Puerto Rico,ARE
+Pangborn Field,United States,EAT
+Aeroporto Prefeito Octavio de Almeida Neves,Brazil,JDR
+Wangerooge Airport,Germany,AGE
+Wittman Regional Airport,United States,OSH
+Brest,Belarus,BQT
+Ternopol,Ukraine,TNL
+Chernigov,Ukraine,CEJ
+Lutsk,Ukraine,UKC
+Southwest Michigan Regional Airport,United States,BEH
+Waukesha County Airport,United States,UES
+Nowra Airport,Australia,NOA
+Tindal Airport,Australia,KTR
+Choibalsan Airport,Mongolia,COQ
+Taree Airport,Australia,TRO
+Orange Airport,Australia,OAG
+Grafton Airport,Australia,GFN
+Marinduque Airport,Philippines,MRQ
+Hamadan Airport,Iran,HDM
+St Augustin Airport,Canada,YIF
+Vieques Airport,Puerto Rico,VQS
+Kalay Airport,Myanmar,KMV
+Terre-de-Haut Airport,Guadeloupe,LSS
+Yenisehir Airport,Turkey,YEI
+Tekirdağ Çorlu Airport,Turkey,TEQ
+Sinop Airport,Turkey,SIC
+Mus Airport,Turkey,MSR
+Canakkale Airport,Turkey,CKZ
+Anadolu Airport,Turkey,AOE
+Katima Mulilo Airport,Namibia,MPA
+Walvis Bay Airport,Namibia,WVB
+Capitan Corbeta C A Curbelo International Airport,Uruguay,PDP
+Sialkot Airport,Pakistan,SKT
+Bonaventure Airport,Canada,YVB
+Brus Laguna Airport,Honduras,BHG
+Samburu South Airport,Kenya,UAS
+Chaoyang Airport,China,CHG
+Walaha Airport,Vanuatu,WLH
+Tanjung Manis Airport,Malaysia,TGC
+Long Akah Airport,Malaysia,LKH
+Geneina Airport,Sudan,EGN
+Togiak Airport,United States,TOG
+Port Heiden Airport,United States,PTH
+King Cove Airport,United States,KVC
+New Stuyahok Airport,United States,KNW
+Igiugig Airport,United States,IGG
+Shimla Airport,India,SLV
+Nanded Airport,India,NDC
+Kangra Airport,India,DHM
+Shahre Kord Airport,Iran,CQD
+Sege Airport,Solomon Islands,EGM
+Burgos Airport,Spain,RGS
+Leon Airport,Spain,LEN
+Deering Airport,United States,DRG
+Sugraly Airport,Uzbekistan,AFS
+Mardin Airport,Turkey,MQM
+Tacheng Airport,China,TCG
+Nueva Loja Airport,Ecuador,LGQ
+Parsabade Moghan Airport,Iran,PFQ
+Ilam Airport,Iran,IIL
+Gorgan Airport,Iran,GBT
+Sahand Airport,Iran,ACP
+Romblon Airport,Philippines,TBH
+Changzhoudao Airport,China,WUZ
+Hami Airport,China,HMI
+Sand Point Airport,United States,SDP
+Gorakhpur Airport,India,GOP
+Araracuara Airport,Colombia,ACR
+Hagerstown Regional Richard A Henson Field,United States,HGR
+Bella Coola Airport,Canada,QBC
+Pajala Airport,Sweden,PJA
+Port Clarence Coast Guard Station,United States,KPC
+Governador Valadares Airport,Brazil,GVR
+Kirovsk-Apatity Airport,Russia,KVK
+Cauayan Airport,Philippines,CYZ
+Tambor Airport,Costa Rica,TMU
+Arenal Airport,Costa Rica,FON
+Imo Airport,Nigeria,QOW
+Arctic Village Airport,United States,ARC
+Tasiujaq Airport,Canada,YTQ
+Puvirnituq Airport,Canada,YPX
+Ormoc Airport,Philippines,OMC
+Noatak Airport,United States,WTK
+Savoonga Airport,United States,SVA
+Shishmaref Airport,United States,SHH
+Ruby Airport,United States,RBY
+Point Hope Airport,United States,PHO
+Mekoryuk Airport,United States,MYU
+Kivalina Airport,United States,KVL
+St Marys Airport,United States,KSM
+Kaltag Airport,United States,KAL
+Hooper Bay Airport,United States,HPB
+Gambell Airport,United States,GAM
+Atqasuk Edward Burnell Sr Memorial Airport,United States,ATK
+Anvik Airport,United States,ANV
+Anaktuvuk Pass Airport,United States,AKP
+Altay Airport,China,AAT
+Naypyidaw,Burma,ELA
+Jan Mayensfield,Norway,ZXB
+Huanghua Intl,China,HHA
+Manzhouli,China,NZH
+Wuhai,China,WUA
+Gary Chicago International Airport,United States,GYY
+Brainerd Lakes Rgnl,United States,BRD
+Greenbrier Valley Airport,United States,LWB
+Pitt-Greenville Airport,United States,PGV
+Chefornak Airport,United States,CYF
+Oxnard - Ventura County,United States,OXR
+Branson LLC,United States,BKG
+Tongren,China,TEN
+Jinggangshan,China,KNC
+Penn Station,United States,ZBP
+Penn Station,United States,ZYP
+Niau,French Polynesia,NIU
+Stratton ANGB - Schenectady County Airpor,United States,SCH
+Begishevo,Russia,NBC
+Warri Airport,Nigeria,QRW
+Langeoog Airport,Germany,LGO
+Fane Airport,Papua New Guinea,FNE
+Itokama Airport,Papua New Guinea,ITK
+Ononge Airport,Papua New Guinea,ONB
+Tapini Airport,Papua New Guinea,TPI
+Wanigela Airport,Papua New Guinea,AGL
+Woitape Airport,Papua New Guinea,WTP
+Awaba Airport,Papua New Guinea,AWB
+Telefomin Airport,Papua New Guinea,TFM
+Nelspruit Airport,South Africa,NLP
+Cherkassy,Ukraine,CKC
+St. Augustine Airport,United States,UST
+Mykolaiv International Airport,Ukraine,NLV
+Ramechhap,Nepal,RHP
+Charles M Schulz Sonoma Co,United States,STS
+Kissimmee Gateway Airport,United States,ISM
+Lake City Municipal Airport,United States,LCQ
+Logan-Cache,United States,LGU
+Brigham City,United States,BMC
+Malad City,United States,MLD
+Aspen Pitkin County Sardy Field,United States,ASE
+Hilton Head,United States,HHH
+Barataevka,Russia,ULV
+Sabi Sabi Airport,South Africa,GSS
+Philadelphia 30th St Station,United States,ZFV
+KBWD,United States,BWD
+Mexia - Limestone County Airport,United States,LXY
+Kerrville Municipal Airport,United States,ERV
+Sussex Co,United States,GED
+Seal Cove Seaplane Base,Canada,ZSW
+Great Bend Municipal,United States,GBN
+Hays Regional Airport,United States,HYS
+Spirit Of St Louis,United States,SUS
+Ely Municipal,United States,LYU
+Grand Rapids Itasca County,United States,GPZ
+Thief River Falls,United States,TVF
+Eagle River,United States,EGV
+Lakeland,United States,ARV
+Ankeny Regl Airport,United States,IKV
+Berens River,Canada,YBV
+Corpus Christi NAS,United States,NGP
+Seaplane Base,Canada,YPI
+Avalon,United States,AVX
+Mojave,United States,MHV
+Air Base,Switzerland,ZIN
+Kenmore Air Harbor Inc Seaplane Base,United States,KEH
+Municipal,Belize,CZH
+Inisheer,Ireland,INQ
+Strezhevoy,Russia,SWT
+Hutchinson Municipal Airport,United States,HUT
+Bagram AFB,Afghanistan,BPM
+Eagle County Airport,United States,EGA
+Gelendzik,Russia,GDZ
+Rosecrans Mem,United States,STJ
+Hartford Union Station,United States,ZRT
+Stamford Amtrak Station,United States,ZTF
+Newark Penn Station,United States,ZRP
+Cuxhaven Airport,Germany,NDZ
+Volk Fld,United States,VOK
+BFT County Airport,United States,BFT
+Adana-Incirlik Airbase,Turkey,UAB
+Gunnison - Crested Butte,United States,GUC
+Xi\\'An Xiguan,China,SIA
+Zamperini Field Airport,United States,TOA
+Manistee County-Blacker Airport,United States,MBL
+Charlotte County-Punta Gorda Airport,United States,PGD
+Grand Canyon Heliport,United States,JGC
+Northern Aroostook Regional Airport,United States,WFK
+Chautauqua County-Jamestown,United States,JHW
+Riviere Rouge - Mont-Tremblant International Inc. Airport,Canada,YTM
+Lake Cumberland Regional Airport,United States,SME
+Shenandoah Valley Regional Airport,United States,SHD
+Devils Lake Regional Airport,United States,DVL
+Dickinson Theodore Roosevelt Regional Airport,United States,DIK
+Sidney-Richland Municipal Airport,United States,SDY
+Chadron Municipal Airport,United States,CDR
+Alliance Municipal Airport,United States,AIA
+McCook Regional Airport,United States,MCK
+Florida Keys Marathon Airport,United States,MTH
+Dawson Community Airport,United States,GDV
+LM Clayton Airport,United States,OLF
+Yellowstone Airport,United States,WYS
+San Luis Valley Regional Airport,United States,ALS
+Canyonlands Field,United States,CNY
+Ely Airport,United States,ELY
+Vernal Regional Airport,United States,VEL
+Sierra Blanca Regional Airport,United States,SRR
+Show Low Regional Airport,United States,SOW
+McCall Municipal Airport,United States,MYL
+Lemhi County Airport,United States,SMN
+Mammoth Yosemite Airport,United States,MMH
+Friday Harbor Airport,United States,FRD
+Orcas Island Airport,United States,ESD
+Anacortes Airport,United States,OTS
+Astoria Regional Airport,United States,AST
+Newport Municipal Airport,United States,ONP
+Emmonak Airport,United States,EMK
+Unalakleet Airport,United States,UNK
+Ugnu-Kuparuk Airport,United States,UUK
+Shageluk Airport,United States,SHX
+Chuathbaluk Airport,United States,CHU
+Nuiqsut Airport,United States,NUI
+Eek Airport,United States,EEK
+Kasigluk Airport,United States,KUK
+Kwethluk Airport,United States,KWT
+Kwigillingok Airport,United States,KWK
+Marshall Don Hunter Sr. Airport,United States,MLL
+Russian Mission Airport,United States,RSH
+Tuntutuliak Airport,United States,WTL
+Ekwok Airport,United States,KEK
+Koliganek Airport,United States,KGK
+Levelock Airport,United States,KLL
+Manokotak Airport,United States,KMO
+Twin Hills Airport,United States,TWA
+Chalkyitsik Airport,United States,CIK
+Eagle Airport,United States,EAA
+Hughes Airport,United States,HUS
+Huslia Airport,United States,HSL
+Livingood Airport,United States,LIV
+Minto Airport,United States,MNT
+Nulato Airport,United States,NUL
+Rampart Airport,United States,RMP
+Tanana Airport,United States,TAL
+Venetie Airport,United States,VEE
+Beaver Airport,United States,WBQ
+Central Airport,United States,CEM
+Shungnak Airport,United States,SHG
+Birch Creek Airport,United States,KBC
+Coldfoot Airport,United States,CXF
+Inyokern Airport,United States,IYK
+Visalia Municipal Airport,United States,VIS
+Merced Municipal Airport,United States,MCE
+Laguna de Los Patos International Airport,Uruguay,CYR
+Amarais Airport,Brazil,CPQ
+Toowoomba,Australia,TWB
+Arkalyk Airport,Kazakhstan,AYK
+Angoon Seaplane Base,United States,AGN
+Elfin Cove Seaplane Base,United States,ELV
+Tenakee Seaplane Base,United States,TKE
+Pelican Seaplane Base,United States,PEC
+Chatham Seaplane Base,United States,CYM
+Funter Bay Seaplane Base,United States,FNR
+Excursion Inlet Seaplane Base,United States,EXI
+Hoonah Airport,United States,HNH
+Kake Airport,United States,AFE
+Craig Seaplane Base,United States,CGA
+Hollis Seaplane Base,United States,HYL
+Metlakatla Seaplane Base,United States,MTM
+Thorne Bay Seaplane Base,United States,KTB
+Hydaburg Seaplane Base,United States,HYG
+Hyder Seaplane Base,United States,WHD
+Point Baker Seaplane Base,United States,KPB
+Port Protection Seaplane Base,United States,PPV
+North Whale Seaplane Base,United States,WWP
+Chignik Lake Airport,United States,KCQ
+Egegik Airport,United States,EGX
+Chignik Lagoon Airport,United States,KCL
+Chignik Bay Seaplane Base,United States,KBW
+Perryville Airport,United States,KPV
+Pilot Point Airport,United States,PIP
+South Naknek Airport,United States,WSN
+Akhiok Airport,United States,AKK
+Karuluk Airport,United States,KYK
+Larsen Bay Airport,United States,KLN
+Old Harbor Airport,United States,OLH
+Ouzinkie Airport,United States,KOZ
+Port Lions Airport,United States,ORI
+Alitak Seaplane Base,United States,ALZ
+Amook Bay Seaplane Base,United States,AOS
+Kitoi Bay Seaplane Base,United States,KKB
+Moser Bay Seaplane Base,United States,KMY
+Olga Bay Seaplane Base,United States,KOY
+Port Bailey Seaplane Base,United States,KPY
+Port Williams Seaplane Base,United States,KPR
+Seal Bay Seaplane Base,United States,SYB
+San Juan - Uganik Seaplane Base,United States,WSJ
+West Point Village Seaplane Base,United States,KWP
+Zachar Bay Seaplane Base,United States,KZB
+Ambler Airport,United States,ABL
+Buckland Airport,United States,BKC
+Bob Baker Memorial Airport,United States,IAN
+Kobuk Airport,United States,OBU
+Robert Curtis Memorial Airport,United States,ORV
+Selawik Airport,United States,WLK
+Brevig Mission Airport,United States,KTS
+Elim Airport,United States,ELI
+Golovin Airport,United States,GLV
+Teller Airport,United States,TLA
+Wales Airport,United States,WAA
+White Mountain Airport,United States,WMO
+Council Airport,United States,CIL
+Koyuk Alfred Adams Airport,United States,KKA
+St. Michael Airport,United States,SMK
+Shaktoolik Airport,United States,SKK
+Stebbins Airport,United States,WBB
+Tin City LRRS Airport,United States,TNC
+Atka Airport,United States,AKB
+Nikolski Air Station,United States,IKO
+Icy Bay Airport,United States,ICY
+Yakataga Airport,United States,CYT
+Alakanuk Airport,United States,AUK
+Sheldon Point Airport,United States,SXP
+Kipnuk Airport,United States,KPN
+False Pass Airport,United States,KFP
+Nelson Lagoon,United States,NLG
+Port Moller Airport,United States,PML
+Klawock Airport,United States,KLW
+Quinhagak Airport,United States,KWN
+Kotlik Airport,United States,KOT
+Koyukuk Airport,United States,KYU
+Scammon Bay Airport,United States,SCM
+Nondalton Airport,United States,NNL
+Pedro Bay Airport,United States,PDB
+Nunapitchuk Airport,United States,NUP
+Kongiganak Airport,United States,KKH
+Nikolai Airport,United States,NIB
+Takotna Airport,United States,TCT
+Pilot Station Airport,United States,PQS
+Akiak Airport,United States,AKI
+Tuluksak Airport,United States,TLT
+Grayling Airport,United States,KGX
+Wainwright Airport,United States,AIN
+ZAPALA,Argentina,APZ
+Rincon de los Sauces,Argentina,RDS
+Colonia Sarmiento,Argentina,OLN
+Rio Turbio,Argentina,RYO
+Puerto Natales,Chile,PNT
+Caleta Olivia,Argentina,CVI
+Sierra Grande,Argentina,SGV
+Ingeniero Jacobacci,Argentina,IGB
+El Chalten,Argentina,ELX
+Chenega Bay Airport,United States,NCN
+Chisana Airport,United States,CZN
+Circle City Airport,United States,IRC
+Coffman Cove Seaplane Base,United States,KCC
+Crooked Creek Airport,United States,CKD
+Red Devil Airport,United States,RDV
+Sleetmute Airport,United States,SLQ
+Stony River 2 Airport,United States,SRV
+Healy River Airport,United States,HKB
+Kake Seaplane Base,United States,KAE
+Klawock Seaplane Base,United States,AQC
+Minchumina Airport,United States,MHM
+Manley Hot Springs Airport,United States,MLY
+St. George Airport,United States,STG
+Tatitlek Airport,United States,TEK
+Ketchikan harbor Seaplane Base,United States,WFB
+Postville Airport,Canada,YSO
+Kangiqsujuaq - Wakeham Bay Airport,Canada,YWB
+Alma Airport,Canada,YTF
+Havre Saint-Pierre Airport,Canada,YGV
+Rimouski Airport,Canada,YXK
+Tadoule Lake Airport,Canada,XTL
+Lac Brochet Airport,Canada,XLB
+South Indian Lake Airport,Canada,XSI
+Brochet Airport,Canada,YBT
+Little Grand Rapids Airport,Canada,ZGR
+Cross Lake - Charlie Sinclair Memorial Airport,Canada,YCR
+Red Sucker Lake Airport,Canada,YRS
+Rainbow Lake Airport,Canada,YOP
+Bonnyville Airport,Canada,YBY
+Nanaimo Harbour Water Airport,Canada,ZNA
+Qualicum Beach Airport,Canada,XQU
+Fort St. James - Perison Airport,Canada,YJM
+Boundary Bay Airport,Canada,YDT
+Bella Bella Airport,Canada,ZEL
+Sechelt Aerodrome,Canada,YHS
+Palo Verde Airport,Mexico,PVP
+Brussels Gare du Midi,Belgium,ZYR
+Caye Chapel Airport,Belize,CYC
+Big Creek Airport,Belize,BGK
+Dangriga Airport,Belize,DGA
+Placencia Airport,Belize,PLJ
+Sartaneja Airport,Belize,SJX
+Corn Island Airport,Nicaragua,RNI
+Bonanza Airport,Nicaragua,BZA
+Rosita Airport,Nicaragua,RFS
+Siuna Airport,Nicaragua,SIU
+Waspam Airport,Nicaragua,WSP
+Carrillo Airport,Costa Rica,RIK
+Fussen,Germany,FUS
+Constanza Airport,Dominican Republic,COZ
+Negril Aerodrome,Jamaica,NEG
+Bochum Railway,Germany,EBO
+Fliegerhost ,Germany,KFB
+Munich Railway,Germany,ZMU
+Nuernberg Railway,Germany,ZAQ
+Jose Aponte de la Torre Airport,Puerto Rico,RVR
+Aeropuerto Internacional Valle del Conlara,Argentina,RLO
+Christiansted Harbor Seaplane Base,Virgin Islands,SSB
+Alto Rio Senguer Airport,Argentina,ARR
+Jose de San Martin Airport,Argentina,JSM
+Uyuni Airport,Bolivia,UYU
+Augsburg Railway,Germany,ZAU
+Mannheim Railway,Germany,ZMA
+Essen Railway,Germany,ZES
+Rurrenabaque Airport,Bolivia,RBQ
+Abaiang Atoll Airport,Kiribati,ABF
+St. Louis Downtown Airport,United States,CPS
+Albina Airstrip,Suriname,ABN
+Botopassi Airstrip,Suriname,BTO
+Djoemoe Airstrip,Suriname,DOE
+Drietabbetje Airstrip,Suriname,DRJ
+Majoor Henry Fernandes Airport,Suriname,ICK
+Vincent Fayks Airport,Suriname,OEM
+Stoelmans Eiland Airstrip,Suriname,SMZ
+Totness Airstrip,Suriname,TOT
+Wageningen Airstrip,Suriname,AGI
+Kaieteur International Airport,Guyana,KIA
+Codela Airport,Costa Rica,CSC
+Orinduik Airport,Guyana,ORJ
+Annai Airport,Guyana,NAI
+Imbaimadai Airport,Guyana,IMB
+Kamarang Airport,Guyana,KAR
+Mabaruma Airport,Guyana,USI
+Mahdia Airport,Guyana,MHA
+Dr. Augusto Roberto Fuster International Airport,Paraguay,PJC
+Alcides Fernandez Airport,Colombia,ACD
+Los Colonizadores Airport,Colombia,RVE
+La Chorrera Airport,Colombia,LCR
+La Macarena,Colombia,LMC
+Villa Garzon Airport,Colombia,VGZ
+El Bagre Airport,Colombia,EBG
+Juan H. White,Colombia,CAQ
+Mandinga Airport,Colombia,COG
+Golfo de Morrosquillo Airport,Colombia,TLU
+Cabo Frio International Airport,Brazil,CFB
+Sinop Airport,Brazil,OPS
+Gurupi Airport,Brazil,GRP
+Campo Alegre Airport,Brazil,CMP
+Breves Airport,Brazil,BVS
+Soure Airport,Brazil,SFK
+Julio Belem Airport,Brazil,PIN
+Barreiras Airport,Brazil,BRA
+Confresa Airport,Brazil,STZ
+Minacu Airport,Brazil,MQH
+Araguaina Airport,Brazil,AUX
+Novo Aripuana Airport,Brazil,NVP
+Bom Futuro Airport,Brazil,LVR
+Franca Airport,Brazil,FRC
+Dourados Airport,Brazil,DOU
+Labrea Airport,Brazil,LBR
+Rondonopolis Airport,Brazil,ROO
+Tancredo Thomaz de Faria Airport,Brazil,GPB
+Joacaba Airport,Brazil,JCB
+Edinburgh Waverly Station,United Kingdom,ZXE
+General leite de Castro Airport,Brazil,RVD
+Araxa Airport,Brazil,AAX
+Maues Airport,Brazil,MBZ
+Borba Airport,Brazil,RBB
+Coari Airport,Brazil,CIZ
+Barcelos Airport,Brazil,BAZ
+Diamantino Airport,Brazil,DMT
+Guanambi Airport,Brazil,GNM
+Tsletsi Airport,Algeria,QDJ
+Lucapa Airport,Angola,LBZ
+Kapanda Airport,Angola,KNP
+Am Timan Airport,Chad,AMC
+Sharq Al-Owainat Airport,Egypt,GSQ
+Eastern WV Regional Airport,United States,MRB
+Awasa Airport,Ethiopia,AWA
+Jijiga Airport,Ethiopia,JIJ
+Mekane Salam Airport,Ethiopia,MKS
+Debre Marqos,Ethiopia,DBM
+Debre Tabor Airport,Ethiopia,DBT
+Harar Meda Airport,Ethiopia,QHR
+Robe Airport,Ethiopia,GOB
+Mayumba Airport,Gabon,MYB
+Mara Serena Airport,Kenya,MRE
+Rumbek Airport,Sudan,RBX
+Cape Palmas Airport,Liberia,CPA
+Ambatomainty Airport,Madagascar,AMY
+Kyoto,Japan,UKY
+Bazaruto Island Airport,Mozambique,BZB
+Benguera Island Airport,Mozambique,BCW
+Indigo Bay Lodge Airport,Mozambique,IBL
+Ouro Sogui Airport,Senegal,MAX
+Bird Island Airport,Seychelles,BDI
+Wadi Halfa Airport,Sudan,WHF
+Enfidha - Zine El Abidine Ben Ali International Airport,Tunisia,NBE
+Pakuba Airport,Uganda,PAF
+Hatay Airport,Turkey,HTY
+Raivavae Airport,French Polynesia,RVV
+Foshan,China,FUO
+Huizhou,China,HUZ
+Lleida-Alguaire Airport,Spain,ILD
+Aeropuerto Capitan Fuentes Martinez,Chile,WPR
+Central Railway Station,Canada,YMY
+Union Station,Canada,YBZ
+Bildudalur Airport,Iceland,BIU
+Gjogur Airport,Iceland,GJR
+Saudarkrokur,Iceland,SAK
+Inishmaan Aerodrome,Ireland,IIA
+Taldykorgan Airport,Kazakhstan,TDK
+Olgii Airport,Mongolia,ULG
+Lille,France,XDB
+Vologda Airport,Russia,VGD
+Burevestnik Airport,Russia,BVV
+Okha Airport,Russia,OHH
+Leshukonskoye Airport,Russia,LDG
+Huesca-Pirineos Airport,Spain,HSK
+Ciudad Real Central Airport,Spain,CQM
+Al Najaf International Airport,Iraq,NJF
+Hilversum Railway Station,Netherlands,QYI
+Colonsay Airport,United Kingdom,CSA
+Coll Airport,United Kingdom,COL
+Rock Hill York Co Bryant Airport,United States,RKH
+Allegheny County Airport,United States,AGC
+Cecil Field,United States,NZC
+Fulton County Airport Brown Field,United States,FTY
+Tresco Heliport,United Kingdom,TSO
+Tarin Kowt Airport,Afghanistan,TII
+Zaranj Airport,Afghanistan,ZAJ
+Chaghcharan Airport,Afghanistan,CCN
+Fuyang Airport,China,FUG
+Longyan Airport,China,LCX
+Baoshan Airport,China,BSD
+Xingyi Airport,China,ACX
+Macau Ferry Pier,Macau,XZM
+Liping Airport,China,HZH
+Ohio State University Airport,United States,OSU
+Rio Sidra,Panama,RSI
+Addison,United States,ADS
+Destin,United States,DTS
+Fort Jefferson,United States,RBN
+Chernobayevka Airport,Ukraine,KHE
+Ryans Creek Aerodrome,New Zealand,SZS
+Zhijiang Airport,China,HJJ
+Yarmouth Airport,Canada,YQI
+Kinston Regional Jetport,United States,ISO
+First Flight Airport,United States,FFA
+Lincang Airport,China,LNJ
+Wenshan Airport,China,WNH
+Ponta Pelada Airport,Brazil,PLL
+Sao Gabriel da Cachoeira Airport,Brazil,SJL
+Carajas Airport,Brazil,CKS
+Cachimbo,Brazil,ITB
+Latur Airport,India,LTU
+Matak Airport,Indonesia,MWK
+Mainz Finthen,Germany,QFZ
+Mainz,Germany,QMZ
+Berlin Gatow,Germany,GWW
+Rheine Bentlage,Germany,ZPQ
+Tana Toraja Airport,Indonesia,TTR
+Persian Gulf Airport,Iran,PGU
+Yasuj Airport,Iran,YES
+Mosul International Airport,Iraq,OSB
+Tajima Airport,Japan,TJH
+Amakusa Airfield,Japan,AXJ
+Kikai Airport,Japan,KKX
+Aguni Airport,Japan,AGJ
+Haeju Airport,North Korea,HAE
+Layang Layang Airport,Malaysia,LAC
+Bulgan Airport,Mongolia,UGA
+Ulaangom Airport,Mongolia,ULO
+Borongan Airport,Philippines,BPR
+Lubang Community Airport,Philippines,LBX
+Bentota Airport,Sri Lanka,BJT
+Dickwella Airport,Sri Lanka,DIW
+Kulob Airport,Tajikistan,TJU
+Cimei Airport,Taiwan,CMJ
+Dasoguz Airport,Turkmenistan,TAZ
+Barrow Island Airport,Australia,BWB
+Morawa Airport,Australia,MWB
+Exmouth Airport,Australia,EXM
+Derby Airport,Australia,DRB
+Walgett Airport,Australia,WGE
+Bathurst Island Airport,Australia,BRT
+Dunk Island Airport,Australia,DKI
+Lizard Island Airport,Australia,LZR
+Hamilton Airport,Australia,HLT
+Halls Creek Airport,Australia,HCQ
+Fitzroy Crossing Airport,Australia,FIZ
+Ravensthorpe Airport,Australia,RVT
+Provo Municipal Airport,United States,PVU
+Steamboat Springs Airport-Bob Adams Field,United States,SBS
+Delta Municipal Airport,United States,DTA
+Richfield Minicipal Airport,United States,RIF
+Carbon County Regional-Buck Davis Field,United States,PUC
+Los Alamos Airport,United States,LAM
+Borrego Valley Airport,United States,BXS
+Lake Havasu City Airport,United States,HII
+Winslow-Lindbergh Regional Airport,United States,INW
+Douglas Municipal Airport,United States,DGL
+Marakei Airport,Kiribati,MZK
+Abemama Atoll Airport,Kiribati,AEA
+Aranuka Airport,Kiribati,AAK
+Kuria Airport,Kiribati,KUC
+Arorae Island Airport,Kiribati,AIS
+Tamana Airport,Kiribati,TMN
+Beru Island Airport,Kiribati,BEZ
+Nikunau Airport,Kiribati,NIG
+Butaritari Atoll Airport,Kiribati,BBG
+Makin Airport,Kiribati,MTK
+Maiana Airport,Kiribati,MNK
+Nonouti Airport,Kiribati,NON
+Tabiteuea South Airport,Kiribati,TSU
+Bosset Airport,Papua New Guinea,BOT
+Ine Airport,Marshall Islands,IMI
+Tinak Airport,Marshall Islands,TIC
+Elenak Airport,Marshall Islands,EAL
+Lae Airport,Marshall Islands,LML
+Airok Airport,Marshall Islands,AIC
+Enejit Airport,Marshall Islands,EJT
+Whitianga Airport,New Zealand,WTZ
+Takaka Aerodrome,New Zealand,KTF
+Asau Airport,Samoa,AAU
+Afutara Airport,Solomon Islands,AFT
+Ulawa Airport,Solomon Islands,RNA
+Choiseul Bay Airport,Solomon Islands,CHY
+Santa Ana Airport,Solomon Islands,NNB
+Yandina Airport,Solomon Islands,XYA
+Batuna Airport,Solomon Islands,BPF
+Bartow Municipal Airport,United States,BOW
+Sokerkino,Russia,KMW
+Fitiuta Airport,American Samoa,FTI
+Ofu Airport,American Samoa,OFU
+Livermore Municipal,United States,LVK
+MariposaYosemite,United States,MPI
+Grootfontein,Namibia,GFY
+Rundu,Namibia,NDU
+Beppu Airport,Japan,BPU
+Heron Island,Australia,HRN
+Lady Elliot Island,Australia,LYT
+Orpheus Island,Australia,ORS
+Paddington Station,United Kingdom,QQP
+Tasiilaq,Greenland,AGM
+Jacqueline Cochran Regional Airport,United States,TRM
+Santa Monica Municipal Airport,United States,SMO
+Bermuda Dunes Airport,United States,UDD
+Scottsdale Airport,United States,ZSY
+Olympia Regional Airpor,United States,OLM
+Yolo County Airport,United States,DWA
+Garfield County Regional Airport,United States,RIL
+Shively Field Airport,United States,SAA
+Dekalb-Peachtree Airport,United States,PDK
+Monroe County Airport,United States,BMG
+Witham Field Airport,United States,SUA
+Morristown Municipal Airport,United States,MMU
+Napa County Airport,United States,APC
+Brown Field Municipal Airport,United States,SDM
+Pahokee Airport,United States,PHK
+Kineshma,Russia,KIE
+Nezhitino,Russia,NEZ
+Machu Pichu Airport,Peru,MFT
+Panama City-NW Florida Bea.,United States,ECP
+San Bernardino International Airport,United States,SBD
+Valenca Airport,Brazil,VAL
+Dix Sept Rosado Airport,Brazil,MVF
+Caruaru Airport,Brazil,CAU
+Wake Island Afld,Wake Island,AWK
+Aeroclube de Nova Iguacu,Brazil,QNV
+Gare du Nord,France,XPG
+Gare Montparnasse,France,XGB
+Saint-Pierre-des-Corps,France,XSH
+San Carlos Airport,United States,SQL
+Koszalin - Zegrze Pomorskie Airport,Poland,OSZ
+Lelystad Airport,Netherlands,LEY
+Rocky Mount Wilson Regional Airport,United States,RWI
+Soldotna Airport,United States,SXQ
+Gillespie,United States,SEE
+Cotopaxi International Airport,Ecuador,LTX
+London St Pancras,United Kingdom,STP
+Amsterdam Centraal,Netherlands,ZYA
+Mammy Yoko Heliport,Sierra Leone,JMY
+Phan Rang Airport,Vietnam,PHA
+Na-San Airport,Vietnam,SQH
+Truckee-Tahoe Airport,United States,TKF
+Frejus Saint Raphael,France,FRJ
+Geelong Airport,Australia,GEX
+Berlin Hauptbahnhof,Germany,QPP
+Amsterdam Centraal,Netherlands,ZYA
+Moultrie Municipal Airport,United States,MGR
+Cobb County Airport-Mc Collum Field,United States,RYY
+Oneonta Municipal Airport,United States,ONH
+Wideawake Field,United Kingdom,ASI
+Mission Field Airport,United States,LVM
+Kota Kinabalu Airport,Malaysia,ZWR
+Tulip City Airport,United States,BIV
+Hernesaari Heliport,Finland,HEN
+West 30th St. Heliport,United States,JRA
+Lakeland Linder Regional Airport,United States,LAL
+Syangboche,Nepal,SYH
+Idlewild Intl,United States,IDL
+French Valley Airport,United States,RBK
+Fenosu,Italy,FNU
+Mysore Airport,India,MYQ
+Erie-Ottawa Regional Airport,United States,PCW
+Dayton-Wright Brothers Airport,United States,MGY
+Richmond Municipal Airport,United States,RID
+Findlay Airport,United States,FDY
+Penneshaw Airport,Australia,PEA
+Kaufbeuren BF,Germany,KFX
+Munich HBF,Germany,MUQ
+Nurnberg HBF,Germany,NUR
+Ebenhofen BF,Germany,EBE
+Augsburg HBF,Germany,AUB
+Biessenhofen BF,Germany,BIE
+Buchloe BF,Germany,BUH
+Fussen BF,Germany,FUX
+Kempten HBF,Germany,KEX
+Aiome,Papua New Guinea,AIE
+Simbai,Papua New Guinea,SIM
+Ambunti,Papua New Guinea,AUJ
+Marktoberdorf BF,Germany,OAL
+Marktoberdorf Schule,Germany,MOS
+Essen HBF,Germany,ESX
+Bochum HBF,Germany,BOX
+Koln HBF,Germany,KOX
+Bembridge,United Kingdom,BBP
+Leuterschach BF,Germany,LES
+Black Hills Airport-Clyde Ice Field,United States,SPF
+Knokke-Heist Westkapelle Heliport,Belgium,KNO
+Gdynia,Poland,QYD
+Olive Branch Muni,United States,OLV
+Zonguldak,Turkey,ONQ
+Rocky Mountain Metropolitan Airport,United States,BJC
+McNary Field,United States,SLE
+Tunica Municipal Airport,United States,UTM
+Kasaba Bay Airport,Zambia,ZKB
+Lindau HBF,Germany,LND
+Guardiamarina Zanartu Airport,Chile,WPU
+Volkel AB,Netherlands,UDE
+Lawrence J Timmerman Airport,United States,MWC
+Southern Wisconsin Regional Airport,United States,JVL
+Hatfield,United Kingdom,HTF
+Arlington Municipal,United States,GKY
+Gwinnett County Airport-Briscoe Field,United States,LZU
+Bowling Green-Warren County Regional Airport,United States,BWG
+Richard Lloyd Jones Jr Airport,United States,RVS
+Krymsk,Russia,NOI
+Minhad HB,United Arab Emirates,NHD
+Kirovograd,Ukraine,KGO
+Alalamain Intl.,Egypt,DBB
+Bryce Canyon,United States,BCE
+Heidelberg,Germany,HDB
+Burlington-Alamance Regional Airport,United States,BUY
+Chkalovsky Airport,Russia,CKL
+Tengchong Tuofeng Airport,China,TCZ
+Belbek Sevastopol International Airport,Ukraine,UKS
+Berlin Brandenburg Willy Brandt,Germany,BER
+Paradise Island Seaplane Base,Bahamas,WZY
+New Century AirCenter Airport,United States,JCI
+Easton-Newnam Field Airport,United States,ESN
+Stafsberg Airport,Norway,HMR
+Yuba County Airport,United States,MYV
+Stockholm Cruise Port,Sweden,STO
+Helsingborg Cruise Port,Sweden,JHE
+Halliburton Field Airport,United States,DUC
+Garner Field,United States,UVA
+Lewis University Airport,United States,LOT
+Buchanan Field Airport,United States,CCR
+Key Largo,United States,OCA
+Yushu Batang,China,YUS
+Playon Chico,Panama,PYC
+Ustupo,Panama,UTU
+Mamitupo,Panama,MPU
+Huai An Lianshui Airport,China,HIA
+El Porvenir,Panama,PVE
+Oshawa Airport,Canada,YOO
+Lahr Airport,Germany,LHA
+Springfield-Beckly Municipal Airport,United States,SGH
+Sun Island Airport,Maldives,MSI
+Herrera International Airport,Dominican Republic,HEX
+Cooinda,Australia,CDA
+Jabiru,Australia,JAB
+Regensburg HBF,Germany,RGB
+Treuchtlingen BF,Germany,TLG
+Miami Seaplane Base,United States,MPB
+Hastings Airport,Sierra Leone,HGS
+Philip Billard Muni,United States,TOP
+Emporia Municipal Airport,United States,EMP
+Gunsa,China,NGQ
+Magdeburg-Cochstedt,Germany,CSO
+Wurzburg HBF,Germany,WZB
+Collin County Regional Airport at Mc Kinney,United States,TKI
+Chicago Executive,United States,PWK
+Kelso Longview,United States,KLS
+Tureia Airport,French Polynesia,ZTA
+Jefferson County Intl,United States,TWD
+Puerto Obaldia,Panama,PUE
+Kerch Intl,Ukraine,KHC
+Train Station,Canada,XDS
+Train Station,Canada,XVV
+Train Station,Canada,XZL
+Train Station,United States,ZRD
+Sentral,Malaysia,XKL
+Train Station,Canada,XAD
+Train Station,Canada,XEF
+Ukunda Airport,Kenya,UKA
+Wilmington Airborne Airpark,United States,ILN
+Marana Regional,United States,AVW
+Casa Grande Municipal Airport,United States,CGZ
+Buckeye Municipal Airport,United States,BXK
+McMinn Co,United States,MMI
+Sterling Municipal Airport,United States,STK
+Rawlins Municipal Airport-Harvey Field,United States,RWL
+Mackenzie Airport,Canada,YZY
+Caldwell Essex County Airport,United States,CDW
+Lee C Fine Memorial Airport,United States,AIZ
+KIEV  INTERNATIONAL AIRPORT,Ukraine,KIP
+Bamberg BF,Germany,BAM
+Ingolstadt BF,Germany,IGS
+Thomasville Regional Airport,United States,TVI
+Henderson Executive Airport,United States,HSH
+Gostomel Antonov,Ukraine,GML
+Henry Tift Myers Airport,United States,TMA
+Frankfurt-Main Hauptbahnhof,Germany,ZRB
+Praha hlavni nadrazi,Czech Republic,XYG
+St Pancras Railway Station,United Kingdom,QQS
+Ulusaba Airstrip,Namibia,ULX
+RADOM,Poland,QXR
+Deer Valley Municipal Airport,United States,DVT
+Calgary Springbank Airport,Canada,YBW
+Golden Airport,Canada,YGE
+Revelstoke Airport,Canada,YRV
+Tula,Russia,TYA
+Hondo Municipal Airport,United States,HDO
+Zhongwei Xiangshan Airport,China,ZHY
+McKinley National Park Airport,United States,MCL
+Lake Hood Seaplane Base,United States,LHD
+Prospect Creek Airport,United States,PPC
+Khwai River Lodge,Botswana,KHW
+Taichung Airport,Taiwan,TXG
+Columbia County,United States,HCC
+Wheeling Ohio County Airport,United States,HLG
+Fitzgerald Municipal Airport,United States,FZG
+Samsun ,Turkey,SSX
+Ye,Burma,XYE
+Kingston Train Station,Canada,XEG
+Dorval Railway Station,Canada,XAX
+Dubai Al Maktoum,United Arab Emirates,DWC
+Aransas County Airport,United States,RKP
+Bandanaira Airport,Indonesia,NDA
+Megeve Airport,France,MVV
+Meribel Airport,France,MFX
+Tianyang,China,AEB
+Okaukuejo Airport,Namibia,OKF
+Mokuti Lodge Airport,Namibia,OKU
+St. Peter-Ording Airport,Germany,PSH
+Crisp County Cordele Airport,United States,CKF
+Ormond Beach municipal Airport,United States,OMN
+Portland Troutdale,United States,TTD
+Portland Hillsboro,United States,HIO
+FOB Salerno,Afghanistan,KHT
+NAYPYITAW,Burma,NYT
+Montgomery County Airpark,United States,GAI
+Pembroke Airport,Canada,YTA
+Tsumeb Airport,Namibia,TSB
+Suffield Heliport,Canada,YSD
+Aeroporto Blumenau,Brazil,BNU
+Aeroclub Sibiu,Romania,SIB
+Aeroclub Cioca,Romania,CIO
+Charlevoix Municipal Airport,United States,CVX
+Roche Harbor Seaplane Base,United States,RCE
+Blakely Island Airport,United States,BYW
+Rosario Seaplane Base,United States,RSJ
+Westsound Seaplane Base,United States,WSX
+Friday Harbor Seaplane Base,United States,FBS
+Big Bay Water Aerodrome,Canada,YRR
+Cornwall Regional Airport,Canada,YCC
+Zona da Mata Regional Airport,Brazil,IZA
+Flagler County Airport,United States,XFL
+Aeroclub Deva,Romania,DVA
+Aeroclub Cluj,Romania,DZM
+Morrisville Stowe State Airport,United States,MVL
+Dallas Executive Airport,United States,RBD
+MOW,Russia,MOW
+Westerly State Airport,United States,WST
+Block Island State Airport,United States,BID
+Nightmute Airport,United States,NME
+Toksook Bay Airport,United States,OOK
+Tununak Airport,United States,TNK
+Goodnews Airport,United States,GNU
+Newtok Airport,United States,WWT
+Achutupo Airport,Panama,ACU
+Tubuala Airport,Panama,TUW
+Garachine Airport,Panama,GHE
+Mulatupo Airport,Panama,MPP
+Ittoqqortoormiit Heliport,Greenland,OBY
+Vinnitsa,Ukraine,VIN
+Angers St Laud,France,QXG
+Decatur County Industrial Air Park,United States,BGE
+Kegaska Airport,Canada,ZKG
+Black Tickle Airport,Canada,YBI
+Silver Springs Airport,United States,SPZ
+Whiteman Airport,United States,WHP
+Madera Municipal Airport,United States,MAE
+Trail Airport,Canada,YZZ
+Arctic Bay Airport,Canada,YAB
+Hector Silva Airstrip,Belize,BCV
+Maripasoula Airport,French Guiana,MPY
+Saint-Laurent-du-Maroni Airport,French Guiana,LDX
+Cayana Airstrip,Suriname,AAJ
+Laduani Airstrip,Suriname,LDO
+Kanas Airport,China,KJI
+Capurgana Airport,Colombia,CPB
+Sohag International,Egypt,HMB
+Rivera International Airport,Uruguay,RVY
+Patos de Minas Airport,Brazil,POJ
+Bauru-Arealva,Brazil,JTC
+Ourilandia do Norte Airport,Brazil,OIA
+Redencao Airport,Brazil,RDC
+Sao Felix do Xingu Airport,Brazil,SXX
+Bonito Airport,Brazil,BYO
+Sao Felix do Araguaia Airport,Brazil,SXO
+Carlos Alberto da Costa Neves Airport,Brazil,CFC
+Carauari Airport,Brazil,CAF
+Amaury Feitosa Tomaz Airport,Brazil,ERN
+Concordia Airport,Brazil,CCI
+Paulo Abdala Airport,Brazil,FBE
+Confresa Airport,Brazil,CFO
+Apalachicola Regional Airport,United States,AAF
+Orlando de Carvalho Airport,Brazil,UMU
+Diamantina Airport,Brazil,DTI
+Fonte Boa Airport,Brazil,FBA
+Senadora Eunice Micheles Airport,Brazil,OLC
+Humaita Airport,Brazil,HUW
+Tapuruquara Airport,Brazil,IRZ
+Oriximina Airport,Brazil,ORX
+Una-Comandatuba Airport,Brazil,UNA
+Telfer Airport,Australia,TEF
+Gazipasa Airport,Turkey,GZP
+St. Augustine Airport,United States,SGJ
+Londolozi,South Africa,LDZ
+Singita Sabi Sands,South Africa,INY
+Douglas Municipal Airport,United States,DQH
+St Lucie County International Airport,United States,FRP
+Alexandria,United States,ALX
+Taunton Municipal Airport - King Field,United States,TAN
+Plymouth Municipal Airport,United States,PYM
+Quonset State Airport,United States,OQU
+Norwood Memorial Airport,United States,OWD
+Barnes Municipal,United States,BAF
+Windham Airport,United States,IJD
+Orange County Airport,United States,MGJ
+Capital City Airport,United States,CXY
+Marshfield Municipal Airport,United States,GHG
+Danbury Municipal Airport,United States,DXR
+Boire Field Airport,United States,ASH
+Lawrence Municipal Airport,United States,LWM
+Waterbury-Oxford Airport,United States,OXC
+Fitchburg Municipal Airport,United States,FIT
+Cartersville Airport,United States,VPC
+Centre-Piedmont-Cherokee County Regional Airport,United States,PYP
+Richard B Russell Airport,United States,RMG
+Northeast Alabama Regional Airport,United States,GAD
+Knoxville Downtown Island Airport,United States,DKX
+Barrow County Airport,United States,WDR
+Plantation Airpark,United States,JYL
+Dalton Municipal Airport,United States,DNN
+West Georgia Regional Airport - O V Gray Field,United States,CTJ
+LaGrange-Callaway Airport,United States,LGC
+Baldwin County Airport,United States,MLJ
+Harris County Airport,United States,PIM
+Atlanta Regional Airport - Falcon Field,United States,FFC
+Lee Gilmer Memorial Airport,United States,GVL
+Harry Clever Field Airport,United States,PHD
+Darlington County Jetport,United States,UDG
+Hilton Head Airport,United States,HXD
+Daniel Field Airport,United States,DNL
+Foothills Regional Airport,United States,MRN
+Pike County Airport - Hatcher Field,United States,PBX
+Toccoa RG Letourneau Field Airport,United States,TOC
+Poltava,Ukraine,PLV
+Wau Airport,Sudan,WUU
+Humera Airport,Ethiopia,HUE
+Moyale Airport,Kenya,OYL
+Yengema Airport,Sierra Leone,WYE
+Gbangbatok Airport,Sierra Leone,GBK
+Tampa Executive Airport,United States,VDF
+Fort Worth Alliance Airport,United States,AFW
+Montgomery Field,United States,MYF
+Gimpo International Airpot,South Korea,SEL
+Renmark,Australia,RMK
+Keewaywin,Canada,KEW
+Marathon,Canada,YSP
+Rene Fontaine,Canada,YHF
+Hornepayne,Canada,YHN
+Kirkland Lake,Canada,YKX
+Manitouwadge,Canada,YMG
+Wawa,Canada,YXZ
+Manitoulin East,Canada,YEM
+Brantford,Canada,YFD
+Lawrence Municipal,United States,LWC
+Wellington Municipal,United States,EGT
+Nicosia International Airport,Cyprus,NIC
+Pompano Beach Airpark,United States,PMP
+Mallacoota Airport,Australia,XMC
+Prince Abdul Majeed Airport,Saudi Arabia,ULH
+Shelby County Airport,United States,EET
+Yuendumu ,Australia,YUE
+Gare de Strasbourg,France,XWG
+Guangzhou South Railway Station,China,GZS
+Lombok International Airport,Indonesia,LOP
+Marmul,Oman,OMM
+South Cariboo Regional Airport,Canada,ZML
+Hebei Handan Airport,China,HDG
+Indianapolis Metropolitan Airport,United States,UMP
+London-Corbin Airport-MaGee Field,United States,LOZ
+Fredericksburg Amtrak Station,United States,FBG
+Warsaw Modlin,Poland,WMI
+Jixi Airport,China,JXA
+Gimli Industrial Park Airport,Canada,YGM
+Beloyarsky,Russia,EYK
+John H. Batten Airport,United States,RAC
+Taytay Sandoval,Philippines,RZP
+Otaru,Japan,QOT
+Shigatse Peace Airport,China,RKZ
+Redlands Municipal Airport,United States,REI
+Flabob Airport,United States,RIR
+Tacoma Narrows Airport,United States,TIW
+Jack Edwards Airport,United States,JKA
+Vieste Heliport,Italy,VIF
+Khmeinitskiy,Ukraine,HMJ
+Hiroshima-Nishi,Japan,HIW
+Hazleton Municipal,United States,HZL
+Greater Cumberland Rgnl.,United States,CBE
+Bob Quinn Lake,Canada,YBO
+Fox Glacier Airstrip,New Zealand,FGL
+Grabtsevo,Russia,KLF
+Central Station,Sweden,XEV
+Central Station,Sweden,QYX
+Centraal,Netherlands,QRH
+Holesovice,Czech Republic,XYJ
+Hauptbahnhof,Germany,BNJ
+Central,Denmark,ZGH
+Hauptbahnhof,Austria,ZSB
+Centraal,Belgium,ZWE
+Ellisras,South Africa,ELL
+Tri-County Regional Airport,United States,LNR
+Regional Airport,United States,JOT
+Illinois Valley Regional,United States,VYS
+Reynolds Field,United States,JXN
+Wings Field,United States,BBX
+County,United States,OBE
+Regional - Hendricks AAF,United States,SEF
+Executive,United States,AVO
+Gilbert Airport,United States,GIF
+Municipal Airport,United States,ZPH
+International Airport,United States,OCF
+Jesup-Wayne County Airport,United States,JES
+Coweta County Airport,United States,CCO
+McDuffie County Airport,United States,HQU
+Municipal Airport,United States,AIK
+Woodward Field,United States,CDN
+Municipal Airport,United States,LBT
+Moore County Airport,United States,SOP
+Richmond County Airport,United States,RCZ
+Baraboo Wisconsin Dells Airport,United States,DLL
+Regional Airport,United States,SVH
+Municipal Airport,United States,BUU
+William T. Piper Mem.,United States,LHV
+Lorain County Regional Airport,United States,LPR
+Burke Lakefront Airport,United States,BKL
+Chautauqua County-Dunkirk Airport,United States,DKK
+South Jersey Regional Airport,United States,VAY
+Linden Airport,United States,LDJ
+Tri-State Steuben County Airport,United States,ANQ
+Van Wert County Airport,United States,VNW
+Brooks Field Airport,United States,RMY
+Genesee County Airport,United States,GVQ
+Clearwater Air Park,United States,CLW
+Scatsta Airport,United Kingdom,SCS
+Zoo,Germany,QWC
+Frankfurt Oder Hbf,Germany,ZFR
+Gare de Lyon,France,PLY
+Gare de LEst,France,XHP
+All Airports,France,PAR
+Ostbahnhof,Germany,BHF
+All Airports,United Kingdom,LON
+All Airports,United States,NYC
+All Airports,United States,CHI
+Meigs Field,United States,CGX
+All Airports,Japan,TYO
+All Airports,China,BJS
+All Airports,Italy,MIL
+All Airports,United States,WAS
+All Airports,Canada,YMQ
+All Airports,Canada,YTO
+Pickens County Airport,United States,JZP
+Gesundbrunnen,Germany,BGS
+Grand Strand Airport,United States,CRE
+Sun Moon Lake Airport,Taiwan,SMT
+Lansing Municipal,United States,IGQ
+Ramona Airport,United States,RNM
+Buochs Airport,Switzerland,BXO
+Branch County Memorial Airport,United States,OEB
+Wilkes-Barre Wyoming Valley Airport,United States,WBW
+Lost Nation Municipal Airport,United States,LNN
+Uummannaq Heliport,Greenland,UMD
+Bayannur,China,RLK
+Capital City Airport,United States,FFT
+Lewiston Maine,United States,LEW
+Naval Air Station,United States,NBU
+Marco Islands,United States,MRK
+Drummond Island Airport,United States,DRM
+Gladwin Zettel Memorial Airport,United States,GDW
+South Haven Area Regional Airport,United States,LWA
+Marshfield Municipal Airport,United States,MFI
+Alexander Field South Wood County Airport,United States,ISW
+Clinton Municipal,United States,CWI
+Beverly Municipal Airport,United States,BVY
+Trois Rivieres Airport,Canada,YRQ
+Poplar Bluff Municipal Airport,United States,POF
+Eastport Municipal Airport,United States,EPM
+Keokuk Municipal Airport,United States,EOK
+Perth Scone Airport,United Kingdom,PSL
+Soderhamn Airport,Sweden,SOO
+Saravane Airport,Laos,VNA
+Dikson Airport,Russia,DKS
+Bogande Airport,Canada,XBG
+Bantry Aerodrome,Ireland,BYT
+Reeroe Airport,Ireland,CHE
+Alldays Airport,South Africa,ADY
+Garissa,Kenya,GAS
+Hola,Kenya,HOA
+Kalokol,Kenya,KLK
+Kericho,Kenya,KEY
+Kilaguni,Kenya,ILU
+Kerio Valley,Kenya,KRV
+Andavadoaka,Madagascar,DVD
+Antsirabe,Madagascar,ATJ
+Bekily,Madagascar,OVA
+Atlantic City Rail Terminal,United States,ZRA
+Springfield Amtrak Station,United States,ZSF
+Amherst Amtrak Station AMM,United States,XZK
+London - Kings Cross,United Kingdom,QQK
+Stevenage Railway Station,United Kingdom,XVJ
+Peterborough Railway Station,United Kingdom,XVH
+Pomalaa,Indonesia,PUM
+Whittlesford Parkway Rail Station,United Kingdom,WLF
+Gorno-Altaysk Airport,Russia,RGK
+Fond Du Lac County Airport,United States,FLD
+Waupaca Municipal Airport,United States,PCZ
+Stevens Point Municipal Airport,United States,STE
+Luce County Airport,United States,ERY
+Hannover Messe-Heliport,Germany,ZVM
+Peenemunde Airfield,Germany,PEF
+Galion Municipal Airport,United States,GQQ
+Tiputini,Ecuador,TPN
+Shell Mera,Ecuador,PTZ
+Clarksville-Montgomery County Regional Airport,United States,CKV
+Liege-Guillemins Railway Station,Belgium,XHN
+Wyk auf Foehr,Germany,OHR
+Lompoc Airport,United States,LPC
+Chester County G O Carlson Airport,United States,CTH
+Bost Airport,Afghanistan,BST
+Lankaran International Airport,Azerbaijan,LLK
+Qabala Airport,Azerbaijan,GBB
+Zaqatala International Airport,Azerbaijan,ZTU
+Lake Placid Airport,United States,LKP
+Zhoubai,China,JIQ
+Mendeleevo,Russia,DEE
+Wishram Amtrak Station,United States,WIH
+Lima Allen County Airport,United States,AOH
+Sondok Airport,North Korea,DSO
+Samjiyon Airport,North Korea,YJS
+McKinnon Airport,United States,SSI
+Beaver Falls,United States,BFP
+Georgetown County Airport,United States,GGE
+Hardwick Field Airport,United States,HDI
+Renton,United States,RNT
+Bromont Airport,Canada,ZBM
+Brackett Field,United States,POC
+CedarKey,United States,CDK
+Cross City,United States,CTY
+Clemson,United States,CEU
+Beech Factory Airport,United States,BEC
+Hamburg Hbf,Germany,ZMB
+Georgetown Municipal Airport,United States,GTU
+Duxford Aerodrome,United Kingdom,QFO
+Sidney Muni Airport,United States,SNY
+Great Keppel Island,Australia,GKL
+Roper Bar,Australia,RPB
+Innisfail,Australia,IFL
+Bamyan Airport,Afghanistan,BIN
+Changbaishan Airport,China,NBS
+Chongjin Airport,North Korea,RGO
+Moomba,Australia,MOO
+Lublin,Poland,LUZ
+Leesburg Executive Airport,United States,JYO
+Maamigili Airport,Maldives,VAM
+Hilton Iru fushi,Maldives,IRU
+Dhigurah Centara Grand Maldives,Maldives,DHG
+Yongzhou Lingling Airport,China,LLF
+Losinj Airport,Croatia,LSZ
+Onslow ,Australia,ONS
+Theodore,Australia,TDR
+RUDNIKI ,Poland,CZW
+Williamson-Sodus Airport,United States,SDC
+Clear Lake Metroport,United States,CLC
+Gilberto Lavaque,Argentina,CFX
+Boulder Municipal,United States,WBU
+Sannvhe,China,TVS
+Palo Alto Airport of Santa Clara County,United States,PAO
+Mesa Falcon Field,United States,FFZ
+Yangzhou Taizhou Airport,China,YTY
+Oakland Co. Intl,United States,PTK
+Kissidougou,Guinea,KSI
+Pecs,Hungary,QPJ
+Dillant Hopkins Airport,United States,EEN
+Tianshui Airport,China,THQ
+Kooddoo,Maldives,GKK
+Rochester Airport,United Kingdom,RCS
+Albian Aerodrome,Canada,JHL
+Monroe Reqional Airport,United States,EQY
+Kankan,Guinea,KNN
+Termal,Argentina,RHD
+Keetmanshoop,Namibia,KMP
+Kangding Airport,China,KGT
+Veliky Ustyug,Russia,VUS
+Iowa City Municipal Airport,United States,IOW
+Turpan,China,TLQ
+Windom Municipal Airport,United States,MWM
+Lee Airport,United States,ANP
+Ndutu,Tanzania,DUU
+Cuamba,Mozambique,FXO
+Bodaibo,Russia,ODO
+Zhytomyr,Ukraine,ZTR
+Mattala Rajapaksa Intl.,Sri Lanka,HRI
+Pecos Municipal Airport,United States,PEQ
+Hattiesburg Bobby L. Chain Municipal Airport,United States,HBG
+Botucatu,Brazil,QCJ
+Sao Carlos TAM,Brazil,QSC
+Chan Gurney,United States,YKN
+Selfield Airport,United States,SES
+Sir Bani Yas Island,United Arab Emirates,XSB
+Dalma Airport,United Arab Emirates,ZDY
+Playa del Carmen Airport,Mexico,PCM
+Kratie Airport,Cambodia,KTI
+Guyuan,China,GYU
+Changhai,China,CNI
+Redhill Aerodrome,United Kingdom,KRH
+Jiagedaqi Airport,China,JGD
+Chinchilla,Australia,CCL
+Hayward Executive Airport,United States,HWD
+Motueka,New Zealand,MZP
+Shute Harbour,Australia,JHQ
+Ann Arbor Municipal Airport,United States,ARB
+Shepparton,Australia,SHT
+Temora,Australia,TEM
+Gayndah,Australia,GAH
+Popondetta,Papua New Guinea,EIA
+Wilcannia,Australia,WIO
+Bijie Feixiong Airport,China,BFJ
+Lensk,Russia,ULK
+Igdir,Turkey,IGD
+Sanliurfa GAP,Turkey,GNY
+Zafer,Turkey,KZR
+Velikiye Luki,Russia,VLU
+Boston Back Bay Station,United States,ZTY
+Yelahanka AFB,India,YLK
+Ulithi,Micronesia,ULI
+Balkanabat,Turkmenistan,BKN
+Belmont Airport,Australia,BEO
+Brampton Island,Australia,BMP
+NAS Alameda,United States,NGZ
+Wilmington Amtrak Station,United States,ZWI
+Fort McMurray - Mildred Lake Airport,Canada,NML
+Elkhart Municipal,United States,EKI
+Cochrane,Canada,YCN
+Aeroporto Estadual Arthur Siqueira,Brazil,BJP
+Brusselton,Australia,BQB
+Garowe - International,Somalia,GGR
+Inverell,Australia,IVR
+Glen Innes,Australia,GLI
