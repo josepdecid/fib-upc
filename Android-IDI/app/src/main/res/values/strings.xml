@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">MyCoinDataBase</string>
+
+    <string name="version">Version</string>
+    <string name="description_about"><b>MyCoinDataBase</b> is an Android application created by <b>Josep de Cid</b>, student of IDI @ FIB-UPC.</string>
+    <string name="ic_black">Go back</string>
+    <string name="title_activity_main_tabs">MainTabsActivity</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="list_tab">Coin list</string>
+    <string name="create_tab">Create coins</string>
+
+    <string name="coin_image">Coin image</string>
+    <string name="action_about">About</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_form_currency">Currency</string>
+    <string name="label_form_country">Country</string>
+    <string name="label_form_year">Year</string>
+    <string name="label_form_description">Description</string>
+    <string name="back_exit">Press back again to exit</string>
+    <string name="successful_create_coin">Successfully created coin</string>
+    <string name="label_form_value">Value</string>
+    <string name="nav_language">Language</string>
+    <string name="description_language">Change app language</string>
+    <string name="new_language">New language set</string>
+</resources>
