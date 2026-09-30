@@ -1,0 +1,18 @@
+drink-name	drink-price	drink-classification	drink-combination	drink-type
+STRING	FLOAT	SYMBOL	SYMBOL	SYMBOL
+Water	1.20	[Other]	[All]	[M S G J]
+Beer	2.50	[Alcohol]	[Vegetarian Spanish Italian French Chinese Japanese American Mexican Indian Mediterranean]	[M S G]
+La_Rioja_Alta_Gran_Reserva_1995	60.00	[Alcohol]	[Gourmet Spanish Italian French Mediterranean]	[M S G]
+La_Vicalanda_Gran_Reserva_2010	35.95	[Alcohol]	[Gourmet Spanish Italian French Mediterranean]	[M S G]
+White_Wine	10.50	[Alcohol]	[Gourmet Spanish Italian French Mediterranean]	[M S G]
+Tequila	14.59	[Alcohol]	[Mexican]	[D]
+Sangria	10.99	[Alcohol]	[Spanish Mediterranean]	[M S G]
+Whisky_Glengarry_12_Years	40.45	[Alcohol]	[American]	[D]
+Ron_Barcelo_Imperial	30.25	[Alcohol]	[Spanish Mediterranean]	[D]
+Juice	1.30	[Juice]	[All]	[D J]
+Coffee_milk	2.10	[Caffeine]	[Spanish Mediterranean Italian]	[D]
+Hot_chocolate	2.00	[Other]	[All]	[D J]
+Tea	1.70	[Other]	[Islamic Chinese Japanese Turkish Indian Moroccan]	[D]
+Soft_drink	1.50	[Other]	[American]	[M S G J]
+Cocktail	3.50	[Alcohol]	[All]	[D]
+Sake	4.50	[Alcohol]	[Japanese Chinese]	[M S G]

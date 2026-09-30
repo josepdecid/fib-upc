@@ -1,0 +1,966 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{xcolor,colortbl}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage[square,sort,comma,numbers]{natbib}
+
+\newenvironment{bottompar}{\par\vspace*{\fill}}{\clearpage}
+\renewcommand{\contentsname}{Índice}
+\setcounter{tocdepth}{2}
+
+\definecolor{DarkGrey}{HTML}{DFDFDF}
+\definecolor{LightGrey}{HTML}{F2F2F2}
+\captionsetup[table]{name=Tabla}
+
+\lstset{
+  mathescape = true,
+  basicstyle = \ttfamily}
+\newcommand{\dollar}{\mbox{\textdollar}}
+
+\title{%
+  Sistemas basados en el conocimiento \\
+  \large Rico Rico \\
+  IA - FIB @ UPC
+}
+\author{\large Eric Dacal, Josep de Cid, Joaquim Marset}
+\date{Mayo 2017}
+
+\begin{document}
+
+\maketitle
+\begin{bottompar}
+\tableofcontents
+\end{bottompar}
+
+\newpage
+\section{Introducción}
+Hay problemas que no se pueden resolver en un tiempo razonable o de forma satisfactoria con una solución algorítmica, ya que dicha resolución requiere de conocimiento específico sobre los elementos del dominio, para poder tomar las decisiones correctas.
+\par
+Este tipo de problemas son el propósito de los sistemas basados en el conocimiento, que se aplican en el campo de la inteligencia artificial para solucionar problemas de alta complejidad. Un sistema basado en el conocimiento es aquel que resuelve un problema utilizando una representación simbólica del conocimiento humano.
+\par
+En esta práctica, lo analizamos mediante la implementación de un sistema de generación de menús para una cadena de restaurantes, teniendo en cuenta las preferencias, restricciones alimenticias, detalles del evento, etc, que el usuario nos proporciona. Al ser un problema altamente dependiente de la información disponible, es muy útil la resolución de ese con la ayuda de un sistema basado en el conocimiento, separando así el tratamiento de la información subyacente de los algoritmos de razonamiento, que son los que generan las recomendaciones.
+\par
+Hemos desarrollado una ontología, capaz de almacenar la información sobre los ingredientes, bebidas, platos y menús usando \textbf{Protégé} y un sistema de reglas que describen el proceso de toma de decisiones usando \textbf{CLIPS}.
+\par
+La realización de esta práctica, así como los apartados de este informe, siguen un modelo simplificado de la metodología de desarrollo en cascada, basado en la ingeniería del conocimiento, que se divide en las siguientes fases: \textit{Identificación del problema}, \textit{Conceptualización}, \textit{Formalización} y  \textit{Implementación y prueba}.
+\par
+A pesar de las reducidas dimensiones de la práctica, hemos iterado sobre este esquema volviendo a fases anteriores para mejorar el diseño de nuestra solución. En los siguientes apartados del documento, explicaremos los pasos seguidos para el desarrollo de nuestra solución, analizando los resultados obtenidos.
+
+\newpage
+\section{Identificación del problema}
+En la ingeniería del conocimiento partimos de la fase de análisis e identificación del problema a tratar antes de crear la estructura de nuestro sistema basado en el conocimiento.
+Para ello, se evalúan los requisitos del problema, recursos disponibles, viabilidad, etc y en función de este análisis, se establecen los objetivos concretos sobre los cuales empezar a trabajar con el proceso de resolución.
+
+\subsection{Descripción del problema}
+Rico Rico, una empresa de catering, ha decidido implementar un sistema de elaboración de menús para celebraciones familiares (bodas, bautizos, comuniones) y comidas/cenas de congresos, a partir de la información personalizada proporcionada por sus clientes, como restricciones sobre el menú (alergias, estilos culinarios, límite de precio...), las fechas del evento, número de asistentes,etc.
+\par
+A partir de dicha información el sistema utilizara su conocimiento para seleccionar los platos más adecuados para elaborar los menús, compuestos por primer, segundo plato y postre, a parte de la bebida, que puede ser única por menú o una diferente en cada plato. De cada plato se dispone de sus ingredientes, disponibilidad, complejidad, que tipo de plato es entre otros datos.
+\par
+El proceso de selección de los menús adecuados, requiere la consideración de un amplio abanico de factores, variados e independientes, como son la gran variedad de estilos de comida, restricciones alimenticias, número de comensales o disponibilidad de los ingredientes necesarios para preparar cada plato. La gran diversidad de combinaciones posibles entre platos que pueden generar menús válidos puede llegar a plantear un reto a la hora de elegir el subconjunto de estos más adecuado para enseñar al usuario, y es por eso que se desarrolla una aplicación de recomendación de menús que tenga en cuenta todas estas variables.
+\par
+El sistema encargado de generar las recomendaciones de menús se basa en las características de cada plato y bebida, disponiendo de los ingredientes necesarios para cocinar dichos platos, su nivel de dificultad, proporcionalmente asociado al tiempo de preparación o recursos necesarios, disponiendo a la vez, por cada ingrediente, de los meses del año en que está disponible (por ejemplo, verduras o frutas frescas de temporada), y datos sobre su valor nutricional (proteínas, hidratos de carbono, grasas, colesterol...). A partir de dicha información sobre el dominio del problema y las respuestas del usuario sobre su caso concreto, se pueden construir recomendaciones personalizadas ajustadas a la individualidad del comensal.
+\par
+Concretamente se ofrecerá al usuario la posibilidad de introducir los datos específicos sobre el evento como son el tipo y fecha del evento, número de asistentes, preferencias en el estilo de los platos (comidas regionales, alta gastronomía...), restricciones de la comida (vegetariano, sin gluten...), prohibiciones de tipos de bebidas (alcohol, bebidas azucaradas...) y un intervalo de precio a pagar aceptable para el menú.
+\par
+A partir de los parámetros descritos y el conocimiento del dominio del sistema, es posible realizar una búsqueda sobre los platos y bebidas disponibles para crear combinaciones de diferentes menús y asociar a cada uno de ellas un grado de afinidad con el cliente para la recomendación. Finalmente, una vez determinados se escogen tres menús representativos con una buena puntuación de forma que haya una diferencia notable de precio entre los tres y que el usuario tenga variedad de precios para escoger de forma que todas las opciones cumplan las restricciones impuestas.
+
+\subsection{Viabilidad del desarrollo}
+A partir de la descripción de la sección anterior, se intuye que estamos ante un problema de análisis mediante el conocimiento, del cual disponemos de la información sobre diferentes platos, bebidas e ingredientes, donde se espera que el sistema evalúe la compatibilidad y a partir de esta, evalúe la calidad de los menús generados.
+\par
+Al ser un problema de análisis, no disponemos de una solución algorítmica directa usando metodologías clásicas, dado que es un problema complejo y altamente dependiente del conocimiento sobre el conjunto de los elementos que lo conforman, tanto los elementos del dominio, como las restricciones o preferencias del cliente.
+Además, este no es un conocimiento completo, así que no hay un método exacto para establecer los grados de recomendación de los diferentes menús, sino que hay que usar métodos heurísticos y valoraciones para aproximar los razonamientos lógicos que podría hacer una persona sin disponer del total conocimiento del dominio.
+\par
+Dichos motivos, nos hacen pensar que parece una elección razonable modelar esta práctica como un problema de clasificación heurística, pudiendo ser resuelto con un sistema basado en el conocimiento, que sigue un esquema basado en la abstracción de los datos relevantes a partir de la información disponible para la posterior creación de una cierta asociación de menús al cliente y sus preferencias, mediante métodos heurísticos de razonamiento. Aunque el sistema no dispone de todo el conocimiento del problema, almacena los datos principales para generar una solución, las características básicas de los diferentes platos, bebidas e ingredientes a combinar.
+\par
+Los razonamientos que nos llevan a la recomendación de menús según las preferencias y restricciones establecidas se pueden emular usando reglas de producción de nuestro sistema basadas en el conocimiento. En conclusión, es factible la implementación de un sistema basado en el conocimiento para la resolución de este problema, puesto que disponemos del conjunto de datos necesarios y desconocemos algoritmos (en un tiempo y complejidad razonables) para llegar a una solución.
+
+\subsection{Fuentes de conocimiento}
+Se asume en todo momento que nuestro sistema dispone del conocimiento necesario sobre los platos, bebidas e ingredientes. Para que esto sea cierto, hace falta considerar las posibles fuentes de conocimiento disponibles y analizar si son suficientes para alcanzar el conocimiento descrito anteriormente. En este caso el conocimiento necesario se basa en una amplia gamma de datos para poder generar muchos tipos de menús diferentes dependiendo de los requerimientos del usuario.
+\par
+Para obtener los datos necesarios sobre los alimentos hemos consultado listas de alimentos por categoría, para disponer de una amplia variedad de cada tipo: verduras, fruta, carne, pescado, especias, pasta... Para cada ingrediente encontrado, hemos consultado el valor nutricional de cada ingrediente en Google, ya que el propio buscador ofrece, vinculado con Wikipedia, una ficha con los valores nutricionales de cada ingrediente buscado. Siendo Google el principal motor de búsqueda del mundo y Wikipedia la principal enciclopedia en la nube, podemos considerar estos dos sitios como fuentes fiables, ya que almacenan gran parte del conocimiento requerido de forma estructurada (y de forma pública).
+\par
+Para los platos y bebidas hemos recogido información de muchas páginas web de recetas de cocina y listados de bebidas, tanto alcohólicas como infusiones, zumos...
+Dado que los platos son una mera combinación de ingredientes y no necesitan ser platos existentes, aunque las páginas de las que hemos obtenido la información, aunque no son conocidas y podrían contener información incorrecta o no verificada, no influyen en la correcta representación de nuestro conocimiento.
+\par
+Para finalizar, nos falta el conocimiento aportado por los propios clientes. Estos son los únicos conocedores reales de sus circunstancias, necesidades y preferencias a los menús e ingredientes que quieren elegir. Estos datos son de vital importancia para generar recomendaciones ajustadas a su perfil, ya que aunque es posible que no proporcionen toda la información al sistema, el sistema inferiría algunos de los datos restantes a partir de los datos propios de cada plato o menú.
+\par
+En conclusión, estas son fuentes fiables de las que podemos obtener el conocimiento necesario para el correcto funcionamiento de nuestro sistema.
+
+\subsection{Objetivo del sistema}
+Finalmente debemos definir los objetivos clave que debe satisfacer el sistema para resolver el problema planteado de forma correcta. En primer lugar, el sistema debe ser capaz de obtener las restricciones y preferencias introducidas por el cliente, mediante la formulación inicial de preguntas a este. No hace falta que el cliente introduzca información explicita para el sistema, sino datos con los que el sistema puede llegar a inferir restricciones.
+\par
+El objetivo final de esta práctica es, una vez recogido la información proporcionada por el cliente y almacenado en el sistema de forma correcta, establecer una valoración de menús que se adapten a las restricciones, intereses y necesidades del perfil del usuario.
+\par
+Basado en esta valoración, el programa debe hacer una selección final de un total de tres menús con precios significativamente diferentes, más algún posible menú extra según determinadas condiciones, para ofrecer la recomendación final al usuario.
+\par
+El sistema debe ser capaz de mostrar un grado cualitativo de recomendación y los motivos que han conducido al sistema de razonamiento a la selección de ese menú, de forma que el menú generado sea valido y cumpla todas las restricciones establecidas por el usuario.
+
+\newpage
+\section{Conceptualización}
+Una vez dada la descripción en detalle del problema y el análisis  y establecimiento de objetivos concretos, debemos dar paso a la fase de conceptualización.
+\par
+En esta fase, es donde se abstraen los conceptos que nos permiten estructurar de forma correcta el problema y dividirlo en subproblemas más sencillos, para poder dar así estrategias de resolución concretas para cada uno mediante razonamientos basados en el conocimiento disponible en nuestro sistema.
+\par
+El análisis que realizaremos parte del punto de vista que podría ofrecer un experto del dominio.
+
+\subsection{Elementos del problema}
+Como hemos visto previamente en el análisis del problema, los elementos de este, se pueden clasificar en dos grupos, teniendo por un lado los platos, bebidas e ingredientes, junto a sus características, y por otro los clientes, con sus preferencias, restricciones y información adicional que puedan aportar. A partir de la información de los elementos del dominio que nos da el experto podemos hacer una definición informal de la ontología.
+\par
+Los menús no tienen identificación propia sino que se identifican mediante los elementos que los conforman, los platos y las bebidas. Para cada menú contamos con tres platos (primer, segundo plato y postre) y una bebida, o opcionalmente tres bebidas, una por cada plato. Por cada plato, tenemos su nombre, categorías en las que clasificarlo (comida italiana, mediterránea, sopas...), los ingredientes que lo conforman, con que otro tipo de platos combina, el precio y la complejidad de su elaboración.
+\par
+Cada ingrediente dispone de su nombre y información sobre los meses en los que está disponible, y sus valores nutricionales: calorías, grasas, proteínas, hidratos de carbono y colesterol. Por otro lado tenemos las bebidas, de las que tenemos su nombre, precio, su clasificación (alcohólicas, refrescos...), con que tipo de platos combinan y si son bebidas orientadas a toda la comida, solo para el postre...
+\par
+Como ya se ha mencionado anteriormente, el usuario introducirá todas sus preferencias y restricciones explícitamente para que el sistema de recomendación las use, además de las inferidas a partir de datos del propio evento, y combinando el conocimiento proporcionado ya sea directa o indirectamente por el usuario, con los datos del dominio del problema, nuestro sistema dispondrá de toda la información necesaria para realizar recomendaciones que satisfagan las preferencias del usuario.
+
+\subsection{Estructura del problema}
+A fin de resolver nuestro problema, en el que intervienen una gran cantidad de elementos sin significativa relación entre ellos, debemos descomponerlo en subproblemas más simples que faciliten un tratamiento sistemático del problema general mediante razonamientos y heurísticos sobre el conocimiento adquirido por el sistema.
+\par
+Como se intuye en secciones anteriores, nuestro problema estará compuesto por cuatro subproblemas a resolver:
+\begin{itemize}
+    \item \textbf{Obtención información cliente:} En primer lugar debemos obtener el máximo de información posible del cliente, relativa a la fecha del evento, el número de comensales, las preferencias de estilos culinarios, las restricciones referentes a ingredientes y/o bebidas prohibitivas, saber si desea una bebida por plato o no y finalmente el rango de precio dentro del cual está dispuesto a pagar, así que esta parte consiste en consultar al cliente mediante preguntas sus preferencias, restricciones e información acerca del evento a organizar, mediante un sistema de preguntas cerradas, ya sean numéricas con rango, de respuesta sí o no, o de múltiples opciones. De esa forma nos aseguramos que el cliente introduzca la suficiente información y que sea válida y útil. De este primer subproblema obtendremos todas las restricciones y preferencias a las que los menús se tendrán que amoldar.
+    \item \textbf{Evaluar disponibilidad y validez:} En este segundo subproblema debemos evaluar de entre el conjunto de platos y bebidas de las que se dispone, cuáles serán los potenciales candidatos a formar parte de la solución que dará el sistema teniendo en cuenta todas las restricciones y preferencias que el usuario habrá especificado al comienzo y los que no cumplan esas restricciones serán eliminados de nuestro espacio de búsqueda. De este subproblema obtendremos como salida un conjunto de platos y bebidas que pueden ser parte de la solución.
+    \item \textbf{Abstracción heurística:} En este subproblema debemos abstraer las preferencias del cliente obtenidas para obtener un conjunto de características clave suficientemente descriptivas que vienen determinadas por unos valores mucho más restringidos. Tras esta abstracción debemos asociar cada combinación de elementos que genera un menú disponible y válido a cierto grado de adecuación para la recomendación, basándose en las características individuales del caso planteado por el cliente.
+    \item \textbf{Elaboración solución:} Finalmente, una vez tengamos calculada las valoraciones para cada menú, debemos elaborar la solución final, seleccionando generalmente aquellos tres más idóneos, de forma que tengamos un precio fácilmente diferenciable, y todo menú solución cumpla las restricciones y se adecue al máximo a las preferencias del cliente.
+\end{itemize}
+
+\subsection{Proceso de resolución}
+El proceso de resolución del problema empieza con la recopilación de la información de las preferencias del cliente y las restricciones que este impone sobre determinados ingredientes prohibidos, rango de precios... Para lograr dicha información, se formulan una serie de preguntas para determinar datos sobre el evento, las preferencias del cliente, si tiene restricciones sobre algún tipo de plato, si quiere eliminar algún tipo de bebida y los rangos de precios que está  dispuesto a pagar.
+\par
+Dada la información del dominio de la que dispone el sistema, más la proporcionada por el usuario y la inferencia de otros datos a partir de información del evento como se explicará en detalle en apartados posteriores, ya hemos adquirido todo el conocimiento necesario para resolver el problema original, por lo que procedemos a abstraer las características obtenidas del cliente simplificar la evaluación de menús recomendados. Primeramente, descartamos los platos que no cumplen restricciones obligatorias impuestas por el usuario, como que por ejemplo platos que lleven carne cuando se ha impuesto una restricción vegetariana.
+\par
+Posteriormente, una vez filtrados los componentes que no cumplen restricciones obligatorias, planteamos la resolución de este problema usando las técnicas de clasificación heurística, con un cierto refinamiento dado que la asociación heurística ya proporciona una solución.
+\par
+Finalmente, se valoran los menús restantes mediante reglas heurísticas de razonamiento  se les asigna una puntuación que estima cuán recomendables son, incentivando la elección de aquellos con mayor puntuación, también relacionándola con el precio del menú para así obtener tres menús distintos que nos ofrezcan la elección de un menú de precio económico, medio o más caro.
+\par
+Con esto, el problema ya está prácticamente resuelto y solo queda mostrar al usuario aquellos menús que el sistema considera más recomendables, es decir, que se les ha otorgado una puntuación más elevada, de forma que se adecuen al perfil del cliente.
+
+\subsection{Ejemplos del conocimiento experto}
+En las secciones previas, se ha tratado la adecuación de los menús generados a los clientes y sus respectivas preferencias, todo de forma abstracta. Es por eso que no se ha definido aún ningún los criterios de evaluación de calidad que el sistema utilizará para las recomendaciones.
+\par
+En esta sección vamos a ofrecer un ejemplo concreto del conocimiento experto del sistema que permite efectuar dicha valoración, combinando el conocimiento objetivo del dominio, y el proporcionado por el cliente.
+\par
+En el problema de inferencia de conocimiento a partir del número de comensales y tipo del evento, se usa implícitamente  conocimiento del dominio para obtener conclusiones. Por ejemplo, el sistema asume que, si hay un número elevado de comensales, la dificultad de preparar platos de alta complejidad va a ser mucho más elevada así que el sistema va a excluir de los posibles platos aquellos cuyo nivel de complejidad sea más elevado, todo en proporción al número de comensales. Dado el tipo del evento el sistema puede inferir, por ejemplo, que si es un evento familiar va a ser necesario un menú infantil sin alcohol y comidas más simples para niños, o si es un congreso, servir platos o bebidas de más alto \textit{standing}.
+
+\newpage
+\section{Formalización}
+Cuando ya tenemos todos los elementos que conforman el problema y las estrategias a seguir para resolverlo de forma ordenada, necesitamos representar este conocimiento de forma adecuada.
+\par
+Para ello, basados en la perspectiva de un ingeniero del conocimiento, hemos desarrollado una ontología y un conjunto de reglas de razonamiento precisas para poder resolver los distintos subproblemas que derivan del original. Esta formalización y su validez son esenciales para la posterior implementación de nuestro sistema.
+
+\subsection{Ontología del dominio}
+En este apartado explicaremos en detalle la ontología del dominio de nuestro problema. Como sabemos una ontología es un conjunto de conceptos o términos que definen elementos de la realidad a la que pertenece nuestro dominio. Ya hemos ido definiendo de una forma más simplificada los elementos que forman nuestro dominio en apartados anteriores. Entonces los elementos que componen el dominio de nuestro problema son los siguientes: ingrediente, menú, plato (del que se especializará en primero, segundo y postre) y bebida.\par
+En esta sección se muestra un diagrama generado con \textbf{Protégé} con los elementos de nuestro dominio que se representan mediante clases y también de las asociaciones y generalizaciones/especializaciones entre los términos de nuestro dominio.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{ontology.png}\hfill
+    \includegraphics[width=0.75\textwidth]{ontology2.png}
+    \caption{Ontolgía de dominio de RicoRico}
+    \label{fig:ontology}
+\end{figure}
+\par
+Una vez introducidos los elementos del dominio i las relaciones entre estos términos pasamos a explicar con más detalle cada una de las clases que forman la ontología de nuestro problema.
+
+\subsubsection{Ingrediente}
+Esta clase será la que mantenga la información relativa a cada ingrediente. En ella tendremos como atributos los valores nutricionales que tiene el ingrediente, que en nuestro caso hemos considerado la cantidad de grasas, calorías, colesterol, proteínas e hidratos de carbono. Todos tienen una cardinalidad de 1.
+También tenemos como atributo el nombre del ingrediente y finalmente tenemos la disponibilidad del ingrediente que será un atributo multi-valuado que podrá contener los distintos meses del año en los que se dispone del ingrediente (están en formato numérico y valdrá 0 en caso que sea un ingrediente que esté disponible todo el año).
+\subsubsection{Plato}
+Esta clase será la que mantenga la información de cada uno de los platos que se pueden preparar. Como se ha comentado, esta clase será una generalización de la cuál saldrán como subclases la clase referente a los primeros platos, a los segundos y a los postres. Aunque esas subclases no añadan nuevos atributos si que tendrán relaciones propias con otras clases de nuestro dominio y por lo tanto hemos considerando que es condición suficiente para ser una entidad propia.
+\par
+Entonces la clase Plato tiene como atributos el nombre del plato, el precio del plato, la dificultad de preparar ese plato, con qué tipos de plato puede combinar, cuál es la clasificación que se le da al plato referente a estilos de cocina, cuáles son las restricciones alimenticias que cumple y finalmente un valor que utilizamos a modo de contador para saber si el menú donde aparece ese plato se tiene que penalizar ya que es un plato que ya ha aparecido en uno de los menús que serán solución a nuestro problema.
+Referente a la cardinalidad, los atributos tienen cardinalidad de 1 excepto en el caso obvio de clasificación y combinación del plato donde puede ser que pertenezca a más de una categoría a la vez. Es decir que un plato puede pertenecer a más de un estilo culinario a la vez, estar formado por ingredientes que suponen más de una restricción alimentaria a la vez y finalmente que un plato puede combinar con más de un estilo culinario a la vez. Con estos atributos de clasificación y combinación son los que usamos para inferir nuestra solución a partir de la información del usuario.
+\subsubsection{Bebida}
+Esta clase será la que mantenga la información relativa a las bebidas que se pueden ofrecer. En este caso no consideramos necesario hacer una subclase para cada bebida de cada tipo de plato ya que no necesariamente tiene que haber una para cada plato y en cambio puede haber una general para todo el menú.
+\par
+Los atributos de la las bebidas son el nombre de la bebida, el precio de la bebida, el tipo de la bebida según si es una bebida para el primer plato, segundo, postre, general o si es para un menú infantil. También disponemos de un atributo que nos da la clasificación de la bebida según si lleva alcohol, cafeína, etc, y un atributo de combinación que funciona de la misma manera que en la clase Plato y nos dice con que estilos culinarios combina la bebida y tiene el mismo dominio de valores. Finalmente también disponemos de un atributo de penalización de la bebida que también funciona igual que el atributo correspondiente de la clase Plato.
+Entonces la cardinalidad de los atributos es de 1 en el caso del nombre y el precio de la bebida y la penalización y multi-valuado para los atributos de clasificación, combinación y tipo de bebida.
+
+\subsubsection{Menú}
+Esta clase será la encargada de mantener la información de los menús que generaremos que serán la salida de nuestro problema y por ende el resultado que se le mostrará al usuario.
+\par
+Esta clase tiene como atributos el precio del menú, el primer plato, el segundo y el postre así como la bebida general para todo el menú o en caso que se haya especificado una bebida por plato,tendrá como atributos las bebidas respectivas a cada plato. Además a cada menú se le ha añadido una puntuación que sirve para la resolución del problema a la hora de aplicar la metodología de clasificación heurística para determinar los tres menús que formarán la solución.
+Obviamente los atributos referentes a platos y bebidas son instancias de sus respectivas clases y por lo tanto se establecen relaciones entre la clase Menú y las demás.
+Respecto a cardinalidad de los atributos excepto en las bebidas que puede ser vacío según el caso ya comentado todos los demás tienen cardinalidad de 1.
+
+\subsection{Razonamiento resolución}
+Como se ha ido comentando ya en apartados anteriores, nuestro problema se trata de una problema de análisis donde en lugar de construir una solución lo que tenemos que hacer es escoger una solución de un conjunto finito de soluciones. Para seleccionar la solución más adecuada tenemos que partir de los datos de entrada, interpretarlos para poder generar conocimiento usable para el sistema, y mediante razonamiento heurístico lograr asociarlo a una solución. En nuestro caso tenemos que seleccionar los 3 menús que más se adecúen al usuario según las restricciones y preferencias especificadas. Para hacerlo el sistema tiene que evaluar la adecuación de cada menú que puede crear según el conocimiento del que dispone tanto del usuario como de cada menú y clasificarlos según si cumplen o no las preferencias y restricciones del usuario.
+Por ende como se trata de un problema de análisis el método de resolución será la clasificación heurística y a continuación se detallarán las distintas partes que conforman el método.
+\par
+
+\begin {enumerate}
+    \item La abstracción de los datos consiste en pasar de la información concreta que obtenemos del usuario y obtener una generalización de sus datos para poder acercarlo a las soluciones abstractas del conjunto finito del que disponemos. En esta fase vamos a incluir los subproblemas de obtención de conocimiento mediante un conjunto de preguntas para el usuario, y la inferencia de conocimiento restante a partir de esas.
+    \par
+    Dado que los datos a introducir por el usuario son obligatorios, la dificultad de la abstracción va a ser siempre la misma independientemente de las características del cliente, infiriendo la dificultad adecuada para los platos dependiendo del número de comensales.
+    \par
+    En nuestro caso, la abstracción de los datos es directa en el sentido que directamente le preguntamos al usuario sus datos según las opciones que conformarán un tipo de usuario y por tanto no necesitamos reglas de abstracción para realizar esta fase. En conclusión directamente el problema concreto es el problema abstracto. Es en esta fase donde se resuelve el subproblema de la obtención de la información del cliente, convirtiendo preguntas concretas al usuario en un modelo de conocimiento abstracto para el sistema, que completa los datos necesarios para realizar de forma correcta el problema de recomendación de menús.
+
+    \item La asociación heurística es el proceso en el que se busca la mayor coincidencia entre el problema abstracto que hemos obtenido de la fase anterior y una solución del conjunto de soluciones de las que disponemos al inicio.
+    \par
+    En esta fase, se quiere obtener una posible solución que genere una serie de recomendaciones de menús según sus grados de recomendación, usando reglas de razonamiento deductivo. Concretamente, para nuestro problema queremos obtener tres menús tal que cumplan la información de preferencias y restricciones que ha especificado, teniendo la máxima puntuación posible.
+    \par
+    Para resolver esta fase, se usan un conjunto de reglas de asociación heurística para realizar la asociación de problema abstracto y solución abstracta. En nuestro problema lo que hacen estas reglas es, a partir del conocimiento que se tiene del usuario, se crean todos los posibles menús juntando un plato de cada tipo y una o tres bebidas dependiendo de lo que especifique el usuario que sabemos que ya cumplirán como mínimo todas las restricciones y preferencias que se han especificado y además que combinen según estilos de comida.
+    \par
+    El trabajo que hacen es el de lograr filtrar los platos y bebidas para que solo al crear los menús se dispongan de los que sabemos que son aceptables como adecuados para ser parte de la solución.
+    Es decir la idea es empezar generar los primeros platos que sabemos que pueden cumplir restricciones y preferencias de los que se disponen. A partir de estos miramos segundos platos que también sean adecuados y nos aseguramos que combinen con los primeros platos. A continuación repetimos el mismo proceso con los postres mirando que combinen con los otros. Para finalizar miramos las bebidas y hacemos lo mismo también mirando que sean adecuadas y combinen con el resto. Así acabamos generando los menús que podemos catalogar como adecuadas para la información dada por el usuario.
+    \par
+    En esta fase se resuelve el subproblema de la evaluación de la disponibilidad.
+
+    \item Para finalizar la última fase es la del refinamiento de la solución. En esta fase lo que hacemos es aplicar una serie de reglas deductivas que partiendo de las soluciones abstractas nos generen tres menús siendo uno un menú barato, otro un menú caro y finalmente uno que tenga un precio medio pudiendo tener en todos los casos una bebida general o una bebida por plato.
+    \par
+    Para nuestro problema la idea de esta fase es que coja los menús que tenemos como posibles soluciones y aplique esas reglas para determinar el conjunto de tres menús que mejor se adapten al usuario y por tanto será la solución para ese problema concreto.
+    \par
+    El proceso de refinamiento consiste en un cálculo heurístico donde se hace una resta ponderada usando el precio, la puntuación del plato y de la bebida y una penalización para fomentar no repetir platos ni bebidas. Respecto a la puntuación, ésta esta formada por tres factores. El primero compara los estilos culinarios del primer y segundo plato y teniendo en cuenta que son platos adecuados a la información del usuario, consideramos que a más variedad mejor opción. El segundo mira si los ingredientes que conforman el primer plato y el postre son saludables, es decir mira si las grasas, calorías y colesterol de cada ingrediente están dentro de un rango que consideramos adecuado y obviamente a más saludable mejor opción. Finalmente el tercer factor mira si las proteínas, grasas y hidratos de carbono son las adecuadas para una comida comparando con los valores que consideramos aceptables.
+    \par
+    A partir de estos tres factores definimos la puntuación ya mencionada para cada menú que es un valor de 100 puntos divididos entre los tres factores.
+    Respecto a usar el precio del menú, lo que hacemos es comparar el precio que tiene ese menú y compararlo con el precio esperado según el tipo de menú. El precio esperado se determina según el rango de precios dado por el usuario siendo para el caso del menú barato el precio mínimo, para el caso del menú caro el máximo y para el mediano será un precio entre el máximo y el mínimo. Entonces una vez obtenido lo que hacemos es comparar el precio del menú con el esperado y como más se aleje lo consideramos peor opción.
+    \par
+    Finalmente la penalización de los platos y de las bebidas como se ha dicho se hace con el propósito de generar menús que sean lo más diferentes posibles en el sentido de que no se repitan platos. Por lo tanto la idea es que si en un menú hemos usado un plato, a ese plato le sumamos un contador de usos. Ese contador de usos lo multiplicamos por un cierto valor para lograr penalizar el heurístico y por tanto sea una peor opción a seleccionar.
+    \par
+    Entonces una vez aplicado ese cálculo heurístico para cada menú recibido como entrada de esta fase se recorren todos y se determinan los tres mejores menús, siendo como ya se ha comentado un menú barato, otro de precio medio y finalmente un menú caro.
+    Por tanto en esta fase es donde resolvemos los subproblemas de abstracción heurística i elaboración de la solución.
+\end{enumerate}
+
+\subsection{Valoración heurística en detalle}
+En esta sección vamos a explicar y ejemplificar nuestro cálculo heurístico para la puntuación y posterior validación de nuestros posibles menús. Dicho valor está compuesto por muchos factores. La valoración la obtenemos con la diferencia de la puntuación del menú obtenida previamente, de la prioridad asociada al menú (la obtención de ambas será explicada próximamente en este apartado) y del precio del menú.
+
+\subsubsection{Puntuación del menú}
+La puntuación del menú la obtenemos a partir de tres heurísticos que podríamos considerar independientes entre sí, un heurístico de variedad en cuanto a los platos que forman dicho menú, otro que analiza lo saludable que es, y un último asociado a lo nutricionalmente variado que es el menú.
+
+\begin{itemize}
+    \item \textbf{Variedad de platos:} En dicho heurístico fomentamos la variabilidad entre los platos, y por ello evaluamos la variedad entre el primer y el segundo plato,  comparando las categorías a las que está asignado y, a partir del valor máximo, que se daría en el caso que no compartiesen ninguna categoría, por cada categoría en común vamos restando puntuación. Este cálculo representa el 40\% del heurístico total.
+
+    \item \textbf{Saludable:} Con respecto a lo saludable que es el menú el heurístico trabaja de la siguiente forma, analizando los ingredientes de cada plato, penalizando proporcionalmente a medida que aumentan las calorías, grasas y colesterol. Este cálculo representa el 30\% del heurístico total.
+
+    \item \textbf{Valores nutricionales:} La variedad nutricional la calculamos buscando la diferencia entre los porcentajes aconsejados para una dieta de mantenimiento sana en cuanto a macro-nutrientes y los porcentajes en cuanto a nutrientes del plato, dados por sus ingredientes. Para ello sumamos la resta de diferencias entre los porcentajes de cada macro-nutriente con los valores "ideales" para una persona media (35\% de proteínas, 25\% de grasas y 45\% de hidratos de carbono).
+\end{itemize}
+
+\subsubsection{Prioridad}
+La prioridad la usamos para penalizar aquellos platos que ya han salido en los menús generados y ya seleccionados previamente. Por cada plato ya añadido en un menú le bajamos la prioridad para evitar que así se repita en los siguientes menús, de forma que bajamos la probabilidad de que aparezcan repetidos y aumentamos la variabilidad de los platos, en el conjunto final de menús generados, para ofrecer más opciones al cliente.
+
+\subsubsection{Coste temporal y optimización}
+El añadido de estos heurísticos añade un incremento del tiempo de cálculo para los menús, cosa que puede resultar molesta para el usuario del sistema. Para evitarlo hemos aplicado medidas de corte con las cuales llegados a una valoración suficientemente adecuado según el numero de restricciones y de preferencias cortamos la generación de mas instancias de menú.
+\par
+Cuantas mas restricciones hay, menos restrictivos somos nosotros en cuanto a los heurísticos ya que podríamos no generar suficientes instancias como para completar los tres menús y en caso contrario ampliamos el rango de corte del heurístico. En cuanto a las preferencias, si se selecciona una preferencia disminuimos el rango pero el aumento del numero de preferencias va disminuyendo paulatinamente el rango de corte del heurístico.
+\par
+Esto nos permite mantener un equilibrio entre la generación de las suficientes instancias y el tiempo de computo de las posibles combinaciones.
+
+\subsubsection{Ejemplo de puntuación}
+Disponemos de un menú compuesto por los platos \textit{Sándwich vegano} (pan, tomate, aceite, rúcula, aguacate y cebolla), \textit{Lomo de cerdo con pasas} (aceite, ajo, sal, pimienta, lomo de cerdo, vino rojo y pasas), y \textit{Magdalenas de plátano} (extracto de vainilla, plátano, azúcar, aceite vegetal, levadura y yogur de soja), como primer, segundo plato y postre respectivamente.
+\begin{itemize}
+    \item \textbf{Variedad de platos:} La única categoría común que comparten, es 'sin lactosa', por lo que tenemos una puntuación ya ponderada de $$40 - 3*1 = 37$$
+    \item \textbf{Saludable:} Con los valores nutricionales de cada ingrediente utilizado en cada plato del menú, podemos generar la puntuación asociada este a partir de las calorías, grasas y colesterol, utilizando por cada uno una ponderación divisora de 500, 200 y 100 respectivamente. Con los datos de la siguiente tabla, obtenemos el valor ya ponderado de $$30 - (1389 + 1734 + 1637) / 500 + (118 + 102 + 114) / 200 + (0 + 81 + 0) / 100 = 17.984$$
+    \item \textbf{Valores nutricionales:} Con los valores de grasas, hidratos de carbono y proteínas de cada uno de los ingredientes que están presentes en los tres platos del menú generamos la puntuación determinando para cada ingrediente la diferencia de porcentaje entre el valor adecuado y el del ingrediente siendo 25, 35 y 45\% para grasas, proteínas y hidratos de carbono respectivamente. Entonces el cálculo resultante es el siguiente, donde P\textsubscript{i}, G\textsubscript{i} y HC\textsubscript{i} son los porcentajes de proteínas, grasas e hidratos de carbono respectivamente, para cada ingrediente i del conjunto del menú:
+    $$30 - (\sum_{i}^{ingredientes}(35 - P\textsubscript{i}) + (25 - G\textsubscript{i}) + (45 - HC\textsubscript{i}) = 10.998$$
+\end{itemize}
+
+Combinando estos tres heurísticos, obtenemos un valor total de $$37 + 17.984 + 10.998 = 65.982$$ valor que, dado el gran número de restricciones que afectan a un menú, es una muy buena puntuación.
+
+\begin{center}
+    \begin{tabular}{ | r | r | r | r | r | r | }
+      \hline
+      \rowcolor{DarkGrey}
+      \multicolumn{1}{|c|}{Ingrediente} & \multicolumn{1}{|c|}{Calorías} & \multicolumn{1}{|c|}{Grasas} & \multicolumn{1}{|c|}{Proteínas} & \multicolumn{1}{|c|}{Hidratos de Carbono} & \multicolumn{1}{|c|}{Colesterol} \\ \hline \hline
+        \multicolumn{1}{|l|}{Pan} & 264 & 3 & 9 & 49 & 0 \\ \hline
+        \rowcolor{LightGrey}
+        \multicolumn{1}{|l|}{Tomate} & 17 & 0 & 1 & 4 & 0 \\ \hline
+        \multicolumn{1}{|l|}{Aceite} & 884 & 100 & 0 & 0 & 0 \\ \hline
+        \rowcolor{LightGrey}
+        \multicolumn{1}{|l|}{Rúcula} & 25 & 0 & 3 & 4 & 0 \\ \hline
+        \multicolumn{1}{|l|}{Aguacate} & 160 & 15 & 2 & 9 & 0 \\ \hline
+        \rowcolor{LightGrey}
+        \multicolumn{1}{|l|}{Cebolla} & 39 & 0 & 1 & 9 & 0 \\ \hline
+        \multicolumn{1}{|l|}{Ajo} & 148 & 1 & 6 & 33 & 0 \\ \hline
+        \rowcolor{LightGrey}
+        \multicolumn{1}{|l|}{Sal} & 1 & 1 & 1 & 1 & 1 \\ \hline
+        \multicolumn{1}{|l|}{Pimienta} & 251 & 3 & 10 & 64 & 0 \\ \hline
+        \rowcolor{LightGrey}
+        \multicolumn{1}{|l|}{Lomo de Cerdo} & 242 & 14 & 27 & 0 & 80 \\ \hline
+        \multicolumn{1}{|l|}{Vino rojo} & 83 & 0 & 0 & 3 & 0 \\ \hline
+        \rowcolor{LightGrey}
+        \multicolumn{1}{|l|}{Pasas} & 240 & 0 & 2 & 63 & 0 \\ \hline
+        \multicolumn{1}{|l|}{Vainilla} & 228 & 0 & 0 & 13 & 0 \\ \hline
+        \rowcolor{LightGrey}
+        \multicolumn{1}{|l|}{Plátano} & 88 & 0 & 1 & 23 & 0 \\ \hline
+        \multicolumn{1}{|l|}{Azúcar} & 387 & 0 & 100 & 0 & 0 \\ \hline
+        \rowcolor{LightGrey}
+        \multicolumn{1}{|l|}{Aceite vegetal} & 884 & 100 & 0 & 0 & 0 \\ \hline
+        \multicolumn{1}{|l|}{Levadura} & 53 & 0 & 0 & 28 & 0 \\ \hline
+        \rowcolor{LightGrey}
+        \multicolumn{1}{|l|}{Yogur de soja} & 94 & 2 & 3 & 16 & 0 \\ \hline
+      \rowcolor{LightGrey}
+    \end{tabular}
+    \captionof{table}{Tabla con el coste, expansiones y tiempo de cada estado inicial.}
+    \label{table:T2}
+\end{center}
+
+\newpage
+\section{Implementación}
+En secciones anteriores, se ha descrito de forma detallada la versión final de nuestro sistema. En esta sección, vamos a describir las distintas fases del proceso de implementación, siguiendo la metodología de prototipado rápido incremental, de metodologías ágiles.
+\par
+Esta metodología consiste en el continuo desarrollo de prototipos funcionales en los que se van añadiendo funcionalidades del sistema final de forma iterativa, partiendo de un sistema básico de con un conjunto de funcionalidades muy limitadas al cual se han ido añadiendo elementos del dominio de nuestro problema a tener en cuenta en el proceso de resolución hasta llegar al sistema final ya descrito. De esta forma, hemos podido desarrollar un sistema funcional desde una fase temprana del desarrollo y que se ha podido probar a medida que se expandía con nuevas características. Además, esto ha facilitado las mejoras basadas en los resultados obtenidos con distintos juegos de prueba. En alguna de estas fases de expansión, ha sido necesario hacer alguna modificación menor de la ontología. Aun así, el esmero en obtener una especificación correcta de los elementos del dominio ha permitido desarrollar sin problemas el sistema basado en la ontología desarrollada esencialmente durante las primeras semanas. A continuación vamos a listar todos los prototipos de nuestro sistema desde su versión inicial hasta obtener un sistema completamente funcional y completo:
+\begin{itemize}
+    \item El primer prototipo de nuestro sistema, cuya finalidad fue analizar los diversos elementos y posibilidades que componen el lenguaje CLIPS. Dicha versión solo contenía una primera parte, que formulaba un subconjunto de las preguntas básicas a formular al usuario para obtener sus restricciones alimenticias en forma de hechos. En la segunda parte del programa, a partir de los datos obtenidos, se filtraban platos que no cumplían las restricciones y el sistema generaba una recomendación aleatoria de menús con los platos restantes.
+    \par
+    Con respecto a la ontología de nuestro dominio, inicialmente solo teníamos las clases más básicas como son la clase Plato, la clase Ingrediente y la clase Bebida. Es decir no contemplábamos la posibilidad de tener una clase que representaría el menú como tenemos en nuestra versión final. Además tampoco considerábamos diferenciar platos según si era primero, segundo y postre y como generábamos una recomendación aleatoria, salían por ejemplo primeros platos como postres. También comentar, que como es normal, las clases básicas no tenían todos los atributos de los que disponen como puede ser las combinaciones de cada plato o en el caso de bebidas diferenciar si son para primer plato, segundo o postre. Aunque la ontología era mucho más simple que su versión final, nos sirvió para experimentar y aprender a usar la navegación entre clases en las reglas.
+
+    \item Nuestro segundo prototipo añadió todas las preguntas necesarias para la obtención del total de la información a pesar de no usar gran parte de esa en dicha versión. Con más datos sobre el usuario, se empezaron a tener en cuenta las preferencias de estilos de cocina del usuario y rango de precios que está dispuesto a pagar. De esa forma, el sistema permitía filtrar platos regionales de ciertos países, tipos de comidas, y menús que se salían de los límites de precio marcados.
+    \par
+    En nuestra ontología, incluimos la clase menú para representar de forma más sencilla, la combinación de los diferentes platos y bebidas para también trivializar el cálculo del precio. En esta versión, el sistema ya no fue tan aleatorio, y se tuvo en cuenta el precio de los platos para elaborar los tres menús solución, y tampoco usar un mismo plato seleccionado más de una vez para no repetir soluciones. Dentro de los posibles platos que habían pasado el filtro de restricciones se recomendaban el más barato, el más caro y uno entre los dos en cuanto a precio, seleccionando la bebida de forma aleatoria.
+
+    \item En el tercer prototipo dividimos los platos entre primer, segundo plato y postre, y añadimos combinaciones entre ellos según el estilo de los platos, para que un plato no pudiese aparecer tanto como postre o primer plato, y que un primer y segundo plato no fuesen de estilos totalmente diferentes, por ejemplo. De esta forma, pudimos generar menús con combinaciones más realistas, siempre respetando las restricciones y reglas tratadas en prototipos anteriores.
+    \par
+    En la ontología incluimos la diferenciación entre platos, de manera que lo que antiguamente era la clase Plato, en este prototipo Plato pasa a tener varias subclases que se especializan en Primer plato, Segundo plato y Postre. La diferenciación según el tipo de plato nos facilita la tarea de poder generar los menús resultantes al evitar obtener platos que no se corresponden con su tipo. Además añadimos el atributo en la superclase Plato de los estilos y tipos de platos con los que combinaba cada uno para poder generar menús que combinaran.
+
+    \item El cuarto prototipo supuso un gran avance hacia la versión final. En este prototipo, se añadió las distintas reglas para realizar la clasificación heurística de nuestro problema, usando una ponderación entre precio y puntuación para cada menú generado que cumple todas las restricciones dadas.
+    \par
+    En este prototipo, modificamos la ontología para añadir un atributo de puntuación a los menús. El heurístico de la puntuación de cada menú venía dado por tres componentes distintos, la variedad entre primer y segundo plato, cuan saludable es el menú (teniendo en cuenta valores nutricionales como las calorías y grasas), y la correcta distribución de los macro-nutrientes respecto a los valores recomendados para una persona estándar. De esta forma, para seleccionar los tres menús finales, se hace una ponderación entre el precio y la puntuación del menú, variando la importancia que le damos a cada factor, para obtener un menú más barato aunque con probablemente menos calidad, y otros con más puntuación y que suban el precio final.
+
+    \item El quinto y definitivo prototipo, añadió la posibilidad de generar menús con una bebida específica para cada plato, valoró una penalización en la puntuación de platos ya escogidos para maximizar el abanico de opciones diferentes, mejoró la eficiencia de cálculo del heurístico y las combinaciones y añadió un menú infantil.
+    \par
+    En esta versión final, modificamos la ontología para añadir un atributo de penalización en los platos y bebidas ya escogidas previamente, para fomentar la diversidad de los platos de los menús generados y ofrecer opciones variadas al usuario. La clasificación heurística se amplió para poder generar también menús con una bebida potencialmente diferente por cada plato, y el coste de cálculo del heurístico de cada menú se redujo drásticamente al añadir cierto valor umbral a partir del cual cortar el resto del cálculo y marcar dicha instancia como una no muy recomendada. Esta reducción de tiempo ha sido muy necesaria en el cálculo de los menús con tres bebidas y tres platos, en que el coste computacional de combinarlos y el número de combinaciones generadas es mucho mayor.
+    \par
+    Para eventos de tipo familiar, se ha añadido un menú infantil, que prescinde de bebidas alcohólicas y cafeína, y sirve platos sencillos, que suelen resultar en platos más baratos, y por lo tanto menús sencillos con un precio más reducido.
+\end{itemize}
+
+\newpage
+\section{Validaciones y pruebas}
+Tras el desarrollo e implementación de nuestro sistema que resuelve el problema de recomendación de menús, nos queda ahora comprobar y estudiar las soluciones obtenidas y su validez para instancias concretas y variadas del problema.
+\par
+A continuación, vamos a analizar los resultados logrados mediante un conjunto de juegos de prueba representativos, que pretenden emular situaciones variadas en las que se puedan encontrar distintos perfiles de clientes. Se han planteado algunos casos triviales con apenas restricciones, y otros casos más complejos para estudiar circunstancias excepcionales (casos con restricciones que pueden ser más difíciles de resolver) y para evaluar la capacidad del sistema de ofrecer recomendaciones adecuadas a la situación.
+\par
+Vamos a realizar pruebas con 8 eventos distintos, cuyos protagonistas son diferentes perfiles de clientes, de culturas diferentes, gustos variados y con distintas restricciones para probar la validez de nuestro sistema:
+
+\subsection{Toda comida es buena}
+\subsubsection{Descripción}
+El próximo 20 de Junio se va ha realizar un congreso de motivación y liderazgo para los empleados de una empresa. Tras el congreso la empresa ha decidido celebrar una cena para unir lazos entre empleados. La empresa tiene unos 20 empleados y en principio no va haber ninguna restricción con respecto a comida o bebida. En cuanto al precio tampoco habrá restricción ninguna.
+\par
+El jefe de la empresa es el que realizará la reserva a Rico Rico y en este caso no va haber restricción ninguna. Este sera un caso en el que no habrá restricción y ningún tipo de preferencia.
+
+\subsubsection{Resultado Esperado}
+En este caso el sistema deberá tratar una caso en el que debería ser sencillo obtener un resultado y en principio no debería tener ningún tipo de problema para generar los menús necesarios.
+\par
+Dado que no hay un gran número de asistentes que nos obligue a reducir la dificultad permitida de los platos, ni restricciones alimenticias que descarten de inicio algunos platos, ya que aparte de los menús restringidos por ingredientes no disponibles en algún plato o malas combinaciones de platos, el sistema va a disponer de una amplia variedad de menús para seleccionar los de mejor calidad.
+
+\subsubsection{Salida}
+\begin{lstlisting}
+*----------------------------------------------------------------
+| > Which type of event will it be? (Familiar Congress)
+| Congress
+| > Tell me the event date [DD MM]
+| 20 06
+| > How many guests will there be? 20
+| > Which cuisine styles do you prefer? (Mediterranean Spanish...
+| any
+| > Any dietary restrictions? (Gluten-free Vegan Vegetarian...
+| none
+| > Will you require a drink for each dish?
+| no
+| > Would you discard any drinks? (Alcohol Soft-drinks...
+| none
+| > Minimum price to pay? 1
+| > Maximum price to pay? 1000
+*----------------------------------------------------------------
+| Cheap menu
+|----------------------------------------------------------------
+| Main course: Chipotle Spaguetti.
+| Second course: Sweet and sour aubergines.
+| Dessert: Chocolate ice cream taco.
+| Drink: Water.
+| Price: 13.4$\dollar$
+| Score: 65.9945197259972p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Medium price menu
+|----------------------------------------------------------------
+| Main course: Braised Lentils Sausage And Black Pudding.
+| Second course: Chicken parmesan.
+| Dessert: Gulab jamun.
+| Drink: La Vicalanda Gran Reserva 2010.
+| Price: 48.05$\dollar$
+| Score: 65.7580356689638p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Expensive menu
+|----------------------------------------------------------------
+| Main course: Vegan Sandwich.
+| Second course: Roast pork with prunes.
+| Dessert: Banana muffins.
+| Drink: La Rioja Alta Gran Reserva 1995.
+| Price: 79.5$\dollar$
+| Score: 65.9826544111626p.
+*----------------------------------------------------------------
+\end{lstlisting}
+
+\subsubsection{Resultado}
+En este caso, el sistema ha recomendado información sin tener en cuenta ninguna restricción alimenticia ni preferencias culinarias (no indicadas por el cliente) y de todos los menús posibles, ha seleccionado los que han obtenido mayor valoración con el heurístico, siempre teniendo en cuenta que no sea imposible la combinación entre ellos además del filtrado por calidad y por precio de forma natural. En cuanto a bebidas como tampoco se ha impuesto restricción ha combinado de forma libre, obteniendo bebidas más simples para menús baratos, y bebidas alcohólicas (más caras) para los otros menús.
+\par
+Podemos notar que al no imponer casi restricciones sobre el sistema, el precio de los menús caro obtenido es de los más altos que podemos generar con el conjunto de instancias de las que disponemos actualmente, no la de más precio, ya que la valoración de cada menú evalúa también cuán sano es el menú, dados los valores nutricionales de cada ingrediente, y por ende, de los platos que forman el menú, por lo que es posible que un menú de cierto precio sea más recomendable que uno que es más caro.
+\par
+Los menús que genera son variados, dado que no hay ningún plato repetido ni bebida, y existe una diferenciación importante en cuanto a los precios de estos, obteniendo platos variados de pasta, carne, verduras, etc, también combinando con bebidas con i sin alcohol. Con esto comprobamos que nuestro sistema funciona correctamente para casos en que no nos importan mucho o simplemente no tenemos, restricciones sobre los menús que queremos.
+\par
+Respecto a la evaluación de la puntuación de los menús resultado dado que no hay ningún tipo de restricción ni preferencia especificada a parte de la implícita de la fecha por la disponibilidad de los ingredientes se observa como el factor de la puntuación del menú del cálculo heurístico es bastante elevado, un valor de 66 en los tres menús respecto al valor total de 100. Esto es así dado a que al no haber como se ha dicho restricciones ni preferencias que lo afecten, de todos los posibles menús generados que tengan ingredientes en esa fecha cogerá aquel que sea más saludable en cuánto a valores nutricionales y que sea lo más variado en cuanto a estilos. Como se observa a simple vista por los nombres, los platos pueden no ser lo más variados nutricionalmente hablando ni tampoco lo más saludables posibles por los ingredientes por los que están compuestos.
+
+\subsection{Come en verde}
+\subsubsection{Descripción}
+Vamos a suponer un congreso de una asociación dedicada a la protección a los animales con unos 50 asistentes, donde se van a realizar una serie de exposiciones. El congreso se va a realizar este 21 de Mayo y como habrá bastantes exposiciones que se extenderán durante todo el día han decidido realizar una comida en el congreso para los asistentes.
+\par
+El organizador del congreso sera el encargado de realizar la reserva. Teniendo en cuenta la temática del evento y que es un evento donde se realizan exposiciones, el organizador prefiere que solo se sirva comida que no implique la muerte de animales, y además prefiere que dado que algunos de los asistentes todavía tienen que exponer, que no se sirva alcohol. Teniendo en cuenta que son una Asociación sin ánimo de lucro que depende de las donaciones, han decidido que el menú ronde entre los 7 y 40 $\dollar$.
+
+\subsubsection{Resultado Esperado}
+En este caso, dado que se ha impuesto el sistema debería descartar comidas que impliquen algún tipo de carne como ingrediente y teniendo en cuenta que son 50 asistentes, un número de asistentes no muy grande, podremos permitirnos complicarnos un poco en cuanto a la dificultad de elaboración de los platos.
+\par
+Tampoco deberían aparecer platos cuyos ingredientes no estén disponibles en mayo, como alguna fruta o verdura de temporada. La bebida servida será única para todo el menú, y además no debería de contener alcohol. En cuanto al precio del menú, la cantidad a pagar por comensal, debería rondar lo estipulado por el cliente.
+
+\subsubsection{Salida}
+\begin{lstlisting}
+*----------------------------------------------------------------
+| > Which type of event will it be? (Familiar Congress)
+| Congress
+| > Tell me the event date [DD MM]
+| 21 05
+| > How many guests will there be? 50
+| > Which cuisine styles do you prefer? (Mediterranean Spanish...
+| any
+| > Any dietary restrictions? (Gluten-free Vegan Vegetarian...
+| Vegetarian
+| > Will you require a drink for each dish?
+| no
+| > Would you discard any drinks? (Alcohol Soft-drinks...
+| Alcohol
+| > Minimum price to pay? 7
+| > Maximum price to pay? 40
+*----------------------------------------------------------------
+| Cheap menu
+|----------------------------------------------------------------
+| Main course: Guacamole with tomatoes.
+| Second course: Sweet and sour aubergines.
+| Dessert: Chocolate ice cream taco.
+| Drink: Water.
+| Price: 15.4$\dollar$
+| Score: 58.9117138830946p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Medium price menu
+|----------------------------------------------------------------
+| Main course: Vegan Sandwich.
+| Second course: Spanish omelette.
+| Dessert: Banana muffins.
+| Drink: Soft drink.
+| Price: 19.5$\dollar$
+| Score: 59.1876422654136p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Expensive menu
+|----------------------------------------------------------------
+| Main course: Vegan Sandwich.
+| Second course: Marinate mussels.
+| Dessert: Red bean bun.
+| Drink: Water.
+| Price: 21.5$\dollar$
+| Score: 62.1858310336406p.
+*----------------------------------------------------------------
+\end{lstlisting}
+
+\subsubsection{Resultado}
+En este caso el sistema dado a que ha visto restringidos platos que contengan carne, por la restricción de vegetariano, ha filtrado los platos que la contengan. En este caso se ha impuesto que las bebidas no incluyesen alcohol y podemos observar que el sistema ha escogido agua y refrescos para los menús.
+\par
+En cuanto al precio podemos ver que dado que el precio indicado entre 7 y 40, no ha habido gran diferencia entre los precios aunque hay que tener en cuenta que se han impuesto unas reglas sobre la bebida (el alcohol suele tener un precio más elevado) y sobre las comida que han hecho que el precio se disminuya sustancialmente.
+\par
+Si observamos los menús generados vemos que aunque se ha impuesto una restricción, siguen siendo datos muy variados, excepto el primer plato del menú medio y el caro, hecho posible, ya que la cantidad de platos disponibles que cumplen la restricción vegetariana se ha reducido mucho respecto a la cantidad total y quizás la puntuación heurística dada al sándwich vegetariano es muy superior al resto de platos disponibles, así que a pesar de la penalización por repetición prioriza su elección.
+\par
+Respecto a la puntuación de los menús vemos que rondan un valor algo mayor que el 50\% del total. Esto puede ser debido a que en este experimento se ha impuesto la condición de que los platos sean vegetarianos, por lo tanto el sistema ha buscado combinar platos que cumplan esa restricción. Aunque no es una puntuación que se pueda considerar del todo mala ya que nos basamos en el hecho que no disponemos de una base de instancias perfecta ni muy extensa por razones obvias. Por lo tanto es posible que los platos que ha combinado formando los menús resultado no sean lo más variados en cuanto estilos de comida. Luego otro hecho que supone esta puntuación es la posibilidad de que alguno de los platos no sea lo suficientemente saludable o que no tenga una variación de nutrientes apropiada y tenga una valoración muy baja, implicando una baja puntuación. Por último remarcar que el precio impuesto por el usuario quizás no es lo suficientemente alto para poder generar menús con una puntuación más elevada que la obtenida.
+
+\subsection{Desfile con clase}
+\subsubsection{Descripción}
+Vamos a suponer que este verano se va a celebrar el Desfile de Moda Moderna, a este desfile asistirán los diseñadores y modelos mas famosos del mundillo actual y tras el desfile se ha decido realizar una cena multitudinaria con los diseñadores y los modelos. Al evento asistirán cientos de personas y todos ellos acostumbrados al lujo y la vida cara. Además los modelos están interesados en mantener una dieta estricta por lo que querrán platos de diseño que les permitan mantener su figura.
+\par
+El jefe de la organización del evento ha decido encargar la cena a Rico Rico. La cena habrá de ser de alta cocina y lo más sana posible para que la estricta dieta de sus asistentes no se vea afectada. En cuanto a la bebida no permitirán en ningún caso las bebida carbonatadas(refrescos) y además preferirán una variación de la bebida para cada plato que se adapte al paladar de los asistentes. En cuanto al precio no van a poner ninguna restricción mientras el evento salga como ellos quieren.
+
+\subsubsection{Resultado Esperado}
+Dado que tenemos que generar menús que se adecúen a un estilo de cocina elegante y refinado, en este caso el sistema debería seleccionar las comidas que sean del estilo Gourmet que son las que el sistema considera pertenecientes a este nivel de cualidad culinaria. Además es necesario que los platos que conformen el menú resultado sean tales que los valores nutricionales sean lo más adecuado posible para poder ser del agrado de los asistentes a causa de su estricta dieta y por tanto el sistema buscará platos que sean lo más variados posibles respecto a ingredientes y que contengan los ingredientes adecuados para siempre poder generar platos que conformen una comida saludable y equilibrad. El sistema debería generar una bebida por plato, que al igual que los platos pertenezca a la categoría Gourmet y que evite dar una bebida que sea un refresco.
+
+\subsubsection{Salida}
+\begin{lstlisting}
+*----------------------------------------------------------------
+| > Which type of event will it be? (Familiar Congress)
+| Congress
+| > Tell me the event date [DD MM]
+| 06 07
+| > How many guests will there be? 100
+| > Which cuisine styles do you prefer? (Mediterranean Spanish...
+| Gourmet
+| > Any dietary restrictions? (Gluten-free Vegan...
+| none
+| > Will you require a drink for each dish?
+| yes
+| > Would you discard any drinks? (Alcohol Soft-drinks...
+| Soft-drinks
+| > Minimum price to pay? 1
+| > Maximum price to pay? 1000
+*----------------------------------------------------------------
+| Cheap menu
+|----------------------------------------------------------------
+| Main course: Kirmizi Mercimek Corbasi.
+| - Drink: Water.
+| Second course: Marinate mussels.
+| - Drink: Water.
+| Dessert: Tiramisu.
+| - Drink: Juice.
+| Price: 20.4$\dollar$
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Medium price menu
+|----------------------------------------------------------------
+| Main course: Mushroom risotto.
+| - Drink: La Vicalanda Gran Reserva 2010.
+| Second course: Marinate mussels.
+| - Drink: La Vicalanda Gran Reserva 2010.
+| Dessert: Gulab jamun.
+| - Drink: Cocktail.
+| Price: 94.5$\dollar$
+| Score: 50.8123623556976p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Expensive menu
+|----------------------------------------------------------------
+| Main course: Cream Of Mushrooms And Chestnuts With Duck Confit.
+| - Drink: La Rioja Alta Gran Reserva 1995.
+| Second course: Marinate mussels.
+| - Drink: La Rioja Alta Gran Reserva 1995.
+| Dessert: Chocolate pots.
+| - Drink: Whisky Glengarry 12 Years.
+| Price: 183.15$\dollar$
+| Score: 55.5521742058264p.
+*----------------------------------------------------------------
+\end{lstlisting}
+
+\subsubsection{Resultado}
+El sistema ha escogido comidas de alta gamma, por tanto ha recomendado comidas clasificadas como Gourmet sin tener en cuenta restricción alguna. El hecho de que sean más o menos saludables esta controlado por el heurístico por lo que las comidas ya han pasado por un filtro para las combinaciones poco sanas.
+\par
+En este caso se ha impuesto que las bebidas no incluyan refrescos y como se puede observar por la salida el sistema las has restringido y al tratarse de Gourmet ha optado por vinos de alta calidad para combinar con los platos. También se ha diseñado el menú con una bebida específica por plato como ha sido estipulado por el usuario.
+\par
+Las bebidas han sido añadidas a los menús teniendo en cuenta que combinasen con sus respectivos platos y también que fueran adecuados como acompañamientos para primer plato, segundo o como postres.
+\par
+En cuanto al precio como no se ha impuesto ningún máximo el sistema ha creado platos Gourmet caros y además con bebidas también bastante caras pero que combinan bien con el estilo Gourmet. El sistema en este caso al no tener el precio muy restringido ha generado precios mas variados.
+\par
+Respecto a la puntuación de los menús se puede observar como en el caso del menú barato no hay puntuación y en cambio en los otros dos está entre 50 y 60. El motivo que el barato no tenga es porqué la puntuación que tiene el menú realmente es 0. Que sea 0 quiere decir que es un menú donde alguno de los tres factores que componen la puntuación dan un valor que consideramos malo y que no es una opción a considerar para el resultado. Pero el hecho que salga como un resultado se debe a que al imponer el estilo de cocina Gourmet el sistema no puede encontrar nada mejor que sea barato y lo genera para dar una solución.
+Respecto a los otros dos menús la puntuación es una puntuación bastante estándar y es debida a que encuentra menús que satisfagan las condiciones pero simplemente no son perfectos en el hecho de ser variados ni son lo más saludables ni lo más nutritivos posibles.
+También comentar que se había especificado una bebida por plato, pero como el límite del precio es muy elevado al sistema no le afecta en absoluto a la hora de crear los menús resultado y por ello la puntuación no se ve afectada.
+
+\subsection{Sabor oriental}
+\subsubsection{Descripción}
+Este otoño se va a realizar un congreso sobre lenguas orientales en el van a participar unas 40 personas. Tras el congreso han decidido realizar una cena para los participantes. Para evitar costos adicionales de los que ya representa la estada en el congreso, han pensado que lo mejor es que la cena sea de como mucho 25$\dollar$ por menú y además hay varios intolerantes a la lactosa entre los asistentes así que quieren que el menú no incluya leche ni derivados. No habrá ninguna restricción con respecto a la bebida.
+\par
+El organizador principal hace la comanda a nuestro sistema. La cena tendrá que ser de estilo oriental y además tendrá que cumplir que sea no incluya lactosa. En principio no pondrán restricción alguna a la bebida.
+
+\subsubsection{Resultado Esperado}
+Dado que el usuario solo quiere platos que pertenezcan a la cocina oriental, el sistema tiene que considerar solo como posibles platos a combinar para formar el menú platos que pertenezcan al estilo culinario Japonés, Chino o Indio y no incluya ninguno que no pertenezca a estos estilos culinarios ya que no es lo que ha pedido. Además como algún asistente es intolerante a la lactosa el sistema debe asegurarse de no mostrar como recomendación platos que puedan incluir algún ingrediente que derivado lácteo. En cuanto a la bebida no habrá ninguna restricción pero sería interesante que el sistema intentase buscar bebidas que combinasen con el estilo oriental de la comida.
+\par
+También como el número de asistentes es bajos el sistema debe poder generar platos con cierto grado de dificultad y con un precio de menú que se adecúe lo máximo a lo especificado por el usuario.
+
+\subsubsection{Salida}
+\begin{lstlisting}
+*----------------------------------------------------------------
+| > Which type of event will it be? (Familiar Congress)
+| Congress
+| > Tell me the event date [DD MM]
+| 12 10
+| > How many guests will there be? 40
+| > Which cuisine styles do you prefer? (Mediterranean Spanish...
+| Chinese Japanese Indian
+| > Any dietary restrictions? (Gluten-free Vegan Vegetarian...
+| Lactose-free
+| > Will you require a drink for each dish?
+| no
+| > Would you discard any drinks? (Alcohol Soft-drinks...
+| none
+| > Minimum price to pay? 10
+| > Maximum price to pay? 25
+*----------------------------------------------------------------
+| Cheap menu
+|----------------------------------------------------------------
+| Main course: Vegan samosas.
+| Second course: Mapo tofu.
+| Dessert: Sandesh.
+| Drink: Water.
+| Price: 15.1$\dollar$
+| Score: 49.4440602181615p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Medium price menu
+|----------------------------------------------------------------
+| Main course: Vegan samosas.
+| Second course: Mapo tofu.
+| Dessert: Gulab jamun.
+| Drink: Beer.
+| Price: 15.9$\dollar$
+| Score: 50.271198894586p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Expensive menu
+|----------------------------------------------------------------
+| Main course: Shumai.
+| Second course: Mapo tofu.
+| Dessert: Red bean bun.
+| Drink: Sake.
+| Price: 19.1$\dollar$
+*----------------------------------------------------------------
+\end{lstlisting}
+
+\subsubsection{Resultado}
+Dado que era un congreso de lenguas orientales cuyos asistentes querían comida tradicional de allí, el sistema ha escogido comida de los estilos india, china y japonesa, como podemos observar en cualquier plato de los tres menús generados. También vemos que ningún plato de los menús generados contienen comida no apta para personas con intolerancia a la lactosa.
+\par
+No hay tanta variedad entre los menús como en otras pruebas, ya que las restricciones aplicadas por gluten y lactosa, sumado a los ingredientes disponibles en la época del año del evento y la combinación entre dichos posibles platos, nos limita mucho la cantidad de platos disponibles, como vemos en el segundo plato ya que, aunque el resto de platos varían, éste se repite, por el hecho de que posiblemente sea el único que cumpla todas las restricciones y pueda combinar con los demás
+\par
+En el caso de las bebidas el sistema ha escogido entre las posibles bebidas las que combinaran con los platos escogidos ya que no había restricciones adicionales sobre ellas. Quizás la más destacable es el \textit{sake} generado en el menú más caro, ya que su precio es más elevado que la cerveza o el agua y por lo tanto, aunque con mejor combinación, el heurístico lo puntúa por debajo de las otras dos bebidas, y por lo tanto solo sale en el menú más adecuado para su precio.
+\par
+El precio en este caso es poco variado pero viene dado por el hecho de que las instancias de comida orientales son ligeramente más simples y por lo tanto más baratas, y también el hecho de haber limitado tanto el rango de precios del cliente.
+\par
+Respecto a la puntuación obtenida en los menús resultado, como ha ido sucediendo en las pruebas anteriores se observa una puntuación de unos 50 puntos del total de 100 menos en el caso del menú caro que tiene un valor de 0. En este experimento se ha seleccionado únicamente estilos culinarios orientales como preferencias y platos libres de lactosa como restricciones. Entonces eso supone que el sistema debe eliminar cualquier plato que tenga un estilo que no sea oriental reduciendo en gran medida las posibilidades de combinación. Además tiene en cuenta que no puede haber ningún plato con algún ingrediente que contenga lactosa dificultando más la resolución. Si sumamos a esto el hecho que el precio no debe superar los 25\$, el sistema encuentra un menú que se acerque lo máximo a ese precio máximo pero en cambio el menú no es lo suficientemente bueno en lo que respecta a ser un menú variado, saludable y con los valores nutricionales adecuados pero lo genera como solución porqué no encuentra uno que lo mejore.
+\subsection{Cocinando salud}
+\subsubsection{Descripción}
+Se va a realizar un Congreso de medicina este Diciembre sobre incapacidades alimenticias, al que van asistir varios médicos pero también van a asistir algunos enfermos interesados en los temas tratados. Se ha decidido realizar una cena posterior a la cual asistirán tanto médicos como enfermos. Se calcula que van a asistir unas 50 personas.
+\par
+El médico encargado del proyecto quiere pedir un catering a Rico a Rico para el evento. Como habrá varios enfermos con problemas de alimentación, se va a pedir que la comida sea libre de Gluten y sin Lactosa, además tampoco se permitirá que se sirva alcohol. El precio máximo sera de 50$\dollar$.
+
+\subsubsection{Resultado Esperado}
+Dado que tenemos que generar menús para un evento de 50 personas el sistema ha de poder jugar con combinaciones de platos con cierta dificultad. Como no se especifica ningún estilo culinario concreto el sistema debería dar opciones pertenecientes a cualquier estilo pero siempre asegurándose que los platos no que formen los menús resultantes no contengan nada con gluten ni lactosa. Referente a las bebidas el sistema debe evitar dar bebidas que contengan alcohol ya que el usuario especifica que no pueden haber.
+\par
+Finalmente el precio que se dé de los menús tiene que estar lo más cercano posible al precio especificado a menos que no hubiera menús que como mínimo tuvieran ese precio, que no será el caso.
+
+\subsubsection{Salida}
+\begin{lstlisting}
+*----------------------------------------------------------------
+| > Which type of event will it be? (Familiar Congress)
+| Congress
+| > Tell me the event date [DD MM]
+| 01 12
+| > How many guests will there be? 50
+| > Which cuisine styles do you prefer? (Mediterranean Spanish...
+| any
+| > Any dietary restrictions? (Gluten-free Vegan Vegetarian...
+| Gluten-free Lactose-free
+| > Will you require a drink for each dish?
+| no
+| > Would you discard any drinks? (Alcohol Soft-drinks...
+| Alcohol
+| > Minimum price to pay? 10
+| > Maximum price to pay? 50
+*----------------------------------------------------------------
+| Cheap menu
+*----------------------------------------------------------------
+| Main course: Guacamole with tomatoes.
+| Second course: Stuffed bell pepper.
+| Dessert: Sandesh.
+| Drink: Water.
+| Price: 16.9$\dollar$
+| Score: 45.7565584401308p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Medium price menu
+|----------------------------------------------------------------
+| Main course: Vegan samosas.
+| Second course: Roast pork with prunes.
+| Dessert: Sandesh.
+| Drink: Water.
+| Price: 17.3$\dollar$
+| Score: 57.0809826290839p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Expensive menu
+|----------------------------------------------------------------
+| Main course: Moroccan chickpea soup.
+| Second course: Tuna steak.
+| Dessert: Sandesh.
+| Drink: Water.
+| Price: 17.5$\dollar$
+| Score: 55.5135872543437p.
+*----------------------------------------------------------------
+\end{lstlisting}
+
+\subsubsection{Resultado}
+Estamos ante un caso sin ningún estilo preferido pero con bastantes restricciones, así que se han suprimido todos los menús con derivados lácteos y no clasificados como libres de gluten. Podemos observar que la restricciones que el cliente nos presentaba quedan satisfechas en la comida es decir nuestras comida no contiene gluten y están libres de glucosa.
+\par
+Las bebidas en este caso han sido restringidas teniendo en cuenta que no contuvieran alcohol y que combinase en la medida de lo posible con los platos presentados. En este caso ha salido en todas agua, ya que otras bebidas no alcohólicas van asociadas a otros tipos de menús quizás más infantiles, como hamburguesas para refrescos.
+\par
+En todo momento, el precio de cada menú es poco variado pero es necesario tener en cuenta que al restringir las bebidas alcohólicas el precio del menú baja sustancialmente, ya que implican gran parte del precio final, y las instancias restantes de platos libres de lactosa y gluten, no presentan ingredientes tan variados como para suponer grandes cambios de precio.
+\par
+Respecto a la puntuación vemos como en este caso para el menú barato está por debajo de los 50 puntos y los otros dos superan los 55, es decir para el caso del caro y el mediano no es una puntuación tan mala aunque si que es cierto que para el caso del menú barato no llega ni a la mitad. Como se ha impuesto que la comida no lleve ni lactosa ni gluten, al sistema le cuesta más generar menús resultado ya que a más restricciones menos platos que pueda llegar a usar y también afecta el hecho de no tener un número muy grande de instancias que puedan cumplir todas las restricciones. Además que para el caso del menú barato no es muy variado en cuanto a estilos culinarios y es de los tres factores el que más peso tiene y además no tiene los valores nutricionales que consideramos adecuados para una comida.w
+
+\subsection{Mundo de sabores}
+\subsubsection{Descripción}
+Al la familia Bosch le gusta probar nuevos sabores de diferentes culturas y han decido probar una combinación de estos con nuestro sistema. La familia esta compuesta por 4 personas, los padres, la abuela, y su hijo Álvaro, de 9 años.
+\par
+La madre de Álvaro ha decido hacer la reserva. Debido a su afición por comer platos internacionales y experimentar nuevos sabores, la cena tendrá que ser multicultural y contener platos de diferentes culturas. No van a imponer ninguna restricción adicional a la comida ni a la bebida. Dado que van a celebrar el cumpleaños de su hijo, pero siguen siendo una familia modesta, el precio marcado no deberá sobrepasar los 80$\dollar$.
+
+\subsubsection{Resultado Esperado}
+Dado que el usuario quiere platos pertenecientes a diferentes culturas culinarias se espera que el sistema sea capaz de generar menús que pertenezcan a las culturas especificadas y que sea capaz de generarlos de tal manera que los platos y bebidas que conformen un menú pertenezcan a distintas culturas. Es decir que los platos de un menú puedan ser de culturas diferentes siempre teniendo en cuenta que han de poder combinar y ser variados nutricionalmente y adecuados.
+\par
+En cuanto a la bebida el sistema ha de poder generarlas de tal forma que combinen lo mejor posible con las comidas y que sean también de alguna de las culturas especificadas. Como se especifica que hay niños el sistema generará un menú infantil el cual no puede contener ninguna bebida alcohólica y los platos que formen ese menú han de ser sencillos. El precio por menú no debería sobrepasar el límite estipulado.
+
+\subsubsection{Salida}
+\begin{lstlisting}
+*----------------------------------------------------------------
+| > Which type of event will it be? (Familiar Congress)
+| Familiar
+| > Tell me the event date [DD MM]
+| 12 12
+| > How many guests will there be? 4
+| > Which cuisine styles do you prefer? (Mediterranean American...
+| Spanish Italian French Chinese Japanese Turkish American
+| Mexican Indian Moroccan
+| > Any dietary restrictions? (Gluten-free Vegan Vegetarian...
+| none
+| > Will you require a drink for each dish?
+| no
+| > Would you discard any drinks? (Alcohol Soft-drinks...
+| none
+| > Minimum price to pay? 1
+| > Maximum price to pay? 80
+*----------------------------------------------------------------
+| Cheap menu
+|----------------------------------------------------------------
+| Main course: Chipotle Spaguetti.
+| Second course: Pan seared salmon.
+| Dessert: Chocolate ice cream taco.
+| Drink: Water.
+| Price: 16.1$\dollar$
+| Score: 64.3570608515383p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Medium price menu
+|----------------------------------------------------------------
+| Main course: Guacamole with tomatoes.
+| Second course: Chicken wings with chili-lime butter.
+| Dessert: Chocolate pots.
+| Drink: Sangria.
+| Price: 26.89$\dollar$
+| Score: 54.9553582440104p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Expensive menu
+|----------------------------------------------------------------
+| Main course: Harira.
+| Second course: Burrito pie.
+| Dessert: Gulab jamun.
+| Drink: La Rioja Alta Gran Reserva 1995.
+| Price: 74.1$\dollar$
+| Score: 61.2659176959138p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Kids menu
+|----------------------------------------------------------------
+| Main course: Mexican salad.
+| Second course: Burrito pie.
+| Dessert: Chocolate ice cream taco.
+| Drink: Soft drink.
+| Price: 16.2$\dollar$
+*----------------------------------------------------------------
+\end{lstlisting}
+
+\subsubsection{Resultado}
+Este es un caso pero con bastantes restricciones que simplifican la búsqueda, al necesitar solo platos que estén asociados de alguna forma a los estilos regionales pedidos. Podemos observar cierta variedad regional en los platos, con comida americana, mexicana, mediterránea, etc. Además se ha incluido un menú infantil formado por comidas menos complejas de forma que tampoco se sirva alcohol y siga cumpliendo las restricciones impuestas.
+\par
+Como en otras pruebas la diferencia de las bebidas se observa en los tres menús generados, en la que en el barato se sirve algo barato, en este caso agua, y a medida que incrementamos el precio, se empieza a servir vino cada vez de más prestigio y por lo tanto, mayor precio. En cuanto al menú infantil, debido a la restricción de no servir bebidas alcohólicas, se sirve agua.
+\par
+El precio de los menús generados se encuentra dentro del rango establecido, y el precio del menú infantil, al ser un menú con platos simples y agua de bebida, tiene un precio muy parecuido al del menú generado más barato.
+\par
+Respecto a la puntuación se puede observar como en los tres casos es una puntuación elevada entre 55 y 65 puntos. En el caso del menú infantil no hay puntuación ya que su generación no sigue la misma estrategia que los otros tres menús. Esto es a causa de que se ha especificado un número grande de estilos culinarios sobre los que trabajar y además no se ha impuesto ninguna restricción. Si sumamos también el hecho que el número de comensales es muy pequeño y el precio es bastante aceptable podemos ver que esta puntuación es aceptable. Es decir al haber propuesto tantos estilos diferentes, el sistema tiene una gran cantidad de platos de los que puede elegir para combinar y por lo tanto disponer de un amplio abanico de posibilidades. Al disponer de tantas opciones el sistema no tiene problemas para encontrar aquellos tres menús que tengan más puntuación y por lo tanto sean variados en estilos de comida, por el mero hecho de que se han indicado bastantes, que sean también saludables y tengan los nutrientes esenciales para una persona.
+
+\subsection{El Bar Mitzvah de los Barzellay}
+\subsubsection{Descripción}
+El hijo mayor de la familia Barzellay va celebrar su Bar Mitzvah (ceremonia judía en la que se considera que se alcanza la madurez) a finales de año. Tras la ceremonia han decido realizar una cena para los familiares asistentes. Los Barzellay son una familia muy tradicional que sigue las estrictas restricciones de la dieta Kosher. Al evento van a asistir unos 20 familiares entre los que se incluyen niños.
+\par
+El padre de familia ha decido pedir una reserva a nuestro sistema. La cena deberá de cumplir con las restricciones de la dieta Kosher y además tendrá que incluir un menú infantil para los niños. Tratándose de una familia tan tradicional el alcohol como bebida queda completamente descartada. Como son pocos asistentes y es un evento especial la familia esta dispuesta ha dejarse como mucho 80$\dollar$ por menú.
+
+\subsubsection{Resultado Esperado}
+Como se trata de un evento familiar debería generarse un menú infantil (menú con platos sencillos y con bebidas sin alcohol). Además como se trata de un evento con 20 personas nos permitirá hacer platos con cierta complejidad ya que no se trata de demasiadas personas.
+\par
+En cuanto a las restricciones el menú no debería contener alimentos que cumplan las restricciones Kosher entre las que se encuentran el hecho de no contener algunos mariscos, algunos pescados... En cuanto al estilo de la comida como el usuario no ha impuesto ninguna preferencia, el sistema combinara platos de todos los estilos que cumplan las restricciones Kosher.
+\par
+En cuanto a las bebidas estas no deberán contener alcohol y deberán combinar en la medida de lo posible con los platos generados.
+
+\subsubsection{Salida}
+\begin{lstlisting}
+*----------------------------------------------------------------
+| > Which type of event will it be? (Familiar Congress)
+| Familiar
+| > Tell me the event date [DD MM]
+| 12 12
+| > How many guests will there be? 20
+| > Which cuisine styles do you prefer? (Mediterranean Spanish...
+| any
+| > Any dietary restrictions? (Gluten-free Vegan Vegetarian...
+| Kosher
+| > Will you require a drink for each dish?
+| no
+| > Would you discard any drinks? (Alcohol Soft-drinks...
+| Alcohol
+| > Minimum price to pay? 10
+| > Maximum price to pay? 80
+*----------------------------------------------------------------
+| Cheap menu
+|----------------------------------------------------------------
+| Main course: Vegan samosas.
+| Second course: Chicken wings with chili-lime butter.
+| Dessert: Gulab jamun.
+| Drink: Water.
+| Price: 15.7$\dollar$
+| Score: 53.4434802798673p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Medium price menu
+|----------------------------------------------------------------
+| Main course: Guacamole with tomatoes.
+| Second course: Burrito pie.
+| Dessert: Chocolate ice cream taco.
+| Drink: Soft drink.
+| Price: 16.7$\dollar$
+| Score: 63.1288299190269p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Expensive menu
+|----------------------------------------------------------------
+| Main course: Vegan Sandwich.
+| Second course: Chicken parmesan.
+| Dessert: Red bean bun.
+| Drink: Water.
+| Price: 17.5$\dollar$
+| Score: 67.4394951501497p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Kids menu
+|----------------------------------------------------------------
+| Main course: Mexican salad.
+| Second course: Stuffed bell pepper.
+| Dessert: Candied pumpkin.
+| Drink: Water.
+| Price: 16.9$\dollar$
+*----------------------------------------------------------------
+\end{lstlisting}
+
+\subsubsection{Resultado}
+Este un caso bastante restrictivo que incluye restricciones en la comida y en la bebida. Podemos observar que el menú cumple las restricciones de la comida Kosher como no se han presentado mas estilos ni restricciones, no se han restringido mas platos. Aún así, se han generado menús variados en los que aparecen distintos platos. Las bebidas en este caso han sido restringidas teniendo en cuenta que no contuvieran alcohol y que combinase en la medida de lo posible con los platos presentados.
+\par
+El precio en este caso es poco variado pero es necesario tener en cuenta que al restringir las bebidas alcohólicas el precio del menú baja sustancialmente, y la falta de instancias y el uso de ingredientes parecidos, explica el porqué de las semejanzas en cuanto a precio.
+\par
+Respecto a la puntuación, en esta prueba también observamos menús con puntuación elevada. Esto es debido a que únicamente se ha impuesto como restricción alimentaria que los platos sigan las normas de la dieta Kosher y además no se ha indicado ningún estilo culinario en particular, así que el sistema tiene un marco de posibilidades elevadas gracias al hecho que la mayoría de las instancias de platos de nuestro sistema son platos que cumplen con las normas Kosher exceptuando unos pocos. También tenemos que el número de comensales es pequeño así que no prohibimos platos con cierta dificultad y el precio está en un rango también aceptable para las instancias de nuestro sistema.
+
+\subsection{Innovación en sistemas de conocimiento}
+\subsubsection{Descripción}
+Este 29 de Agosto se va a celebrar el congreso Internacional de IA y los miembros del congreso han oído hablar de un increíble sistema basado en reglas que genera menús, así que han decido preparar una cena para los participantes usando el sistema. En el evento participan principalmente personas del sector y su objetivo es ponérselo difícil a la IA a modo de prueba.
+\par
+El organizador del evento junto con los participantes han preparado una reserva para probar la IA. Para ello van a intentar crear restricciones que sean difíciles en conjunto y ver cual es la reacción del sistema. Para ello van a poner múltiples valores de estilos y con varias restricciones diferentes que puedan complicar al sistema.
+\subsubsection{Resultado Esperado}
+Dado que lo que se busca es probar la robustez del sistema, como se ha dicho se harán pruebas complicadas para corroborar su correcto funcionamiento en casos complicados y por ello el sistema debería poder tratar en la medida de lo posible todas las restricciones y generar un resultado que como mínimo se adapte a las restricciones alimentarias que se especifiquen y además que pertenezcan a los estilos culinarios impuestos. Puede darse el caso que el sistema no fuera capaz de encontrar 3 menús que cumplieran con todo lo que se impone. En ese caso pero, el sistema siempre se asegurará que los menús cumplan las restricciones alimentarias que se han especificado ya que es primordial cumplirlas pero en cambio los estilos de cocina quizás no se adapta a todos pero mínimo a uno. Finalmente respecto el precio puede ser también que el sistema no pueda cumplir la restricción del precio máximo dispuesto a pagar y dará la opción que más se acerque.
+Se ha de tener en cuenta que estos casos donde no se puede generar soluciones adaptadas a toda la información del usuario son causados por no disponer de platos y bebidas suficientes para poder crear menús. Aunque es una situación posible dado que este sistema no dispone de una base de conocimiento real de platos.
+
+\subsubsection{Salida}
+\begin{lstlisting}
+*----------------------------------------------------------------
+| > Which type of event will it be? (Familiar Congress)
+| Congress
+| > Tell me the event date [DD MM]
+| 28 08
+| > How many guests will there be? 100
+| > Which cuisine styles do you prefer? (Mediterranean Spanish...
+| French Gourmet
+| > Any dietary restrictions? (Gluten-free Vegan Vegetarian...
+| none
+| > Will you require a drink for each dish?
+| yes
+| > Would you discard any drinks? (Alcohol Soft-drinks...
+| Juice Soft-drinks
+| > Minimum price to pay? 10
+| > Maximum price to pay? 100
+*----------------------------------------------------------------
+| Cheap menu
+|----------------------------------------------------------------
+| Main course: Kirmizi Mercimek Corbasi.
+| - Drink: Water.
+| Second course: Roast pork with prunes.
+| - Drink: Water.
+| Dessert: Catalan cream.
+| - Drink: Hot chocolate.
+| Price: 19.6$\dollar$
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Medium price menu
+|----------------------------------------------------------------
+| Main course: Mushroom risotto.
+| - Drink: La Vicalanda Gran Reserva 2010.
+| Second course: Marinate mussels.
+| - Drink: La Vicalanda Gran Reserva 2010.
+| Dessert: Gulab jamun.
+| - Drink: Cocktail.
+| Price: 94.5$\dollar$
+| Score: 50.8123623556976p.
+*----------------------------------------------------------------
+*----------------------------------------------------------------
+| Expensive menu
+|----------------------------------------------------------------
+| Main course: Cream Of Mushrooms And Chestnuts With Duck Confit.
+| - Drink: La Rioja Alta Gran Reserva 1995.
+| Second course: Marinate mussels.
+| - Drink: La Rioja Alta Gran Reserva 1995.
+| Dessert: Chocolate pots.
+| - Drink: Whisky Glengarry 12 Years.
+| Price: 183.15$\dollar$
+| Score: 55.5521742058264p.
+*----------------------------------------------------------------
+\end{lstlisting}
+
+\subsubsection{Resultado}
+Este es un caso con varios estilos. Esto hace que se combinen plato que cumplan con alguno de los estilos que el cliente desea. En este caso todos los platos están clasificados como de estilo Francés o Gourmet o de ambos. Estos platos suelen estar asociados a platos caros o alcohol caro, se puede ver en los menús medio y caro.
+\par
+En este caso se han restringido los zumos y los refrescos por ser considerados de bajo nivel al ser Gourmet, y por lo tanto ha optado por bebidas alcohólicas lujosas en el caso de los precios caros y simples como el agua en los menús mas baratos.
+\par
+En este caso teniendo en cuenta todas las restricciones no se ha encontrado tres menús que estén en el rango estipulado por lo que el sistema ha optado por sacar el plato mas caro que cumpla con todas las condiciones por encima del precio.
+\par
+Respecto a la puntuación observamos como en el caso del menú barato no tiene puntuación significando que no es un menú que nuestro sistema considere como óptimo pero como no encuentra otra mejor solución lo muestra para poder dar el resultado completo. Vemos que en el caso de los otros dos tienen una puntuación entre 50 y 55 puntos. En este caso se ha impuesto que se quiere comida de la categoría Gourmet y Francesa a la vez, son un número de comensales elevado y el precio máximo son 80\$. Entonces en este caso solo puede coger platos que sean de alguno de los estilos como mínimo y intenta crear menús. Realmente el sistema tiene cierto número de instancias que se puedan seleccionar como válidas para crear los menús y por tanto las puntuaciones de los dos últimos menús son puntuaciones aceptables ya que no necesariamente comida Gourmet para nosotros es saludable y equilibrada.
+Finalmente comentar que lo que no se acaba de adaptar a la información dada por el usuario es el precio, y esto es causado por el mero hecho de que se ha determinado que se quiere una bebida por plato y que además también pertenezca a alguno de esos estilos culinarios ya que funciona de la misma forma con los platos. Como solo tenemos instancias con precios elevados para estos estilos culinarios el sistema no puede amoldarse a esa limitación de precio y en ese caso da un resultado que no se amolda al precio pero si que se adapta a la otra información impuesta por el usuario.
+
+\newpage
+\section{Conclusión}
+Durante el transcurso de esta práctica, hemos sido capaces de desarrollar un producto aplicando algunas de las metodologías existentes en la ingeniería del conocimiento.
+\par
+A pesar de tratarse, quizás, de un problema simplificado respecto a como sería el problema en el mundo ideal (restricciones más complejas o extrañas, amplía variedad de instancias, más problemas o restricciones culturales...), nos ha permitido hacernos una idea del conjunto de problemas al que se pueden aplicar estas técnicas.
+\par
+En particular, hemos analizado en detalle el problema de recomendación de menús a los clientes y hemos desarrollado un sistema basado en el conocimiento capaz de resolverlo de forma eficiente en base al conocimiento experto del sistema sobre el dominio.
+\par
+Hemos visto que un sistema de estas características, se compone esencialmente de una ontología (en nuestro caso desarrollada mediante Protégé, la cual representa el conocimiento de dominio, y un programa que sintetiza el proceso de razonamiento, seguido de la obtención de recomendaciones adecuadas mediante reglas deductivas lógicas, escrito en el lenguaje CLIPS. Para su desarrollo hemos aprendido y llevado a cabo las diferentes fases de la ingeniería de conocimiento, descritas en el análisis del problema. De esta forma, la solución planteada se enmarca en dichas técnicas de asociación heurística.
+\par
+Por ende, hemos comprobado como en dicho tipo de problemas, es prácticamente imposible dar una solución óptima o perfecta usando técnicas algorítmicas o planteamientos de problemas clásicos, pero podemos aprovechar la mayor expresividad de un lenguaje de reglas de deducción y la potencia de los motores de inferencia como el que usa CLIPS, para expresar de forma simple cierto proceso de razonamiento que nos lleve a la obtención de soluciones, que aunque no óptimas, son razonablemente buenas.
+
+\iffalse
+\begin{bottompar}
+\begin{lstlisting}[basicstyle=\small]
+                                                            ___/___/
+                                                            \,/ \,/
+                                                             |   |
+                                                           __|___|__
+                                                          [_________]
+                                                 ,,,,,,      _|//
+                                                 , , ::       | /
+                                                 <    D        =o
+  ______        ___     __     __)               |.   /       /\|
+  (, /    )    /(,  )   (, /|  /             _____|><|_______/o /
+    /---(     /    /      / | /             / '==| :: |=='  <  /
+ ) / ____)   /    /    ) /  |/             /  \  <    >  /____/
+(_/ (       (___ /    (_/   '             /  _/\ | :: | /
+
+  _____       _____       _____        _____)     ______)      _____     ______)
+  (, /  |     (, /   )    (, /   )    /           (, /         (, /      (, /
+    /---|      _/__ /      _/__ /     )__           /            /         /
+ ) /    |_     /           /        /            ) /         ___/__     ) /
+(_/         ) /         ) /        (_____)      (_/        (__ /       (_/
+           (_/         (_/
+
+
+\end{lstlisting}
+\end{bottompar}
+\fi
+
+\end{document}

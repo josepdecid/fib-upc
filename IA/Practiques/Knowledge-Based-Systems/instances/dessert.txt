@@ -1,0 +1,25 @@
+dish-name	dish-classification	dish-ingredients	dish-combination	dish-price	dish-difficulty
+STRING	SYMBOL	INSTANCE	SYMBOL	FLOAT INTEGER	INTEGER
+Tiramisu	[Italian Gourmet Kosher Islamic Gluten-free Vegetarian Cold Classical]	[[eggs] [sugar] [chocolate] [cream_cheese] [cocoa_powder] [coffee]]	[Italian American Spanish French Gourmet Cold Hot]	4.00	6
+Cheese_cake	[Vegetarian American Italian French Spanish Islamic Kosher Cold Classical]	[[cream_cheese] [sugar] [wheat_flour] [salt] [eggs] [butter] [cookies] [vanilla_extract] [sour_cream] [berry]]	[American Italian French Spanish Cold Hot]	5.50	4
+Catalan_cream	[Spanish Vegetarian Islamic Kosher French Classical Hot]	[[milk] [sugar] [eggs] [cinamon] [lemon] [maizena]]	[Spanish French Hot]	3.50	6
+Orange_cake	[Vegan Lactose-free Vegetarian Mediterranean Moroccan Modern Cold Kosher Islamic]	[[orange] [wheat_flour] [sugar] [vegetable_oil] [salt] [baking_powder]]	[Moroccan Cold Mediterranean Hot Cold]	3.90	4
+Doklova	[Turkish Vegetarian Cold Classical Islamic Kosher]	[[filo] [walnut] [butter] [cinamon] [sugar] [vanilla_extract] [honey]]	[Turkish Cold]	4.30	6
+Egg_tart	[Chinese Cold Classical Vegetarian Islamic Kosher]	[[wheat_flour] [eggs] [butter] [salt] [milk] [sugar]]	[Chinese Cold Hot]	3.10	6
+Matcha_pudding	[Japanese Cold Modern Islamic Kosher Vegetarian]	[[milk] [sugar] [salt] [eggs] [butter] [whip_cream] [maizena] [matcha_powder]]	[Japanese Cold Chinese]	3.40	6
+Stuffed_dates	[Moroccan Vegetarian Cold Classical Islamic Kosher]	[[date] [honey] [cinamon] [sugar] [walnut] [cream_cheese] [almonds]]	[Moroccan Cold]	2.50	7
+Paal_payasam	[Indian Vegetarian Cold Classical Islamic Kosher]	[[rice] [milk] [cardamon_powder] [sugar] [butter] [walnut] [raisin]]	[Indian Cold Turkish]	3.80	7
+Lemon_parfait	[Gourmet Modern French American Vegetarian Cold Japanese]	[[eggs] [sugar] [lemon] [butter] [wheat_flour] [vanilla_extract] [chocolate] [honey] [orange_juice] [plum] [double_cream]]	[Gourmet Spanish Japanese Italian French American Cold]	6.50	4
+Apple_enchiladas	[Mexican Vegetarian Islamic Kosher Gluten-free Hot Classical]	[[cinamon] [butter] [sugar] [apple] [tortilla]]	[Mexican Hot]	3.50	2
+Fruit	[Vegetarian Kosher Islamic Spanish Italian French Gluten-free Vegan Lactose-free Mediterranean Cold Classical]	[]	[All]	2.00	1
+Banana_muffins	[Vegan Vegetarian Kosher Islamic American Modern Cold]	[[vanilla_extract] [banana] [sugar] [vegetable_oil] [baking_powder] [soy_milk_yogurt]]	[Cold American French Italian Spanish Japanese]	3.50	5
+Chocolate_pots	[Gluten-free Vegetarian Kosher Islamic American French Italian Spanish Japanese Cold Modern Gourmet Mexican]	[[sugar] [corn_starch] [milk] [eggs] [vanilla_extract] [chocolate] [cocoa_powder]]	[Cold American French Italian Spanish Japanese Gourmet Mexican]	4.00	4
+Strawberry_coconut_milk_ice_cream	[Vegan Vegetarian Lactose-free Gluten-free Cold Classical Italian Kosher Islamic]	[[strawberry] [banana] [honey] [coconut_milk]]	[All]	3.00	2
+Yogurt_cake	[Moroccan Kosher Islamic Vegetarian Italian Spanish Classical Cold]	[[eggs] [yogurt] [vegetable_oil] [sugar] [wheat_flour] [baking_powder] [salt] [vanilla_extract]]	[Moroccan Cold Italian Spanish French]	2.70	1
+Chocolate_ice_cream_taco	[Mexican Islamic Kosher Vegetarian Cold Modern]	[[tortilla] [chocolate_chips] [vanilla_ice_cream] [coconut_oil]]	[Mexican American Cold]	4.20	4
+Red_bean_bun	[Chinese Japanese Cold Classical Kosher Islamic Lactose-free Vegan Vegetarian]	[[anko] [wheat_flour] [sugar] [baking_powder]]	[Chinese Japanese Cold]	3.30	4
+Banana_spring_roll	[Chinese Japanese Islamic Kosher Vegetarian Cold Classical]	[[oil] [banana] [butter] [sugar] [cinamon] [wheat_flour] [corn_starch] [salt]]	[Chinese Japanese Cold]	4.00	5
+Gulab_jamun	[Indian Lactose-free Vegan Vegetarian Kosher Islamic Classical Gourmet Hot]	[[khoya] [wheat_flour] [sugar] [oil] [saffron]]	[Indian Gourmet Hot]	3.60	2
+Sandesh	[Indian Lactose-free Vegan Vegetarian Kosher Islamic Classical Cold Classical Gluten-free]	[[cheese] [khoya] [cardamon_powder] [saffron] [sugar] [almonds]]	[Indian Cold Moroccan Turkish]	4.10	5
+Tulumba	[Turkish Kosher Islamic Vegetarian Hot Classical]	[[sugar] [butter] [semolina] [corn_starch] [lemon_juice] [eggs] [oil] [semolina]]	[Turkish Hot Italian French]	3.20	5
+Candied_pumpkin	[Turkish Kosher Islamic Vegetarian Cold Classical Vegan Gluten-free]	[[sugar] [pumpkin] [double_cream] [cinamon] [walnut] [salt]]	[Turkish Cold American Mexican]	4.60	3

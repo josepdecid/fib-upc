@@ -1,0 +1,669 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{xcolor,colortbl}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage[square,sort,comma,numbers]{natbib}
+
+\newenvironment{bottompar}{\par\vspace*{\fill}}{\clearpage}
+\renewcommand{\contentsname}{Índice}
+\setcounter{tocdepth}{2}
+
+\input{pddl.tex}
+
+\lstdefinelanguage{none}{
+  identifierstyle=
+}
+
+\title{%
+  Planificación \\
+  \large Rico Rico \\
+  IA - FIB @ UPC
+}
+\author{\large Eric Dacal, Josep de Cid, Joaquim Marset}
+\date{Mayo 2017}
+
+\begin{document}
+
+\maketitle
+\begin{bottompar}
+\tableofcontents
+\end{bottompar}
+
+
+\section{Introducción}
+Muchos problemas de optimización y restricciones, son computacionalmente intratables debido a la alta complejidad algorítmica que poseen, usando algoritmos exactos. Este problema viene dado por la magnitud de la estructura combinatoria subyacente al problema.
+\par
+Por ello se usan algoritmos de inteligencia artificial que utilizan técnicas para podar el espacio de búsqueda y lo inspeccionan de forma guiada por valores heurísticos para poder ofrecer soluciones, aunque quizás no óptimas, correctas y en un tiempo aceptable.
+\par
+Una de las familias de problemas sobre las que se ha conseguido simplificar su resolución con problemas de planificación, son los algoritmos genéticos, automatizando gran parte de su proceso.
+\par
+El objetivo de estos problemas es construir un plan de acción o secuencias de acciones que permitan llegar de un estado inicial a una posible solución del problema, construyendo una solución basándose en el conocimiento del domino, como el estado del entorno, acciones disponibles en cada momento o solución aceptable.
+\par
+La comunidad de inteligencia artificial, en los últimos años, ha desarrollado herramientas capaces de resolver problemas de planificación de forma independiente a la modelización del dominio, de forma que el usuario de dichas herramientas solo debe modelizar su problema mediante un lenguaje formal de representación que entienda el sistema de resolución automática, como \textbf{PDDL}, el lenguaje con el que trataremos en esta práctica.
+
+\section{Descripción del problema}
+En esta práctica, debemos resolver un problema de asignación que se puede modelizar como un problema de planificación para guiar adecuadamente la construcción de la solución. El problema consiste en la programación semanal de menús para bares y restaurantes. Cada menú tiene asociados un primer y segundo plato, y cada menú se sirve en un día laborable, entre lunes y viernes.
+\par
+Entre los platos que conforman un mismo menú, pueden existir incompatibilidades, de forma que no se puedan combinar. También habrán restricciones en el tipo de alimentos de forma que entre días consecutivos no se repitan los mismos tipos de comida, de forma independiente entre primer y segundo plato. Como la salud también es importante, dispondremos de la información calórica de cada plato de forma que se pueda usar para generar menús los más saludables posible. Los platos también disponen de un coste de elaboración, para no juntar dos platos muy costosos en el mismo menú.
+\par
+El problema básico consiste en un menú semanal en que los platos de cada día sean compatibles entre sí. La primera extensión añadirá evitar repeticiones del mismo plato durante la semana. En la segunda evitaremos que en dos días consecutivos se sirva el mismo tipo de plato. En la tercera debemos forzar que ciertos platos se sirvan en días concretos de la semana. La cuarta añade la elaboración delos menús controlando su consumo calórico, y la última extensión, minimiza el precio del menú generado.
+\par
+Desarrollaremos pues, un modelo expresado en PDDL para cada uno de las versiones consideradas, analizando los elementos necesarios para especificar el problema utilizando la herramienta de planificación \textbf{Fast Forward}, observando los resultados obtenidos y ver si coinciden con los esperados.
+\par
+Todo esto, se va a realizar con las metodologías de ingeniería del conocimiento vistas en la práctica anterior de \textbf{CLIPS}, con un desarrollo incremental basado en prototipos, a pesar de que, debido a la simplicidad de este problema, las fases de identificación, conceptualización y formalización del problema, se verán prácticamente juntas.
+
+
+\section{Modelización}
+En esta sección vamos a describir en detalle los elementos que aparecen en los modelos desarrollados para cada versión de la práctica que se ha considerado.
+\par
+El modelo para cada versión, se ha construido de forma iterativa siguiendo el la metodología del prototipado incremental o \textit{Agile}, añadiendo en cada versión los mínimos elementos del problema necesarios para conseguir solucionar el problema propuesto, evitando así, evitar repeticiones innecesarias o futuras modificaciones, respecto a la anterior, siendo abierto a la extensión y cerrado a la modificación, el conocido principio de \textit{Open Closed}.
+
+\subsection{Problema básico}
+Como se ha explicado en la descripción del problema, los elementos disponibles en la versión básica son los días de la semana, y los dos platos que podemos asignar en cada menú. Para empezar, debemos definir en nuestro modelo dos nuevos tipos de objetos: día y plato. Plato a su vez va a tener dos subtipos para facilitar su diferenciación: primer y segundo plato. Esto permite al sistema de planificación ser más eficiente, al restringir el número de posibilidades de unificación y por lo tanto, el factor de ramificación.
+\begin{lstlisting}[language=pddl]
+(:types
+    day - object
+    dish - object
+    mainCourse - dish secondCourse - dish
+)
+\end{lstlisting}
+Con este dominio inicial, necesitaremos saber incompatibilidades entre platos, platos asignados a cada día, y si un día ya tiene su menú completo.
+\par
+Para ello definimos tres predicados que indican con que plato combina otro, si en un día ya hay un menú asignado, y el primer y segundo plato del menú de ese día. Leyendo en notación infija, todos indican que el primer parámetro realiza/tiene acción con los otros parámetros.
+\begin{lstlisting}[language=pddl]
+(:predicates
+    (incompatible ?mc - mainCourse ?sc - secondCourse)
+    (assigned ?d - day ?mc - mainCourse ?sc - secondCourse)
+    (dayReady ?d - day)
+)
+\end{lstlisting}
+Finalmente, en esta versión básica, solo necesitamos una única acción para llevar a cabo una asignación completa de platos por cada día de la semana. Esta acción de asignación, recibe como parámetros el día de la semana y los dos platos que conforman el menú.
+\par
+Como precondición, debemos comprobar que al día de la semana aún no se le han asignado los dos platos, y que los dos platos que vamos a introducir no sean incompatibles. El efecto de la acción asignar, resulta en marcar el día como preparado y asignarle el primer y segundo plato.
+\begin{lstlisting}[language=pddl]
+(:action assignMenus
+    :parameters (?d - day ?mc - mainCourse ?sc - secondCourse)
+    :precondition (and (not (dayReady ?d)) (not (incompatible ?mc ?sc)))
+    :effect (and (dayReady ?d) (assigned ?d ?mc ?sc))
+)
+\end{lstlisting}
+A la hora de crear el problema, debemos crear primero un conjunto de objetos día, primer plato, y segundo plato, teniendo de estos últimos una amplia variedad para no tener problemas a la hora de añadir restricciones.
+\par
+A la hora de definir el estado inicial, indicamos incompatibilidades entre platos, que va a ser información estática durante la ejecución del planificador.
+\begin{lstlisting}[language=pddl]
+(:init
+    (incompatible Spaghetti_Bolognese Paella)
+    ; [...]
+)
+\end{lstlisting}
+Como estado final, queremos comprobar que el conjunto de días esté listo, lo que significa que tienen un menú asignado.
+\begin{lstlisting}[language=pddl]
+(:goal
+    (forall (?d - day)
+      (dayReady ?d)
+    )
+)
+\end{lstlisting}
+
+\subsection{Primera extensión}
+Para la primera extensión de nivel básico del problema, debemos añadir la restricción de no utilizar el mismo plato más de una vez a la semana.
+\par
+Para simplificar la planificación, hemos decidido separar las acciones de asignar menú en asignar primer y segundo plato. Para ello debemos añadir un nuevo predicado que nos indica que un plato ha sido usado, y los nuevos predicados que indican si cada plato de ha asignado a un día y si el día está listo, en sustitución del predicado de asignación y indicador de listo común.
+\begin{lstlisting}[language=pddl]
+(:predicates
+    (incompatible ?mc - mainCourse ?sc - secondCourse)
+    (assignedMC ?d - day ?mc - mainCourse)
+    (assignedSC ?d - day ?sc - secondCourse)
+    (mainReady ?d - day)
+    (secondReady ?d - day)
+    (used ?d - dish)
+)
+\end{lstlisting}
+Eso nos fuerza a añadir como precondición que cada uno de los dos platos no esté siendo ya usado en la acción correspondiente, y como efecto indicar que han sido usados.
+\begin{lstlisting}[language=pddl]
+(:action assignMC
+    :parameters (?d -day ?mc - mainCourse)
+    :precondition (and (not (mainReady ?d)) (not (used ?mc)))
+    :effect (and (assignedMC ?d ?mc) (used ?mc) (mainReady ?d))
+)
+(:action assignSC
+    :parameters (?d - day ?mc - mainCourse ?sc - secondCourse)
+    :precondition (and (assignedMC ?d ?mc)  (not (secondReady ?d))
+        (not (used ?sc)) (not (incompatible ?mc ?sc)))
+    :effect (and (assignedSC ?d ?sc) (used ?sc) (secondReady ?d))
+)
+\end{lstlisting}
+Para la correcta separación de las dos acciones, necesitamos asegurar en el segundo plato que el primero ya haya sido asignado y dicho plato sea compatible con el segundo a asignar.
+\par
+Dado que en un principio ningún plato va a ser usado y no nos importa cuales han sido usados o no en la solución final, siempre que se cumplan las restricciones, no tenemos la necesidad de modificar el \textit{init}. El \textit{goal} si que tenemos que cambiarlo ya que el predicado que definía que un día estaba listo ha sido separado en estar listo el primer plato y estar listo el segundo plato para ese día.
+
+\begin{lstlisting}[language=pddl]
+(:goal
+    (forall (?d - day)
+      (and (mainReady ?d) (secondReady ?d))
+    )
+)
+\end{lstlisting}
+
+
+\subsection{Segunda extensión}
+En esta extensión hay que añadir que no  haya platos del mismo tipo en días consecutivos de la semana, para ello hay que añadir nuevos predicados que incluyan la clasificación de los platos en diversas categorías, y la relación de sucesión entre los días de nuestro dominio.
+\par
+Obviamente, para ello, debemos primero definir el tipo categoría:
+\begin{lstlisting}[language=pddl]
+(:types
+    day - object
+    dish - object
+    category - object
+    mainCourse - dish secondCourse - dish
+)
+\end{lstlisting}
+Los predicados a añadir quedarían de la siguiente forma, definiendo una clasificación para cada plato, y la clasificación de primer y segundo plato diferenciados para cada día:
+\begin{lstlisting}[language=pddl]
+(:predicates
+    (incompatible ?mc - mainCourse ?sc - secondCourse)
+    (assignedMC ?d - day ?mc - mainCourse)
+    (mainReady ?d - day)
+    (secondReady ?d - day)
+    (used ?d - dish)
+    (classified ?d - dish ?c - category)
+    (daySCClassif ?d - day ?c - category)
+    (dayMCClassif ?d - day ?c - category)
+    (dayBefore ?db - day ?d - day)
+)
+\end{lstlisting}
+Como se observa respecto a la extensión anterior el predicado (assignedSC ?d - day ?mc - mainCourse) ha sido eliminado ya que lo vimos innecesario al no asignar postres en los menús y al tener ya el predicado que nos indica cuando el segundo plato de un día está listo.
+\par
+
+Una vez definidos los nuevos tipos y predicados, debemos crear varios objetos de tipo categoría y clasificar cada plato en una categoría distinta:
+\begin{lstlisting}[language=pddl]
+(:init
+    ; [...]
+    (classified Spaghetti_Bolognese Pasta)
+    (classified Mediterranean_Salad Salad)
+    ; [...]
+)
+\end{lstlisting}
+Con todos los elementos necesarios ya inicializados, solo nos queda añadir las restricciones a las acciones de asignar el primer y el segundo plato en cada menú.
+Como se da el caso que Lunes no tiene un día que se pueda considerar anterior, ya que Viernes no sería su inmediatamente anterior, hemos definido un día auxiliar llamado \textit{DummyD} que hará de día anterior a Lunes.
+\par
+Como tenemos que imponer también que no puedan repetir categoría primeros y segundos de días consecutivos hemos añadido también una categoría auxiliar llamada \textit{DummyC} que se usará solo para ese día auxiliar. Entonces forzamos en el estado inicial del problema que ese día auxiliar ya tenga un menú asignado así el primer día real que generará será Lunes que es lo que nos interesa. Para el resto de días, para que se puedan asignar platos a ese día se tiene que cumplir que el día anterior ya esté finalizado para comprobar las categorías de los platos asignados. Se ha usado esta estrategia de usar campos auxiliares para evitar tener muchas disyunciones que hacen menos entendible el código.
+\par
+Entonces una vez asignado el menú del día anterior nos aseguramos que tanto el primer plato como el segundo del día actual, pertenezcan a categorías distintas que las del día anterior. Finalmente en la parte del efecto, igual que antes ponemos a cierto el predicado indicando el uso de los platos y la asignación de los platos del menú y también ponemos a cierto el predicado que indica la categoría del primer o segundo plato asignados al menú según la acción de asignación en la que se encuentre.
+
+
+\begin{lstlisting}[language=pddl]
+(:action assignMC
+    :parameters (?d - day ?mc - mainCourse)
+    :precondition (and
+        (not (mainReady ?d)) (not (used ?mc))
+        (exists (?db - day ?c2 - category) (and (dayBefore ?db ?d)
+        (secondReady ?db) (dayMCClassif ?db ?c2)
+        (not (classified ?mc ?c2)))))
+    :effect (and
+        (used ?mc) (mainReady ?d) (assignedMC ?d ?mc)
+        (forall (?c - category) (when (classified ?mc ?c)
+        (dayMCClassif ?d ?c))))
+)
+(:action assignSC
+    :parameters (?d - day ?mc - mainCourse ?sc - secondCourse)
+    :precondition (and
+        (assignedMC ?d ?mc) (not (secondReady ?d)) (not (used ?sc))
+        (not (incompatible ?mc ?sc)) (exists (?db - day ?c2 - category)
+        (and (dayBefore ?db ?d) (secondReady ?db) (daySCClassif ?db ?c2)
+        (not (classified ?sc ?c2)))))
+    :effect (and
+        (used ?sc) (secondReady ?d) (forall (?c - category)
+        (when (classified ?sc ?c) (daySCClassif ?d ?c))))
+)
+\end{lstlisting}
+
+\subsection{Tercera extensión}
+En la tercera extensión se nos pide asignar obligatoriamente ciertos platos específicos en un día concreto de la semana.
+\par
+Para ello debemos definir un predicado que nos indique que un plato solo se sirve en un día en concreto, por lo que los predicados quedarían de la siguiente forma:
+\begin{lstlisting}[language=pddl]
+(:predicates
+    (incompatible ?mc - mainCourse ?sc - secondCourse)
+    (assignedMC ?d - day ?mc - mainCourse)
+    (mainReady ?d - day)
+    (secondReady ?d - day)
+    (used ?d - dish)
+    (classified ?d - dish ?c - category)
+    (daySCClassif ?d - day ?c - category)
+    (dayMCClassif ?d - day ?c - category)
+    (dayBefore ?db - day ?d - day)
+    (servedOnly ?dish - dish ?day - day)
+)
+\end{lstlisting}
+Una vez el predicado ha sido definido, podemos indicar en el init que platos son forzados a ser servidos en un día en concreto:
+\begin{lstlisting}[language=pddl]
+(:init
+    ; [...]
+    (servedOnly Paella Thu)
+    (servedOnly Spanish_omelette Mon)
+    ; [...]
+)
+\end{lstlisting}
+
+Una vez definidos los predicados que son ciertos en el \textit{init} queda añadir las condiciones en las acciones para poder generar menús que cumplan la condición impuesta en esta extensión. Entonces la idea es, como siempre partiendo de la extensión anterior, que cuando queremos asignar un plato a un día concreto pueden pasar dos cosas.
+\par
+O bien se ha impuesto como restricción que solo se pueda asignar el plato a ese día concreto en el que el planificador intenta asignar, o bien no hay ninguna obligación de asignar ningún plato concreto a ese día y tampoco hay ninguna imposición de asignar ese plato a otro día concreto.
+\par
+Entonces si se cumple una de las dos condiciones significa que el plato se puede asignar a ese día y por tanto puede seguir adelante. La idea es la misma sea primer plato o segundo ya que consideramos ese predicado general tanto para primeros platos como para segundos.
+
+\begin{lstlisting}[language=pddl]
+(:action assignMC
+    :parameters (?d - day ?mc - mainCourse)
+    :precondition (and
+        (not (mainReady ?d)) (not (used ?mc))
+        (exists (?db - day ?c2 - category) (and (dayBefore ?db ?d)
+        (secondReady ?db) (dayMCClassif ?db ?c2)
+        (not (classified ?mc ?c2)))) (or (servedOnly ?mc ?d)
+        (and (not (exists (?day - day) (and (not (= ?day ?d))
+        (servedOnly ?mc ?day)))) (not (exists (?mc2 - mainCourse)
+        (and (not (= ?mc2 ?mc)) (servedOnly ?mc2 ?d)))))))
+    :effect (and
+        (used ?mc) (mainReady ?d) (assignedMC ?d ?mc)
+        (forall (?c - category) (when (classified ?mc ?c)
+        (dayMCClassif ?d ?c))))
+)
+(:action assignSC
+    :parameters (?d - day ?mc - mainCourse ?sc - secondCourse)
+    :precondition (and
+        (assignedMC ?d ?mc) (not (secondReady ?d)) (not (used ?sc))
+        (not (incompatible ?mc ?sc)) (exists (?db - day ?c2 - category)
+        (and (dayBefore ?db ?d) (secondReady ?db) (daySCClassif ?db ?c2)
+        (not (classified ?sc ?c2)))) (or (servedOnly ?sc ?d)
+        (and (not (exists (?day - day) (and (not (= ?day ?d))
+        (servedOnly ?sc ?day)))) (not (exists (?sc2 - secondCourse)
+        (and (not (= ?sc2 ?sc)) (servedOnly ?sc2 ?d)))))))
+    :effect (and
+        (used ?sc) (secondReady ?d) (forall (?c - category)
+        (when (classified ?sc ?c) (daySCClassif ?d ?c))))
+)
+\end{lstlisting}
+
+\subsection{Cuarta extensión}
+En esta cuarta extensión, nuestro planificador, debe controlar que el menú generado, aporte entre 1000 y 1500 calorías, utilizando las directivas de \textbf{Metric-FF}.
+\par
+Para ello creamos tres funciones, dos usadas a modo de variable global, que contienen las calorías mínimas y máximas, para tener los datos de forma parametrizada. La otra función, nos permite obtener las calorías de un plato en concreto:
+\begin{lstlisting}[language=pddl]
+(:functions
+    (minCalories)
+    (maxCalories)
+    (calories ?d - dish)
+)
+\end{lstlisting}
+Una vez definidas las funciones, debemos inicializar sus valores, de la siguiente forma, asignando los valores ya definidos por el enunciado al rango de calorías y un valor calórico para cada plato del sistema.
+\begin{lstlisting}[language=pddl]
+(:init
+    ; [...]
+    (= (minCalories) 1000)
+    (= (maxCalories) 1500)
+
+    (= (calories Mediterranean_Salad) 120)
+    (= (calories Vegan_Sandwich) 290)
+    ; [...]
+)
+\end{lstlisting}
+En la acción de asignar el segundo plato, ya que al ejecutarse ya hay un primer plato asignado, debemos comprobar que la suma de las calorías del primer plato con las del segundo a planificar, están entre el mínimo y máximo de calorías especificadas, en este caso 1000 y 1500. La acción de asignar el primer plato no necesita cambios respecto la versión anterior:
+\begin{lstlisting}[language=pddl]
+(:action assignSC
+    :parameters (?d - day ?mc - mainCourse ?sc - secondCourse)
+    :precondition (and
+        (assignedMC ?d ?mc) (not (secondReady ?d)) (not (used ?sc))
+        (not (incompatible ?mc ?sc))
+        (>= (+ (calories ?mc) (calories ?sc)) (minCalories))
+        (<= (+ (calories ?mc) (calories ?sc)) (maxCalories))
+        (exists (?db - day ?c2 - category) (and (dayBefore ?db ?d)
+        (secondReady ?db) (daySCClassif ?db ?c2)
+        (not (classified ?sc ?c2)))) (or (servedOnly ?sc ?d)
+        (and (not (exists (?day - day) (and (not (= ?day ?d))
+        (servedOnly ?sc ?day)))) (not (exists (?sc2 - secondCourse)
+        (and (not (= ?sc2 ?sc)) (servedOnly ?sc2 ?d)))))))
+    :effect (and
+        (used ?sc) (secondReady ?d) (forall (?c - category)
+        (when (classified ?sc ?c) (daySCClassif ?d ?c))))
+)
+\end{lstlisting}
+
+\subsection{Quinta extensión}
+En esta quinta y última extensión nuestro planificador tiene que intentar minimizar el precio de los menús generados para cada uno de los días de la semana.
+\par
+Entonces para ello debemos hacer uso de la sección \textit{minimize} que nos proporciona \textbf{Metric-FF} y pasarle los parámetros que queremos que se minimicen. Para ello definimos otra función a modo de variable global, donde iremos acumulando los precios de los platos que se van asignando a los diferentes días y para cada asignación de un día el planificador intentará minimizar el precio que estará acumulado en cada momento en la nueva función. Esto a su vez implica otra función donde para cada posible plato a asignar nos devuelve el precio que tiene impuesto.
+
+Igual que antes,  hemos definido las funciones de la siguiente forma:
+\begin{lstlisting}[language=pddl]
+(:functions
+    (minCalories)
+    (maxCalories)
+    (calories ?d - dish)
+
+    (totalPrice)
+    (price ?d - dish)
+)
+\end{lstlisting}
+Con las nuevas funciones definidas, debemos inicializar los valores de precio para cada plato, y definir el objetivo a minimizar:
+\begin{lstlisting}[language=pddl]
+(:init
+    ; [...]
+    (= (totalPrice) 0)
+
+    (= (price Mediterranean_Salad) 7)
+    (= (price Vegan_Sandwich) 5)
+    ; [...]
+)
+
+(:metric minimize (totalPrice))
+\end{lstlisting}
+
+Para esta extensión, la modificación de las acciones ocurre en la acción de asignar el segundo plato ya que tendremos como parámetro el primer plato asignado a ese día. Lo que hacemos es incrementar el valor de la función que acumula los precios de los platos con los precios del primer y segundo plato del día que intenta asignar el planificador. De esta forma podremos lograr minimizar los precios como ya se ha comentado anteriormente.
+
+\begin{lstlisting}[language=pddl]
+(:action assignSC
+    :parameters (?d - day ?mc - mainCourse ?sc - secondCourse)
+    :precondition (and
+        (assignedMC ?d ?mc) (not (secondReady ?d)) (not (used ?sc))
+        (not (incompatible ?mc ?sc))
+        (>= (+ (calories ?mc) (calories ?sc)) (minCalories))
+        (<= (+ (calories ?mc) (calories ?sc)) (maxCalories))
+        (exists (?db - day ?c2 - category) (and (dayBefore ?db ?d)
+        (secondReady ?db) (daySCClassif ?db ?c2)
+        (not (classified ?sc ?c2)))) (or (servedOnly ?sc ?d)
+        (and (not (exists (?day - day) (and (not (= ?day ?d))
+        (servedOnly ?sc ?day)))) (not (exists (?sc2 - secondCourse)
+        (and (not (= ?sc2 ?sc)) (servedOnly ?sc2 ?d)))))))
+    :effect (and
+        (used ?sc) (secondReady ?d) (increase (totalPrice) (+ (price ?mc)
+        (price ?sc))) (forall (?c - category)
+        (when (classified ?sc ?c) (daySCClassif ?d ?c))))
+)
+\end{lstlisting}
+
+\section{Implementación}
+En la sección anterior, se ha descrito de forma detallada e incremental, el modelo desarrollado para cada una de las versiones del problema que se han tratado. Estos modelos se han expresado en lenguaje \textbf{PDDL}, el código completo de los cuales esta adjunto a este documento.
+\par
+Para implementar el modelo final, se ha optado por un esquema de diseño incremental, basado en el prototipado, siguiendo el guión de versiones indicado en el enunciado de la práctica, empezando por la versión básica, y avanzando poco a poco en cada versión de extensión. Por lo tanto, a lo largo del desarrollo de la práctica se han ido construyendo prototipos, todos ellos perfectamente funcionales, cuyas versiones están separadas en el código adjunto, cada vez teniendo en cuenta más elementos del problema hasta llegar a la última extensión.
+\par
+Como hemos explicado previamente en la introducción del problema, la simplicidad de este nos ha llevado a, de un solo paso, las fases de identificación, conceptualización y formalización, dado que las modificaciones a realizar entre versiones, eran muy pequeñas.
+\par
+A parte de los modelos en PDDL, se ha desarrollado unos \textit{scripts} escritos en \textbf{Python}, también adjunto, para ejecutar de forma rápida la versión deseada, y generar varias instancias de entrada para nuestro problema respectivamente.
+
+\section{Resultados}
+En esta sección vamos a analizar los resultados obtenidos en los distintos juegos de prueba, específicamente diseñados para cada una de las versiones del problema, para estudiar el comportamiento del planificador en ciertos casos, o comparar el efecto de las diferencias entre versiones.
+\par
+En todos los casos, las instancias generadas son pequeñas para así facilitar el razonamiento sobre las soluciones obtenidas.
+
+\subsection{Problema básico}
+En el problema básico solo se espera que se genere una asignación válida sin tener en cuenta casi ninguna restricción, solo evitando combinar platos incompatibles en un mismo menú. Por lo tanto las posibilidades a explorar en los juegos de prueba son muy limitadas.
+\par
+El primer juego de pruebas consiste en un par de primeros y segundos platos con una restricción entre los primeros de cada tipo, de forma que el resultado será el la primera instancia de los primeros platos, y la segunda de los segundos platos. En este caso, el planificador encuentra una solución inmediata y sin dificultades.
+\begin{lstlisting}[language=none]
+ff: found legal plan as follows
+
+step    0: ASSIGNMENUS FRI SPAGHETTI_BOLOGNESE SPANISH_OMELETTE
+        1: ASSIGNMENUS THU SPAGHETTI_BOLOGNESE SPANISH_OMELETTE
+        2: ASSIGNMENUS WED SPAGHETTI_BOLOGNESE SPANISH_OMELETTE
+        3: ASSIGNMENUS TUE SPAGHETTI_BOLOGNESE SPANISH_OMELETTE
+        4: ASSIGNMENUS MON SPAGHETTI_BOLOGNESE SPANISH_OMELETTE
+
+time spent:
+    0.00 seconds instantiating 15 easy, 0 hard action templates
+    0.00 seconds reachability analysis, yielding 20 facts and 15 actions
+    0.00 seconds creating final representation with 20 relevant facts
+    0.00 seconds building connectivity graph
+    0.00 seconds searching, evaluating 6 states, to a max depth of 1
+    0.00 seconds total time
+\end{lstlisting}
+El segundo juego de pruebas consiste en los mismos cuatro platos, dos de cada tipo, de forma que ambos primeros platos sean incompatibles con los dos segundos. En este caso es imposible encontrar una asignación que satisfaga las restricciones del problema. El planificador detecta la situación e informa de la inexistencia de solución de forma correcta.
+\begin{lstlisting}[language=none]
+ff: goal can be simplified to FALSE. No plan will solve it
+\end{lstlisting}
+
+\subsection{Primera extensión}
+En la primera extensión se ha añadido la restricción de no repetir platos durante la semana. El primer juego de pruebas consiste en crear cinco primeros platos y cinco segundos platos con alguna pequeña restricción entre ellos, de forma que al generar los menús ningún plato esté repetido. En este caso, el planificador nos devuelve cinco menús, de forma que no se repite ningún primer ni ningún segundo plato.
+\begin{lstlisting}[language=none]
+ff: found legal plan as follows
+
+step    0: ASSIGNMC FRI SPAGHETTI_BOLOGNESE
+        1: ASSIGNSC FRI SPAGHETTI_BOLOGNESE ROAST_PORK_WITH_PRUNES
+        2: ASSIGNMC THU MEDITERRANEAN_SALAD
+        3: ASSIGNSC THU MEDITERRANEAN_SALAD SPANISH_OMELETTE
+        4: ASSIGNMC WED VEGAN_SANDWICH
+        5: ASSIGNSC WED VEGAN_SANDWICH PAELLA
+        6: ASSIGNMC TUE MUSHROOM_RISOTTO
+        7: ASSIGNSC TUE MUSHROOM_RISOTTO TUNA_STEAK
+        8: ASSIGNMC MON GUACAMOLE_WITH_TOMATOES
+        9: ASSIGNSC MON GUACAMOLE_WITH_TOMATOES CHICKEN_PARMESAN
+
+time spent:
+    0.00 seconds instantiating 135 easy, 0 hard action templates
+    0.00 seconds reachability analysis, yielding 90 facts and 135 actions
+    0.00 seconds creating final representation with 90 relevant facts
+    0.00 seconds building connectivity graph
+    0.00 seconds searching, evaluating 11 states, to a max depth of 1
+    0.00 seconds total time
+\end{lstlisting}
+El segundo juego de pruebas consiste en crear solamente cuatro segundos platos, de forma que al intentar generar menús para cinco días de forma que no se repitan, el planificador indique que no es posible llegar a una solución. En este caso, el planificador, nos indica que no hay suficientes recursos en el espacio de búsqueda para llegar a la solución y por lo tanto el problema es irresoluble.
+\begin{lstlisting}[language=none]
+advancing to distance :   10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+
+best first search space empty! problem proven unsolvable.
+
+time spent:
+    0.00 seconds instantiating 110 easy, 0 hard action templates
+    0.00 seconds reachability analysis, yielding 83 facts and 110 actions
+    0.00 seconds creating final representation with 83 relevant facts
+    0.00 seconds building connectivity graph
+    0.50 seconds searching, evaluating 232743 states, to a max depth of 1
+    0.50 seconds total time
+\end{lstlisting}
+
+\subsection{Segunda extensión}
+En esta extensión se añade la restricción de no repetir una misma categoría de plato en dos días consecutivos, de forma independiente entre primeros y segundos platos. El primer juego de pruebas, consiste en crear cinco primeros platos con algunas restricciones básicas de incompatibilidad como en la extensión anterior, y añadir clasificaciones diversas en cada plato. En este caso, el planificador nos devuelve cinco menús, de forma que cumplan las restricciones de todas las extensiones anteriores, y que en un día no se repita el tipo de plato del día anterior.
+\begin{lstlisting}[language=none]
+ff: found legal plan as follows
+
+step    0: ASSIGNMC MON SPAGHETTI_BOLOGNESE
+        1: ASSIGNSC MON SPAGHETTI_BOLOGNESE ROAST_PORK_WITH_PRUNES
+        2: ASSIGNMC TUE VEGAN_SANDWICH
+        3: ASSIGNSC TUE VEGAN_SANDWICH PAELLA
+        4: ASSIGNMC WED MEDITERRANEAN_SALAD
+        5: ASSIGNSC WED MEDITERRANEAN_SALAD SPANISH_OMELETTE
+        6: ASSIGNMC THU MUSHROOM_RISOTTO
+        7: ASSIGNSC THU MUSHROOM_RISOTTO TUNA_STEAK
+        8: ASSIGNMC FRI GUACAMOLE_WITH_TOMATOES
+        9: ASSIGNSC FRI GUACAMOLE_WITH_TOMATOES CHICKEN_PARMESAN
+
+time spent:
+    0.00 seconds instantiating 0 easy, 783 hard action templates
+    0.00 seconds reachability analysis, yielding 104 facts and 263 actions
+    0.00 seconds creating final representation with 100 relevant facts
+    0.00 seconds building connectivity graph
+    0.00 seconds searching, evaluating 11 states, to a max depth of 1
+    0.00 seconds total time
+\end{lstlisting}
+En el segundo juego de pruebas, hemos categorizado cuatro de los cinco segundos platos, como carne de forma que no pueden combinarse para que nunca se repita carne en dos días seguidos. En este caso, el planificador indica que no hay suficientes recursos para encontrar una solución y por lo tanto el problema es irresoluble.
+\begin{lstlisting}[language=none]
+advancing to distance :   21
+                          16
+                          11
+                           9
+
+best first search space empty! problem proven unsolvable.
+
+time spent:
+    0.00 seconds instantiating 0 easy, 783 hard action templates
+    0.00 seconds reachability analysis, yielding 99 facts and 175 actions
+    0.00 seconds creating final representation with 95 relevant facts
+    0.00 seconds building connectivity graph
+    0.00 seconds searching, evaluating 155 states, to a max depth of 1
+    0.00 seconds total time
+\end{lstlisting}
+
+\subsection{Tercera extensión}
+La tercera extensión añade tener que fijar un plato en un día concreto de la semana manteniendo las extensiones anteriores.
+\par
+En el primer juego de pruebas, hemos añadido cuatro restricciones por las cuales tiene fijado cuatro platos en cuatro días de forma obligada. Hemos fijado la Paella el Jueves, la Tortilla de patatas el Lunes, el plato marroquí Lamb Tagine el Miércoles y el Sushi el Viernes. En este caso el planificador nos devuelve cinco menús una para cada día de la semana y que cumple las restricciones anteriores, y además tiene en los días señalados los platos fijados.
+\begin{lstlisting}[language=none]
+ff: found legal plan as follows
+
+step    0: ASSIGNMC MON SPAGHETTI_BOLOGNESE
+        1: ASSIGNSC MON SPAGHETTI_BOLOGNESE SPANISH_OMELETTE
+        2: ASSIGNMC TUE MEDITERRANEAN_SALAD
+        3: ASSIGNSC TUE MEDITERRANEAN_SALAD TUNA_STEAK
+        4: ASSIGNMC WED VEGAN_SANDWICH
+        5: ASSIGNSC WED VEGAN_SANDWICH LAMB_TAGINE
+        6: ASSIGNMC THU MUSHROOM_RISOTTO
+        7: ASSIGNSC THU MUSHROOM_RISOTTO PAELLA
+        8: ASSIGNMC FRI SUSHI
+        9: ASSIGNSC FRI SUSHI ROAST_PORK_WITH_PRUNES
+
+time spent:
+    0.04 seconds instantiating 0 easy, 1992 hard action templates
+    0.00 seconds reachability analysis, yielding 161 facts and 356 actions
+    0.00 seconds creating final representation with 156 relevant facts
+    0.00 seconds building connectivity graph
+    0.00 seconds searching, evaluating 11 states, to a max depth of 1
+    0.04 seconds total time
+\end{lstlisting}
+En el segundo juego de prueba, hemos puesto solo dos restricciones de la tercera extensión, pero en este caso hemos fijado la carne de cerdo con ciruelas el jueves y en el miércoles hemos fijado el pollo parmesano. Al tratarse de dos platos clasificados como carne, como suponíamos el Planificador nos dice que es irresoluble.
+\begin{lstlisting}[language=none]
+ff: goal can be simplified to FALSE. No plan will solve it
+\end{lstlisting}
+
+\subsection{Cuarta extensión}
+A partir de esta extensión hemos empezado a usar \textbf{Fluents} lo que nos permite añadir funciones,comparaciones... y los resultados ya no son necesariamente la solución más óptima sino que son cortadas antes por el algoritmo.
+\par
+En esta extensión se nos pide que todos los platos de un día tenga unas calorías totales entre 1000 y 1500 calorías.
+\par
+En el primer juego de pruebas, hemos puesto unas calorías más o menos reales para cada plato y tal que cada plato se puede combinar con otro sin sobrepasar las 1500 calorías. En este caso el planificador nos devuelve un menú muy similar solo que evita alguna combinación de plato que de calorías menores a 1000.
+\begin{lstlisting}[language=none]
+ff: search configuration is  best-first on 1*g(s) + 5*h(s) where metric is  plan length
+
+advancing to distance:   18
+                         14
+                         13
+                          9
+                          8
+                          6
+                          5
+                          3
+                          2
+                          1
+                          0
+
+ff: found legal plan as follows
+
+step    0: ASSIGNMC MON CHINESE_NOODLES_WITH_VEGETABLES
+        1: ASSIGNSC MON CHINESE_NOODLES_WITH_VEGETABLES SPANISH_OMELETTE
+        2: ASSIGNMC TUE MUSHROOM_RISOTTO
+        3: ASSIGNSC TUE MUSHROOM_RISOTTO TUNA_STEAK
+        4: ASSIGNMC WED AMERICAN_BURGER
+        5: ASSIGNSC WED AMERICAN_BURGER LAMB_TAGINE
+        6: ASSIGNMC THU GUACAMOLE_WITH_TOMATOES
+        7: ASSIGNSC THU GUACAMOLE_WITH_TOMATOES PAELLA
+        8: ASSIGNMC FRI SUSHI
+        9: ASSIGNSC FRI SUSHI CHICKEN_PARMESAN
+
+
+time spent:
+    0.02 seconds instantiating 0 easy, 1114 hard action templates
+    0.00 seconds reachability analysis, yielding 159 facts and 283 actions
+    0.00 seconds creating final representation with 152 relevant facts, 0 relevant fluents
+    0.00 seconds computing LNF
+    0.00 seconds building connectivity graph
+    0.00 seconds searching, evaluating 51 states, to a max depth of 0
+    0.02 seconds total time
+\end{lstlisting}
+En el segundo juego de pruebas, hemos aumentado las calorías de cada plato de forma irreal provocando que todo plato tenga mas de 800 calorías. Como la implementación es correcta el planificador nos ha dicho que el problema es irresoluble y además lo ha hecho muy rápido.
+\begin{lstlisting}[language=none]
+ff: search configuration is  best-first on 1*g(s) + 5*h(s) where metric is  plan length
+
+advancing to distance:   20
+
+best first search space empty! problem proven unsolvable.
+
+
+
+time spent:
+    0.02 seconds instantiating 0 easy, 658 hard action templates
+    0.00 seconds reachability analysis, yielding 161 facts and 275 actions
+    0.00 seconds creating final representation with 156 relevant facts, 0 relevant fluents
+    0.00 seconds computing LNF
+    0.00 seconds building connectivity graph
+    0.00 seconds searching, evaluating 13 states, to a max depth of 0
+    0.02 seconds total time
+\end{lstlisting}
+
+\subsection{Quinta extensión}
+La última extensión nos pide que minimicemos el preció del menú generado.
+\par
+En esta versión hemos diseñado un juego de pruebas en que hemos puesto unos precios más o menos reales a cada plato. Como resultado obtenemos unos menús que podemos observar que cumplen con los requisitos y además en combinación son baratos, es decir siempre intenta combinar los platos mas  baratos dentro de las posibilidades que le permitan las restricciones.
+\begin{lstlisting}[language=none]
+metric established (normalized to minimize): ((1.00*[RF0](TOTALPRICE)) - () + 0.00)
+
+checking for cyclic := effects --- OK.
+
+ff: search configuration is  best-first on 1*g(s) + 5*h(s) where metric is ((1.00*[RF0](TOTALPRICE)) - () + 0.00)
+
+advancing to distance:   18
+                         14
+                         13
+                         10
+                          9
+                          6
+                          5
+                          3
+                          2
+                          1
+                          0
+
+ff: found legal plan as follows
+
+step    0: ASSIGNMC MON AMERICAN_BURGER
+        1: ASSIGNSC MON AMERICAN_BURGER SPANISH_OMELETTE
+        2: ASSIGNMC TUE SPAGHETTI_BOLOGNESE
+        3: ASSIGNSC TUE SPAGHETTI_BOLOGNESE SPICY_SEAFOOD_STEW
+        4: ASSIGNMC WED CHINESE_NOODLES_WITH_VEGETABLES
+        5: ASSIGNSC WED CHINESE_NOODLES_WITH_VEGETABLES LAMB_TAGINE
+        6: ASSIGNMC THU MUSHROOM_RISOTTO
+        7: ASSIGNSC THU MUSHROOM_RISOTTO PAELLA
+        8: ASSIGNMC FRI SUSHI
+        9: ASSIGNSC FRI SUSHI PERSIAN_PIE
+
+
+time spent:
+    0.03 seconds instantiating 0 easy, 1114 hard action templates
+    0.00 seconds reachability analysis, yielding 159 facts and 283 actions
+    0.00 seconds creating final representation with 152 relevant facts, 1 relevant fluents
+    0.00 seconds computing LNF
+    0.00 seconds building connectivity graph
+    0.00 seconds searching, evaluating 52 states, to a max depth of 0
+    0.03 seconds total time
+\end{lstlisting}
+
+\section{Conclusión}
+En esta práctica hemos resuelto un problema práctico de asignación, modelizándolo como un problema de planificación para usar un sistema de planificación automática en su resolución.
+\par
+Aunque se ha tratado con una práctica simple con un dominio muy limitado, nos ha permitido ver el tipo de problemas sobre los que aplicar técnicas de planificación y la capacidad expresiva de lenguajes formales de definición de dominios, y la potencia de Fast Forward.
+\par
+Para ello, hemos analizado el problema de asignación de menús para un restaurante, en las que intervienen varias restricciones, tipos de objetos, predicados y acciones a realizar. Siguiendo el desarrollo incremental guiado por prototipos (versiones en nuestro caso), hemos desarrollado la práctica, de forma que hemos podido usar el planificador FF para llegar a soluciones concretas de nuestro problema.
+\par
+Con todo esto, hemos podido comprobar como los sistemas de planificación automáticos diseñados de forma genérica sin ningún tipo de conocimiento del dominio, pueden ofrecer soluciones correctas en tiempos de ejecución muy razonables, a pesar de su facilidad de uso y gran potencia expresiva.
+
+\end{document}

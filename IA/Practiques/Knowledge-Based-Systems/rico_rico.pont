@@ -1,0 +1,342 @@
+; Mon May 22 17:56:02 CEST 2017
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot dish-difficulty
+		(type INTEGER)
+		(default 0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot price_max
+		(type FLOAT)
+		(range 0.0 1000.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot drink-price
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dish-price
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot drinks
+		(type INSTANCE)
+;+		(allowed-classes Drink)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot drink-name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot month
+		(type SYMBOL)
+		(allowed-values January February March April May June July August September October November December)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot main-course-drink
+		(type INSTANCE)
+;+		(allowed-classes Drink)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot cholesterol
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot main-course
+		(type INSTANCE)
+;+		(allowed-classes MainCourse)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot ing-name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot calories
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot drink-type
+		(type SYMBOL)
+		(allowed-values M S D G)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot dish-name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot price_min
+		(type FLOAT)
+		(range 0.0 1000.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot carbohydrates
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dish-priority
+		(type INTEGER)
+		(range 1 10)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot protein
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot drink-classification
+		(type SYMBOL)
+		(allowed-values Alcohol Soft-drink Caffeine Juice Other)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot dish-ingredients
+		(type INSTANCE)
+;+		(allowed-classes Ingredient)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot number_eaters
+		(type INTEGER)
+		(range 1 1000)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot dishes
+		(type INSTANCE)
+;+		(allowed-classes Dish)
+		(cardinality 3 3)
+		(create-accessor read-write))
+	(multislot dish-classification
+		(type SYMBOL)
+		(allowed-values Vegetarian Kosher Islamic Spanish Italian French Chinese Japanese Turkish American Mexican Indian Moroccan Gourmet Gluten-free Vegan Lactose-free Mediterranean Cold Hot Soup Meat Fish Pasta Vegetables Modern Classical)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot drink-combination
+		(type SYMBOL)
+		(allowed-values Vegetarian Kosher Islamic Spanish Italian French Chinese Japanese Turkish American Mexican Indian Moroccan Gourmet Gluten-free Vegan Lactose-free Mediterranean All)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot menu-score
+		(type FLOAT)
+		(range 0.0 100.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot drink-priority
+		(type INTEGER)
+		(default 0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot type
+		(type SYMBOL)
+		(allowed-values Familiar Congress)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot second-course-drink
+		(type INSTANCE)
+;+		(allowed-classes Drink)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot dish-combination
+		(type SYMBOL)
+		(allowed-values Spanish Italian French Chinese Japanese Turkish American Mexican Indian Moroccan Gourmet Mediterranean Cold Hot Soup Meat Fish Pasta Vegetables All)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot menu-price
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot menu-drink
+		(type INSTANCE)
+;+		(allowed-classes Drink)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot ing-availability
+		(type INTEGER)
+		(range 0 12)
+		(cardinality 1 12)
+		(create-accessor read-write))
+	(single-slot dessert-drink
+		(type INSTANCE)
+;+		(allowed-classes Drink)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot second-course
+		(type INSTANCE)
+;+		(allowed-classes SecondCourse)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dessert
+		(type INSTANCE)
+;+		(allowed-classes Dessert)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot fat
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Dish
+	(is-a USER)
+	(role abstract)
+	(single-slot dish-difficulty
+		(type INTEGER)
+		(default 0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dish-priority
+		(type INTEGER)
+		(range 1 10)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot dish-classification
+		(type SYMBOL)
+		(allowed-values Vegetarian Kosher Islamic Spanish Italian French Chinese Japanese Turkish American Mexican Indian Moroccan Gourmet Gluten-free Vegan Lactose-free Mediterranean Cold Hot Soup Meat Fish Pasta Vegetables Modern Classical)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot dish-name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dish-price
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot dish-combination
+		(type SYMBOL)
+		(allowed-values Spanish Italian French Chinese Japanese Turkish American Mexican Indian Moroccan Gourmet Mediterranean Cold Hot Soup Meat Fish Pasta Vegetables All)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot dish-ingredients
+		(type INSTANCE)
+;+		(allowed-classes Ingredient)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass MainCourse
+	(is-a Dish)
+	(role concrete))
+
+(defclass SecondCourse
+	(is-a Dish)
+	(role concrete))
+
+(defclass Dessert
+	(is-a Dish)
+	(role concrete))
+
+(defclass Drink
+	(is-a USER)
+	(role concrete)
+	(single-slot drink-name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot drink-priority
+		(type INTEGER)
+		(default 0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot drink-type
+		(type SYMBOL)
+		(allowed-values M S D G)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot drink-combination
+		(type SYMBOL)
+		(allowed-values Vegetarian Kosher Islamic Spanish Italian French Chinese Japanese Turkish American Mexican Indian Moroccan Gourmet Gluten-free Vegan Lactose-free Mediterranean All)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot drink-price
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot drink-classification
+		(type SYMBOL)
+		(allowed-values Alcohol Soft-drink Caffeine Juice Other)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Ingredient
+	(is-a USER)
+	(role concrete)
+	(single-slot carbohydrates
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot fat
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot cholesterol
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot ing-name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot ing-availability
+		(type INTEGER)
+		(range 0 12)
+		(cardinality 1 12)
+		(create-accessor read-write))
+	(single-slot protein
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot calories
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Menu
+	(is-a USER)
+	(role concrete)
+	(single-slot menu-price
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot menu-score
+		(type FLOAT)
+		(range 0.0 100.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot main-course-drink
+		(type INSTANCE)
+;+		(allowed-classes Drink)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot menu-drink
+		(type INSTANCE)
+;+		(allowed-classes Drink)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot main-course
+		(type INSTANCE)
+;+		(allowed-classes MainCourse)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot second-course-drink
+		(type INSTANCE)
+;+		(allowed-classes Drink)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot dessert-drink
+		(type INSTANCE)
+;+		(allowed-classes Drink)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot second-course
+		(type INSTANCE)
+;+		(allowed-classes SecondCourse)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dessert
+		(type INSTANCE)
+;+		(allowed-classes Dessert)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
