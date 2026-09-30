@@ -1,0 +1,32 @@
+.DS_Store
+**/.DS_Store
+
+# Editor / IDE
+**/.idea/
+
+# Generic build outputs
+**/build/
+**/out/
+**/bin/
+
+# C/C++ / generated objects
+**/*.o
+**/*.obj
+**/*.exe
+
+# Haskell build artifacts
+**/*.hi
+
+# Python
+**/__pycache__/
+**/*.pyc
+
+# R
+**/.Rhistory
+**/.RData
+
+# LaTeX intermediates
+**/*.aux
+**/*.log
+**/*.dvi
+**/*.pyg

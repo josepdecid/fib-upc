@@ -4,3 +4,6 @@ venv/*
 __pycache__
 
 */.ipynb_checkpoints/*
+
+# Centralized at repo root
+*.DS_Store
