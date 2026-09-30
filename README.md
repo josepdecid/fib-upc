@@ -1,5 +1,3 @@
-<img src="./fib-upc.png" alt="FIB UPC" width="150" />
-
 # Grau d'Enginyeria Informàtica (GEI) @ FIB-UPC
 
 Benvingut/da a aquest honorable caos acadèmic.
@@ -17,3 +15,5 @@ Sí, sí: estic parlant d’aquell art obscur de **llegir l’enunciat**, **debu
 En resum: aquest repositori és una mena de **museu arqueològic personal del meu pas per la FIB**, amb una barreja entranyable de codi funcional, codi dubtós i decisions tècniques que, amb la perspectiva dels anys, només es poden contemplar amb respecte i una mica d’humor.
 
 Si has arribat fins aquí, et desitjo molta sort, bon context switching i zero `segmentation fault` inesperats.
+
+<img src="./fib-upc.png" alt="FIB UPC" width="150" />
