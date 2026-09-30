@@ -1,0 +1,249 @@
+# 0. Gente y ocupación de personas nacidas el 13 de Julio de 1942
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX w3s: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?name, ?occupation
+WHERE {
+  ?person a dbo:Person .
+  ?person dbo:birthDate ?birth .
+  FILTER (?birth = "1942-6-13"^^w3s:date)
+  
+  ?person dbo:birthName ?name .
+  ?person dbo:occupation ?occRes .
+  ?occRes rdfs:label ?occupation
+  FILTER (lang(?occupation) = 'en')
+}
+LIMIT 50
+
+# 1. Capitales de Europa, ordenadas (http://dbpedia.org/class/yago/WikicatCapitalsInEurope)
+
+PREFIX caps: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+SELECT ?capital
+WHERE { ?capital a caps: }
+ORDER BY ?capital
+
+# 2. Capitales de Europa y su nombre, ordenadas (http://dbpedia.org/property/name)
+
+PREFIX caps: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+PREFIX dbp: <http://dbpedia.org/property/>
+SELECT ?capital, ?capitalName
+WHERE {
+  ?capital a caps: .
+  ?capital dbp:name ?capitalName
+} 
+ORDER BY ?capital
+
+# 3. Capitales de Europa que no tienen nombre, ordenadas
+
+PREFIX caps: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+PREFIX dbp: <http://dbpedia.org/property/>
+SELECT ?capital
+WHERE {
+  ?capital a caps:
+  FILTER NOT EXISTS { ?capital dbp:name ?capitalName }
+}
+ORDER BY ?capital
+
+# 4. Capitales de Europa, su nombre y su nombre nativo, ordenadas (http://dbpedia.org/property/nativeName)
+
+PREFIX caps: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+PREFIX dbp: <http://dbpedia.org/property/>
+SELECT ?capital, ?capitalName, ?capitalNativeName
+WHERE { 
+  ?capital a caps: .
+  ?capital dbp:name ?capitalName .
+  ?capital dbp:nativeName ?capitalNativeName
+} 
+ORDER BY ?capital
+
+# 5. Capitales de Europa y su nombre (si lo tienen), ordenadas
+
+PREFIX caps: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+PREFIX dbp: <http://dbpedia.org/property/>
+SELECT ?capital, ?capitalName
+WHERE { 
+  ?capital a caps:
+  OPTIONAL { ?capital dbp:name ?capitalName }
+} 
+ORDER BY ?capital
+
+#6. Capitales de Europa, su nombre (si lo tienen) y su nombre nativo (si lo tienen), ordenadas
+
+PREFIX caps: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+PREFIX dbp: <http://dbpedia.org/property/>
+SELECT ?capital, ?capitalName, ?capitalNativeName
+WHERE { 
+  ?capital a caps:
+  OPTIONAL { ?capital dbp:name ?capitalName }
+  OPTIONAL { ?capital dbp:nativeName ?capitalNativeName }
+} 
+ORDER BY ?capital
+
+# 7. Capitales de Europa y, si tienen ambos, su nombre y su nombre nativo
+
+PREFIX caps: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+PREFIX dbp: <http://dbpedia.org/property/>
+SELECT ?capital, ?capitalName, ?capitalNativeName
+WHERE { 
+  ?capital a caps:
+  OPTIONAL {
+    ?capital dbp:name ?capitalName .
+    ?capital dbp:nativeName ?capitalNativeName
+  }
+} 
+ORDER BY ?capital
+
+# 8. Capitales europeas cuyo nombre contiene una “e”
+
+PREFIX caps: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+PREFIX dbp: <http://dbpedia.org/property/>
+SELECT ?capital
+WHERE { 
+  ?capital a caps: .
+  ?capital dbp:name ?capitalName
+  FILTER regex(?capitalName, "e")
+} 
+ORDER BY ?capital
+
+# 9. Capitales europeas y población de más de 2.000.000 habitantes, ordenados por no habitantes (de mayor a menor) (http://dbpedia.org/ontology/populationTotal)
+
+PREFIX caps: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT ?capital
+WHERE { 
+  ?capital a caps: .
+  ?capital dbo:populationTotal ?inhabitants
+  FILTER (?inhabitants > 2000000)
+} 
+ORDER BY DESC(?inhabitants)
+
+# 10. Para cada capital europea de más de 2 millones de habitantes mostrar un texto con el nombre y los habitantes. Por ejemplo: “En Madrid hay 3500000 habitantes”
+
+PREFIX caps: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+SELECT CONCAT("En ", ?capitalName, " hay ", ?inhabitants, " habitantes.")
+WHERE { 
+  ?capital a caps: .
+  ?capital dbp:name ?capitalName .
+  ?capital dbo:populationTotal ?inhabitants
+  FILTER (?inhabitants > 2000000)
+} 
+ORDER BY DESC(?inhabitants)
+
+# 11. Capitales europeas con más de 1000 km2 (en m2) (http://dbpedia.org/ontology/areaTotal)
+
+PREFIX caps: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT ?capital
+WHERE { 
+  ?capital a caps: .
+  ?capital dbo:areaTotal ?area
+  FILTER (?area > 1000000000)
+}
+
+# 12. Capitales europeas o asiáticas con más de 1000 km2 (en m2) (http://dbpedia.org/class/yago/WikicatCapitalsInAsia)
+
+PREFIX capsE: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+PREFIX capsA: <http://dbpedia.org/class/yago/WikicatCapitalsInAsia>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT ?capital
+WHERE { 
+  { ?capital a capsE: } UNION { ?capital a capsA: }
+  ?capital dbo:areaTotal ?area
+  FILTER (?area > 1000000000)
+}
+
+# 13. Capitales europeas con más de 1000 km2 (en m2) y capitales de Asia con más de 10 millones de habitantes
+
+PREFIX capsE: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+PREFIX capsA: <http://dbpedia.org/class/yago/WikicatCapitalsInAsia>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT ?capital
+WHERE { 
+  {
+    ?capital a capsE: .
+    ?capital dbo:areaTotal ?area
+    FILTER (?area > 1000000000)
+  } UNION { 
+    ?capital a capsA: . 
+    ?capital dbo:populationTotal ?inhabitants
+    FILTER (?inhabitants > 10000000)
+  }
+}
+
+# 14. Capitales europeas y población de más de 2.000.000 habitantes, de países de menos de 500.000 km2 (en m2) (http://dbpedia.org/ontology/country)
+
+PREFIX caps: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?capital
+WHERE { 
+  ?capital a caps: .
+  ?capital dbo:populationTotal ?inhabitants .
+  ?capital dbo:country ?country .
+  ?country dbo:areaTotal ?area 
+  FILTER (?inhabitants > 2000000 && ?area > 500000000000)
+}
+
+# 15. Actores de cine que están casados entre ellos, han participado en la misma película, y tal que uno de ellos ha nacido en un país cuya capital tiene más de 3 millones de habitantes, y el otro ha nacido en una ciudad que tiene un equipo en la NBA
+# • dbpprop:spouse
+# • dbpedia-owl:starring (pelicula – actor)
+# • dbpedia-owl:birthPlace
+# • dbpedia-owl:Country (clase)
+# • dbpedia-owl:capital
+# • dbpedia-owl:populationTotal
+# • dbpprop:city (equipo - ciudad)
+# • yago:WikicatNationalBasketballAssociationTeams
+
+PREFIX nba: <http://dbpedia.org/class/yago/WikicatNationalBasketballAssociationTeams>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+SELECT ?actor1, ?actor2
+WHERE {
+  ?film dbo:starring ?actor1 .
+  ?film dbo:starring ?actor2 .
+  { ?actor1 dbp:spouse ?actor2 } UNION { ?actor2 dbp:spouse ?actor1 }
+  
+  ?actor1 dbo:birthPlace ?country .
+  ?country a dbo:Country .
+  ?country dbo:capital ?capital .
+  ?capital dbo:populationTotal ?inhabitants
+  FILTER (?inhabitants > 3000000)
+
+  ?actor2 dbo:birthPlace ?city .
+  ?team dbp:city ?city .
+  ?team a nba:
+
+  FILTER (?inhabitants)
+}
+
+# 16. Número de capitales europeas
+
+PREFIX caps: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+SELECT COUNT(?capital)
+WHERE { ?capital a caps: }
+
+# 17. Número mínimo y máximo de habitantes de las capitales europeas
+
+PREFIX caps: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT MIN(?inhabitants), MAX(?inhabitants)
+WHERE { 
+  ?capital a caps: .
+  ?capital dbo:populationTotal ?inhabitants
+}
+
+# 18. Tenistas ganadores de más de cinco torneos Grand Slam (Roland Garros, Wimbledon, Open USA, Open Australia) indicando y ordenado por número de torneos ganados (mayor a menor)
+# • dbpedia-owl:championInSingleMale (torneo – ganador)
+# • dbpedia-owl:category <http://dbpedia.org/resource/Grand_Slam_(tennis)>
+
+PREFIX caps: <http://dbpedia.org/class/yago/WikicatCapitalsInEurope>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT ?winner, (COUNT(?tournament) AS ?times)
+WHERE { 
+  ?tournament dbo:championInSingleMale ?winner .
+  ?tournament dbo:category <http://dbpedia.org/resource/Grand_Slam_(tennis)>
+}
+GROUP BY ?winner
+HAVING (COUNT(?tournament) > 5) ORDER BY DESC(?times)

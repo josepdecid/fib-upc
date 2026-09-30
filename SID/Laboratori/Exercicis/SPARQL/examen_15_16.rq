@@ -1,0 +1,96 @@
+# 1. Sobre las instancias del concepto de la DBPedia Book obtener los siguientes datos:
+# • name
+# • author
+# • literaryGenre
+# • publisher
+# • pages
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+SELECT DISTINCT ?name, ?author, ?literaryGenre, ?publisher, ?pages, ?publicationDate
+WHERE {
+    ?book a dbo:Book .
+    ?book dbp:name ?name .
+    ?book dbp:author ?author .
+    ?book dbp:genre ?literaryGenre .
+    ?book dbp:publisher ?publisher .
+    ?book dbp:pages ?pages .
+    ?book dbp:publicationDate ?publicationDate
+}
+LIMIT 50
+
+# 2. Sobre las instancias del concepto de la DBPedia Book obtener los siguientes datos:
+# • name
+# • name del publisher (que no el publisher)
+# • isbn, siempre y cuando se encuentre disponible
+# • releaseDate, siempre y cuando se encuentre disponible
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+SELECT DISTINCT ?name, ?publisherName, ?isbn, ?releaseDate
+WHERE {
+    ?book a dbo:Book .
+    ?book dbp:name ?name .
+    ?book dbp:publisher ?publisher .
+    ?publisher dbp:name ?publisherName
+    OPTIONAL { ?book dbp:isbn ?isbn }
+    OPTIONAL { ?book dbp:releaseDate ?releaseDate }
+}
+LIMIT 50
+
+# 3. Sobre las instancias del concepto de la DBPedia Book que cumplan las siguientes condiciones:
+# • Publicados por publishers cuyo nombre comienza con la palabra Harper
+# • Que pertenezcan a algun genero de Fiction (hay de varios tipos)
+# Obtener los siguientes datos:
+# • name
+# • genre
+# • name del publisher
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+SELECT DISTINCT ?name, ?genre, ?publisherName
+WHERE {
+    ?book a dbo:Book .
+    ?book dbp:name ?name .
+    ?book dbp:genre ?genre .
+    ?book dbp:publisher ?publisher .
+    ?publisher dbp:name ?publisherName
+    FILTER (regex(?capitalName, "^Harper") && ?genre a dbo:Fiction)
+}
+LIMIT 50
+
+# 4. Obtener todas las propiedades que se pueden aplicar al concepto Artist.
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+SELECT DISTINCT ?property
+WHERE ?property rdfs:domain dbo:Artist
+
+# 5. Sobre las instancias del concepto de la DBPedia Artist que tengan mas de 3 premios y sean de algun pas europeo cuya supercie sea signicativa (>= 50*10^9 km^2), obtener:
+# • name
+# • birthPlace
+# • cantidad de premios
+
+PREFIX dbo:<http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbp:<http://dbpedia.org/property/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dbc:<http://dbpedia.org/resource/Category:Countries_in_Europe>
+
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?artist ?name ?birthPlace ?country ?awards ?area
+WHERE {
+    ?artist a dbo:Artist . 
+    ?artist foaf:name ?name .
+    ?artist dbp:birthPlace ?birthPlace .
+    ?birthPlace dbo:country ?country .
+    ?country dcterms:subject dbc: .
+    OPTIONAL {?artist dbp:awards ?awards.} .
+    ?country dbo:areaTotal ?area. 
+    
+    FILTER (?area > 50000000000)
+
+    #FILTER (?awards > 3) .
+
+} 
+LIMIT 50

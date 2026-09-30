@@ -1,0 +1,29 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix foaf: <http://xmlns.com/foaf/0.1/> 
+prefix dbo: <http://dbpedia.org/ontology/>
+prefix dbp: <http://dbpedia.org/property/>
+prefix dbr: <http://dbpedia.org/resource/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix yago: <http://dbpedia.org/class/yago/>
+
+
+Select ?artist Sample(?numAwards) As ?artistAwards Sample(?name) As ?artistName Sample(?place) As ?artistCountry
+Where {
+       {
+        Select ?artist Count(?award) As ?numAwards
+        Where {
+                ?artist rdf:type dbo:Artist.
+                ?artist dbo:award ?award
+              }
+        Group By ?artist
+        Having (Count(?artist) > 3)
+       }
+       ?artist foaf:name ?name.
+       ?artist dbo:birthPlace ?place.
+       ?place rdf:type dbo:Country.
+       ?place dbo:areaTotal ?area.
+       Filter (?area > 50000000000)
+}
+Group By ?artist
+Order By Asc(?artistAwards)
+Limit 50

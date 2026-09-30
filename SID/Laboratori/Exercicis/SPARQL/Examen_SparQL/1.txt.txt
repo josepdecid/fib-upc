@@ -1,0 +1,16 @@
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix foaf: <http://xmlns.com/foaf/0.1/> 
+prefix dbo: <http://dbpedia.org/ontology/>
+prefix dbp: <http://dbpedia.org/property/>
+
+Select Distinct ?name ?genre ?author ?publisher ?pages ?publicDate
+Where {
+       ?book rdf:type dbo:Book.
+       ?book foaf:name ?name.
+       ?book dbo:literaryGenre ?genre.
+       ?book dbo:author ?author.
+       ?book dbo:publisher ?publisher.
+       ?book dbo:numberOfPages ?pages.
+       ?book dbo:publicationDate ?publicDate.
+}
+Limit 50

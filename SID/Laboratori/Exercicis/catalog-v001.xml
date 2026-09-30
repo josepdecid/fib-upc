@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1525849882511" name="http://purl.obolibrary.org/obo/uo.owl" uri="uo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1525849882511" name="http://www.co-ode.org/ontologies/pizza" uri="Intro%20Protégé/pizza_owl.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1525849882511" name="http://www.co-ode.org/ontologies/pizza/pizza.owl" uri="Intro%20Protégé/pizza_rdf.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1525849882511" name="http://www.pizza.com/ontologies/pizza.owl" uri="pizza.owl"/>
+    </group>
+</catalog>
