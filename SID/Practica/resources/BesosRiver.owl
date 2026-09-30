@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://www.semanticweb.org/josepdecidrodriguez/ontologies/2018/5/untitled-ontology-17#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.semanticweb.org/josepdecidrodriguez/ontologies/2018/5/untitled-ontology-17">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Metallurgical">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Factory"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="RespondPourRequest">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="AgentAction"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PaperMill">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Factory"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ReturnWater">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#AgentAction"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#AgentAction">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Concept"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Cement">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Factory"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="TreatmentPlant">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="AID"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="RequestWater">
+    <rdfs:subClassOf rdf:resource="#AgentAction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="River">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#AID"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="SupplyWater">
+    <rdfs:subClassOf rdf:resource="#AgentAction"/>
+  </owl:Class>
+  <owl:Class rdf:about="#AID">
+    <rdfs:subClassOf rdf:resource="#Concept"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Factory">
+    <rdfs:subClassOf rdf:resource="#AID"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Stretch">
+    <rdfs:subClassOf rdf:resource="#River"/>
+  </owl:Class>
+  <owl:Class rdf:ID="RequestPour">
+    <rdfs:subClassOf rdf:resource="#AgentAction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Textile">
+    <rdfs:subClassOf rdf:resource="#Factory"/>
+  </owl:Class>
+  <owl:Class rdf:ID="WaterTank">
+    <rdfs:subClassOf rdf:resource="#Concept"/>
+  </owl:Class>
+  <owl:Class rdf:ID="WaterMass">
+    <rdfs:subClassOf rdf:resource="#Concept"/>
+    <owl:disjointWith rdf:resource="#WaterTank"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="actionInput">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="action"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#action">
+    <rdfs:domain rdf:resource="#AgentAction"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#AID"/>
+          <owl:Class rdf:about="#Concept"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="actionOutput">
+    <rdfs:subPropertyOf rdf:resource="#action"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="actionName">
+    <rdfs:subPropertyOf rdf:resource="#action"/>
+    <rdfs:domain rdf:resource="#AgentAction"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <owl:DatatypeProperty rdf:ID="chemicalOxygenDemandContaminant">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:ID="contaminant"/>
+    </rdfs:subPropertyOf>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="totalSulfatesContaminant">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="#contaminant"/>
+    </rdfs:subPropertyOf>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="biologicalOxygenDemandContaminant">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="#contaminant"/>
+    </rdfs:subPropertyOf>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="totalNitratesContaminant">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="#contaminant"/>
+    </rdfs:subPropertyOf>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#contaminant">
+    <rdfs:range>
+      <rdfs:Datatype>
+        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:withRestrictions rdf:parseType="Collection">
+          <rdf:Description>
+            <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+            >0.0</xsd:minInclusive>
+          </rdf:Description>
+        </owl:withRestrictions>
+      </rdfs:Datatype>
+    </rdfs:range>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#WaterMass"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="volume">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#WaterMass"/>
+    <rdfs:range>
+      <rdfs:Datatype>
+        <owl:withRestrictions rdf:parseType="Collection">
+          <rdf:Description>
+            <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+            >0.0</xsd:minInclusive>
+          </rdf:Description>
+        </owl:withRestrictions>
+        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+      </rdfs:Datatype>
+    </rdfs:range>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="suspensionSolidContaminant">
+    <rdfs:subPropertyOf rdf:resource="#contaminant"/>
+  </owl:DatatypeProperty>
+  <owl:AllDisjointClasses>
+    <owl:members rdf:parseType="Collection">
+      <owl:Class rdf:about="#RequestPour"/>
+      <owl:Class rdf:about="#RequestWater"/>
+      <owl:Class rdf:about="#RespondPourRequest"/>
+      <owl:Class rdf:about="#ReturnWater"/>
+      <owl:Class rdf:about="#SupplyWater"/>
+    </owl:members>
+  </owl:AllDisjointClasses>
+  <owl:AllDisjointClasses>
+    <owl:members rdf:parseType="Collection">
+      <owl:Class rdf:about="#Factory"/>
+      <owl:Class rdf:about="#River"/>
+      <owl:Class rdf:about="#TreatmentPlant"/>
+    </owl:members>
+  </owl:AllDisjointClasses>
+  <owl:AsymmetricProperty rdf:ID="nextStretch">
+    <rdfs:domain rdf:resource="#Stretch"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#Stretch"/>
+  </owl:AsymmetricProperty>
+  <owl:AsymmetricProperty rdf:ID="hasTank">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Factory"/>
+          <owl:Class rdf:about="#TreatmentPlant"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <owl:inverseOf>
+      <owl:AsymmetricProperty rdf:ID="ownedBy">
+        <rdfs:range>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#Factory"/>
+              <owl:Class rdf:about="#TreatmentPlant"/>
+            </owl:unionOf>
+          </owl:Class>
+        </rdfs:range>
+        <rdfs:domain rdf:resource="#WaterTank"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+      </owl:AsymmetricProperty>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:range rdf:resource="#WaterTank"/>
+  </owl:AsymmetricProperty>
+  <owl:AllDisjointClasses>
+    <owl:members rdf:parseType="Collection">
+      <owl:Class rdf:about="#AID"/>
+      <owl:Class rdf:about="#AgentAction"/>
+      <owl:Class rdf:about="#Concept"/>
+    </owl:members>
+  </owl:AllDisjointClasses>
+  <owl:AsymmetricProperty rdf:ID="hasWaterMass">
+    <rdfs:domain rdf:resource="#WaterTank"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#WaterMass"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </owl:AsymmetricProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 533)  http://protege.stanford.edu -->
