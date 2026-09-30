@@ -1,4 +1,4 @@
-![FIB UPC](./fib-upc.png)
+<img src="./fib-upc.png" alt="FIB UPC" width="150" />
 
 # Grau d'Enginyeria Informàtica (GEI) @ FIB-UPC
 
