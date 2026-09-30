@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Optimització i funcionament d&#39;un supermercat.: Fitxer de Codi Customer.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Optimització i funcionament d&#39;un supermercat.
+   &#160;<span id="projectnumber">versió nov-2015</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generat per Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pàgina&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fitxers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Llista&#160;dels&#160;Fitxers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;Fitxers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tot</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fitxers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funcions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pàgines</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Customer.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_customer_8cc.html">Veure la documentació d'aquest fitxer.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_customer_8hh.html">Customer.hh</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_customer.html#abcc8fae9701e5ba9d7d6fe44498b34e3">    7</a></span>&#160;<a class="code" href="class_customer.html#abcc8fae9701e5ba9d7d6fe44498b34e3">Customer::Customer</a>()</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <a class="code" href="class_customer.html#a68d2d04bc933c01ae5e315a71c01b3a6">comprador_id</a> = 0;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <a class="code" href="class_customer.html#a44093c7f7f720b7308e1c5ba10dd4eb8">instant_recollida_tiquet</a> = <span class="stringliteral">&quot;none&quot;</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="class_customer.html#a04f1bda72b94cf5923c5609ad11f877d">NL</a> = -1;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="class_customer.html#af757903f62dc50cdd2f2a1526c99194b">vec_prod_comprats</a> = vector&lt; pair&lt;string, int&gt; &gt; (0);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="class_customer.html#a1e6163969717f7dcaacce34432126f38">correct_customer</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_customer.html#ab93fb14683b0393b9c900109f77c2629">   17</a></span>&#160;<a class="code" href="class_customer.html#ab93fb14683b0393b9c900109f77c2629">Customer::~Customer</a>() {}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_customer.html#a205b46e5dca22bc40976320122537869">   20</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_customer.html#a205b46e5dca22bc40976320122537869">Customer::consult_comprador_id</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_customer.html#a68d2d04bc933c01ae5e315a71c01b3a6">comprador_id</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_customer.html#acaaa9a096653f6db4218dde74f0e73f2">   25</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_customer.html#acaaa9a096653f6db4218dde74f0e73f2">Customer::consult_instant_recollida_tiquet</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_customer.html#a44093c7f7f720b7308e1c5ba10dd4eb8">instant_recollida_tiquet</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_customer.html#a826e355e5fa1e574d0c6eb4b0016f0f7">   30</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_customer.html#a826e355e5fa1e574d0c6eb4b0016f0f7">Customer::consult_NL</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_customer.html#a04f1bda72b94cf5923c5609ad11f877d">NL</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_customer.html#adad5b71fde9680ee6d9e116ae7f4dfda">   35</a></span>&#160;pair&lt;string, int&gt; <a class="code" href="class_customer.html#adad5b71fde9680ee6d9e116ae7f4dfda">Customer::consult_vec_prod_comprats</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_customer.html#af757903f62dc50cdd2f2a1526c99194b">vec_prod_comprats</a>[i];</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_customer.html#af8e7ac238e17ccf4e2addefa004b90a7">   40</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_customer.html#af8e7ac238e17ccf4e2addefa004b90a7">Customer::consult_correct_customer</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_customer.html#a1e6163969717f7dcaacce34432126f38">correct_customer</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_customer.html#a35ca18bbb12f0ce1bdd5fff51f6177d0">   45</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_customer.html#a35ca18bbb12f0ce1bdd5fff51f6177d0">Customer::consult_cart_quantity</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">int</span> result = 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_customer.html#a04f1bda72b94cf5923c5609ad11f877d">NL</a>; ++i)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    result += <a class="code" href="class_customer.html#af757903f62dc50cdd2f2a1526c99194b">vec_prod_comprats</a>[i].second;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_customer.html#a5f95c30a8619323f836733a64f745c51">   56</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_customer.html#a5f95c30a8619323f836733a64f745c51">Customer::read_customer</a>()</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  cin &gt;&gt; <a class="code" href="class_customer.html#a68d2d04bc933c01ae5e315a71c01b3a6">comprador_id</a> &gt;&gt; <a class="code" href="class_customer.html#a44093c7f7f720b7308e1c5ba10dd4eb8">instant_recollida_tiquet</a> &gt;&gt; <a class="code" href="class_customer.html#a04f1bda72b94cf5923c5609ad11f877d">NL</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="class_customer.html#af757903f62dc50cdd2f2a1526c99194b">vec_prod_comprats</a> = vector&lt; pair&lt;string, int&gt; &gt;(<a class="code" href="class_customer.html#a04f1bda72b94cf5923c5609ad11f877d">NL</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_customer.html#a04f1bda72b94cf5923c5609ad11f877d">NL</a>; ++i)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    cin &gt;&gt; <a class="code" href="class_customer.html#af757903f62dc50cdd2f2a1526c99194b">vec_prod_comprats</a>[i].first &gt;&gt; <a class="code" href="class_customer.html#af757903f62dc50cdd2f2a1526c99194b">vec_prod_comprats</a>[i].second;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="class_customer.html#a68d2d04bc933c01ae5e315a71c01b3a6">comprador_id</a> &gt; 0 &amp;&amp; NL &gt;= 0) <a class="code" href="class_customer.html#a1e6163969717f7dcaacce34432126f38">correct_customer</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="ttc" id="class_customer_html_a35ca18bbb12f0ce1bdd5fff51f6177d0"><div class="ttname"><a href="class_customer.html#a35ca18bbb12f0ce1bdd5fff51f6177d0">Customer::consult_cart_quantity</a></div><div class="ttdeci">int consult_cart_quantity() const </div><div class="ttdoc">Consultora quantitat de productes comprats. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8cc_source.html#l00045">Customer.cc:45</a></div></div>
+<div class="ttc" id="class_customer_html_a5f95c30a8619323f836733a64f745c51"><div class="ttname"><a href="class_customer.html#a5f95c30a8619323f836733a64f745c51">Customer::read_customer</a></div><div class="ttdeci">void read_customer()</div><div class="ttdoc">Operació de lectura. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8cc_source.html#l00056">Customer.cc:56</a></div></div>
+<div class="ttc" id="class_customer_html_adad5b71fde9680ee6d9e116ae7f4dfda"><div class="ttname"><a href="class_customer.html#adad5b71fde9680ee6d9e116ae7f4dfda">Customer::consult_vec_prod_comprats</a></div><div class="ttdeci">pair&lt; string, int &gt; consult_vec_prod_comprats(int i) const </div><div class="ttdoc">Consultora vec_prod_comprats[i]. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8cc_source.html#l00035">Customer.cc:35</a></div></div>
+<div class="ttc" id="class_customer_html_a1e6163969717f7dcaacce34432126f38"><div class="ttname"><a href="class_customer.html#a1e6163969717f7dcaacce34432126f38">Customer::correct_customer</a></div><div class="ttdeci">bool correct_customer</div><div class="ttdoc">Booleà que indica si el client és correcte. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8hh_source.html#l00044">Customer.hh:44</a></div></div>
+<div class="ttc" id="class_customer_html_a04f1bda72b94cf5923c5609ad11f877d"><div class="ttname"><a href="class_customer.html#a04f1bda72b94cf5923c5609ad11f877d">Customer::NL</a></div><div class="ttdeci">int NL</div><div class="ttdoc">Nombre de productes comprats. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8hh_source.html#l00038">Customer.hh:38</a></div></div>
+<div class="ttc" id="class_customer_html_a205b46e5dca22bc40976320122537869"><div class="ttname"><a href="class_customer.html#a205b46e5dca22bc40976320122537869">Customer::consult_comprador_id</a></div><div class="ttdeci">int consult_comprador_id() const </div><div class="ttdoc">Cosultora comprador_id. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8cc_source.html#l00020">Customer.cc:20</a></div></div>
+<div class="ttc" id="class_customer_html_af757903f62dc50cdd2f2a1526c99194b"><div class="ttname"><a href="class_customer.html#af757903f62dc50cdd2f2a1526c99194b">Customer::vec_prod_comprats</a></div><div class="ttdeci">vector&lt; pair&lt; string, int &gt; &gt; vec_prod_comprats</div><div class="ttdoc">Vector dels Product comprats. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8hh_source.html#l00041">Customer.hh:41</a></div></div>
+<div class="ttc" id="class_customer_html_ab93fb14683b0393b9c900109f77c2629"><div class="ttname"><a href="class_customer.html#ab93fb14683b0393b9c900109f77c2629">Customer::~Customer</a></div><div class="ttdeci">~Customer()</div><div class="ttdoc">Destructora per defecte. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8cc_source.html#l00017">Customer.cc:17</a></div></div>
+<div class="ttc" id="class_customer_html_a44093c7f7f720b7308e1c5ba10dd4eb8"><div class="ttname"><a href="class_customer.html#a44093c7f7f720b7308e1c5ba10dd4eb8">Customer::instant_recollida_tiquet</a></div><div class="ttdeci">string instant_recollida_tiquet</div><div class="ttdoc">Instant de recollida del tiquet. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8hh_source.html#l00035">Customer.hh:35</a></div></div>
+<div class="ttc" id="class_customer_html_a68d2d04bc933c01ae5e315a71c01b3a6"><div class="ttname"><a href="class_customer.html#a68d2d04bc933c01ae5e315a71c01b3a6">Customer::comprador_id</a></div><div class="ttdeci">int comprador_id</div><div class="ttdoc">Id del client. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8hh_source.html#l00032">Customer.hh:32</a></div></div>
+<div class="ttc" id="class_customer_html_abcc8fae9701e5ba9d7d6fe44498b34e3"><div class="ttname"><a href="class_customer.html#abcc8fae9701e5ba9d7d6fe44498b34e3">Customer::Customer</a></div><div class="ttdeci">Customer()</div><div class="ttdoc">Creadora per defecte. S&#39;executa automàticament al declarar un Customer c. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8cc_source.html#l00007">Customer.cc:7</a></div></div>
+<div class="ttc" id="class_customer_html_af8e7ac238e17ccf4e2addefa004b90a7"><div class="ttname"><a href="class_customer.html#af8e7ac238e17ccf4e2addefa004b90a7">Customer::consult_correct_customer</a></div><div class="ttdeci">bool consult_correct_customer() const </div><div class="ttdoc">Consultora correct_customer. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8cc_source.html#l00040">Customer.cc:40</a></div></div>
+<div class="ttc" id="class_customer_html_acaaa9a096653f6db4218dde74f0e73f2"><div class="ttname"><a href="class_customer.html#acaaa9a096653f6db4218dde74f0e73f2">Customer::consult_instant_recollida_tiquet</a></div><div class="ttdeci">string consult_instant_recollida_tiquet() const </div><div class="ttdoc">Consultora instant_recollida_tiquet. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8cc_source.html#l00025">Customer.cc:25</a></div></div>
+<div class="ttc" id="class_customer_html_a826e355e5fa1e574d0c6eb4b0016f0f7"><div class="ttname"><a href="class_customer.html#a826e355e5fa1e574d0c6eb4b0016f0f7">Customer::consult_NL</a></div><div class="ttdeci">int consult_NL() const </div><div class="ttdoc">Consultora NL. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8cc_source.html#l00030">Customer.cc:30</a></div></div>
+<div class="ttc" id="_customer_8hh_html"><div class="ttname"><a href="_customer_8hh.html">Customer.hh</a></div><div class="ttdoc">Especificació de la classe Customer. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generat a Dc Dec 9 2015 14:16:13 per a Optimització i funcionament d&#39;un supermercat. per &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

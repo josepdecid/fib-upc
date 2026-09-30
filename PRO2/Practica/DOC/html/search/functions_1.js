@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['carregar_5finformacio_5fde_5fvendes',['carregar_informacio_de_vendes',['../program_8cc.html#afaea8f85c5e6faacd81d4469fcd789e8',1,'program.cc']]],
+  ['cjt_5fcustomers',['Cjt_Customers',['../class_cjt___customers.html#a029a0d0fdaab1adca025d1126a376be4',1,'Cjt_Customers']]],
+  ['config_5fm',['config_m',['../class_optimus.html#ad740a00df89702289518cf828eb1b01e',1,'Optimus']]],
+  ['consult_5fcart_5fquantity',['consult_cart_quantity',['../class_customer.html#a35ca18bbb12f0ce1bdd5fff51f6177d0',1,'Customer']]],
+  ['consult_5fcomprador_5fid',['consult_comprador_id',['../class_customer.html#a205b46e5dca22bc40976320122537869',1,'Customer']]],
+  ['consult_5fcorrect_5fcustomer',['consult_correct_customer',['../class_customer.html#af8e7ac238e17ccf4e2addefa004b90a7',1,'Customer']]],
+  ['consult_5fcorrect_5fproduct',['consult_correct_product',['../class_product.html#ab072a5d64d8f6f1ab19aff744274e969',1,'Product']]],
+  ['consult_5finstant_5frecollida_5ftiquet',['consult_instant_recollida_tiquet',['../class_customer.html#acaaa9a096653f6db4218dde74f0e73f2',1,'Customer']]],
+  ['consult_5fmidabloc_5fp',['consult_midaBloc_p',['../class_optimus.html#a48144885083c04e5c3e72952bd16de1d',1,'Optimus']]],
+  ['consult_5fnl',['consult_NL',['../class_customer.html#a826e355e5fa1e574d0c6eb4b0016f0f7',1,'Customer']]],
+  ['consult_5fnumber_5fcustomer',['consult_number_Customer',['../class_cjt___customers.html#ab9b64e59e6f518c499379b71f7daadf5',1,'Cjt_Customers']]],
+  ['consult_5fpreu',['consult_preu',['../class_product.html#af8219e982d3195313a83c6216d27349b',1,'Product']]],
+  ['consult_5fproducte_5fid',['consult_producte_id',['../class_product.html#ad2c242f80e37598837dd7258084702c1',1,'Product']]],
+  ['consult_5fseccio',['consult_seccio',['../class_product.html#aec5b46b1ed3d064133f5846d7550104e',1,'Product']]],
+  ['consult_5ftemps_5fcobrament',['consult_temps_cobrament',['../class_product.html#a337f803ae0211816973dc858d7cbca6a',1,'Product']]],
+  ['consult_5fvec_5fprod_5fcomprats',['consult_vec_prod_comprats',['../class_customer.html#adad5b71fde9680ee6d9e116ae7f4dfda',1,'Customer']]],
+  ['customer',['Customer',['../class_customer.html#abcc8fae9701e5ba9d7d6fe44498b34e3',1,'Customer']]]
+];

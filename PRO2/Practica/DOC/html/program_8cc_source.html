@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Optimització i funcionament d&#39;un supermercat.: Fitxer de Codi program.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Optimització i funcionament d&#39;un supermercat.
+   &#160;<span id="projectnumber">versió nov-2015</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generat per Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pàgina&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fitxers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Llista&#160;dels&#160;Fitxers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;Fitxers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tot</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fitxers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funcions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pàgines</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">program.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="program_8cc.html">Veure la documentació d'aquest fitxer.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_optimus_8hh.html">Optimus.hh</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="program_8cc.html#a028fae12c60d68adcc24b0528f62805a">inicialitzacio</a>(<a class="code" href="class_optimus.html">Optimus</a>&amp; opt);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="program_8cc.html#afaea8f85c5e6faacd81d4469fcd789e8">carregar_informacio_de_vendes</a>(<a class="code" href="class_cjt___customers.html">Cjt_Customers</a>&amp; cjt_tots_customers);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="program_8cc.html#abbc12aeaf8b4a4b6c1572600e76ad941">info_producte</a>(<span class="keyword">const</span> <a class="code" href="class_optimus.html">Optimus</a>&amp; opt);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="program_8cc.html#a52f22252369b33dc16d4951e64d107cc">llistat_productes</a>(<span class="keyword">const</span> <a class="code" href="class_optimus.html">Optimus</a>&amp; opt);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="program_8cc.html#a6055ff55aaf941057b741c13fc0eda40">llargada_millor_cami</a>(<span class="keyword">const</span> <a class="code" href="class_optimus.html">Optimus</a>&amp; opt, <span class="keyword">const</span> <a class="code" href="class_cjt___customers.html">Cjt_Customers</a>&amp; cjt_tots_customers);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="program_8cc.html#a85ce6aa9100ab3a31993655eb1609df6">simular_pagament</a>(<a class="code" href="class_optimus.html">Optimus</a>&amp; opt, <span class="keyword">const</span> <a class="code" href="class_cjt___customers.html">Cjt_Customers</a>&amp; cjt_tots_customers);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   23</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="class_optimus.html">Optimus</a> opt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="class_cjt___customers.html">Cjt_Customers</a> cjt_tots_customers;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">string</span> s = <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">while</span> (s != <span class="stringliteral">&quot;sortir&quot;</span> &amp;&amp; cin &gt;&gt; s)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;inicialitzar&quot;</span>) <a class="code" href="program_8cc.html#a028fae12c60d68adcc24b0528f62805a">inicialitzacio</a>(opt);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;carregar&quot;</span>) <a class="code" href="program_8cc.html#afaea8f85c5e6faacd81d4469fcd789e8">carregar_informacio_de_vendes</a>(cjt_tots_customers);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;informacio&quot;</span>) <a class="code" href="program_8cc.html#abbc12aeaf8b4a4b6c1572600e76ad941">info_producte</a>(opt);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;productes&quot;</span>) <a class="code" href="program_8cc.html#a52f22252369b33dc16d4951e64d107cc">llistat_productes</a>(opt);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;millor&quot;</span>) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keywordtype">string</span> s1;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      cin &gt;&gt; s1;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keywordflow">if</span> (s1 == <span class="stringliteral">&quot;cami&quot;</span>) <a class="code" href="program_8cc.html#a6055ff55aaf941057b741c13fc0eda40">llargada_millor_cami</a>(opt, cjt_tots_customers);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;simular&quot;</span>) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keywordtype">string</span> s1;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      cin &gt;&gt; s1;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keywordflow">if</span> (s1 == <span class="stringliteral">&quot;pagament&quot;</span>) <a class="code" href="program_8cc.html#a85ce6aa9100ab3a31993655eb1609df6">simular_pagament</a>(opt, cjt_tots_customers);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="program_8cc.html#a028fae12c60d68adcc24b0528f62805a">   47</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="program_8cc.html#a028fae12c60d68adcc24b0528f62805a">inicialitzacio</a>(<a class="code" href="class_optimus.html">Optimus</a>&amp; opt)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="class_optimus.html">Optimus</a> aux;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  opt = aux;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">int</span> R, C, X, N;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  cin &gt;&gt; R &gt;&gt; C &gt;&gt; X &gt;&gt; N;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  opt.<a class="code" href="class_optimus.html#a0f553f8cdfdee84004832aeb50b4a731">redimension_market</a>(R, C, X, N);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N; ++i) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_product.html">Product</a> p;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    p.<a class="code" href="class_product.html#afb50b58b57310f1c32dd2851cd5de568">read_product</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    opt.<a class="code" href="class_optimus.html#add0847835303f278f86465d06e4b4c39">add_Product</a>(p);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="program_8cc.html#afaea8f85c5e6faacd81d4469fcd789e8">   65</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="program_8cc.html#afaea8f85c5e6faacd81d4469fcd789e8">carregar_informacio_de_vendes</a>(<a class="code" href="class_cjt___customers.html">Cjt_Customers</a>&amp; cjt_tots_customers)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="class_cjt___customers.html">Cjt_Customers</a> aux;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  cjt_tots_customers = aux;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">int</span> L;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  cin &gt;&gt; L;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  cjt_tots_customers.<a class="code" href="class_cjt___customers.html#ae2f9885760029bf21d4b64f892e1c2ff">redimension_Cjt_Customers</a>(L);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="class_customer.html">Customer</a> c;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; L; ++i) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    c.<a class="code" href="class_customer.html#a5f95c30a8619323f836733a64f745c51">read_customer</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    cjt_tots_customers.<a class="code" href="class_cjt___customers.html#a295c53c194283823a6cb3bbb3dfa3fff">add_Customer_to_cjt</a>(c);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="program_8cc.html#abbc12aeaf8b4a4b6c1572600e76ad941">   83</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="program_8cc.html#abbc12aeaf8b4a4b6c1572600e76ad941">info_producte</a>(<span class="keyword">const</span> <a class="code" href="class_optimus.html">Optimus</a>&amp; opt)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordtype">string</span> s;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  cin &gt;&gt; s;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="class_product.html">Product</a> p;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  p = opt.<a class="code" href="class_optimus.html#a7858f54da2cab98a04361f40fd2a1689">extract_Product</a>(s);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  p.<a class="code" href="class_product.html#afbc207cf443b837da99d98faad1077ec">write_product</a>(s);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="program_8cc.html#a52f22252369b33dc16d4951e64d107cc">   96</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="program_8cc.html#a52f22252369b33dc16d4951e64d107cc">llistat_productes</a>(<span class="keyword">const</span> <a class="code" href="class_optimus.html">Optimus</a>&amp; opt)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordtype">string</span> s;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  cin &gt;&gt; s;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  opt.<a class="code" href="class_optimus.html#a596cda1289855742a0fbc84a32ae7313">write_section</a>(s);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="program_8cc.html#a6055ff55aaf941057b741c13fc0eda40">  107</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="program_8cc.html#a6055ff55aaf941057b741c13fc0eda40">llargada_millor_cami</a>(<span class="keyword">const</span> <a class="code" href="class_optimus.html">Optimus</a>&amp; opt, <span class="keyword">const</span> <a class="code" href="class_cjt___customers.html">Cjt_Customers</a>&amp; cjt_tots_customers)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordtype">int</span> n;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  cin &gt;&gt; n;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="code" href="class_customer.html">Customer</a> c;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  c = cjt_tots_customers.<a class="code" href="class_cjt___customers.html#a602ae2cdbb11477384380dfe93428bad">extract_Customer</a>(n);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  opt.<a class="code" href="class_optimus.html#a30f17b02492625842d611992f01fa10f">find_best_path</a>(c, n);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="program_8cc.html#a85ce6aa9100ab3a31993655eb1609df6">  121</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="program_8cc.html#a85ce6aa9100ab3a31993655eb1609df6">simular_pagament</a>(<a class="code" href="class_optimus.html">Optimus</a>&amp; opt, <span class="keyword">const</span> <a class="code" href="class_cjt___customers.html">Cjt_Customers</a>&amp; cjt_tots_customers)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordtype">int</span> M;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  cin &gt;&gt; M;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  opt.<a class="code" href="class_optimus.html#a9ecc645e989801db0d772c719af2307a">simulate_payment</a>(cjt_tots_customers, M);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<div class="ttc" id="class_cjt___customers_html_a295c53c194283823a6cb3bbb3dfa3fff"><div class="ttname"><a href="class_cjt___customers.html#a295c53c194283823a6cb3bbb3dfa3fff">Cjt_Customers::add_Customer_to_cjt</a></div><div class="ttdeci">void add_Customer_to_cjt(const Customer &amp;c)</div><div class="ttdoc">Afegeix un Customer al Cjt_Customer. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt___customers_8cc_source.html#l00021">Cjt_Customers.cc:21</a></div></div>
+<div class="ttc" id="program_8cc_html_a52f22252369b33dc16d4951e64d107cc"><div class="ttname"><a href="program_8cc.html#a52f22252369b33dc16d4951e64d107cc">llistat_productes</a></div><div class="ttdeci">void llistat_productes(const Optimus &amp;opt)</div><div class="ttdoc">Extreu tots els Product d&#39;una secció d&#39;Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="program_8cc_source.html#l00096">program.cc:96</a></div></div>
+<div class="ttc" id="class_optimus_html_a7858f54da2cab98a04361f40fd2a1689"><div class="ttname"><a href="class_optimus.html#a7858f54da2cab98a04361f40fd2a1689">Optimus::extract_Product</a></div><div class="ttdeci">Product extract_Product(string s) const </div><div class="ttdoc">Consulta un Product de nom s a Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00231">Optimus.cc:231</a></div></div>
+<div class="ttc" id="class_customer_html_a5f95c30a8619323f836733a64f745c51"><div class="ttname"><a href="class_customer.html#a5f95c30a8619323f836733a64f745c51">Customer::read_customer</a></div><div class="ttdeci">void read_customer()</div><div class="ttdoc">Operació de lectura. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8cc_source.html#l00056">Customer.cc:56</a></div></div>
+<div class="ttc" id="class_cjt___customers_html_a602ae2cdbb11477384380dfe93428bad"><div class="ttname"><a href="class_cjt___customers.html#a602ae2cdbb11477384380dfe93428bad">Cjt_Customers::extract_Customer</a></div><div class="ttdeci">Customer extract_Customer(int id) const </div><div class="ttdoc">Consultora del Customer id. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt___customers_8cc_source.html#l00031">Cjt_Customers.cc:31</a></div></div>
+<div class="ttc" id="class_product_html_afbc207cf443b837da99d98faad1077ec"><div class="ttname"><a href="class_product.html#afbc207cf443b837da99d98faad1077ec">Product::write_product</a></div><div class="ttdeci">void write_product(string s) const </div><div class="ttdoc">Operació d&#39;escriptura. </div><div class="ttdef"><b>Definition:</b> <a href="_product_8cc_source.html#l00045">Product.cc:45</a></div></div>
+<div class="ttc" id="program_8cc_html_a028fae12c60d68adcc24b0528f62805a"><div class="ttname"><a href="program_8cc.html#a028fae12c60d68adcc24b0528f62805a">inicialitzacio</a></div><div class="ttdeci">void inicialitzacio(Optimus &amp;opt)</div><div class="ttdoc">Inicialitza tots els paràmetres necessaris del supermercat i tots els productes que conté aquest...</div><div class="ttdef"><b>Definition:</b> <a href="program_8cc_source.html#l00047">program.cc:47</a></div></div>
+<div class="ttc" id="class_customer_html"><div class="ttname"><a href="class_customer.html">Customer</a></div><div class="ttdoc">Representa un client de la cadena Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8hh_source.html#l00019">Customer.hh:19</a></div></div>
+<div class="ttc" id="class_optimus_html_a596cda1289855742a0fbc84a32ae7313"><div class="ttname"><a href="class_optimus.html#a596cda1289855742a0fbc84a32ae7313">Optimus::write_section</a></div><div class="ttdeci">void write_section(string s) const </div><div class="ttdoc">Retorna el conjunt de Product d&#39;una secció. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00319">Optimus.cc:319</a></div></div>
+<div class="ttc" id="class_product_html"><div class="ttname"><a href="class_product.html">Product</a></div><div class="ttdoc">Representa un producte del supermercat. </div><div class="ttdef"><b>Definition:</b> <a href="_product_8hh_source.html#l00020">Product.hh:20</a></div></div>
+<div class="ttc" id="program_8cc_html_a6055ff55aaf941057b741c13fc0eda40"><div class="ttname"><a href="program_8cc.html#a6055ff55aaf941057b741c13fc0eda40">llargada_millor_cami</a></div><div class="ttdeci">void llargada_millor_cami(const Optimus &amp;opt, const Cjt_Customers &amp;cjt_tots_customers)</div><div class="ttdoc">Calcula el camí més ràpid que passa per totes les seccions on hi han Products a la llista d&#39;un Custom...</div><div class="ttdef"><b>Definition:</b> <a href="program_8cc_source.html#l00107">program.cc:107</a></div></div>
+<div class="ttc" id="class_optimus_html_a0f553f8cdfdee84004832aeb50b4a731"><div class="ttname"><a href="class_optimus.html#a0f553f8cdfdee84004832aeb50b4a731">Optimus::redimension_market</a></div><div class="ttdeci">void redimension_market(int R, int C, int X, int N)</div><div class="ttdoc">Modifica el tamany d&#39;Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00210">Optimus.cc:210</a></div></div>
+<div class="ttc" id="program_8cc_html_a85ce6aa9100ab3a31993655eb1609df6"><div class="ttname"><a href="program_8cc.html#a85ce6aa9100ab3a31993655eb1609df6">simular_pagament</a></div><div class="ttdeci">void simular_pagament(Optimus &amp;opt, const Cjt_Customers &amp;cjt_tots_customers)</div><div class="ttdoc">Simula els pagament del supermercat amb certes configuracions diferents. </div><div class="ttdef"><b>Definition:</b> <a href="program_8cc_source.html#l00121">program.cc:121</a></div></div>
+<div class="ttc" id="class_product_html_afb50b58b57310f1c32dd2851cd5de568"><div class="ttname"><a href="class_product.html#afb50b58b57310f1c32dd2851cd5de568">Product::read_product</a></div><div class="ttdeci">void read_product()</div><div class="ttdoc">Operació de lectura. </div><div class="ttdef"><b>Definition:</b> <a href="_product_8cc_source.html#l00039">Product.cc:39</a></div></div>
+<div class="ttc" id="class_cjt___customers_html"><div class="ttname"><a href="class_cjt___customers.html">Cjt_Customers</a></div><div class="ttdoc">Representa un conjunt de Customer de la cadena Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt___customers_8hh_source.html#l00010">Cjt_Customers.hh:10</a></div></div>
+<div class="ttc" id="program_8cc_html_abbc12aeaf8b4a4b6c1572600e76ad941"><div class="ttname"><a href="program_8cc.html#abbc12aeaf8b4a4b6c1572600e76ad941">info_producte</a></div><div class="ttdeci">void info_producte(const Optimus &amp;opt)</div><div class="ttdoc">Extreu la informació d&#39;un Product. </div><div class="ttdef"><b>Definition:</b> <a href="program_8cc_source.html#l00083">program.cc:83</a></div></div>
+<div class="ttc" id="class_optimus_html_add0847835303f278f86465d06e4b4c39"><div class="ttname"><a href="class_optimus.html#add0847835303f278f86465d06e4b4c39">Optimus::add_Product</a></div><div class="ttdeci">void add_Product(const Product &amp;p)</div><div class="ttdoc">Afegeix un Product al map_products d&#39;Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00220">Optimus.cc:220</a></div></div>
+<div class="ttc" id="program_8cc_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Programa principal. </div><div class="ttdef"><b>Definition:</b> <a href="program_8cc_source.html#l00023">program.cc:23</a></div></div>
+<div class="ttc" id="class_optimus_html_a30f17b02492625842d611992f01fa10f"><div class="ttname"><a href="class_optimus.html#a30f17b02492625842d611992f01fa10f">Optimus::find_best_path</a></div><div class="ttdeci">void find_best_path(const Customer &amp;c, int i) const </div><div class="ttdoc">Indica el millor camí per recórrer l&#39;Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00242">Optimus.cc:242</a></div></div>
+<div class="ttc" id="class_optimus_html_a9ecc645e989801db0d772c719af2307a"><div class="ttname"><a href="class_optimus.html#a9ecc645e989801db0d772c719af2307a">Optimus::simulate_payment</a></div><div class="ttdeci">void simulate_payment(const Cjt_Customers &amp;cc, int M)</div><div class="ttdoc">Indica com resulta la simulació de pagament amb diferents configuracions. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00302">Optimus.cc:302</a></div></div>
+<div class="ttc" id="_optimus_8hh_html"><div class="ttname"><a href="_optimus_8hh.html">Optimus.hh</a></div><div class="ttdoc">Especificació de la classe Optimus. </div></div>
+<div class="ttc" id="class_cjt___customers_html_ae2f9885760029bf21d4b64f892e1c2ff"><div class="ttname"><a href="class_cjt___customers.html#ae2f9885760029bf21d4b64f892e1c2ff">Cjt_Customers::redimension_Cjt_Customers</a></div><div class="ttdeci">void redimension_Cjt_Customers(int L)</div><div class="ttdoc">Modifica el tamany del vector de Customer. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt___customers_8cc_source.html#l00015">Cjt_Customers.cc:15</a></div></div>
+<div class="ttc" id="program_8cc_html_afaea8f85c5e6faacd81d4469fcd789e8"><div class="ttname"><a href="program_8cc.html#afaea8f85c5e6faacd81d4469fcd789e8">carregar_informacio_de_vendes</a></div><div class="ttdeci">void carregar_informacio_de_vendes(Cjt_Customers &amp;cjt_tots_customers)</div><div class="ttdoc">Realitza el seguit d&#39;operacions necessàries per a carregar la informació dels Customer. </div><div class="ttdef"><b>Definition:</b> <a href="program_8cc_source.html#l00065">program.cc:65</a></div></div>
+<div class="ttc" id="class_optimus_html"><div class="ttname"><a href="class_optimus.html">Optimus</a></div><div class="ttdoc">Representa un supermercat de la cadena Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8hh_source.html#l00021">Optimus.hh:21</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generat a Dc Dec 9 2015 14:16:13 per a Optimització i funcionament d&#39;un supermercat. per &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

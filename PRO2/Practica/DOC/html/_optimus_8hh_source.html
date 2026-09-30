@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Optimització i funcionament d&#39;un supermercat.: Fitxer de Codi Optimus.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Optimització i funcionament d&#39;un supermercat.
+   &#160;<span id="projectnumber">versió nov-2015</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generat per Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pàgina&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fitxers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Llista&#160;dels&#160;Fitxers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;Fitxers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tot</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fitxers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funcions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pàgines</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Optimus.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_optimus_8hh.html">Veure la documentació d'aquest fitxer.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _OPTIMUS_HH_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _OPTIMUS_HH_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/* Això fa que el doxygen no inglogui aquestes classes als diagrames modulars,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * mentre que el compilador de c++ si que les processa correctament.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;queue&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cjt___customers_8hh.html">Cjt_Customers.hh</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_optimus.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_optimus.html">Optimus</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// Tipus de mòdul: dades</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_optimus.html#ac00afd41c92693584a89fe5dc5a5b3fd">   34</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_optimus.html#ac00afd41c92693584a89fe5dc5a5b3fd">R</a>, <a class="code" href="class_optimus.html#a68843a9bce6f1598d44fd776bcdd3646">C</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_optimus.html#a15b6e96d21429f5831446a97a7c9eeec">   37</a></span>&#160;  map&lt;string, Product&gt; <a class="code" href="class_optimus.html#a15b6e96d21429f5831446a97a7c9eeec">map_products</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_optimus.html#a6a4b266fc631e302a8b3944b1dcf1c45">   40</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_optimus.html#a6a4b266fc631e302a8b3944b1dcf1c45">midaBloc_p</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_optimus.html#a64ce8823d2b8c334d40529be28b3f222">   43</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_optimus.html#a64ce8823d2b8c334d40529be28b3f222">X_caixes</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_optimus.html#a90292927f5871300557bbc28118ac3e4">   46</a></span>&#160;  vector&lt; queue&lt;string&gt; &gt; <a class="code" href="class_optimus.html#a90292927f5871300557bbc28118ac3e4">opt_caixers</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_optimus.html#a4738cf4ace03bff12a9f1a8a885a2e04">   49</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_optimus.html#a4738cf4ace03bff12a9f1a8a885a2e04">correct_optimus</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_optimus.html#a927c98a3eb787be7f448854bbfca6a21">paying_time</a>(<a class="code" href="class_customer.html">Customer</a>&amp; c) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_optimus.html#abaf436618e0659856c55a8ce6be8e3e1">refresh_cash</a>(<span class="keywordtype">int</span> temps_recollida, <span class="keywordtype">int</span> mida_min);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_optimus.html#ad740a00df89702289518cf828eb1b01e">config_m</a>(<span class="keyword">const</span> <a class="code" href="class_cjt___customers.html">Cjt_Customers</a>&amp; cc, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">//Constructores</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="class_optimus.html#ab5bae2ddb07a77686cc1b03d9c957de3">Optimus</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="comment">//Destructora</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <a class="code" href="class_optimus.html#a66416b2eb4ddd7f3d04fc4471703b2b5">~Optimus</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">//Modificadores</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_optimus.html#a0f553f8cdfdee84004832aeb50b4a731">redimension_market</a>(<span class="keywordtype">int</span> R, <span class="keywordtype">int</span> C, <span class="keywordtype">int</span> X, <span class="keywordtype">int</span> N);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_optimus.html#add0847835303f278f86465d06e4b4c39">add_Product</a>(<span class="keyword">const</span> <a class="code" href="class_product.html">Product</a>&amp; p);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">//Consultores</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_optimus.html#a48144885083c04e5c3e72952bd16de1d">consult_midaBloc_p</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <a class="code" href="class_product.html">Product</a> <a class="code" href="class_optimus.html#a7858f54da2cab98a04361f40fd2a1689">extract_Product</a>(<span class="keywordtype">string</span> s) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">//Simuladores</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_optimus.html#a30f17b02492625842d611992f01fa10f">find_best_path</a>(<span class="keyword">const</span> <a class="code" href="class_customer.html">Customer</a>&amp; c, <span class="keywordtype">int</span> i) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_optimus.html#a9ecc645e989801db0d772c719af2307a">simulate_payment</a>(<span class="keyword">const</span> <a class="code" href="class_cjt___customers.html">Cjt_Customers</a>&amp; cc, <span class="keywordtype">int</span> M);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">//Lectura i escriptura</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_optimus.html#a596cda1289855742a0fbc84a32ae7313">write_section</a>(<span class="keywordtype">string</span> s) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;};</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_optimus_html_a64ce8823d2b8c334d40529be28b3f222"><div class="ttname"><a href="class_optimus.html#a64ce8823d2b8c334d40529be28b3f222">Optimus::X_caixes</a></div><div class="ttdeci">int X_caixes</div><div class="ttdoc">Nombre de caixes. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8hh_source.html#l00043">Optimus.hh:43</a></div></div>
+<div class="ttc" id="class_optimus_html_a7858f54da2cab98a04361f40fd2a1689"><div class="ttname"><a href="class_optimus.html#a7858f54da2cab98a04361f40fd2a1689">Optimus::extract_Product</a></div><div class="ttdeci">Product extract_Product(string s) const </div><div class="ttdoc">Consulta un Product de nom s a Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00231">Optimus.cc:231</a></div></div>
+<div class="ttc" id="class_optimus_html_a66416b2eb4ddd7f3d04fc4471703b2b5"><div class="ttname"><a href="class_optimus.html#a66416b2eb4ddd7f3d04fc4471703b2b5">Optimus::~Optimus</a></div><div class="ttdeci">~Optimus()</div><div class="ttdoc">Destructora per defecte. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00208">Optimus.cc:208</a></div></div>
+<div class="ttc" id="class_customer_html"><div class="ttname"><a href="class_customer.html">Customer</a></div><div class="ttdoc">Representa un client de la cadena Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_customer_8hh_source.html#l00019">Customer.hh:19</a></div></div>
+<div class="ttc" id="class_optimus_html_a596cda1289855742a0fbc84a32ae7313"><div class="ttname"><a href="class_optimus.html#a596cda1289855742a0fbc84a32ae7313">Optimus::write_section</a></div><div class="ttdeci">void write_section(string s) const </div><div class="ttdoc">Retorna el conjunt de Product d&#39;una secció. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00319">Optimus.cc:319</a></div></div>
+<div class="ttc" id="class_product_html"><div class="ttname"><a href="class_product.html">Product</a></div><div class="ttdoc">Representa un producte del supermercat. </div><div class="ttdef"><b>Definition:</b> <a href="_product_8hh_source.html#l00020">Product.hh:20</a></div></div>
+<div class="ttc" id="class_optimus_html_a0f553f8cdfdee84004832aeb50b4a731"><div class="ttname"><a href="class_optimus.html#a0f553f8cdfdee84004832aeb50b4a731">Optimus::redimension_market</a></div><div class="ttdeci">void redimension_market(int R, int C, int X, int N)</div><div class="ttdoc">Modifica el tamany d&#39;Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00210">Optimus.cc:210</a></div></div>
+<div class="ttc" id="class_cjt___customers_html"><div class="ttname"><a href="class_cjt___customers.html">Cjt_Customers</a></div><div class="ttdoc">Representa un conjunt de Customer de la cadena Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt___customers_8hh_source.html#l00010">Cjt_Customers.hh:10</a></div></div>
+<div class="ttc" id="class_optimus_html_a927c98a3eb787be7f448854bbfca6a21"><div class="ttname"><a href="class_optimus.html#a927c98a3eb787be7f448854bbfca6a21">Optimus::paying_time</a></div><div class="ttdeci">int paying_time(Customer &amp;c) const </div><div class="ttdoc">Calcula el temps de compra d&#39;un Customer. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00125">Optimus.cc:125</a></div></div>
+<div class="ttc" id="class_optimus_html_a68843a9bce6f1598d44fd776bcdd3646"><div class="ttname"><a href="class_optimus.html#a68843a9bce6f1598d44fd776bcdd3646">Optimus::C</a></div><div class="ttdeci">int C</div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8hh_source.html#l00034">Optimus.hh:34</a></div></div>
+<div class="ttc" id="class_optimus_html_a6a4b266fc631e302a8b3944b1dcf1c45"><div class="ttname"><a href="class_optimus.html#a6a4b266fc631e302a8b3944b1dcf1c45">Optimus::midaBloc_p</a></div><div class="ttdeci">int midaBloc_p</div><div class="ttdoc">Nombre total de Product. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8hh_source.html#l00040">Optimus.hh:40</a></div></div>
+<div class="ttc" id="class_optimus_html_ac00afd41c92693584a89fe5dc5a5b3fd"><div class="ttname"><a href="class_optimus.html#ac00afd41c92693584a89fe5dc5a5b3fd">Optimus::R</a></div><div class="ttdeci">int R</div><div class="ttdoc">Dimensions del supermercat. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8hh_source.html#l00034">Optimus.hh:34</a></div></div>
+<div class="ttc" id="class_optimus_html_a90292927f5871300557bbc28118ac3e4"><div class="ttname"><a href="class_optimus.html#a90292927f5871300557bbc28118ac3e4">Optimus::opt_caixers</a></div><div class="ttdeci">vector&lt; queue&lt; string &gt; &gt; opt_caixers</div><div class="ttdoc">Vector de caixers. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8hh_source.html#l00046">Optimus.hh:46</a></div></div>
+<div class="ttc" id="class_optimus_html_a15b6e96d21429f5831446a97a7c9eeec"><div class="ttname"><a href="class_optimus.html#a15b6e96d21429f5831446a97a7c9eeec">Optimus::map_products</a></div><div class="ttdeci">map&lt; string, Product &gt; map_products</div><div class="ttdoc">Map amb tots els Product del supermercat ordenats lexicogràficament. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8hh_source.html#l00037">Optimus.hh:37</a></div></div>
+<div class="ttc" id="_cjt___customers_8hh_html"><div class="ttname"><a href="_cjt___customers_8hh.html">Cjt_Customers.hh</a></div><div class="ttdoc">Especificació de la classe Cjt_Customers. </div></div>
+<div class="ttc" id="class_optimus_html_add0847835303f278f86465d06e4b4c39"><div class="ttname"><a href="class_optimus.html#add0847835303f278f86465d06e4b4c39">Optimus::add_Product</a></div><div class="ttdeci">void add_Product(const Product &amp;p)</div><div class="ttdoc">Afegeix un Product al map_products d&#39;Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00220">Optimus.cc:220</a></div></div>
+<div class="ttc" id="class_optimus_html_ad740a00df89702289518cf828eb1b01e"><div class="ttname"><a href="class_optimus.html#ad740a00df89702289518cf828eb1b01e">Optimus::config_m</a></div><div class="ttdeci">void config_m(const Cjt_Customers &amp;cc, int x, int y)</div><div class="ttdoc">Calcula les sortides de simular pagament per a una determinada configuració. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00150">Optimus.cc:150</a></div></div>
+<div class="ttc" id="class_optimus_html_a30f17b02492625842d611992f01fa10f"><div class="ttname"><a href="class_optimus.html#a30f17b02492625842d611992f01fa10f">Optimus::find_best_path</a></div><div class="ttdeci">void find_best_path(const Customer &amp;c, int i) const </div><div class="ttdoc">Indica el millor camí per recórrer l&#39;Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00242">Optimus.cc:242</a></div></div>
+<div class="ttc" id="class_optimus_html_abaf436618e0659856c55a8ce6be8e3e1"><div class="ttname"><a href="class_optimus.html#abaf436618e0659856c55a8ce6be8e3e1">Optimus::refresh_cash</a></div><div class="ttdeci">void refresh_cash(int temps_recollida, int mida_min)</div><div class="ttdoc">Actualitza les caixes a partir del temps de tiquet del Customer actual. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00138">Optimus.cc:138</a></div></div>
+<div class="ttc" id="class_optimus_html_ab5bae2ddb07a77686cc1b03d9c957de3"><div class="ttname"><a href="class_optimus.html#ab5bae2ddb07a77686cc1b03d9c957de3">Optimus::Optimus</a></div><div class="ttdeci">Optimus()</div><div class="ttdoc">Creadora per defecte. S&#39;executa automàticament al declarar Optimus opt. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00198">Optimus.cc:198</a></div></div>
+<div class="ttc" id="class_optimus_html_a9ecc645e989801db0d772c719af2307a"><div class="ttname"><a href="class_optimus.html#a9ecc645e989801db0d772c719af2307a">Optimus::simulate_payment</a></div><div class="ttdeci">void simulate_payment(const Cjt_Customers &amp;cc, int M)</div><div class="ttdoc">Indica com resulta la simulació de pagament amb diferents configuracions. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00302">Optimus.cc:302</a></div></div>
+<div class="ttc" id="class_optimus_html_a4738cf4ace03bff12a9f1a8a885a2e04"><div class="ttname"><a href="class_optimus.html#a4738cf4ace03bff12a9f1a8a885a2e04">Optimus::correct_optimus</a></div><div class="ttdeci">bool correct_optimus</div><div class="ttdoc">Booleà de correctesa d&#39;Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8hh_source.html#l00049">Optimus.hh:49</a></div></div>
+<div class="ttc" id="class_optimus_html_a48144885083c04e5c3e72952bd16de1d"><div class="ttname"><a href="class_optimus.html#a48144885083c04e5c3e72952bd16de1d">Optimus::consult_midaBloc_p</a></div><div class="ttdeci">int consult_midaBloc_p() const </div><div class="ttdoc">Consulta el nombre de Product que conté Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8cc_source.html#l00226">Optimus.cc:226</a></div></div>
+<div class="ttc" id="class_optimus_html"><div class="ttname"><a href="class_optimus.html">Optimus</a></div><div class="ttdoc">Representa un supermercat de la cadena Optimus. </div><div class="ttdef"><b>Definition:</b> <a href="_optimus_8hh_source.html#l00021">Optimus.hh:21</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generat a Dc Dec 9 2015 14:16:13 per a Optimització i funcionament d&#39;un supermercat. per &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>
