@@ -1,0 +1,52 @@
+<div id="search-query-dialog" class="fill-parent">
+    <md-dialog-content class="md-dialog-content dialog-forms scrollable-y" layout="column" layout-align="center center">
+        <form name="querySearch">
+            <div ng-if="!similarDocuments">
+                <p class="text-info text-bold-dialog">{{'DESCRIPTION_QUERY_SEARCH' | translate}}</p>
+                <md-input-container class="md-block">
+                    <label>{{'PLACEHOLDER_QUERY_SEARCH' | translate}}</label>
+                    <input ng-model="query" name="query" type="text" ng-required="true">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>{{'DIALOG_SEARCH_SIMILAR_PLACEHOLDER' | translate}}</label>
+                    <input ng-model="numberOfDocuments" name="numberOfDocuments" type="number" ng-required="true">
+                </md-input-container>
+
+                <md-radio-group ng-model="searchMode.mode">
+                    <md-radio-button value="{{searchMode1}}" class="md-primary">{{searchMode1}}</md-radio-button>
+                    <md-radio-button value="{{searchMode2}}" class="md-warn">{{searchMode2}}</md-radio-button>
+                </md-radio-group>
+
+                <p class="error-text text-center" ng-show="isInvalidData !== undefined">{{isInvalidData | translate}}</p>
+                <md-button ng-disabled="querySearch.$invalid" class="md-raised md-primary"
+                           ng-click="searchQuery(query, numberOfDocuments)">
+                    {{'BUTTON_SEARCH' | translate}}
+                </md-button>
+            </div>
+
+        </form>
+
+            <md-list ng-if="similarDocuments" ng-cloak class="similars-list" layout="column" layout-align="start center">
+                <md-list-item ng-repeat="document in similarDocuments" class="similars-list-item">
+                    <md-button ng-click="selectNewDocument(document)">
+                        <div class="fill-parent" layout="row" layout-align="space-between stretch">
+                            <div>
+                                <img ng-src="../../../covers/{{document.cover}}" class="list-item-image">
+                            </div>
+                            <div layout="column" layout-align="center start"
+                                 class="item-info hide-overflow" flex>
+                                <span class="title">{{document.title}}</span>
+                                <span class="author">{{document.author}}</span>
+                            </div>
+                            <div class="percentage-space" layout="column" layout-align="center center">
+                                <span class="percentage">{{(document.relevance).toFixed(2)}}</span>
+                            </div>
+                        </div>
+                    </md-button>
+                    <md-divider></md-divider>
+                </md-list-item>
+            </md-list>
+
+    </md-dialog-content>
+</div>

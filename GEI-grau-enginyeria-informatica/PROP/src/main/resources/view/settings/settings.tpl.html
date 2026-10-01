@@ -1,0 +1,24 @@
+<md-content id="settings-wrapper"  layout="column" flex>
+    <md-list id="settings-scroll">
+        <md-subheader class="md-no-sticky">{{vm.languages.title | translate}}</md-subheader>
+        <md-list-item ng-repeat="language in vm.languages.values">
+            <p>{{language.name | translate}}</p>
+            <md-checkbox class="md-raised md-primary" ng-model="language.selected" aria-label="Language checkbox"
+                         ng-click="vm.disableOtherLanguages(language)"></md-checkbox>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-subheader class="md-no-sticky">{{vm.theme.title | translate}}</md-subheader>
+        <md-list-item>
+            <p ng-if="vm.theme.darkTheme">{{vm.theme.themeDark | translate}}</p>
+            <p ng-if="!vm.theme.darkTheme">{{vm.theme.themeLight | translate}}</p>
+            <md-switch class="md-primary" ng-model="vm.theme.darkTheme" aria-label="Switch theme"></md-switch>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-subheader class="md-no-sticky">{{'SETTINGS_ACCOUNT' | translate}}</md-subheader>
+        <md-list-item>
+            <md-button class="md-raised md-warn"  ng-click="vm.deleteAccount($event)">
+                {{'ACCOUNT_DELETE' | translate}}
+            </md-button>
+        </md-list-item>
+    </md-list>
+</md-content>

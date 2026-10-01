@@ -1,0 +1,64 @@
+#document-info {
+    width: 100%;
+    padding: 20px;
+}
+
+#document-info .container {
+    width: 100%;
+    padding: 0;
+}
+
+#document-info .doc-cover {
+    width: 200px;
+    border-radius: 3px;
+}
+
+#document-info .left-container{
+    height: 70%;
+    padding: 0 20px 0 0;
+}
+
+#document-info .left-container .md-button{
+    margin: 5px 0 0;
+    height: 50px;
+}
+
+#document-info .left-container .image-container{
+    height: 75%;
+    padding-bottom: 30px;
+}
+
+#document-info .left-container .buttons-container{
+    height: 25%;
+    width: 100%;
+}
+
+#document-info .right-container{
+    padding: 0 0 0 20px;
+    font-family: sans-serif;
+    text-align: left;
+}
+
+#document-info .md-content {
+    background: inherit;
+}
+
+#document-info .text-title {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#document-info .info-header {
+    width: 100%;
+    word-wrap: break-word;
+}
+
+#document-info .info-header p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#document-info .buttons .md-button{
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+

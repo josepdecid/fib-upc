@@ -1,0 +1,126 @@
+#document-list .list-image {
+    height: 100%;
+}
+
+#document-list .docs-list-item {
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#document-list .docs-list-item {
+    height: 85px;
+    width: 100%;
+    padding: 5px 5px 5px 20px;
+}
+
+#document-list .docs-list-item .item-image-container{
+    height: 100%;
+    width: auto;
+}
+#document-list .externalEditButton {
+    opacity: 0.4;
+}
+#document-list .externalEditButton:hover{
+    opacity: 1;
+}
+
+#document-list .docs-list-item .item-image-container > .item-image{
+    height: 90%;
+}
+
+#document-list .list-space-below {
+    padding-bottom: 130px;
+}
+
+#document-list .docs-list-item .item-info-container{
+    height: 100%;
+    width: auto;
+    padding: 5px 5px 5px 15px;
+    overflow: hidden;
+}
+
+#document-list .docs-list-item .item-info-container > h1{
+    font-weight: bolder;
+    font-size: 1.3em;
+    margin: 0 0 5px;
+    text-transform: none !important;
+}
+#document-list .docs-list-item .item-info-container > h2{
+    font-weight: normal;
+    font-size: 0.9em;
+    margin: 0;
+    text-transform: none !important;
+}
+
+#document-list .docs-list-item .item-buttons-container{
+    height: 100%;
+    padding-right: 10px;
+    width: auto;
+}
+
+#document-list .docs-list-item .item-buttons-container > .md-button{
+    margin: 6px;
+}
+
+#document-list .right-top-buttons {
+    z-index: 10;
+    float: right;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
+
+#document-list .error-text {
+    color: darkred;
+    font-weight: bold;
+}
+
+/**************************/
+
+#document-list .docs-grid-item {
+    height: 85px;
+    width: 100%;
+    padding: 5px 5px 5px 5px;
+}
+
+
+
+#document-list .docs-grid-item .item-image-container{
+    height: 100%;
+    width: auto;
+}
+
+#document-list .docs-grid-item .item-image-container > .item-image{
+    height: 100%;
+}
+
+
+#document-list .docs-grid-item .item-info-container{
+    height: 100%;
+    width: auto;
+    padding: 5px 5px 5px 15px;
+}
+
+#document-list .docs-grid-item .item-info-container > h1{
+    font-weight: bolder;
+    font-size: 1.3em;
+    margin: 0 0 5px;
+    text-transform: none !important;
+}
+#document-list .docs-grid-item .item-info-container > h2{
+    font-weight: normal;
+    font-size: 0.9em;
+    margin: 0;
+    text-transform: none !important;
+}
+
+#document-list .docs-grid-item .item-buttons-container{
+    height: 100%;
+    padding-right: 10px;
+    width: auto;
+}
+
+#document-list .opaque-image {
+    opacity: 0.5;
+}

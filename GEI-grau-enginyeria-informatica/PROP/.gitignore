@@ -1,0 +1,12 @@
+# IntelliJ files
+.idea
+
+# Compilation outputs
+output/*
+target/*
+covers/*
+/classes/
+
+# Databases
+test.db
+development.db

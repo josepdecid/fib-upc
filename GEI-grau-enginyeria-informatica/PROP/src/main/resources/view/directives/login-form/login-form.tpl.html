@@ -1,0 +1,50 @@
+<div ng-if="!isLoggedIn" id="login-container" layout="row" layout-align="center center">
+
+    <form ng-if="!isRegister" name="clientLogin">
+        <md-input-container class="md-block" flex-gt-sm="">
+            <label>{{'FORM_EMAIL' | translate}}</label>
+            <input ng-model="user.email" name="userEmail" type="email" ng-required="true">
+            <p class="error-text" ng-show="clientLogin.userEmail.$invalid && !clientLogin.userEmail.$pristine">
+                {{'FORM_INVALID_EMAIL' | translate}}</p>
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm="">
+            <label>{{'FORM_PASSWORD' | translate}}</label>
+            <input ng-model="user.password" name="userPassword" type="password" ng-required="true">
+        </md-input-container>
+
+        <p class="error-text" ng-show="isInvalidData !== undefined">{{isInvalidData | translate}}</p>
+        <md-button ng-disabled="clientLogin.$invalid" class="md-raised md-primary" ng-click="login()">
+            {{'FORM_LOGIN' | translate}}
+        </md-button>
+        <a ng-click="changeFormMode()">{{'FORM_LOGIN_ACCOUNT_TEXT' | translate}}</a>
+    </form>
+
+    <form ng-if="isRegister" name="clientRegister">
+        <md-input-container ng-if="isRegister" class="md-block" flex-gt-sm="">
+            <label>{{'FORM_USER_NAME' | translate}}</label>
+            <input ng-model="user.userName" name="userName" type="text" ng-required="true">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm="">
+            <label>{{'FORM_EMAIL' | translate}}</label>
+            <input ng-model="user.email" name="userEmail" type="email" ng-required="true">
+            <p class="error-text" ng-show="clientRegister.userEmail.$invalid && !clientRegister.userEmail.$pristine">
+                {{'FORM_INVALID_EMAIL' | translate}}
+            </p>
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm="">
+            <label>{{'FORM_PASSWORD' | translate}}</label>
+            <input ng-model="user.password" name="userPassword" type="password" ng-required="true">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm="">
+            <label>{{'FORM_REPEAT_PASSWORD' | translate}}</label>
+            <input ng-model="user.password2" name="userPassword2" type="password" ng-required="true">
+        </md-input-container>
+
+        <p class="error-text" ng-show="isInvalidData !== undefined">{{isInvalidData | translate}}</p>
+        <md-button ng-disabled="clientRegister.$invalid" class="md-raised md-warn" ng-click="register()">
+            {{'FORM_REGISTER' | translate}}
+        </md-button>
+        <a ng-click="changeFormMode()">{{'FORM_REGISTER_ACCOUNT_TEXT' | translate}}</a>
+    </form>
+
+</div>

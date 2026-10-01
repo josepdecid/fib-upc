@@ -1,0 +1,117 @@
+body {
+    overflow-x: hidden;
+}
+
+#wrapper {
+    min-height: 100%;
+    padding-left: 0;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#wrapper .fill-all-window {
+    width: 100%;
+    height: 100vh;
+}
+
+#wrapper .fill-parent {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+.title-landing {
+    margin-top: 0 !important;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-bold-dialog {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.search-input {
+    padding: 10px;
+    background: white;
+}
+
+.no-scrollable { overflow: hidden !important; }
+.no-scrollable-x { overflow-x: hidden !important; }
+.no-scrollable-y { overflow-y: hidden !important; }
+.scrollable { overflow: auto !important; }
+.scrollable-x { overflow-x: auto !important; }
+.scrollable-y { overflow-y: auto !important; }
+
+
+md-toast.md-success-toast-theme span {
+    color: white;
+}
+
+md-toast.md-error-toast-theme span {
+    color: #F44336;
+}
+
+
+.hide-overflow {
+    overflow: hidden;
+}
+
+.wrap-text {
+   word-wrap: break-word;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #f2f2f2;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.23);
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

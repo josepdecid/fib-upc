@@ -1,0 +1,12 @@
+<ul ng-if="readOnly" class="star-rating" style="opacity: 0.8;">
+    <li ng-repeat="star in stars" class="star" ng-class="{filled: star.filled, readonly: readOnly}">
+        <i class="fa fa-star"></i>
+    </li>
+</ul>
+
+<ul ng-if="!readOnly" class="star-rating">
+    <li ng-repeat="star in stars" class="star" ng-class="{filled: star.filled, readonly: readOnly}"
+        ng-click="toggle($index)">
+        <i class="fa fa-star"></i>
+    </li>
+</ul>

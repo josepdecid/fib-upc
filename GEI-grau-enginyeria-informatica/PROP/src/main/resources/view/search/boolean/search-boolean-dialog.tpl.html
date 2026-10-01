@@ -1,0 +1,17 @@
+<md-dialog-content class="md-dialog-content dialog-forms" layout="column" layout-align="center center"
+                   id="search-author-wrapper">
+    <form name="booleanSearch">
+        <p class="text-info text-bold-dialog">{{'DESCRIPTION_BOOLEAN_SEARCH' | translate}}</p>
+        <md-input-container class="md-block">
+            <label>{{'PLACEHOLDER_BOOLEAN_SEARCH' | translate}}</label>
+            <input ng-model="booleanExpression" name="booleanExpression" type="text" ng-required="true">
+        </md-input-container>
+
+        <p class="error-text text-center" ng-show="isInvalidData !== undefined">{{isInvalidData | translate}}</p>
+        <md-button ng-disabled="booleanSearch.$invalid" class="md-raised md-primary"
+                   ng-click="searchBoolean(booleanExpression)">
+            {{'BUTTON_SEARCH' | translate}}
+        </md-button>
+    </form>
+
+</md-dialog-content>

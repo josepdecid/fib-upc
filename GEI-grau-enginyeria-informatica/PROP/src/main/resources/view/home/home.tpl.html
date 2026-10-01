@@ -1,0 +1,48 @@
+<div id="home" layout="column" flex>
+    <div ng-show="!vm.isDocumentSelected" layout="column" flex>
+        <md-content class="main-container" layout="column" flex>
+            <div class="recommended-docs-space" layout="column" flex>
+                <span class="section-title" style="padding-bottom: 5px;"> {{'RECOMMENDED_DOCUMENTS' | translate}}</span>
+                <div layout="row" flex>
+                    <div ng-if="vm.recommendedDocs.length > 0" ng-repeat="document in vm.recommendedDocs" layout="column" flex>
+                        <div class="item-image-space" layout="column" layout-align="center center" flex>
+                            <img ng-src="../../../covers/{{document.cover}}" ng-click="vm.select(document)">
+                        </div>
+                        <div class="item-info-space" layout="column" layout-align="end center">
+                            <span class="title text-ellipsis" style="text-overflow: ellipsis;">{{document.title}}</span>
+                            <span class="author text-ellipsis">{{document.author}}</span>
+                            <star-rating ng-model="document.rating" read-only="true"></star-rating>
+                        </div>
+                    </div>
+                    <div ng-if="vm.recommendedDocs.length == 0" layout="column" layout-align="center center" flex>
+                        <span class="no-docs-message">{{'NO_RECOMMENDED_DOCS_TO_SHOW' | translate}}</span>
+                        <i class="fa fa-frown-o fa-4x" style="opacity: 0.3;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="recently-visited-docs-space" layout="column" flex>
+                <span class="section-title"> {{'HOME_NEW_DISCOVERIES' | translate}}</span>
+                <div layout="row" flex>
+                    <div ng-if="vm.newDiscoveries.length > 0" ng-repeat="document in vm.newDiscoveries" layout="column" flex>
+                        <div class="item-image-space" layout="column" layout-align="center center" flex>
+                            <img ng-src="../../../covers/{{document.cover}}" ng-click="vm.select(document)">
+                        </div>
+                        <div class="item-info-space" layout="column" layout-align="end center">
+                            <span class="title text-ellipsis">{{document.title}}</span>
+                            <span class="author text-ellipsis">{{document.author}}</span>
+                            <star-rating ng-model="document.rating" read-only="true"></star-rating>
+                        </div>
+                    </div>
+                    <div ng-if="vm.recommendedDocs.length == 0" layout="column" layout-align="center center" flex>
+                        <span class="no-docs-message">{{'NO_NEW_DISCOVERIES_TO_SHOW' | translate}}</span>
+                        <i class="fa fa-frown-o fa-4x" style="opacity: 0.3;"></i>
+                    </div>
+                </div>
+            </div>
+        </md-content>
+    </div>
+    <div ng-if="vm.isDocumentSelected" layout="column" flex>
+        <document-info ng-model="vm.selectedDocument" aux="vm.isDocumentSelected" parent-title="vm.title" from="'home'"
+                       layout="column" flex>  </document-info>
+    </div>
+</div>

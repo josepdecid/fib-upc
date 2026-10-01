@@ -1,0 +1,34 @@
+<div ng-if="isLoggedIn" id="side-nav" class="fill-parent">
+    <md-content id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <div class="user-space">
+                <div class="user-space-inner" layout="row" layout-align="start center">
+                    <div class="user-image">
+                        <img ng-click="userEdit()" ng-src="../images/avatars/{{currentUser.avatar}}.png">
+                    </div>
+                    <div class="user-info" layout="column" layout-align="center start" flex>
+                        <span class="user-info-name">{{currentUser.userName}}</span>
+                        <a ng-click="logout()">{{'ACCOUNT_LOGOUT' | translate}}</a>
+
+                    </div>
+                </div>
+            </div>
+            <li ng-repeat="item in menuItems"
+                ng-class="{'active-option-menu': item.selected}">
+                <a ui-sref="{{item.children === undefined ? item.state : item.children[0].state}}">
+                    <span><i class="fa {{item.icon}}"></i></span>
+                    {{item.name | translate}}
+                </a>
+                <ul>
+                    <li ng-if="!item.collapsed" ng-repeat="childItem in item.children"
+                        ng-class="{'active-option-menu': childItem.selected}">
+                        <a ui-sref="{{childItem.state}}">
+                            <span><i class="menu-item-child fa {{childItem.icon}}"></i></span>
+                            {{childItem.name | translate}}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </md-content>
+</div>

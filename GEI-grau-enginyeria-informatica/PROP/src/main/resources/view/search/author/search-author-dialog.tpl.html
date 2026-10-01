@@ -1,0 +1,27 @@
+<div id="search-authors-dialog" class="fill-parent no-scrollable">
+    <md-dialog-content class="md-dialog-content dialog-forms no-scrollable" layout="column" layout-align="center center"
+                       id="search-author-wrapper">
+        <form name="authorSearch">
+            <p class="text-info text-bold-dialog">{{'DESCRIPTION_AUTHOR_SEARCH' | translate}}</p>
+            <md-input-container class="md-block">
+                <label>{{'PLACEHOLDER_AUTHOR_SEARCH' | translate}}</label>
+                <input ng-model="prefix" name="authorPrefix" type="text">
+            </md-input-container>
+
+            <p class="error-text text-center" ng-show="isInvalidData !== undefined">{{isInvalidData | translate}}</p>
+            <md-button ng-disabled="authorSearch.$invalid" class="md-raised md-primary"
+                       ng-click="searchAuthors(prefix)">
+                {{'BUTTON_SEARCH' | translate}}
+            </md-button>
+        </form>
+        <p ng-if="isPrefixSearch && authors" class="text-info">{{authors.length}} {{"AUTHORS_FOUND_LABEL" | translate}}!</p>
+        <md-list ng-if="isPrefixSearch" ng-cloak class="authors-list" layout="column" layout-align="start center">
+        <md-list-item ng-repeat="author in authors" class="authors-list-item">
+            <md-button ng-click="selectAuthor(author)" class="authors-list-item">
+                    <span class="title">{{author.name}}</span>
+            </md-button>
+        </md-list-item>
+        </md-list>
+
+    </md-dialog-content>
+</div>

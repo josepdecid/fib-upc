@@ -1,0 +1,8 @@
+#loading-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(25, 25, 25, 0.9);
+    z-index: 2000;
+}

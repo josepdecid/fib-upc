@@ -1,0 +1,35 @@
+<md-toolbar id="toolbar" class="md-primary" ng-if="isLoggedIn" ng-show="params.enabled">
+    <div class="md-toolbar-tools md-medium-tall">
+        <md-button ng-if="params.back" ng-click="functions.back()" class="md-icon-button" aria-label="Go back">
+            <i class="fa fa-arrow-left"></i>
+        </md-button>
+        <h2>
+            <span>{{params.title | translate}}</span>
+        </h2>
+        <span flex></span>
+        <md-button ng-if="params.print" ng-click="functions.print()" class="md-icon-button" aria-label="Favorite">
+            <i class="fa fa-print"></i>
+        </md-button>
+        <md-button ng-if="params.google" ng-click="functions.google()" class="md-icon-button" aria-label="More">
+            <i class="fa fa-google"></i>
+        </md-button>
+        <md-button ng-if="params.google" ng-click="functions.amazon()" class="md-icon-button" aria-label="More">
+            <i class="fa fa-amazon"></i>
+        </md-button>
+        <md-button ng-if="params.google" ng-click="functions.sharemail()" class="md-icon-button" aria-label="More">
+            <i class="fa fa-share-alt"></i>
+        </md-button>
+        <md-button ng-if="params.search" ng-click="functions.search()" class="md-icon-button" aria-label="More">
+            <i class="fa fa-search"></i>
+        </md-button>
+        <md-button ng-if="params.import" ng-click="functions.import()" class="md-icon-button" aria-label="More">
+            <i class="fa fa-download"></i>
+        </md-button>
+        <md-button ng-if="params.create" ng-click="functions.create()" class="md-icon-button" aria-label="More">
+            <i class="fa fa-plus"></i>
+        </md-button>
+        <md-button ng-if="params.external" ng-click="functions.external()" class="md-icon-button" aria-label="More">
+            <i class="fa fa-share-square-o"></i>
+        </md-button>
+    </div>
+</md-toolbar>

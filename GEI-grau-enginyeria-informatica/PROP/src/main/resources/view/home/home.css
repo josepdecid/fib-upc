@@ -1,0 +1,79 @@
+#home .main-container > div {
+    padding: 10px;
+}
+
+#home .main-container {
+    padding: 5px;
+}
+
+#home .search-space {
+    height: auto;
+}
+
+
+#home .section-title {
+    font-size: 1.6em;
+    font-weight: 600;
+    padding-left: 10px;
+    bottom: 0;
+}
+
+/***************************/
+
+#home .recommended-docs-space .list-item{
+}
+
+#home .recommended-docs-space .item-image-space {
+}
+#home .recommended-docs-space .item-info-space {
+    padding-top: 5px;
+    line-height: 13px;
+}
+#home .recommended-docs-space .item-info-space .title{
+    font-weight: 600;
+    line-height: 13px;
+    font-size: 1em;
+}
+#home .recommended-docs-space .item-info-space .author{
+    font-size: 0.8em;
+}
+
+#home .recommended-docs-space .item-image-space img{
+    max-height: 90%;
+    max-width: 68%;
+}
+
+/***************************/
+
+#home .recently-visited-docs-space .docs-list{
+}
+
+
+
+#home .recently-visited-docs-space .list-item{
+}
+
+#home .recently-visited-docs-space .item-image-space {
+}
+#home .recently-visited-docs-space .item-info-space {
+    padding-top: 5px;
+    line-height: 13px;
+}
+#home .recently-visited-docs-space .item-info-space .title{
+    font-weight: 600;
+    line-height: 13px;
+    font-size: 1em;
+}
+#home .recently-visited-docs-space .item-info-space .author{
+    font-size: 0.8em;
+}
+
+#home .recently-visited-docs-space .item-image-space img{
+    max-height: 100%;
+    max-width: 76%;
+}
+
+#home .no-docs-message{
+    color: #8c8c8c;
+    font-size: 1.2em;
+}
