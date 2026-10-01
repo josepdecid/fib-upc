@@ -1,18 +1,18 @@
-# Grau d'Enginyeria Informàtica (GEI) @ FIB-UPC
+# Estudis a la FIB-UPC: GEI + MAI
 
 Benvingut/da a aquest honorable caos acadèmic.
 
-Aquest repo és, bàsicament, un **compendi de tots els repositoris que tenia escampats pel GitHub** i de **fitxers perduts, retrobats i mig fossilitzats** de la gran majoria d’assignatures que vaig fer a la **FIB-UPC** durant el **Grau d’Enginyeria Informàtica**.
+Aquest repo és, bàsicament, un **compendi de tots els repositoris que tenia escampats pel GitHub** i de **fitxers perduts, retrobats i mig fossilitzats** de la gran majoria d’assignatures que vaig fer a la **FIB-UPC** al llarg dels estudis que hi he cursat: tant el **Grau d’Enginyeria Informàtica (GEI)** com el **Màster en Intel·ligència Artificial (MAI)**.
 
 Aquí hi conviuen pràctiques, projectes, exercicis, experiments, entregues i probablement algun arxiu que ni jo mateix sabria justificar del tot, però que en el seu moment segur que tenia molt sentit.
 
-El més sorprenent de tot plegat és que **absolutament tot aquest codi és d’època pre-IA** (**o, almenys, pre-IA generativa per programar**): una era remota i misteriosa en què els estudiants programàvem amb tecnologies ancestrals i coneixements avui pràcticament perduts.
+El més sorprenent de tot plegat és que **absolutament tot aquest codi és d’època pre-IA** (**o, almenys, pre-IA generativa per programar**), mentre que una part ja pertany a aquella etapa deliciosament paradoxal en què estudiava **Intel·ligència Artificial** però encara tocava **picar molt codi igualment**.
 
-Sí, sí: estic parlant d’aquell art obscur de **llegir l’enunciat**, **debuguejar a mà** i **buscar errors sense preguntar-li primer a un model generatiu**.
+Sí, sí: estic parlant d’aquell art obscur de **llegir l’enunciat**, **debuguejar a mà** i **buscar errors sense preguntar-li primer a un model generatiu**. I, més endavant, també d’aquell altre art igualment noble de **fer IA mentre continues patint bugs perfectament humans**.
 
 > Òbviament és broma... o no del tot.
 
-En resum: aquest repositori és una mena de **museu arqueològic personal del meu pas per la FIB**, amb una barreja entranyable de codi funcional, codi dubtós i decisions tècniques que, amb la perspectiva dels anys, només es poden contemplar amb respecte i una mica d’humor.
+En resum: aquest repositori és una mena de **museu arqueològic personal del meu pas per la FIB**, amb una barreja entranyable de codi funcional, codi dubtós i decisions tècniques que, amb la perspectiva dels anys, només es poden contemplar amb respecte i una mica d’humor. Un arxiu sentimental i tècnic que recull tant l’etapa del **GEI** com la del **MAI**.
 
 Si has arribat fins aquí, et desitjo molta sort, bon context switching i zero `segmentation fault` inesperats.
 
