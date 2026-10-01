@@ -1,0 +1,24 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+ipykernel = "*"
+sphinx = "*"
+sphinx-bootstrap-theme = "*"
+stsci-rtd-theme = "*"
+sphinx-rtd-theme = "*"
+
+[packages]
+numpy = "==1.16.4"
+scipy = "*"
+scikit-learn = "*"
+pandas = "*"
+tqdm = "*"
+matplotlib = "==3.0.0"
+neupy = "*"
+cvxopt = "*"
+
+[requires]
+python_version = "3.6"
