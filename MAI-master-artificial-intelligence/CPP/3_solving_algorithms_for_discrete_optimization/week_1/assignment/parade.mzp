@@ -1,0 +1,21 @@
+{
+	"projectFiles": [
+		"models/parade.mzn",
+		"data/parade1.dzn",
+		"data/parade17.dzn",
+		"data/parade2.dzn",
+		"data/parade6.dzn",
+		"data/parade5.dzn",
+		"data/parade11.dzn",
+		"data/parade9.dzn",
+		"data/parade8.dzn",
+		"_mooc"
+	],
+	"openFiles": [
+		"models/parade.mzn"
+	],
+	"openTab": 0,
+	"version": 106,
+	"selectedBuiltinConfigId": "org.gecode.gecode",
+	"selectedBuiltinConfigVersion": "6.3.0"
+}

@@ -1,0 +1,24 @@
+{
+	"projectFiles": [
+		"models/banquet.mzn",
+		"data/banquet_10.dzn",
+		"data/banquet_8.dzn",
+		"data/banquet_11.dzn",
+		"data/banquet_12.dzn",
+		"data/banquet_6.dzn",
+		"data/banquet_7.dzn",
+		"data/banquet_5.dzn",
+		"data/banquet_4.dzn",
+		"data/banquet_1.dzn",
+		"data/banquet_3.dzn",
+		"data/banquet_2.dzn",
+		"_mooc"
+	],
+	"openFiles": [
+		"models/banquet.mzn"
+	],
+	"openTab": 0,
+	"version": 106,
+	"selectedBuiltinConfigId": "org.gecode.gecode",
+	"selectedBuiltinConfigVersion": "6.3.0"
+}
