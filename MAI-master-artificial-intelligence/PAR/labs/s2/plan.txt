@@ -1,0 +1,38 @@
+ff: parsing domain file
+domain 'MOVING-TARGET' defined
+ ... done.
+ff: parsing problem file
+problem 'MOVING-TARGET1' defined
+ ... done.
+
+
+
+no optimization required. skipping criterion.
+
+
+no metric specified. plan length assumed.
+
+checking for cyclic := effects --- OK.
+
+ff: search configuration is EHC, if that fails then  best-first on 1*g(s) + 5*h(s) where
+    metric is  plan length
+
+Cueing down from goal distance:    3 into depth [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: MOVE R C0 C0 C1 C0 G C3 C3 C2 C3 T0 T1
+        1: MOVE R C1 C0 C1 C1 G C2 C3 C1 C3 T1 T2
+        2: MOVE R C1 C1 C1 C2 G C1 C3 C1 C2 T2 T3
+     
+
+time spent:    1.13 seconds instantiating 0 easy, 3072 hard action templates
+               0.00 seconds reachability analysis, yielding 24 facts and 38 actions
+               0.00 seconds creating final representation with 24 relevant facts, 1 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 6 states, to a max depth of 1
+               1.13 seconds total time

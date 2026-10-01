@@ -1,0 +1,58 @@
+ff: parsing domain file
+domain 'LUNAR-LOCKOUT' defined
+ ... done.
+ff: parsing problem file
+problem 'LUNAR-LOCKOUT40' defined
+ ... done.
+
+
+
+no optimization required. skipping criterion.
+
+
+no metric specified. plan length assumed.
+
+checking for cyclic := effects --- OK.
+
+ff: search configuration is EHC, if that fails then  best-first on 1*g(s) + 5*h(s) where
+    metric is  plan length
+
+Cueing down from goal distance:    6 into depth [1]
+                                   5            [1]
+                                   4            [1] --- pruning stopped --- [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+
+advancing to distance:    6
+                          5
+                          4
+                          3
+                          2
+                          1
+                          0
+
+ff: found legal plan as follows
+
+step    0: MOVE-LEFT GREEN C1 C3 C2
+        1: MOVE-LEFT PURPLE C1 C5 C3
+        2: MOVE-DOWN GREEN C1 C2 C4
+        3: MOVE-RIGHT ORANGE C1 C1 C2
+        4: MOVE-DOWN ORANGE C1 C2 C3
+        5: MOVE-RIGHT GREEN C4 C2 C4
+        6: MOVE-UP RED C5 C2 C4
+        7: MOVE-LEFT GREEN C4 C4 C3
+        8: MOVE-LEFT YELLOW C4 C5 C4
+        9: MOVE-UP GREEN C4 C3 C2
+       10: MOVE-RIGHT RED C4 C2 C3
+       11: MOVE-UP RED C4 C3 C3
+
+
+time spent:    0.06 seconds instantiating 0 easy, 4320 hard action templates
+               0.00 seconds reachability analysis, yielding 234 facts and 586 actions
+               0.00 seconds creating final representation with 136 relevant facts, 1 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 100 states, to a max depth of 1
+               0.06 seconds total time
